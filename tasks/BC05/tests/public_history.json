@@ -1,0 +1,102 @@
+[
+  {
+    "start": "2024-03-01",
+    "end": "2024-05-31",
+    "fiscal_year": "2024",
+    "revenue": 186.749977,
+    "ebit": 19.251712,
+    "operating_cost_ex_sbc": 152.181098,
+    "sbc": 4.52334,
+    "nonrecurring_gain": 0.0
+  },
+  {
+    "start": "2024-06-01",
+    "end": "2024-08-31",
+    "fiscal_year": "2024",
+    "revenue": 191.760343,
+    "ebit": 20.709566,
+    "operating_cost_ex_sbc": 155.501742,
+    "sbc": 4.644699,
+    "nonrecurring_gain": 0.0
+  },
+  {
+    "start": "2024-09-01",
+    "end": "2024-11-30",
+    "fiscal_year": "2025",
+    "revenue": 196.770708,
+    "ebit": 22.21661,
+    "operating_cost_ex_sbc": 158.782553,
+    "sbc": 4.766056,
+    "nonrecurring_gain": 0.0
+  },
+  {
+    "start": "2024-12-01",
+    "end": "2025-02-28",
+    "fiscal_year": "2025",
+    "revenue": 201.781073,
+    "ebit": 23.772846,
+    "operating_cost_ex_sbc": 162.023531,
+    "sbc": 4.887415,
+    "nonrecurring_gain": 0.0
+  },
+  {
+    "start": "2025-03-01",
+    "end": "2025-05-31",
+    "fiscal_year": "2025",
+    "revenue": 206.791438,
+    "ebit": 25.378274,
+    "operating_cost_ex_sbc": 165.224675,
+    "sbc": 5.008772,
+    "nonrecurring_gain": 0.0
+  },
+  {
+    "start": "2025-06-01",
+    "end": "2025-08-31",
+    "fiscal_year": "2025",
+    "revenue": 211.801804,
+    "ebit": 27.032892,
+    "operating_cost_ex_sbc": 168.385986,
+    "sbc": 5.13013,
+    "nonrecurring_gain": 0.0
+  },
+  {
+    "start": "2025-09-01",
+    "end": "2025-11-30",
+    "fiscal_year": "2026",
+    "revenue": 216.812169,
+    "ebit": 28.736703,
+    "operating_cost_ex_sbc": 171.507464,
+    "sbc": 5.251488,
+    "nonrecurring_gain": 0.0
+  },
+  {
+    "start": "2025-12-01",
+    "end": "2026-02-28",
+    "fiscal_year": "2026",
+    "revenue": 221.822534,
+    "ebit": 30.489704,
+    "operating_cost_ex_sbc": 174.589108,
+    "sbc": 5.372846,
+    "nonrecurring_gain": 0.0
+  },
+  {
+    "start": "2026-03-01",
+    "end": "2026-05-31",
+    "fiscal_year": "2026",
+    "revenue": 226.832899,
+    "ebit": 32.291897,
+    "operating_cost_ex_sbc": 177.63092,
+    "sbc": 5.494204,
+    "nonrecurring_gain": 0.0
+  },
+  {
+    "start": "2026-06-01",
+    "end": "2026-08-31",
+    "fiscal_year": "2026",
+    "revenue": 231.843265,
+    "ebit": 34.143281,
+    "operating_cost_ex_sbc": 180.632898,
+    "sbc": 5.615562,
+    "nonrecurring_gain": 2.727463
+  }
+]

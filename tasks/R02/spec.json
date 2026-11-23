@@ -1,0 +1,18 @@
+{
+  "schema_version": "v3.0",
+  "task_id": "R02",
+  "family": "R",
+  "company": "企业档案订阅",
+  "reused_from": "exp/dcf_factory_v2/tasks/F01（v2 F 方案）",
+  "reuse_reason": "历史版本中真实模型得分低、暴露出实质建模错误；原样复用题面数据、参考答案和评分器",
+  "prior_scores": {
+    "kimi-k3.1-pro": "旧版 0.040 ×3，最终版 0.100",
+    "qwen3.8-max": "多次 0.0（多数为断连无交付，不作能力结论）"
+  },
+  "observed_failures": [
+    "缺新语义输出键",
+    "历史 EBIT、客户驱动、现金收款与合同负债、NWC、DCF 和扰动传导均有差异"
+  ],
+  "theme": "订阅客户新增/流失/定价、合同负债与现金收款、季度历史、残期、双终值加权、稀释股权桥",
+  "grader": "原版本评分器（tests/grader.py），参考答案在 v3 本地复验 reward=1.0，空白工作簿被拒"
+}

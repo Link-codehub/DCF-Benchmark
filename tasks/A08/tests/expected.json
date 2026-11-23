@@ -1,0 +1,102 @@
+{
+  "baseline": {
+    "occupied_area_p1": 89180.0,
+    "rental_revenue_p1": 276.45799999999997,
+    "noi_p1": 196.28517999999997,
+    "property_value_p1": 3217.789836065573,
+    "occupied_area_p2": 90650.0,
+    "rental_revenue_p2": 288.267,
+    "noi_p2": 204.66957,
+    "property_value_p2": 3355.2388524590165,
+    "occupied_area_p3": 91140.0,
+    "rental_revenue_p3": 297.1164,
+    "noi_p3": 210.952644,
+    "property_value_p3": 3458.2400655737706,
+    "occupied_area_p4": 92120.0,
+    "rental_revenue_p4": 307.68080000000003,
+    "noi_p4": 218.453368,
+    "property_value_p4": 3581.202754098361,
+    "occupied_area_p5": 92120.0,
+    "rental_revenue_p5": 315.05039999999997,
+    "noi_p5": 223.68578399999996,
+    "property_value_p5": 3666.98006557377,
+    "property_value_at_valuation": 3217.789836065573,
+    "nav": 3097.789836065573,
+    "equity_value": 3097.789836065573,
+    "cap_rate": 0.061,
+    "diluted_shares": 96.0,
+    "value_per_share": 32.26864412568305
+  },
+  "perturbations": [
+    {
+      "label": "hidden_operating_valuation_bridge_1",
+      "input_changes": {
+        "a.occupancy.0": 0.93275,
+        "a.cap_rate.0": 0.05917
+      },
+      "expected": {
+        "occupied_area_p1": 91409.5,
+        "rental_revenue_p1": 283.36945,
+        "noi_p1": 201.19230949999996,
+        "property_value_p1": 3400.2418370796004,
+        "occupied_area_p2": 90650.0,
+        "rental_revenue_p2": 288.267,
+        "noi_p2": 204.66957,
+        "property_value_p2": 3355.2388524590165,
+        "occupied_area_p3": 91140.0,
+        "rental_revenue_p3": 297.1164,
+        "noi_p3": 210.952644,
+        "property_value_p3": 3458.2400655737706,
+        "occupied_area_p4": 92120.0,
+        "rental_revenue_p4": 307.68080000000003,
+        "noi_p4": 218.453368,
+        "property_value_p4": 3581.202754098361,
+        "occupied_area_p5": 92120.0,
+        "rental_revenue_p5": 315.05039999999997,
+        "noi_p5": 223.68578399999996,
+        "property_value_p5": 3666.98006557377,
+        "property_value_at_valuation": 3400.2418370796004,
+        "nav": 3280.2418370796004,
+        "equity_value": 3280.2418370796004,
+        "cap_rate": 0.05917,
+        "diluted_shares": 96.0,
+        "value_per_share": 34.1691858029125
+      }
+    },
+    {
+      "label": "hidden_operating_valuation_bridge_2",
+      "input_changes": {
+        "a.rent_per_unit.1": 0.0033072,
+        "b.debt": 276.35999999999996
+      },
+      "expected": {
+        "occupied_area_p1": 89180.0,
+        "rental_revenue_p1": 276.45799999999997,
+        "noi_p1": 196.28517999999997,
+        "property_value_p1": 3217.789836065573,
+        "occupied_area_p2": 90650.0,
+        "rental_revenue_p2": 299.79768,
+        "noi_p2": 212.8563528,
+        "property_value_p2": 3489.448406557377,
+        "occupied_area_p3": 91140.0,
+        "rental_revenue_p3": 297.1164,
+        "noi_p3": 210.952644,
+        "property_value_p3": 3458.2400655737706,
+        "occupied_area_p4": 92120.0,
+        "rental_revenue_p4": 307.68080000000003,
+        "noi_p4": 218.453368,
+        "property_value_p4": 3581.202754098361,
+        "occupied_area_p5": 92120.0,
+        "rental_revenue_p5": 315.05039999999997,
+        "noi_p5": 223.68578399999996,
+        "property_value_p5": 3666.98006557377,
+        "property_value_at_valuation": 3217.789836065573,
+        "nav": 3115.429836065573,
+        "equity_value": 3115.429836065573,
+        "cap_rate": 0.061,
+        "diluted_shares": 96.0,
+        "value_per_share": 32.45239412568305
+      }
+    }
+  ]
+}

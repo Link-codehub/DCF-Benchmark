@@ -1,0 +1,734 @@
+{
+  "task_id": "B01",
+  "version": "1.0",
+  "score_range": [
+    0,
+    100
+  ],
+  "harbor_reward": "score/100",
+  "oracle_threshold": 1.0,
+  "no_llm_judge": true,
+  "category_weights": {
+    "dynamic_perturbation": 21.0,
+    "equity_bridge": 4.2985050000000005,
+    "fcff": 9.671643,
+    "forecast": 19.343283999999997,
+    "historical": 12.895522,
+    "live_formulas": 5,
+    "recalculation": 1,
+    "structure": 1,
+    "timeline": 5.373134,
+    "valuation": 12.895523999999998,
+    "working_capital": 7.522387999999999
+  },
+  "criteria": [
+    {
+      "id": "B01-S01",
+      "category": "structure",
+      "weight": 1,
+      "kind": "structure",
+      "description": "交付完整并自建要求的五个页和三个关键标签",
+      "verification": "LibreOffice recalculation and deterministic comparison",
+      "tolerance": "exact Boolean condition",
+      "evidence": "workbook sheets and Forecast/Valuation labels",
+      "labels": {
+        "Forecast!A13": "本预测段收入",
+        "Forecast!A34": "FCFF",
+        "Valuation!A21": "每股价值（元）"
+      }
+    },
+    {
+      "id": "B01-R01",
+      "category": "recalculation",
+      "weight": 1,
+      "kind": "recalc",
+      "description": "公式缓存完整、无 Excel 错误或外链",
+      "verification": "LibreOffice recalculation and deterministic comparison",
+      "tolerance": "exact Boolean condition",
+      "evidence": "all workbook formulas"
+    },
+    {
+      "id": "B01-H01",
+      "category": "historical",
+      "weight": 3.761194,
+      "kind": "numeric",
+      "description": "FY2024 完整财年必须由该财年半年/季度加总",
+      "verification": "LibreOffice recalculation and deterministic comparison",
+      "tolerance": "max(0.000001, 0.00000002*abs(expected))",
+      "evidence": "Historical!B4:E4",
+      "checks": [
+        {
+          "cell": "Historical!B4",
+          "expected_path": "annual_history.FY2024.revenue"
+        },
+        {
+          "cell": "Historical!C4",
+          "expected_path": "annual_history.FY2024.cogs"
+        },
+        {
+          "cell": "Historical!D4",
+          "expected_path": "annual_history.FY2024.other_opex"
+        },
+        {
+          "cell": "Historical!E4",
+          "expected_path": "annual_history.FY2024.ebit"
+        }
+      ]
+    },
+    {
+      "id": "B01-H02",
+      "category": "historical",
+      "weight": 3.761194,
+      "kind": "numeric",
+      "description": "FY2025 完整财年必须由该财年半年/季度加总",
+      "verification": "LibreOffice recalculation and deterministic comparison",
+      "tolerance": "max(0.000001, 0.00000002*abs(expected))",
+      "evidence": "Historical!B5:E5",
+      "checks": [
+        {
+          "cell": "Historical!B5",
+          "expected_path": "annual_history.FY2025.revenue"
+        },
+        {
+          "cell": "Historical!C5",
+          "expected_path": "annual_history.FY2025.cogs"
+        },
+        {
+          "cell": "Historical!D5",
+          "expected_path": "annual_history.FY2025.other_opex"
+        },
+        {
+          "cell": "Historical!E5",
+          "expected_path": "annual_history.FY2025.ebit"
+        }
+      ]
+    },
+    {
+      "id": "B01-H03",
+      "category": "historical",
+      "weight": 5.373134,
+      "kind": "numeric",
+      "description": "LTM 必须拼接最近两个半年或四个季度，而非短期间年化",
+      "verification": "LibreOffice recalculation and deterministic comparison",
+      "tolerance": "max(0.000001, 0.00000002*abs(expected))",
+      "evidence": "Historical!B6:E6",
+      "checks": [
+        {
+          "cell": "Historical!B6",
+          "expected_path": "ltm.revenue"
+        },
+        {
+          "cell": "Historical!C6",
+          "expected_path": "ltm.cogs"
+        },
+        {
+          "cell": "Historical!D6",
+          "expected_path": "ltm.other_opex"
+        },
+        {
+          "cell": "Historical!E6",
+          "expected_path": "ltm.ebit"
+        },
+        {
+          "cell": "Historical!G4",
+          "expected_path": "nwc_opening"
+        }
+      ]
+    },
+    {
+      "id": "B01-T01",
+      "category": "timeline",
+      "weight": 5.373134,
+      "kind": "numeric",
+      "description": "残期活动比例、期间比例与四段现金流折现指数对齐实际日期",
+      "verification": "LibreOffice recalculation and deterministic comparison",
+      "tolerance": "max(0.000001, 0.00000002*abs(expected))",
+      "evidence": "Forecast!B8:E9 and B36:E36",
+      "checks": [
+        {
+          "cell": "Forecast!B8",
+          "expected_path": "forecast.0.period_fraction"
+        },
+        {
+          "cell": "Forecast!B9",
+          "expected_path": "forecast.0.activity_ratio"
+        },
+        {
+          "cell": "Forecast!B36",
+          "expected_path": "forecast.0.discount_time"
+        },
+        {
+          "cell": "Forecast!E36",
+          "expected_path": "forecast.3.discount_time"
+        }
+      ]
+    },
+    {
+      "id": "B01-F01",
+      "category": "forecast",
+      "weight": 4.298507,
+      "kind": "numeric",
+      "description": "残期收入先按量价或门店完整年驱动，再按残期实际天数缩放",
+      "verification": "LibreOffice recalculation and deterministic comparison",
+      "tolerance": "max(0.000001, 0.00000002*abs(expected))",
+      "evidence": "Forecast!B10:B13",
+      "checks": [
+        {
+          "cell": "Forecast!B12",
+          "expected_path": "forecast.0.revenue_full"
+        },
+        {
+          "cell": "Forecast!B13",
+          "expected_path": "forecast.0.revenue"
+        }
+      ]
+    },
+    {
+      "id": "B01-F02",
+      "category": "forecast",
+      "weight": 3.223881,
+      "kind": "numeric",
+      "description": "后续完整年度收入使用对应驱动，不沿用残期年化",
+      "verification": "LibreOffice recalculation and deterministic comparison",
+      "tolerance": "max(0.000001, 0.00000002*abs(expected))",
+      "evidence": "Forecast!D12:D13",
+      "checks": [
+        {
+          "cell": "Forecast!D12",
+          "expected_path": "forecast.2.revenue_full"
+        },
+        {
+          "cell": "Forecast!D13",
+          "expected_path": "forecast.2.revenue"
+        }
+      ]
+    },
+    {
+      "id": "B01-F03",
+      "category": "forecast",
+      "weight": 3.223881,
+      "kind": "numeric",
+      "description": "残期经营费用、EBIT、现金税与 NOPAT 正确",
+      "verification": "LibreOffice recalculation and deterministic comparison",
+      "tolerance": "max(0.000001, 0.00000002*abs(expected))",
+      "evidence": "Forecast!B14:B18",
+      "checks": [
+        {
+          "cell": "Forecast!B14",
+          "expected_path": "forecast.0.cogs"
+        },
+        {
+          "cell": "Forecast!B15",
+          "expected_path": "forecast.0.other_opex"
+        },
+        {
+          "cell": "Forecast!B16",
+          "expected_path": "forecast.0.ebit"
+        },
+        {
+          "cell": "Forecast!B17",
+          "expected_path": "forecast.0.cash_tax"
+        },
+        {
+          "cell": "Forecast!B18",
+          "expected_path": "forecast.0.nopat"
+        }
+      ]
+    },
+    {
+      "id": "B01-F04",
+      "category": "forecast",
+      "weight": 4.298507,
+      "kind": "numeric",
+      "description": "固定资产按残期和新采购半年惯例滚动",
+      "verification": "LibreOffice recalculation and deterministic comparison",
+      "tolerance": "max(0.000001, 0.00000002*abs(expected))",
+      "evidence": "Forecast!B19:B22",
+      "checks": [
+        {
+          "cell": "Forecast!B19",
+          "expected_path": "forecast.0.opening_ppe"
+        },
+        {
+          "cell": "Forecast!B20",
+          "expected_path": "forecast.0.capex"
+        },
+        {
+          "cell": "Forecast!B21",
+          "expected_path": "forecast.0.depreciation"
+        },
+        {
+          "cell": "Forecast!B22",
+          "expected_path": "forecast.0.end_ppe"
+        }
+      ]
+    },
+    {
+      "id": "B01-F05",
+      "category": "forecast",
+      "weight": 3.223881,
+      "kind": "numeric",
+      "description": "后续固定资产按上一年度期末滚动",
+      "verification": "LibreOffice recalculation and deterministic comparison",
+      "tolerance": "max(0.000001, 0.00000002*abs(expected))",
+      "evidence": "Forecast!D19:D22",
+      "checks": [
+        {
+          "cell": "Forecast!D19",
+          "expected_path": "forecast.2.opening_ppe"
+        },
+        {
+          "cell": "Forecast!D21",
+          "expected_path": "forecast.2.depreciation"
+        },
+        {
+          "cell": "Forecast!D22",
+          "expected_path": "forecast.2.end_ppe"
+        }
+      ]
+    },
+    {
+      "id": "B01-F06",
+      "category": "forecast",
+      "weight": 1.074627,
+      "kind": "numeric",
+      "description": "无形资产及 D&A；单资产场景必须显式为零",
+      "verification": "LibreOffice recalculation and deterministic comparison",
+      "tolerance": "max(0.000001, 0.00000002*abs(expected))",
+      "evidence": "Forecast!D23:D27",
+      "checks": [
+        {
+          "cell": "Forecast!D25",
+          "expected_path": "forecast.2.amortization"
+        },
+        {
+          "cell": "Forecast!D26",
+          "expected_path": "forecast.2.end_intangibles"
+        },
+        {
+          "cell": "Forecast!D27",
+          "expected_path": "forecast.2.da"
+        }
+      ]
+    },
+    {
+      "id": "B01-W01",
+      "category": "working_capital",
+      "weight": 4.298507,
+      "kind": "numeric",
+      "description": "营运资本用完整年化经营基数和天数计算，残期增量相对估值日余额",
+      "verification": "LibreOffice recalculation and deterministic comparison",
+      "tolerance": "max(0.000001, 0.00000002*abs(expected))",
+      "evidence": "Historical!G4 and Forecast!B28:B33",
+      "checks": [
+        {
+          "cell": "Forecast!B28",
+          "expected_path": "forecast.0.ar"
+        },
+        {
+          "cell": "Forecast!B29",
+          "expected_path": "forecast.0.inventory"
+        },
+        {
+          "cell": "Forecast!B30",
+          "expected_path": "forecast.0.ap"
+        },
+        {
+          "cell": "Forecast!B31",
+          "expected_path": "forecast.0.other_nwc"
+        },
+        {
+          "cell": "Forecast!B32",
+          "expected_path": "forecast.0.nwc"
+        },
+        {
+          "cell": "Forecast!B33",
+          "expected_path": "forecast.0.delta_nwc"
+        }
+      ]
+    },
+    {
+      "id": "B01-W02",
+      "category": "working_capital",
+      "weight": 3.223881,
+      "kind": "numeric",
+      "description": "后续年度 NWC 增量为年末余额之差，不重复扣减残期基数",
+      "verification": "LibreOffice recalculation and deterministic comparison",
+      "tolerance": "max(0.000001, 0.00000002*abs(expected))",
+      "evidence": "Forecast!D28:D33",
+      "checks": [
+        {
+          "cell": "Forecast!D32",
+          "expected_path": "forecast.2.nwc"
+        },
+        {
+          "cell": "Forecast!D33",
+          "expected_path": "forecast.2.delta_nwc"
+        }
+      ]
+    },
+    {
+      "id": "B01-C01",
+      "category": "fcff",
+      "weight": 3.223881,
+      "kind": "numeric",
+      "description": "首段 FCFF 包含折旧加回、投资支出及全部 NWC 增量",
+      "verification": "LibreOffice recalculation and deterministic comparison",
+      "tolerance": "max(0.000001, 0.00000002*abs(expected))",
+      "evidence": "Forecast!B34",
+      "checks": [
+        {
+          "cell": "Forecast!B34",
+          "expected_path": "forecast.0.fcff"
+        }
+      ]
+    },
+    {
+      "id": "B01-C02",
+      "category": "fcff",
+      "weight": 3.223881,
+      "kind": "numeric",
+      "description": "后续 FCFF 现值使用正确折现因子且不再乘期间比例",
+      "verification": "LibreOffice recalculation and deterministic comparison",
+      "tolerance": "max(0.000001, 0.00000002*abs(expected))",
+      "evidence": "Forecast!D34:D38",
+      "checks": [
+        {
+          "cell": "Forecast!D34",
+          "expected_path": "forecast.2.fcff"
+        },
+        {
+          "cell": "Forecast!D37",
+          "expected_path": "forecast.2.discount_factor"
+        },
+        {
+          "cell": "Forecast!D38",
+          "expected_path": "forecast.2.pv_fcff"
+        }
+      ]
+    },
+    {
+      "id": "B01-C03",
+      "category": "fcff",
+      "weight": 3.223881,
+      "kind": "numeric",
+      "description": "最后完整年 FCFF 与 EBITDA 与终值口径衔接",
+      "verification": "LibreOffice recalculation and deterministic comparison",
+      "tolerance": "max(0.000001, 0.00000002*abs(expected))",
+      "evidence": "Forecast!E34 and E39",
+      "checks": [
+        {
+          "cell": "Forecast!E34",
+          "expected_path": "forecast.3.fcff"
+        },
+        {
+          "cell": "Forecast!E39",
+          "expected_path": "forecast.3.ebitda"
+        }
+      ]
+    },
+    {
+      "id": "B01-V01",
+      "category": "valuation",
+      "weight": 3.223881,
+      "kind": "numeric",
+      "description": "WACC 使用给定资本结构与债务税盾",
+      "verification": "LibreOffice recalculation and deterministic comparison",
+      "tolerance": "max(0.000001, 0.00000002*abs(expected))",
+      "evidence": "Valuation!B22",
+      "checks": [
+        {
+          "cell": "Valuation!B22",
+          "expected_path": "wacc"
+        }
+      ]
+    },
+    {
+      "id": "B01-V02",
+      "category": "valuation",
+      "weight": 3.223881,
+      "kind": "numeric",
+      "description": "明确预测期现值合计",
+      "verification": "LibreOffice recalculation and deterministic comparison",
+      "tolerance": "max(0.000001, 0.00000002*abs(expected))",
+      "evidence": "Valuation!B6",
+      "checks": [
+        {
+          "cell": "Valuation!B6",
+          "expected_path": "pv_explicit"
+        }
+      ]
+    },
+    {
+      "id": "B01-V03",
+      "category": "valuation",
+      "weight": 3.223881,
+      "kind": "numeric",
+      "description": "Gordon 终值使用最后完整年 FCFF×(1+g)/(WACC-g)，时点不额外后移",
+      "verification": "LibreOffice recalculation and deterministic comparison",
+      "tolerance": "max(0.000001, 0.00000002*abs(expected))",
+      "evidence": "Valuation!B7",
+      "checks": [
+        {
+          "cell": "Valuation!B7",
+          "expected_path": "terminal_value"
+        }
+      ]
+    },
+    {
+      "id": "B01-V04",
+      "category": "valuation",
+      "weight": 1.074627,
+      "kind": "numeric",
+      "description": "终值时点和终值现值位于最后完整财年末",
+      "verification": "LibreOffice recalculation and deterministic comparison",
+      "tolerance": "max(0.000001, 0.00000002*abs(expected))",
+      "evidence": "Valuation!B8:B9",
+      "checks": [
+        {
+          "cell": "Valuation!B8",
+          "expected_path": "terminal_time"
+        },
+        {
+          "cell": "Valuation!B9",
+          "expected_path": "pv_terminal"
+        }
+      ]
+    },
+    {
+      "id": "B01-V05",
+      "category": "valuation",
+      "weight": 2.149254,
+      "kind": "numeric",
+      "description": "企业价值等于明确预测期与终值现值之和",
+      "verification": "LibreOffice recalculation and deterministic comparison",
+      "tolerance": "max(0.000001, 0.00000002*abs(expected))",
+      "evidence": "Valuation!B10",
+      "checks": [
+        {
+          "cell": "Valuation!B10",
+          "expected_path": "enterprise_value"
+        }
+      ]
+    },
+    {
+      "id": "B01-V06",
+      "category": "equity_bridge",
+      "weight": 3.223881,
+      "kind": "numeric",
+      "description": "股权桥与稀释股数",
+      "verification": "LibreOffice recalculation and deterministic comparison",
+      "tolerance": "max(0.000001, 0.00000002*abs(expected))",
+      "evidence": "Valuation!B11:B20",
+      "checks": [
+        {
+          "cell": "Valuation!B17",
+          "expected_path": "equity_value"
+        },
+        {
+          "cell": "Valuation!B20",
+          "expected_path": "shares"
+        }
+      ]
+    },
+    {
+      "id": "B01-V07",
+      "category": "equity_bridge",
+      "weight": 1.074624,
+      "kind": "numeric",
+      "description": "每股价值 = 股权价值 / 稀释股数",
+      "verification": "LibreOffice recalculation and deterministic comparison",
+      "tolerance": "max(0.000001, 0.00000002*abs(expected))",
+      "evidence": "Valuation!B21",
+      "checks": [
+        {
+          "cell": "Valuation!B21",
+          "expected_path": "per_share"
+        }
+      ]
+    },
+    {
+      "id": "B01-L01",
+      "category": "live_formulas",
+      "weight": 5,
+      "kind": "formula",
+      "description": "关键预测、DCF 和股权桥必须直接依赖原始 Inputs 或上游预测公式，不得静态填值",
+      "verification": "LibreOffice recalculation and deterministic comparison",
+      "tolerance": "exact Boolean condition",
+      "evidence": "Forecast!B9; Forecast!B12; Forecast!B13; Forecast!B16; Forecast!B18; Forecast!B21; Forecast!B27; Forecast!B32; Forecast!B33; Forecast!B34; Forecast!B36; Forecast!B38; Forecast!D9; Forecast!D12; Forecast!D13; Forecast!D16; Forecast!D18; Forecast!D21; Forecast!D27; Forecast!D32; Forecast!D33; Forecast!D34; Forecast!D36; Forecast!D38; Forecast!E9; Forecast!E12; Forecast!E13; Forecast!E16; Forecast!E18; Forecast!E21; Forecast!E27; Forecast!E32; Forecast!E33; Forecast!E34; Forecast!E36; Forecast!E38; Valuation!B22; Valuation!B6; Valuation!B7; Valuation!B9; Valuation!B10; Valuation!B17; Valuation!B21",
+      "cells": [
+        "Forecast!B9",
+        "Forecast!B12",
+        "Forecast!B13",
+        "Forecast!B16",
+        "Forecast!B18",
+        "Forecast!B21",
+        "Forecast!B27",
+        "Forecast!B32",
+        "Forecast!B33",
+        "Forecast!B34",
+        "Forecast!B36",
+        "Forecast!B38",
+        "Forecast!D9",
+        "Forecast!D12",
+        "Forecast!D13",
+        "Forecast!D16",
+        "Forecast!D18",
+        "Forecast!D21",
+        "Forecast!D27",
+        "Forecast!D32",
+        "Forecast!D33",
+        "Forecast!D34",
+        "Forecast!D36",
+        "Forecast!D38",
+        "Forecast!E9",
+        "Forecast!E12",
+        "Forecast!E13",
+        "Forecast!E16",
+        "Forecast!E18",
+        "Forecast!E21",
+        "Forecast!E27",
+        "Forecast!E32",
+        "Forecast!E33",
+        "Forecast!E34",
+        "Forecast!E36",
+        "Forecast!E38",
+        "Valuation!B22",
+        "Valuation!B6",
+        "Valuation!B7",
+        "Valuation!B9",
+        "Valuation!B10",
+        "Valuation!B17",
+        "Valuation!B21"
+      ],
+      "input_free_cells": [
+        "Forecast!D36",
+        "Forecast!D9",
+        "Forecast!E36",
+        "Forecast!E9"
+      ]
+    },
+    {
+      "id": "B01-P01",
+      "category": "dynamic_perturbation",
+      "weight": 10.5,
+      "kind": "perturbation",
+      "description": "估值日/残期、经营驱动、营运资本、资本开支与现金同时变化；由独立内核逐格重算",
+      "verification": "LibreOffice recalculation and deterministic comparison",
+      "tolerance": "max(0.000001, 0.00000002*abs(expected))",
+      "evidence": "12 cells across Forecast/Valuation after semantic input edits",
+      "checks": [
+        {
+          "cell": "Forecast!B9",
+          "expected_path": "forecast.0.activity_ratio"
+        },
+        {
+          "cell": "Forecast!B13",
+          "expected_path": "forecast.0.revenue"
+        },
+        {
+          "cell": "Forecast!B21",
+          "expected_path": "forecast.0.depreciation"
+        },
+        {
+          "cell": "Forecast!B33",
+          "expected_path": "forecast.0.delta_nwc"
+        },
+        {
+          "cell": "Forecast!B34",
+          "expected_path": "forecast.0.fcff"
+        },
+        {
+          "cell": "Forecast!B36",
+          "expected_path": "forecast.0.discount_time"
+        },
+        {
+          "cell": "Valuation!B6",
+          "expected_path": "pv_explicit"
+        },
+        {
+          "cell": "Valuation!B7",
+          "expected_path": "terminal_value"
+        },
+        {
+          "cell": "Valuation!B9",
+          "expected_path": "pv_terminal"
+        },
+        {
+          "cell": "Valuation!B10",
+          "expected_path": "enterprise_value"
+        },
+        {
+          "cell": "Valuation!B17",
+          "expected_path": "equity_value"
+        },
+        {
+          "cell": "Valuation!B21",
+          "expected_path": "per_share"
+        }
+      ],
+      "perturbation_index": 0
+    },
+    {
+      "id": "B01-P02",
+      "category": "dynamic_perturbation",
+      "weight": 10.5,
+      "kind": "perturbation",
+      "description": "残期、资本结构、终值假设、债务及股数同时变化；由独立内核逐格重算",
+      "verification": "LibreOffice recalculation and deterministic comparison",
+      "tolerance": "max(0.000001, 0.00000002*abs(expected))",
+      "evidence": "12 cells across Forecast/Valuation after semantic input edits",
+      "checks": [
+        {
+          "cell": "Forecast!B9",
+          "expected_path": "forecast.0.activity_ratio"
+        },
+        {
+          "cell": "Forecast!B13",
+          "expected_path": "forecast.0.revenue"
+        },
+        {
+          "cell": "Forecast!B21",
+          "expected_path": "forecast.0.depreciation"
+        },
+        {
+          "cell": "Forecast!B33",
+          "expected_path": "forecast.0.delta_nwc"
+        },
+        {
+          "cell": "Forecast!B34",
+          "expected_path": "forecast.0.fcff"
+        },
+        {
+          "cell": "Forecast!B36",
+          "expected_path": "forecast.0.discount_time"
+        },
+        {
+          "cell": "Valuation!B6",
+          "expected_path": "pv_explicit"
+        },
+        {
+          "cell": "Valuation!B7",
+          "expected_path": "terminal_value"
+        },
+        {
+          "cell": "Valuation!B9",
+          "expected_path": "pv_terminal"
+        },
+        {
+          "cell": "Valuation!B10",
+          "expected_path": "enterprise_value"
+        },
+        {
+          "cell": "Valuation!B17",
+          "expected_path": "equity_value"
+        },
+        {
+          "cell": "Valuation!B21",
+          "expected_path": "per_share"
+        }
+      ],
+      "perturbation_index": 1
+    }
+  ]
+}

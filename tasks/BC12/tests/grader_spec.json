@@ -1,0 +1,372 @@
+{
+  "schema_version": "v3.0",
+  "task_id": "BC12",
+  "seed": 403455,
+  "candidate_index": 15,
+  "family": "BC",
+  "step": 1,
+  "company": "朔方芯材",
+  "dimension_selection": {
+    "scenario": "商用设备巡检",
+    "difficulty": "L2: 依赖深度8，显式4期",
+    "time_axis": "非自然财年+quarterly历史+实际天数残期",
+    "business_driver": "installed_base",
+    "valuation_mechanism": "dual_terminal",
+    "accounting_basis": "应计无杠杆现金税",
+    "output_mode": "dcf_only",
+    "output_template": "fixed_outputs",
+    "data_provision": "complete_frozen"
+  },
+  "enabled_modules": [
+    "residual_period",
+    "working_capital",
+    "rolling_assets",
+    "nwc_days",
+    "intangible_pool"
+  ],
+  "selection_rationale": {
+    "scenario": "商用设备巡检要求独立的单位与价格口径",
+    "time_axis": "10个季度披露期，需聚合财年/LTM并处理残期",
+    "business_driver": "新增、流失、利用率或服务频次改变收入构造而非仅改增长率",
+    "valuation_mechanism": "终值与折现时点依赖显式预测",
+    "output_mode": "要求相应经营、债务或三表中间证据，结果键保持统一",
+    "output_template": "固定坐标、语义发现或两者分流"
+  },
+  "source_and_choice": {
+    "source": "本生成器按独立 SHA256 子种子生成场景参数、历史数据和预测假设",
+    "choice": "索引保证场景/输出/时间覆盖，种子扰动规模与路径，模块约束过滤非法组合"
+  },
+  "time_axis": {
+    "history_frequency": "mixed_h1_q",
+    "midyear": false,
+    "day_count": "actual/365",
+    "terminal_at_last_fye": true
+  },
+  "accounting": {
+    "normalized_history": true,
+    "sbc_expense": true,
+    "lease_in_debt": true
+  },
+  "business": {
+    "driver": "installed_base",
+    "unit": "千台",
+    "price_unit": "百万元/台次",
+    "description": "商用设备巡检"
+  },
+  "output": {
+    "template": "free_layout"
+  },
+  "valuation_date": "2025-02-14",
+  "last_fy_end": "2024-10-31",
+  "horizon": 4,
+  "history": [
+    {
+      "start": "2021-11-01",
+      "end": "2022-04-30",
+      "fiscal_year": "2022",
+      "period_type": "half_year",
+      "revenue": 321.5,
+      "operating_cost_ex_sbc": 247,
+      "sbc": 9.5,
+      "nonrecurring_gain": 0.0
+    },
+    {
+      "start": "2022-05-01",
+      "end": "2022-10-31",
+      "fiscal_year": "2022",
+      "period_type": "half_year",
+      "revenue": 506.5,
+      "operating_cost_ex_sbc": 392,
+      "sbc": 10.5,
+      "nonrecurring_gain": 2.2
+    },
+    {
+      "start": "2022-11-01",
+      "end": "2023-04-30",
+      "fiscal_year": "2023",
+      "period_type": "half_year",
+      "revenue": 341.5,
+      "operating_cost_ex_sbc": 261,
+      "sbc": 9.5,
+      "nonrecurring_gain": 0.0
+    },
+    {
+      "start": "2023-05-01",
+      "end": "2023-10-31",
+      "fiscal_year": "2023",
+      "period_type": "half_year",
+      "revenue": 526.5,
+      "operating_cost_ex_sbc": 406,
+      "sbc": 10.5,
+      "nonrecurring_gain": 2.2
+    },
+    {
+      "start": "2023-11-01",
+      "end": "2024-04-30",
+      "fiscal_year": "2024",
+      "period_type": "half_year",
+      "revenue": 361.5,
+      "operating_cost_ex_sbc": 275,
+      "sbc": 9.5,
+      "nonrecurring_gain": 0.0
+    },
+    {
+      "start": "2024-05-01",
+      "end": "2024-10-31",
+      "fiscal_year": "2024",
+      "period_type": "half_year",
+      "revenue": 546.5,
+      "operating_cost_ex_sbc": 420,
+      "sbc": 10.5,
+      "nonrecurring_gain": 2.2
+    },
+    {
+      "start": "2024-11-01",
+      "end": "2025-01-31",
+      "fiscal_year": "2025",
+      "period_type": "bridge_quarter",
+      "revenue": 292.9,
+      "operating_cost_ex_sbc": 215.2,
+      "sbc": 5.7,
+      "nonrecurring_gain": 1.1
+    }
+  ],
+  "opening_nwc": 390.586,
+  "opening_deferred": 0,
+  "opening_ppe": 376.03,
+  "opening_rou": 0,
+  "opening_debt": 242.6,
+  "opening_retained_earnings": 194.08,
+  "contributed_capital": 473.07,
+  "opening_cash": 121.3,
+  "opening_sbc_reserve": 0.0,
+  "assumptions": {
+    "driver0": 147,
+    "price0": 2.5786565,
+    "driver_add": [
+      11.76,
+      13.377,
+      14.994,
+      16.611
+    ],
+    "driver_growth": [
+      0.09,
+      0.081,
+      0.072,
+      0.063
+    ],
+    "attrition_rate": [
+      0.045,
+      0.05,
+      0.055,
+      0.06
+    ],
+    "price_growth": [
+      0.03,
+      0.028,
+      0.026,
+      0.024
+    ],
+    "ebit_margin": [
+      0.16,
+      0.167,
+      0.174,
+      0.181
+    ],
+    "da_pct": [
+      0.04,
+      0.042,
+      0.04,
+      0.042
+    ],
+    "capex_pct": [
+      0.061,
+      0.065,
+      0.069,
+      0.061
+    ],
+    "nwc_pct": [
+      0.18,
+      0.186,
+      0.192,
+      0.18
+    ],
+    "tax": 0.235,
+    "wacc": 0.10940000000000001,
+    "g": 0.022,
+    "gordon_weight": 1.0,
+    "exit_multiple": 7.8,
+    "deferred_pct": [
+      0.08,
+      0.08,
+      0.08,
+      0.08
+    ],
+    "cogs_ratio": [
+      0.48,
+      0.48,
+      0.48,
+      0.48
+    ],
+    "dso": [
+      47,
+      48,
+      49,
+      50
+    ],
+    "dio": [
+      62,
+      61,
+      60,
+      59
+    ],
+    "dpo": [
+      43,
+      44,
+      45,
+      46
+    ],
+    "nol0": 133.43,
+    "ppe_rate": 0.13,
+    "rou_rate": 0.2,
+    "lease_additions": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "interest_rate": 0.052,
+    "new_borrowing": [
+      30.325000000000003,
+      0,
+      0,
+      0
+    ],
+    "debt_repayment": [
+      12.13,
+      24.26,
+      36.39,
+      48.52
+    ],
+    "beta_unlevered": 0.88,
+    "target_de": 0.27,
+    "risk_free": 0.034,
+    "erp": 0.049,
+    "specific_premium": 0.006,
+    "cost_of_debt": 0.053,
+    "scenario": 1,
+    "upside_demand_delta": 0.025,
+    "downside_demand_delta": -0.025,
+    "upside_margin_delta": 0.012,
+    "downside_margin_delta": -0.014,
+    "wacc_deltas": [
+      -0.01,
+      0,
+      0.01
+    ],
+    "g_deltas": [
+      -0.005,
+      0,
+      0.005
+    ],
+    "service_frequency": [
+      3.2,
+      3.2800000000000002,
+      3.3600000000000003,
+      3.4400000000000004
+    ],
+    "sbc_pct": [
+      0.025,
+      0.025,
+      0.025,
+      0.025
+    ],
+    "upside_reinvestment_delta": 0.12,
+    "downside_reinvestment_delta": -0.1,
+    "upside_wacc_delta": -0.005,
+    "downside_wacc_delta": 0.006,
+    "valuation_wacc_delta": 0.0075,
+    "valuation_g_delta": 0.004,
+    "intangible_additions": [
+      38.4,
+      42.4,
+      46.4,
+      50.4
+    ],
+    "intangible_rate": 0.16
+  },
+  "bridge": {
+    "cash": 121.3,
+    "debt": 242.6,
+    "investments": 18.195,
+    "lease_liability": 0,
+    "minority": 14.556,
+    "valuation_cash_adjustment": 14.556,
+    "shares": 155,
+    "rsus": 2.4,
+    "options": 6.0,
+    "strike": 7.0,
+    "share_price": 15.5
+  },
+  "multi_step_events": [],
+  "perturbations": [],
+  "constraints": {
+    "money_unit": "百万元",
+    "share_unit": "百万股",
+    "history": "原始披露期不得改写；SBC为经营成本；非经常收益不属于规范化EBIT",
+    "fcff": "EBIT-无杠杆现金税+折旧摊销-资本开支-NWC增加；NOL按可用额与正EBIT孰低抵扣",
+    "residual": "第一期按估值日至财年末实际天数占完整财年天数比例计入经营活动；余额NWC仍按完整年度驱动；首期NWC增量=期末余额-估值日余额（余额不按残期活动比例缩放），后续为相邻期末差额",
+    "deferred": "启用合同负债时，期末按完整年度核心收入比例；现金收款=本期收入+期末合同负债-估值日合同负债（后续减上期末）；FCFF营运资本扣除合同负债，资产负债表单列该负债。未启用模块的对应诊断输出为0",
+    "inputs": "候选保留公开Inputs语义键；标量在C列，向量C/D/E…对应P1/P2/P3…，预测可自由布局但必须链接这些输入",
+    "discount": "实际天数/365；年中法扣除现金流间隔的一半；终值在最后完整财年末",
+    "terminal": "Gordon与退出终值分别计算，按gordon_weight加权；退出基于最后完整期EBITDA",
+    "equity": "EV+现金+投资-借款-租赁负债-少数股权；库存股法期权增量加RSU",
+    "debt": "利息按期初债务加半数新增借款乘实际天数/365；债务和资产独立滚动",
+    "three_statements": "经营流动资产与合同负债分列。SBC已含于EBIT且为非现金费用，CFO加回并计入权益储备，FCFF不加回；净利润=EBIT-利息-利息后现金税，利息税盾与无杠杆现金税分开；现金仅由CFO、资本开支及融资滚动"
+  },
+  "opening_operating_current_assets": 481.561,
+  "opening_balance_facts": {
+    "basis": "独立历史资产负债事实：经营流动资产、合同负债、借款、租赁、现金、投资、留存收益、实收资本和少数股东权益分别列示；期初经营流动资产使已披露历史报表闭合，不参与任何预测期倒挤",
+    "contributed_capital": 473.07,
+    "opening_cash": 121.3,
+    "opening_operating_current_assets": 481.561,
+    "opening_sbc_reserve": 0.0
+  },
+  "opening_intangible": 183.6,
+  "nwc_opening_basis": "valuation_date",
+  "b_items": [
+    "mixed_ltm",
+    "history_normalization",
+    "residual_period",
+    "actual_day_discount",
+    "nwc_valuation_open",
+    "equity_bridge",
+    "dual_asset_pool"
+  ],
+  "b_item_definitions": {
+    "mixed_ltm": "半年＋桥接季度的混合历史拼接 LTM",
+    "history_normalization": "完整财年聚合、LTM，SBC 与非经常项规范化",
+    "residual_period": "残余期＋完整年度预测（4–6 期）",
+    "actual_day_discount": "实际天数，年中/期末折现，终值在最后完整财年末",
+    "nwc_valuation_open": "营运资本天数或比例法；首期 ΔNWC 用估值日余额",
+    "equity_bridge": "现金、投资、债务、租赁、少数股权、库存股期权、RSU 股权桥",
+    "dual_asset_pool": "固定资产＋无形资产双资产池"
+  },
+  "c_structure": "multi_method",
+  "c_structure_definition": "多方法估值与反推",
+  "structure": {
+    "b": [
+      "mixed_ltm",
+      "history_normalization",
+      "residual_period",
+      "actual_day_discount",
+      "nwc_valuation_open",
+      "equity_bridge",
+      "dual_asset_pool"
+    ],
+    "c": "multi_method"
+  },
+  "market": {
+    "market_price": 23.92
+  }
+}

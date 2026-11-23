@@ -1,0 +1,101 @@
+{
+  "schema_version": "v3.0",
+  "task_id": "A03",
+  "family": "A",
+  "company": "衡铸工业",
+  "industry": "manufacturing",
+  "industry_name": "制造与工业设备",
+  "base_structure": "N-期中滚动",
+  "industry_drivers": [
+    "投产产能与利用率",
+    "产品价格",
+    "维护与扩产资本开支"
+  ],
+  "valuation_date": "2026-03-17",
+  "last_fy_end": "2025-11-30",
+  "horizon": 4,
+  "time_axis": {
+    "midyear": false,
+    "history_frequency": "annual",
+    "day_count": "actual/365"
+  },
+  "accounting": {
+    "sbc_expense": true,
+    "industry_valuation": true
+  },
+  "residual_activity": 0.7068493150684931,
+  "enabled_modules": [
+    "industry_driver",
+    "residual_period"
+  ],
+  "history": [],
+  "bridge": {
+    "cash": 157,
+    "debt": 229,
+    "investments": 27,
+    "lease_liability": 15,
+    "minority": 8,
+    "valuation_cash_adjustment": 0,
+    "shares": 81,
+    "rsus": 1.2,
+    "options": 0,
+    "strike": 0,
+    "share_price": 15
+  },
+  "assumptions": {
+    "tax": 0.23,
+    "wacc": 0.10200000000000001,
+    "g": 0.025,
+    "driver0": 420,
+    "ebit_margin": [
+      0.16,
+      0.164,
+      0.168,
+      0.17200000000000001
+    ],
+    "da_pct": [
+      0.052,
+      0.052,
+      0.052,
+      0.052
+    ],
+    "capex_pct": [
+      0.065,
+      0.065,
+      0.065,
+      0.065
+    ],
+    "nwc_pct": [
+      0.13,
+      0.13,
+      0.13,
+      0.13
+    ],
+    "opening_nwc": 71,
+    "capacity_additions": [
+      0,
+      42,
+      0,
+      36,
+      0
+    ],
+    "utilization": [
+      0.72,
+      0.74,
+      0.76,
+      0.78
+    ],
+    "unit_price": [
+      2.35,
+      2.40405,
+      2.4581000000000004,
+      2.51215
+    ],
+    "extra_capex_pct": [
+      0.018,
+      0.018,
+      0.018,
+      0.018
+    ]
+  }
+}

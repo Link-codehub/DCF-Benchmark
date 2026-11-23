@@ -1,0 +1,21 @@
+{
+  "schema_version": "v3.0",
+  "task_id": "R01",
+  "family": "R",
+  "company": "衡岳流体装备",
+  "reused_from": "exp/dcf_factory/B/tasks/B01（v1 B 方案）",
+  "reuse_reason": "历史版本中真实模型得分低、暴露出实质建模错误；原样复用题面数据、参考答案和评分器",
+  "prior_scores": {
+    "kimi-k3.1-pro": "0.564（类别清零后 0.435）",
+    "claude-opus-5-5": "0.250（原始 87.5/100，公式门槛封顶；类别清零后 0.821）",
+    "qwen3.8-max": "连接中断，无交付，不计分"
+  },
+  "observed_failures": [
+    "首段年中折现时点错（Kimi 0.3137，应为 0.1274）",
+    "半年历史聚合到财年错位",
+    "缺语义标签导致隐藏扰动无法执行",
+    "Forecast 活公式失效（Claude）"
+  ],
+  "theme": "非自然财年、半年历史、残期＋3 个完整财年、实际天数折现、固定资产与无形资产滚动",
+  "grader": "原版本评分器（tests/grader.py），参考答案在 v3 本地复验 reward=1.0，空白工作簿被拒"
+}

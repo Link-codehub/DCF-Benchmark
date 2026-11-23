@@ -1,0 +1,62 @@
+[
+  {
+    "start": "2022-06-01",
+    "end": "2022-11-30",
+    "fiscal_year": "2023",
+    "revenue": 339.234,
+    "ebit": 34.873255,
+    "operating_cost_ex_sbc": 274.727847,
+    "sbc": 8.165847,
+    "nonrecurring_gain": 0.0
+  },
+  {
+    "start": "2022-12-01",
+    "end": "2023-05-31",
+    "fiscal_year": "2023",
+    "revenue": 348.3354,
+    "ebit": 37.514064,
+    "operating_cost_ex_sbc": 280.722504,
+    "sbc": 8.384931,
+    "nonrecurring_gain": 0.0
+  },
+  {
+    "start": "2023-06-01",
+    "end": "2023-11-30",
+    "fiscal_year": "2024",
+    "revenue": 357.4368,
+    "ebit": 40.24398,
+    "operating_cost_ex_sbc": 286.64525,
+    "sbc": 8.604014,
+    "nonrecurring_gain": 0.0
+  },
+  {
+    "start": "2023-12-01",
+    "end": "2024-05-31",
+    "fiscal_year": "2024",
+    "revenue": 366.5382,
+    "ebit": 43.063002,
+    "operating_cost_ex_sbc": 292.496087,
+    "sbc": 8.823098,
+    "nonrecurring_gain": 0.0
+  },
+  {
+    "start": "2024-06-01",
+    "end": "2024-11-30",
+    "fiscal_year": "2025",
+    "revenue": 375.6396,
+    "ebit": 45.971132,
+    "operating_cost_ex_sbc": 298.275014,
+    "sbc": 9.042182,
+    "nonrecurring_gain": 0.0
+  },
+  {
+    "start": "2024-12-01",
+    "end": "2025-05-31",
+    "fiscal_year": "2025",
+    "revenue": 384.741,
+    "ebit": 48.968369,
+    "operating_cost_ex_sbc": 303.982032,
+    "sbc": 9.261266,
+    "nonrecurring_gain": 4.498172
+  }
+]

@@ -1,0 +1,438 @@
+{
+  "schema_version": "v3.0",
+  "task_id": "BC02",
+  "seed": 393685,
+  "candidate_index": 17,
+  "family": "BC",
+  "step": 1,
+  "company": "澄川精密",
+  "dimension_selection": {
+    "scenario": "城市补给门店",
+    "difficulty": "L3: 依赖深度7，显式6期",
+    "time_axis": "非自然财年+quarterly历史+实际天数残期",
+    "business_driver": "stores",
+    "valuation_mechanism": "gordon",
+    "accounting_basis": "应计无杠杆现金税",
+    "output_mode": "debt_schedule_dcf",
+    "output_template": "mixed",
+    "data_provision": "complete_frozen"
+  },
+  "enabled_modules": [
+    "residual_period",
+    "working_capital",
+    "nwc_days",
+    "debt_schedule",
+    "capm",
+    "nol",
+    "rolling_assets",
+    "nol",
+    "three_statements"
+  ],
+  "selection_rationale": {
+    "scenario": "城市补给门店要求独立的单位与价格口径",
+    "time_axis": "10个季度披露期，需聚合财年/LTM并处理残期",
+    "business_driver": "新增、流失、利用率或服务频次改变收入构造而非仅改增长率",
+    "valuation_mechanism": "终值与折现时点依赖显式预测",
+    "output_mode": "要求相应经营、债务或三表中间证据，结果键保持统一",
+    "output_template": "固定坐标、语义发现或两者分流"
+  },
+  "source_and_choice": {
+    "source": "本生成器按独立 SHA256 子种子生成场景参数、历史数据和预测假设",
+    "choice": "索引保证场景/输出/时间覆盖，种子扰动规模与路径，模块约束过滤非法组合"
+  },
+  "time_axis": {
+    "history_frequency": "quarterly",
+    "midyear": false,
+    "day_count": "actual/365",
+    "terminal_at_last_fye": true
+  },
+  "accounting": {
+    "normalized_history": true,
+    "sbc_expense": true,
+    "lease_in_debt": false
+  },
+  "business": {
+    "driver": "stores",
+    "unit": "家",
+    "price_unit": "百万元/店/年",
+    "description": "城市补给门店"
+  },
+  "output": {
+    "template": "free_layout"
+  },
+  "valuation_date": "2026-09-03",
+  "last_fy_end": "2026-05-31",
+  "horizon": 6,
+  "history": [
+    {
+      "start": "2023-12-01",
+      "end": "2024-02-29",
+      "fiscal_year": "2024",
+      "revenue": 236.774098,
+      "ebit": 24.449955,
+      "operating_cost_ex_sbc": 193.669187,
+      "sbc": 5.756508,
+      "nonrecurring_gain": 0.0
+    },
+    {
+      "start": "2024-03-01",
+      "end": "2024-05-31",
+      "fiscal_year": "2024",
+      "revenue": 243.126574,
+      "ebit": 26.30145,
+      "operating_cost_ex_sbc": 197.895115,
+      "sbc": 5.91095,
+      "nonrecurring_gain": 0.0
+    },
+    {
+      "start": "2024-06-01",
+      "end": "2024-08-31",
+      "fiscal_year": "2025",
+      "revenue": 249.47905,
+      "ebit": 28.215418,
+      "operating_cost_ex_sbc": 202.070351,
+      "sbc": 6.065393,
+      "nonrecurring_gain": 0.0
+    },
+    {
+      "start": "2024-09-01",
+      "end": "2024-11-30",
+      "fiscal_year": "2025",
+      "revenue": 255.831525,
+      "ebit": 30.191861,
+      "operating_cost_ex_sbc": 206.194894,
+      "sbc": 6.219837,
+      "nonrecurring_gain": 0.0
+    },
+    {
+      "start": "2024-12-01",
+      "end": "2025-02-28",
+      "fiscal_year": "2025",
+      "revenue": 262.184001,
+      "ebit": 32.230777,
+      "operating_cost_ex_sbc": 210.268744,
+      "sbc": 6.374279,
+      "nonrecurring_gain": 0.0
+    },
+    {
+      "start": "2025-03-01",
+      "end": "2025-05-31",
+      "fiscal_year": "2025",
+      "revenue": 268.536477,
+      "ebit": 34.332166,
+      "operating_cost_ex_sbc": 214.291902,
+      "sbc": 6.528723,
+      "nonrecurring_gain": 0.0
+    },
+    {
+      "start": "2025-06-01",
+      "end": "2025-08-31",
+      "fiscal_year": "2026",
+      "revenue": 274.888953,
+      "ebit": 36.49603,
+      "operating_cost_ex_sbc": 218.264367,
+      "sbc": 6.683165,
+      "nonrecurring_gain": 0.0
+    },
+    {
+      "start": "2025-09-01",
+      "end": "2025-11-30",
+      "fiscal_year": "2026",
+      "revenue": 281.241429,
+      "ebit": 38.722367,
+      "operating_cost_ex_sbc": 222.186139,
+      "sbc": 6.837608,
+      "nonrecurring_gain": 0.0
+    },
+    {
+      "start": "2025-12-01",
+      "end": "2026-02-28",
+      "fiscal_year": "2026",
+      "revenue": 287.593904,
+      "ebit": 41.011178,
+      "operating_cost_ex_sbc": 226.057219,
+      "sbc": 6.992051,
+      "nonrecurring_gain": 0.0
+    },
+    {
+      "start": "2026-03-01",
+      "end": "2026-05-31",
+      "fiscal_year": "2026",
+      "revenue": 293.94638,
+      "ebit": 43.362463,
+      "operating_cost_ex_sbc": 229.877605,
+      "sbc": 7.146494,
+      "nonrecurring_gain": 3.471033
+    }
+  ],
+  "opening_nwc": 409.057188,
+  "opening_deferred": 0.0,
+  "opening_ppe": 344.41,
+  "opening_rou": 0.0,
+  "opening_debt": 222.2,
+  "opening_retained_earnings": 177.76,
+  "contributed_capital": 433.29,
+  "opening_cash": 111.1,
+  "opening_sbc_reserve": 0.0,
+  "assumptions": {
+    "driver0": 157,
+    "price0": 7.0764331,
+    "driver_add": [
+      12.56,
+      14.287,
+      16.014,
+      17.741,
+      19.468,
+      21.195
+    ],
+    "driver_growth": [
+      0.09,
+      0.081,
+      0.072,
+      0.063,
+      0.054,
+      0.045
+    ],
+    "attrition_rate": [
+      0.045,
+      0.05,
+      0.055,
+      0.06,
+      0.065,
+      0.07
+    ],
+    "price_growth": [
+      0.03,
+      0.028,
+      0.026,
+      0.024,
+      0.022,
+      0.02
+    ],
+    "ebit_margin": [
+      0.16,
+      0.167,
+      0.174,
+      0.181,
+      0.188,
+      0.195
+    ],
+    "da_pct": [
+      0.04,
+      0.042,
+      0.04,
+      0.042,
+      0.04,
+      0.042
+    ],
+    "capex_pct": [
+      0.061,
+      0.065,
+      0.069,
+      0.061,
+      0.065,
+      0.069
+    ],
+    "nwc_pct": [
+      0.18,
+      0.186,
+      0.192,
+      0.18,
+      0.186,
+      0.192
+    ],
+    "tax": 0.235,
+    "wacc": 0.105,
+    "g": 0.024,
+    "gordon_weight": 1.0,
+    "exit_multiple": 8.4,
+    "deferred_pct": [
+      0.08,
+      0.08,
+      0.08,
+      0.08,
+      0.08,
+      0.08
+    ],
+    "cogs_ratio": [
+      0.48,
+      0.48,
+      0.48,
+      0.48,
+      0.48,
+      0.48
+    ],
+    "dso": [
+      47,
+      48,
+      49,
+      50,
+      51,
+      52
+    ],
+    "dio": [
+      62,
+      61,
+      60,
+      59,
+      58,
+      57
+    ],
+    "dpo": [
+      43,
+      44,
+      45,
+      46,
+      47,
+      48
+    ],
+    "nol0": 122.21,
+    "ppe_rate": 0.13,
+    "rou_rate": 0.2,
+    "lease_additions": [
+      19.997999999999998,
+      19.997999999999998,
+      19.997999999999998,
+      19.997999999999998,
+      19.997999999999998,
+      19.997999999999998
+    ],
+    "interest_rate": 0.052,
+    "new_borrowing": [
+      27.775000000000002,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "debt_repayment": [
+      11.11,
+      22.22,
+      33.33,
+      44.44,
+      55.55,
+      66.66
+    ],
+    "beta_unlevered": 0.8,
+    "target_de": 0.33,
+    "risk_free": 0.034,
+    "erp": 0.049,
+    "specific_premium": 0.006,
+    "cost_of_debt": 0.053,
+    "scenario": 1,
+    "upside_demand_delta": 0.025,
+    "downside_demand_delta": -0.025,
+    "upside_margin_delta": 0.012,
+    "downside_margin_delta": -0.014,
+    "wacc_deltas": [
+      -0.01,
+      0,
+      0.01
+    ],
+    "g_deltas": [
+      -0.005,
+      0,
+      0.005
+    ],
+    "sbc_pct": [
+      0.025,
+      0.025,
+      0.025,
+      0.025,
+      0.025,
+      0.025
+    ],
+    "upside_reinvestment_delta": 0.12,
+    "downside_reinvestment_delta": -0.1,
+    "upside_wacc_delta": -0.005,
+    "downside_wacc_delta": 0.006,
+    "valuation_wacc_delta": 0.0075,
+    "valuation_g_delta": 0.004,
+    "intangible_additions": [
+      21.4,
+      25.4,
+      29.4,
+      33.4,
+      37.4,
+      41.4
+    ],
+    "intangible_rate": 0.16
+  },
+  "bridge": {
+    "cash": 111.1,
+    "debt": 222.2,
+    "investments": 16.665,
+    "lease_liability": 0.0,
+    "minority": 13.332,
+    "valuation_cash_adjustment": 13.332,
+    "shares": 161,
+    "rsus": 2.4,
+    "options": 6.0,
+    "strike": 7.0,
+    "share_price": 16.1
+  },
+  "multi_step_events": [],
+  "perturbations": [],
+  "constraints": {
+    "money_unit": "百万元",
+    "share_unit": "百万股",
+    "history": "原始披露期不得改写；SBC为经营成本；非经常收益不属于规范化EBIT",
+    "fcff": "EBIT-无杠杆现金税+折旧摊销-资本开支-NWC增加；NOL按可用额与正EBIT孰低抵扣",
+    "residual": "第一期按估值日至财年末实际天数占完整财年天数比例计入经营活动；余额NWC仍按完整年度驱动；首期NWC增量=期末余额-估值日余额（余额不按残期活动比例缩放），后续为相邻期末差额",
+    "deferred": "启用合同负债时，期末按完整年度核心收入比例；现金收款=本期收入+期末合同负债-估值日合同负债（后续减上期末）；FCFF营运资本扣除合同负债，资产负债表单列该负债。未启用模块的对应诊断输出为0",
+    "inputs": "候选保留公开Inputs语义键；标量在C列，向量C/D/E…对应P1/P2/P3…，预测可自由布局但必须链接这些输入",
+    "discount": "实际天数/365；年中法扣除现金流间隔的一半；终值在最后完整财年末",
+    "terminal": "Gordon与退出终值分别计算，按gordon_weight加权；退出基于最后完整期EBITDA",
+    "equity": "EV+现金+投资-借款-租赁负债-少数股权；库存股法期权增量加RSU",
+    "debt": "利息按期初债务加半数新增借款乘实际天数/365；债务和资产独立滚动",
+    "three_statements": "经营流动资产与合同负债分列。SBC已含于EBIT且为非现金费用，CFO加回并计入权益储备，FCFF不加回；净利润=EBIT-利息-利息后现金税，利息税盾与无杠杆现金税分开；现金仅由CFO、资本开支及融资滚动"
+  },
+  "opening_operating_current_assets": 374.407,
+  "opening_balance_facts": {
+    "basis": "独立历史资产负债事实：经营流动资产、合同负债、借款、租赁、现金、投资、留存收益、实收资本和少数股东权益分别列示；期初经营流动资产使已披露历史报表闭合，不参与任何预测期倒挤",
+    "contributed_capital": 433.29,
+    "opening_cash": 111.1,
+    "opening_operating_current_assets": 374.407,
+    "opening_sbc_reserve": 0.0
+  },
+  "opening_intangible": 110.6,
+  "nwc_opening_basis": "last_fiscal_year_end",
+  "b_items": [
+    "fiscal_timing",
+    "history_normalization",
+    "residual_period",
+    "actual_day_discount",
+    "nwc_fye_open",
+    "equity_bridge",
+    "cash_tax_nol"
+  ],
+  "b_item_definitions": {
+    "fiscal_timing": "非自然财年；估值日在财年中间",
+    "history_normalization": "完整财年聚合、LTM，SBC 与非经常项规范化",
+    "residual_period": "残余期＋完整年度预测（4–6 期）",
+    "actual_day_discount": "实际天数，年中/期末折现，终值在最后完整财年末",
+    "nwc_fye_open": "营运资本天数或比例法；首期 ΔNWC 用最近财年末余额",
+    "equity_bridge": "现金、投资、债务、租赁、少数股权、库存股期权、RSU 股权桥",
+    "cash_tax_nol": "现金税与 NOL"
+  },
+  "c_structure": "three_statements_dcf",
+  "c_structure_definition": "三表＋DCF",
+  "structure": {
+    "b": [
+      "fiscal_timing",
+      "history_normalization",
+      "residual_period",
+      "actual_day_discount",
+      "nwc_fye_open",
+      "equity_bridge",
+      "cash_tax_nol"
+    ],
+    "c": "three_statements_dcf"
+  },
+  "opening_nwc_last_fye": 409.057188,
+  "opening_nwc_valuation_date": 374.407,
+  "market": {
+    "market_price": 14.82
+  }
+}

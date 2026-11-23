@@ -1,0 +1,1077 @@
+[
+  {
+    "task": "A06",
+    "model": "kimi-k3.1-pro",
+    "job": "/Users/link/Desktop/Finance Bench/exp/dcf_factory_v3/eval/jobs/v3full-kimi-k3.1-pro-A06-a2",
+    "trial": "A06__XVkgGeM",
+    "task_checksum": "167ad648d405f42a0025142a65388008e990740d65d6f9234ad1668c6be9662b",
+    "configured_model": "kimi-k3.1-pro",
+    "agent_result": {
+      "n_input_tokens": 1657694,
+      "n_cache_tokens": 0,
+      "n_output_tokens": 32645,
+      "cost_usd": 3.641838,
+      "model_usage": {
+        "kimi-k3.1-pro": {
+          "n_input_tokens": 1657694,
+          "n_cache_tokens": 0,
+          "n_output_tokens": 32645,
+          "cost_usd": 3.641838
+        }
+      },
+      "rollout_details": null,
+      "metadata": null
+    },
+    "delivery": "/Users/link/Desktop/Finance Bench/exp/dcf_factory_v3/eval/deliveries/kimi-k3.1-pro/A06/v3full-kimi-k3.1-pro-A06-a2"
+  },
+  {
+    "task": "A08",
+    "model": "deepseek-v4-pro",
+    "job": "/Users/link/Desktop/Finance Bench/exp/dcf_factory_v3/eval/jobs/v3full-deepseek-v4-pro-A08-a1",
+    "trial": "A08__BLpGiga",
+    "task_checksum": "bed2a31bf974c71313f92cd0a09043cd8a61f19d9e40241e276e7a2de8b68da2",
+    "configured_model": "deepseek-v4-pro",
+    "agent_result": {
+      "n_input_tokens": 345786,
+      "n_cache_tokens": 0,
+      "n_output_tokens": 15940,
+      "cost_usd": null,
+      "model_usage": {
+        "deepseek-v4-pro": {
+          "n_input_tokens": 345786,
+          "n_cache_tokens": 0,
+          "n_output_tokens": 15940,
+          "cost_usd": null
+        }
+      },
+      "rollout_details": null,
+      "metadata": null
+    },
+    "delivery": "/Users/link/Desktop/Finance Bench/exp/dcf_factory_v3/eval/deliveries/deepseek-v4-pro/A08/v3full-deepseek-v4-pro-A08-a1"
+  },
+  {
+    "task": "A02",
+    "model": "kimi-k3.1-pro",
+    "job": "/Users/link/Desktop/Finance Bench/exp/dcf_factory_v3/eval/jobs/v3full-kimi-k3.1-pro-A02-a1",
+    "trial": "A02__EMiZRWa",
+    "task_checksum": "00ce2d7e117f3dfa6b2edc8442c9edeb495bbd574147fdd13175f0b8d0fbacc2",
+    "configured_model": "kimi-k3.1-pro",
+    "agent_result": {
+      "n_input_tokens": 800282,
+      "n_cache_tokens": 0,
+      "n_output_tokens": 42131,
+      "cost_usd": 2.021874,
+      "model_usage": {
+        "kimi-k3.1-pro": {
+          "n_input_tokens": 800282,
+          "n_cache_tokens": 0,
+          "n_output_tokens": 42131,
+          "cost_usd": 2.0218740000000004
+        }
+      },
+      "rollout_details": null,
+      "metadata": null
+    },
+    "delivery": "/Users/link/Desktop/Finance Bench/exp/dcf_factory_v3/eval/deliveries/kimi-k3.1-pro/A02/v3full-kimi-k3.1-pro-A02-a1"
+  },
+  {
+    "task": "A02",
+    "model": "kimi-k3.1-pro",
+    "job": "/Users/link/Desktop/Finance Bench/exp/dcf_factory_v3/eval/jobs/v3full-kimi-k3.1-pro-A02-a2",
+    "trial": "A02__cdv52AX",
+    "task_checksum": "00ce2d7e117f3dfa6b2edc8442c9edeb495bbd574147fdd13175f0b8d0fbacc2",
+    "configured_model": "kimi-k3.1-pro",
+    "agent_result": {
+      "n_input_tokens": 763044,
+      "n_cache_tokens": 0,
+      "n_output_tokens": 35504,
+      "cost_usd": 1.881128,
+      "model_usage": {
+        "kimi-k3.1-pro": {
+          "n_input_tokens": 763044,
+          "n_cache_tokens": 0,
+          "n_output_tokens": 35504,
+          "cost_usd": 1.881128
+        }
+      },
+      "rollout_details": null,
+      "metadata": null
+    },
+    "delivery": "/Users/link/Desktop/Finance Bench/exp/dcf_factory_v3/eval/deliveries/kimi-k3.1-pro/A02/v3full-kimi-k3.1-pro-A02-a2"
+  },
+  {
+    "task": "A04",
+    "model": "deepseek-v4-pro",
+    "job": "/Users/link/Desktop/Finance Bench/exp/dcf_factory_v3/eval/jobs/v3full-deepseek-v4-pro-A04-a1",
+    "trial": "A04__RFysa4S",
+    "task_checksum": "1602fadfaf022d6ccf71b52d283b18b2b04eb0e780baaf2770d1f534bab57698",
+    "configured_model": "deepseek-v4-pro",
+    "agent_result": {
+      "n_input_tokens": 975567,
+      "n_cache_tokens": 0,
+      "n_output_tokens": 81613,
+      "cost_usd": null,
+      "model_usage": {
+        "deepseek-v4-pro": {
+          "n_input_tokens": 975567,
+          "n_cache_tokens": 0,
+          "n_output_tokens": 81613,
+          "cost_usd": null
+        }
+      },
+      "rollout_details": null,
+      "metadata": null
+    },
+    "delivery": "/Users/link/Desktop/Finance Bench/exp/dcf_factory_v3/eval/deliveries/deepseek-v4-pro/A04/v3full-deepseek-v4-pro-A04-a1"
+  },
+  {
+    "task": "W03",
+    "model": "deepseek-v4-pro",
+    "job": "/Users/link/Desktop/Finance Bench/exp/dcf_factory_v3/eval/jobs/v3full-deepseek-v4-pro-W03-a1",
+    "trial": "W03__5zKSFDW",
+    "task_checksum": "0c53c924bbcecf6b4f94802d91958920e3136f5f256bec663acb372ebd583091",
+    "configured_model": "deepseek-v4-pro",
+    "agent_result": {
+      "n_input_tokens": 2126046,
+      "n_cache_tokens": 0,
+      "n_output_tokens": 53322,
+      "cost_usd": null,
+      "model_usage": {
+        "deepseek-v4-pro": {
+          "n_input_tokens": 2126046,
+          "n_cache_tokens": 0,
+          "n_output_tokens": 53322,
+          "cost_usd": null
+        }
+      },
+      "rollout_details": null,
+      "metadata": null
+    },
+    "delivery": "/Users/link/Desktop/Finance Bench/exp/dcf_factory_v3/eval/deliveries/deepseek-v4-pro/W03/v3full-deepseek-v4-pro-W03-a1"
+  },
+  {
+    "task": "BC01",
+    "model": "deepseek-v4-pro",
+    "job": "/Users/link/Desktop/Finance Bench/exp/dcf_factory_v3/eval/jobs/v3full-deepseek-v4-pro-BC01-a2",
+    "trial": "BC01__JpKMZ2Y",
+    "task_checksum": "44aa43aee7d063640b08289ab0575aa7fe69d82b2407ddcc4f43f3546b150714",
+    "configured_model": "deepseek-v4-pro",
+    "agent_result": {
+      "n_input_tokens": 2422767,
+      "n_cache_tokens": 0,
+      "n_output_tokens": 162142,
+      "cost_usd": null,
+      "model_usage": {
+        "deepseek-v4-pro": {
+          "n_input_tokens": 2422767,
+          "n_cache_tokens": 0,
+          "n_output_tokens": 162142,
+          "cost_usd": null
+        }
+      },
+      "rollout_details": null,
+      "metadata": null
+    },
+    "delivery": "/Users/link/Desktop/Finance Bench/exp/dcf_factory_v3/eval/deliveries/deepseek-v4-pro/BC01/v3full-deepseek-v4-pro-BC01-a2"
+  },
+  {
+    "task": "A03",
+    "model": "kimi-k3.1-pro",
+    "job": "/Users/link/Desktop/Finance Bench/exp/dcf_factory_v3/eval/jobs/v3full-kimi-k3.1-pro-A03-a1",
+    "trial": "A03__DHJ4pCz",
+    "task_checksum": "305fd519610f085185924476d63d128802d0ac7ab96964324b147759c1864ddf",
+    "configured_model": "kimi-k3.1-pro",
+    "agent_result": {
+      "n_input_tokens": 3037650,
+      "n_cache_tokens": 0,
+      "n_output_tokens": 54718,
+      "cost_usd": 6.6224799999999995,
+      "model_usage": {
+        "kimi-k3.1-pro": {
+          "n_input_tokens": 3037650,
+          "n_cache_tokens": 0,
+          "n_output_tokens": 54718,
+          "cost_usd": 6.622479999999999
+        }
+      },
+      "rollout_details": null,
+      "metadata": null
+    },
+    "delivery": "/Users/link/Desktop/Finance Bench/exp/dcf_factory_v3/eval/deliveries/kimi-k3.1-pro/A03/v3full-kimi-k3.1-pro-A03-a1"
+  },
+  {
+    "task": "A05",
+    "model": "deepseek-v4-pro",
+    "job": "/Users/link/Desktop/Finance Bench/exp/dcf_factory_v3/eval/jobs/v3full-deepseek-v4-pro-A05-a1",
+    "trial": "A05__teoCB8z",
+    "task_checksum": "edd732c02a457a0f5a3ba422ca46b992db5e00bb150321b43c6c66c203acc5d7",
+    "configured_model": "deepseek-v4-pro",
+    "agent_result": {
+      "n_input_tokens": 763972,
+      "n_cache_tokens": 0,
+      "n_output_tokens": 68319,
+      "cost_usd": null,
+      "model_usage": {
+        "deepseek-v4-pro": {
+          "n_input_tokens": 763972,
+          "n_cache_tokens": 0,
+          "n_output_tokens": 68319,
+          "cost_usd": null
+        }
+      },
+      "rollout_details": null,
+      "metadata": null
+    },
+    "delivery": "/Users/link/Desktop/Finance Bench/exp/dcf_factory_v3/eval/deliveries/deepseek-v4-pro/A05/v3full-deepseek-v4-pro-A05-a1"
+  },
+  {
+    "task": "W02",
+    "model": "deepseek-v4-pro",
+    "job": "/Users/link/Desktop/Finance Bench/exp/dcf_factory_v3/eval/jobs/v3full-deepseek-v4-pro-W02-a1",
+    "trial": "W02__bLwAAQN",
+    "task_checksum": "44ce209a29629b8e2938510a3d9c2c1b842fd0c81741515e9029cf4b73c52cc1",
+    "configured_model": "deepseek-v4-pro",
+    "agent_result": {
+      "n_input_tokens": 1121920,
+      "n_cache_tokens": 0,
+      "n_output_tokens": 40901,
+      "cost_usd": null,
+      "model_usage": {
+        "deepseek-v4-pro": {
+          "n_input_tokens": 1121920,
+          "n_cache_tokens": 0,
+          "n_output_tokens": 40901,
+          "cost_usd": null
+        }
+      },
+      "rollout_details": null,
+      "metadata": null
+    },
+    "delivery": "/Users/link/Desktop/Finance Bench/exp/dcf_factory_v3/eval/deliveries/deepseek-v4-pro/W02/v3full-deepseek-v4-pro-W02-a1"
+  },
+  {
+    "task": "E03",
+    "model": "kimi-k3.1-pro",
+    "job": "/Users/link/Desktop/Finance Bench/exp/dcf_factory_v3/eval/jobs/v3full-kimi-k3.1-pro-E03-a1",
+    "trial": "E03__WQmKUi2",
+    "task_checksum": "80e6370a485494f6b6c00939aac74b4a5e240136eaf6c7b73bdb24c1bebc2787",
+    "configured_model": "kimi-k3.1-pro",
+    "agent_result": {
+      "n_input_tokens": 3578348,
+      "n_cache_tokens": 0,
+      "n_output_tokens": 49406,
+      "cost_usd": 7.6507559999999994,
+      "model_usage": {
+        "kimi-k3.1-pro": {
+          "n_input_tokens": 3578348,
+          "n_cache_tokens": 0,
+          "n_output_tokens": 49406,
+          "cost_usd": 7.650756000000001
+        }
+      },
+      "rollout_details": null,
+      "metadata": null
+    },
+    "delivery": "/Users/link/Desktop/Finance Bench/exp/dcf_factory_v3/eval/deliveries/kimi-k3.1-pro/E03/v3full-kimi-k3.1-pro-E03-a1"
+  },
+  {
+    "task": "A01",
+    "model": "deepseek-v4-pro",
+    "job": "/Users/link/Desktop/Finance Bench/exp/dcf_factory_v3/eval/jobs/v3full-deepseek-v4-pro-A01-a1",
+    "trial": "A01__H7Pr6Nw",
+    "task_checksum": "c52c4fdad0cc1439c3cf2b97d506967720dd4d19ec453d3d75c37beaeb05030c",
+    "configured_model": "deepseek-v4-pro",
+    "agent_result": {
+      "n_input_tokens": 515518,
+      "n_cache_tokens": 0,
+      "n_output_tokens": 46324,
+      "cost_usd": null,
+      "model_usage": {
+        "deepseek-v4-pro": {
+          "n_input_tokens": 515518,
+          "n_cache_tokens": 0,
+          "n_output_tokens": 46324,
+          "cost_usd": null
+        }
+      },
+      "rollout_details": null,
+      "metadata": null
+    },
+    "delivery": "/Users/link/Desktop/Finance Bench/exp/dcf_factory_v3/eval/deliveries/deepseek-v4-pro/A01/v3full-deepseek-v4-pro-A01-a1"
+  },
+  {
+    "task": "A09",
+    "model": "deepseek-v4-pro",
+    "job": "/Users/link/Desktop/Finance Bench/exp/dcf_factory_v3/eval/jobs/v3full-deepseek-v4-pro-A09-a1",
+    "trial": "A09__fYaYKs9",
+    "task_checksum": "1a949dcd53f264569f05890fe97ed7fe7813aca0d1323ad616a379f0a3ef53ac",
+    "configured_model": "deepseek-v4-pro",
+    "agent_result": {
+      "n_input_tokens": 846096,
+      "n_cache_tokens": 0,
+      "n_output_tokens": 54276,
+      "cost_usd": null,
+      "model_usage": {
+        "deepseek-v4-pro": {
+          "n_input_tokens": 846096,
+          "n_cache_tokens": 0,
+          "n_output_tokens": 54276,
+          "cost_usd": null
+        }
+      },
+      "rollout_details": null,
+      "metadata": null
+    },
+    "delivery": "/Users/link/Desktop/Finance Bench/exp/dcf_factory_v3/eval/deliveries/deepseek-v4-pro/A09/v3full-deepseek-v4-pro-A09-a1"
+  },
+  {
+    "task": "E02",
+    "model": "deepseek-v4-pro",
+    "job": "/Users/link/Desktop/Finance Bench/exp/dcf_factory_v3/eval/jobs/v3full-deepseek-v4-pro-E02-a1",
+    "trial": "E02__LqGKvoV",
+    "task_checksum": "944dadd3abab0a5beac2121101d779cd1dc871ca38e6beea2635f8d2b6ce7ed0",
+    "configured_model": "deepseek-v4-pro",
+    "agent_result": {
+      "n_input_tokens": 1579952,
+      "n_cache_tokens": 0,
+      "n_output_tokens": 82494,
+      "cost_usd": null,
+      "model_usage": {
+        "deepseek-v4-pro": {
+          "n_input_tokens": 1579952,
+          "n_cache_tokens": 0,
+          "n_output_tokens": 82494,
+          "cost_usd": null
+        }
+      },
+      "rollout_details": null,
+      "metadata": null
+    },
+    "delivery": "/Users/link/Desktop/Finance Bench/exp/dcf_factory_v3/eval/deliveries/deepseek-v4-pro/E02/v3full-deepseek-v4-pro-E02-a1"
+  },
+  {
+    "task": "W03",
+    "model": "kimi-k3.1-pro",
+    "job": "/Users/link/Desktop/Finance Bench/exp/dcf_factory_v3/eval/jobs/v3full-kimi-k3.1-pro-W03-a1",
+    "trial": "W03__V5ebHR2",
+    "task_checksum": "0c53c924bbcecf6b4f94802d91958920e3136f5f256bec663acb372ebd583091",
+    "configured_model": "kimi-k3.1-pro",
+    "agent_result": {
+      "n_input_tokens": 4877518,
+      "n_cache_tokens": 0,
+      "n_output_tokens": 64436,
+      "cost_usd": 10.399396,
+      "model_usage": {
+        "kimi-k3.1-pro": {
+          "n_input_tokens": 4877518,
+          "n_cache_tokens": 0,
+          "n_output_tokens": 64436,
+          "cost_usd": 10.399395999999998
+        }
+      },
+      "rollout_details": null,
+      "metadata": null
+    },
+    "delivery": "/Users/link/Desktop/Finance Bench/exp/dcf_factory_v3/eval/deliveries/kimi-k3.1-pro/W03/v3full-kimi-k3.1-pro-W03-a1"
+  },
+  {
+    "task": "BC04",
+    "model": "kimi-k3.1-pro",
+    "job": "/Users/link/Desktop/Finance Bench/exp/dcf_factory_v3/eval/jobs/v3full-kimi-k3.1-pro-BC04-a1",
+    "trial": "BC04__iu6RCkB",
+    "task_checksum": "ab8b0926a89366c1b9c906bf6ea236d9a3cd1aaaed6301a3efe68e4d3cc103e1",
+    "configured_model": "kimi-k3.1-pro",
+    "agent_result": {
+      "n_input_tokens": 8752942,
+      "n_cache_tokens": 0,
+      "n_output_tokens": 78323,
+      "cost_usd": 18.289113999999998,
+      "model_usage": {
+        "kimi-k3.1-pro": {
+          "n_input_tokens": 8752942,
+          "n_cache_tokens": 0,
+          "n_output_tokens": 78323,
+          "cost_usd": 18.289113999999998
+        }
+      },
+      "rollout_details": null,
+      "metadata": null
+    },
+    "delivery": "/Users/link/Desktop/Finance Bench/exp/dcf_factory_v3/eval/deliveries/kimi-k3.1-pro/BC04/v3full-kimi-k3.1-pro-BC04-a1"
+  },
+  {
+    "task": "A04",
+    "model": "kimi-k3.1-pro",
+    "job": "/Users/link/Desktop/Finance Bench/exp/dcf_factory_v3/eval/jobs/v3full-kimi-k3.1-pro-A04-a1",
+    "trial": "A04__qn38gzS",
+    "task_checksum": "1602fadfaf022d6ccf71b52d283b18b2b04eb0e780baaf2770d1f534bab57698",
+    "configured_model": "kimi-k3.1-pro",
+    "agent_result": {
+      "n_input_tokens": 748361,
+      "n_cache_tokens": 0,
+      "n_output_tokens": 28826,
+      "cost_usd": 1.7849819999999998,
+      "model_usage": {
+        "kimi-k3.1-pro": {
+          "n_input_tokens": 748361,
+          "n_cache_tokens": 0,
+          "n_output_tokens": 28826,
+          "cost_usd": 1.7849819999999998
+        }
+      },
+      "rollout_details": null,
+      "metadata": null
+    },
+    "delivery": "/Users/link/Desktop/Finance Bench/exp/dcf_factory_v3/eval/deliveries/kimi-k3.1-pro/A04/v3full-kimi-k3.1-pro-A04-a1"
+  },
+  {
+    "task": "A04",
+    "model": "kimi-k3.1-pro",
+    "job": "/Users/link/Desktop/Finance Bench/exp/dcf_factory_v3/eval/jobs/v3full-kimi-k3.1-pro-A04-a2",
+    "trial": "A04__qCoCEgy",
+    "task_checksum": "1602fadfaf022d6ccf71b52d283b18b2b04eb0e780baaf2770d1f534bab57698",
+    "configured_model": "kimi-k3.1-pro",
+    "agent_result": {
+      "n_input_tokens": 1190041,
+      "n_cache_tokens": 0,
+      "n_output_tokens": 36771,
+      "cost_usd": 2.747792,
+      "model_usage": {
+        "kimi-k3.1-pro": {
+          "n_input_tokens": 1190041,
+          "n_cache_tokens": 0,
+          "n_output_tokens": 36771,
+          "cost_usd": 2.7477919999999996
+        }
+      },
+      "rollout_details": null,
+      "metadata": null
+    },
+    "delivery": "/Users/link/Desktop/Finance Bench/exp/dcf_factory_v3/eval/deliveries/kimi-k3.1-pro/A04/v3full-kimi-k3.1-pro-A04-a2"
+  },
+  {
+    "task": "A07",
+    "model": "qwen3.8-max",
+    "job": "/Users/link/Desktop/Finance Bench/exp/dcf_factory_v3/eval/jobs/v3full-qwen3.8-max-A07-a1",
+    "trial": "A07__WUFmm3c",
+    "task_checksum": "398aa1877c25235117b41eb4cc2d2bad06e44f6d9baddec092e28802f43793c9",
+    "configured_model": "qwen3.8-max",
+    "agent_result": {
+      "n_input_tokens": 4916852,
+      "n_cache_tokens": 0,
+      "n_output_tokens": 117799,
+      "cost_usd": null,
+      "model_usage": {
+        "qwen3.8-max": {
+          "n_input_tokens": 4916852,
+          "n_cache_tokens": 0,
+          "n_output_tokens": 117799,
+          "cost_usd": null
+        }
+      },
+      "rollout_details": null,
+      "metadata": null
+    },
+    "delivery": "/Users/link/Desktop/Finance Bench/exp/dcf_factory_v3/eval/deliveries/qwen3.8-max/A07/v3full-qwen3.8-max-A07-a1"
+  },
+  {
+    "task": "A02",
+    "model": "deepseek-v4-pro",
+    "job": "/Users/link/Desktop/Finance Bench/exp/dcf_factory_v3/eval/jobs/v3full-deepseek-v4-pro-A02-a1",
+    "trial": "A02__TrrqH37",
+    "task_checksum": "00ce2d7e117f3dfa6b2edc8442c9edeb495bbd574147fdd13175f0b8d0fbacc2",
+    "configured_model": "deepseek-v4-pro",
+    "agent_result": {
+      "n_input_tokens": 773237,
+      "n_cache_tokens": 0,
+      "n_output_tokens": 69241,
+      "cost_usd": null,
+      "model_usage": {
+        "deepseek-v4-pro": {
+          "n_input_tokens": 773237,
+          "n_cache_tokens": 0,
+          "n_output_tokens": 69241,
+          "cost_usd": null
+        }
+      },
+      "rollout_details": null,
+      "metadata": null
+    },
+    "delivery": "/Users/link/Desktop/Finance Bench/exp/dcf_factory_v3/eval/deliveries/deepseek-v4-pro/A02/v3full-deepseek-v4-pro-A02-a1"
+  },
+  {
+    "task": "W01",
+    "model": "qwen3.8-max",
+    "job": "/Users/link/Desktop/Finance Bench/exp/dcf_factory_v3/eval/jobs/v3full-qwen3.8-max-W01-a1",
+    "trial": "W01__SPxDKsC",
+    "task_checksum": "aef63be888b4e305d5437b7dff93e61d1b75e80e76b8437928f73505fc04dd6b",
+    "configured_model": "qwen3.8-max",
+    "agent_result": {
+      "n_input_tokens": 2750638,
+      "n_cache_tokens": 0,
+      "n_output_tokens": 103824,
+      "cost_usd": null,
+      "model_usage": {
+        "qwen3.8-max": {
+          "n_input_tokens": 2750638,
+          "n_cache_tokens": 0,
+          "n_output_tokens": 103824,
+          "cost_usd": null
+        }
+      },
+      "rollout_details": null,
+      "metadata": null
+    },
+    "delivery": "/Users/link/Desktop/Finance Bench/exp/dcf_factory_v3/eval/deliveries/qwen3.8-max/W01/v3full-qwen3.8-max-W01-a1"
+  },
+  {
+    "task": "W02",
+    "model": "kimi-k3.1-pro",
+    "job": "/Users/link/Desktop/Finance Bench/exp/dcf_factory_v3/eval/jobs/v3full-kimi-k3.1-pro-W02-a1",
+    "trial": "W02__jUdbDLQ",
+    "task_checksum": "44ce209a29629b8e2938510a3d9c2c1b842fd0c81741515e9029cf4b73c52cc1",
+    "configured_model": "kimi-k3.1-pro",
+    "agent_result": {
+      "n_input_tokens": 2600149,
+      "n_cache_tokens": 0,
+      "n_output_tokens": 38015,
+      "cost_usd": 5.580448,
+      "model_usage": {
+        "kimi-k3.1-pro": {
+          "n_input_tokens": 2600149,
+          "n_cache_tokens": 0,
+          "n_output_tokens": 38015,
+          "cost_usd": 5.580448000000001
+        }
+      },
+      "rollout_details": null,
+      "metadata": null
+    },
+    "delivery": "/Users/link/Desktop/Finance Bench/exp/dcf_factory_v3/eval/deliveries/kimi-k3.1-pro/W02/v3full-kimi-k3.1-pro-W02-a1"
+  },
+  {
+    "task": "A05",
+    "model": "kimi-k3.1-pro",
+    "job": "/Users/link/Desktop/Finance Bench/exp/dcf_factory_v3/eval/jobs/v3full-kimi-k3.1-pro-A05-a1",
+    "trial": "A05__YGDT4S7",
+    "task_checksum": "edd732c02a457a0f5a3ba422ca46b992db5e00bb150321b43c6c66c203acc5d7",
+    "configured_model": "kimi-k3.1-pro",
+    "agent_result": {
+      "n_input_tokens": 5813281,
+      "n_cache_tokens": 0,
+      "n_output_tokens": 52361,
+      "cost_usd": 12.150172,
+      "model_usage": {
+        "kimi-k3.1-pro": {
+          "n_input_tokens": 5813281,
+          "n_cache_tokens": 0,
+          "n_output_tokens": 52361,
+          "cost_usd": 12.150172000000001
+        }
+      },
+      "rollout_details": null,
+      "metadata": null
+    },
+    "delivery": "/Users/link/Desktop/Finance Bench/exp/dcf_factory_v3/eval/deliveries/kimi-k3.1-pro/A05/v3full-kimi-k3.1-pro-A05-a1"
+  },
+  {
+    "task": "A05",
+    "model": "kimi-k3.1-pro",
+    "job": "/Users/link/Desktop/Finance Bench/exp/dcf_factory_v3/eval/jobs/v3full-kimi-k3.1-pro-A05-a2",
+    "trial": "A05__h69eENx",
+    "task_checksum": "edd732c02a457a0f5a3ba422ca46b992db5e00bb150321b43c6c66c203acc5d7",
+    "configured_model": "kimi-k3.1-pro",
+    "agent_result": {
+      "n_input_tokens": 2646465,
+      "n_cache_tokens": 0,
+      "n_output_tokens": 37879,
+      "cost_usd": 5.67172,
+      "model_usage": {
+        "kimi-k3.1-pro": {
+          "n_input_tokens": 2646465,
+          "n_cache_tokens": 0,
+          "n_output_tokens": 37879,
+          "cost_usd": 5.67172
+        }
+      },
+      "rollout_details": null,
+      "metadata": null
+    },
+    "delivery": "/Users/link/Desktop/Finance Bench/exp/dcf_factory_v3/eval/deliveries/kimi-k3.1-pro/A05/v3full-kimi-k3.1-pro-A05-a2"
+  },
+  {
+    "task": "BC01",
+    "model": "kimi-k3.1-pro",
+    "job": "/Users/link/Desktop/Finance Bench/exp/dcf_factory_v3/eval/jobs/v3full-kimi-k3.1-pro-BC01-a1",
+    "trial": "BC01__xxiYLEt",
+    "task_checksum": "4b09ca2e83b03afcff34f6f4164cb99d7dcdbd53bf8c2a1641a15d8c1f72895e",
+    "configured_model": "kimi-k3.1-pro",
+    "agent_result": {
+      "n_input_tokens": 7982485,
+      "n_cache_tokens": 0,
+      "n_output_tokens": 79224,
+      "cost_usd": 16.75721,
+      "model_usage": {
+        "kimi-k3.1-pro": {
+          "n_input_tokens": 7982485,
+          "n_cache_tokens": 0,
+          "n_output_tokens": 79224,
+          "cost_usd": 16.757210000000004
+        }
+      },
+      "rollout_details": null,
+      "metadata": null
+    },
+    "delivery": "/Users/link/Desktop/Finance Bench/exp/dcf_factory_v3/eval/deliveries/kimi-k3.1-pro/BC01/v3full-kimi-k3.1-pro-BC01-a1"
+  },
+  {
+    "task": "A01",
+    "model": "kimi-k3.1-pro",
+    "job": "/Users/link/Desktop/Finance Bench/exp/dcf_factory_v3/eval/jobs/v3full-kimi-k3.1-pro-A01-a1",
+    "trial": "A01__pz5NJdB",
+    "task_checksum": "c52c4fdad0cc1439c3cf2b97d506967720dd4d19ec453d3d75c37beaeb05030c",
+    "configured_model": "kimi-k3.1-pro",
+    "agent_result": {
+      "n_input_tokens": 1161518,
+      "n_cache_tokens": 0,
+      "n_output_tokens": 32648,
+      "cost_usd": 2.6495159999999998,
+      "model_usage": {
+        "kimi-k3.1-pro": {
+          "n_input_tokens": 1161518,
+          "n_cache_tokens": 0,
+          "n_output_tokens": 32648,
+          "cost_usd": 2.6495159999999998
+        }
+      },
+      "rollout_details": null,
+      "metadata": null
+    },
+    "delivery": "/Users/link/Desktop/Finance Bench/exp/dcf_factory_v3/eval/deliveries/kimi-k3.1-pro/A01/v3full-kimi-k3.1-pro-A01-a1"
+  },
+  {
+    "task": "A01",
+    "model": "kimi-k3.1-pro",
+    "job": "/Users/link/Desktop/Finance Bench/exp/dcf_factory_v3/eval/jobs/v3full-kimi-k3.1-pro-A01-a2",
+    "trial": "A01__EDCiew3",
+    "task_checksum": "c52c4fdad0cc1439c3cf2b97d506967720dd4d19ec453d3d75c37beaeb05030c",
+    "configured_model": "kimi-k3.1-pro",
+    "agent_result": {
+      "n_input_tokens": 1029730,
+      "n_cache_tokens": 0,
+      "n_output_tokens": 28445,
+      "cost_usd": 2.3439099999999997,
+      "model_usage": {
+        "kimi-k3.1-pro": {
+          "n_input_tokens": 1029730,
+          "n_cache_tokens": 0,
+          "n_output_tokens": 28445,
+          "cost_usd": 2.34391
+        }
+      },
+      "rollout_details": null,
+      "metadata": null
+    },
+    "delivery": "/Users/link/Desktop/Finance Bench/exp/dcf_factory_v3/eval/deliveries/kimi-k3.1-pro/A01/v3full-kimi-k3.1-pro-A01-a2"
+  },
+  {
+    "task": "A02",
+    "model": "qwen3.8-max",
+    "job": "/Users/link/Desktop/Finance Bench/exp/dcf_factory_v3/eval/jobs/v3r-qwen3.8-max-A02-a1",
+    "trial": "A02__yHjKGFx",
+    "task_checksum": "1cb91290033c4b8a9053eb4984214fea1a96a97599b2f7352a8e227feb381f18",
+    "configured_model": "qwen3.8-max",
+    "agent_result": {
+      "n_input_tokens": 1108145,
+      "n_cache_tokens": 0,
+      "n_output_tokens": 47693,
+      "cost_usd": null,
+      "model_usage": {
+        "qwen3.8-max": {
+          "n_input_tokens": 1108145,
+          "n_cache_tokens": 0,
+          "n_output_tokens": 47693,
+          "cost_usd": null
+        }
+      },
+      "rollout_details": null,
+      "metadata": null
+    },
+    "delivery": "/Users/link/Desktop/Finance Bench/exp/dcf_factory_v3/eval/deliveries/qwen3.8-max/A02/v3r-qwen3.8-max-A02-a1"
+  },
+  {
+    "task": "W01",
+    "model": "kimi-k3.1-pro",
+    "job": "/Users/link/Desktop/Finance Bench/exp/dcf_factory_v3/eval/jobs/v3full-kimi-k3.1-pro-W01-a1",
+    "trial": "W01__Hq2LLmZ",
+    "task_checksum": "aef63be888b4e305d5437b7dff93e61d1b75e80e76b8437928f73505fc04dd6b",
+    "configured_model": "kimi-k3.1-pro",
+    "agent_result": {
+      "n_input_tokens": 1804746,
+      "n_cache_tokens": 0,
+      "n_output_tokens": 62083,
+      "cost_usd": 4.230322,
+      "model_usage": {
+        "kimi-k3.1-pro": {
+          "n_input_tokens": 1804746,
+          "n_cache_tokens": 0,
+          "n_output_tokens": 62083,
+          "cost_usd": 4.230322
+        }
+      },
+      "rollout_details": null,
+      "metadata": null
+    },
+    "delivery": "/Users/link/Desktop/Finance Bench/exp/dcf_factory_v3/eval/deliveries/kimi-k3.1-pro/W01/v3full-kimi-k3.1-pro-W01-a1"
+  },
+  {
+    "task": "E04",
+    "model": "deepseek-v4-pro",
+    "job": "/Users/link/Desktop/Finance Bench/exp/dcf_factory_v3/eval/jobs/v3full-deepseek-v4-pro-E04-a1",
+    "trial": "E04__muybvh4",
+    "task_checksum": "0b2f4e1748b60cb23d6a604803b980c13d780b72a9200a13d8f4d554ce3eb8d5",
+    "configured_model": "deepseek-v4-pro",
+    "agent_result": {
+      "n_input_tokens": 1383337,
+      "n_cache_tokens": 0,
+      "n_output_tokens": 70559,
+      "cost_usd": null,
+      "model_usage": {
+        "deepseek-v4-pro": {
+          "n_input_tokens": 1383337,
+          "n_cache_tokens": 0,
+          "n_output_tokens": 70559,
+          "cost_usd": null
+        }
+      },
+      "rollout_details": null,
+      "metadata": null
+    },
+    "delivery": "/Users/link/Desktop/Finance Bench/exp/dcf_factory_v3/eval/deliveries/deepseek-v4-pro/E04/v3full-deepseek-v4-pro-E04-a1"
+  },
+  {
+    "task": "E02",
+    "model": "kimi-k3.1-pro",
+    "job": "/Users/link/Desktop/Finance Bench/exp/dcf_factory_v3/eval/jobs/v3full-kimi-k3.1-pro-E02-a2",
+    "trial": "E02__Hzz7dW4",
+    "task_checksum": "944dadd3abab0a5beac2121101d779cd1dc871ca38e6beea2635f8d2b6ce7ed0",
+    "configured_model": "kimi-k3.1-pro",
+    "agent_result": {
+      "n_input_tokens": 2512547,
+      "n_cache_tokens": 0,
+      "n_output_tokens": 66284,
+      "cost_usd": 5.687934,
+      "model_usage": {
+        "kimi-k3.1-pro": {
+          "n_input_tokens": 2512547,
+          "n_cache_tokens": 0,
+          "n_output_tokens": 66284,
+          "cost_usd": 5.687934
+        }
+      },
+      "rollout_details": null,
+      "metadata": null
+    },
+    "delivery": "/Users/link/Desktop/Finance Bench/exp/dcf_factory_v3/eval/deliveries/kimi-k3.1-pro/E02/v3full-kimi-k3.1-pro-E02-a2"
+  },
+  {
+    "task": "W04",
+    "model": "kimi-k3.1-pro",
+    "job": "/Users/link/Desktop/Finance Bench/exp/dcf_factory_v3/eval/jobs/v3full-kimi-k3.1-pro-W04-a1",
+    "trial": "W04__BrnjyKg",
+    "task_checksum": "2a81fbce7506baa998ff7ff93b623ffc8688117a7eee3eb1b2fef5571b0c05c4",
+    "configured_model": "kimi-k3.1-pro",
+    "agent_result": {
+      "n_input_tokens": 2517038,
+      "n_cache_tokens": 0,
+      "n_output_tokens": 43767,
+      "cost_usd": 5.4717459999999996,
+      "model_usage": {
+        "kimi-k3.1-pro": {
+          "n_input_tokens": 2517038,
+          "n_cache_tokens": 0,
+          "n_output_tokens": 43767,
+          "cost_usd": 5.471745999999998
+        }
+      },
+      "rollout_details": null,
+      "metadata": null
+    },
+    "delivery": "/Users/link/Desktop/Finance Bench/exp/dcf_factory_v3/eval/deliveries/kimi-k3.1-pro/W04/v3full-kimi-k3.1-pro-W04-a1"
+  },
+  {
+    "task": "BC03",
+    "model": "kimi-k3.1-pro",
+    "job": "/Users/link/Desktop/Finance Bench/exp/dcf_factory_v3/eval/jobs/v3full-kimi-k3.1-pro-BC03-a1",
+    "trial": "BC03__paBKcR4",
+    "task_checksum": "cea08aa6f5e8dc61ab3935793813017b80ec86ed6d34929d209c58a3015c033f",
+    "configured_model": "kimi-k3.1-pro",
+    "agent_result": {
+      "n_input_tokens": 12360092,
+      "n_cache_tokens": 0,
+      "n_output_tokens": 75745,
+      "cost_usd": 25.477634,
+      "model_usage": {
+        "kimi-k3.1-pro": {
+          "n_input_tokens": 12360092,
+          "n_cache_tokens": 0,
+          "n_output_tokens": 75745,
+          "cost_usd": 25.477634000000002
+        }
+      },
+      "rollout_details": null,
+      "metadata": null
+    },
+    "delivery": "/Users/link/Desktop/Finance Bench/exp/dcf_factory_v3/eval/deliveries/kimi-k3.1-pro/BC03/v3full-kimi-k3.1-pro-BC03-a1"
+  },
+  {
+    "task": "E01",
+    "model": "deepseek-v4-pro",
+    "job": "/Users/link/Desktop/Finance Bench/exp/dcf_factory_v3/eval/jobs/v3full-deepseek-v4-pro-E01-a1",
+    "trial": "E01__TJh5gHe",
+    "task_checksum": "d7aa1f09c7c1dbe44a7746563a03eea90872cd8b9adfdfcaf31315e65c79631d",
+    "configured_model": "deepseek-v4-pro",
+    "agent_result": {
+      "n_input_tokens": 1010021,
+      "n_cache_tokens": 0,
+      "n_output_tokens": 42395,
+      "cost_usd": null,
+      "model_usage": {
+        "deepseek-v4-pro": {
+          "n_input_tokens": 1010021,
+          "n_cache_tokens": 0,
+          "n_output_tokens": 42395,
+          "cost_usd": null
+        }
+      },
+      "rollout_details": null,
+      "metadata": null
+    },
+    "delivery": "/Users/link/Desktop/Finance Bench/exp/dcf_factory_v3/eval/deliveries/deepseek-v4-pro/E01/v3full-deepseek-v4-pro-E01-a1"
+  },
+  {
+    "task": "W03",
+    "model": "qwen3.8-max",
+    "job": "/Users/link/Desktop/Finance Bench/exp/dcf_factory_v3/eval/jobs/v3full-qwen3.8-max-W03-a1",
+    "trial": "W03__B8EvpWb",
+    "task_checksum": "0c53c924bbcecf6b4f94802d91958920e3136f5f256bec663acb372ebd583091",
+    "configured_model": "qwen3.8-max",
+    "agent_result": {
+      "n_input_tokens": 6408557,
+      "n_cache_tokens": 0,
+      "n_output_tokens": 91275,
+      "cost_usd": null,
+      "model_usage": {
+        "qwen3.8-max": {
+          "n_input_tokens": 6408557,
+          "n_cache_tokens": 0,
+          "n_output_tokens": 91275,
+          "cost_usd": null
+        }
+      },
+      "rollout_details": null,
+      "metadata": null
+    },
+    "delivery": "/Users/link/Desktop/Finance Bench/exp/dcf_factory_v3/eval/deliveries/qwen3.8-max/W03/v3full-qwen3.8-max-W03-a1"
+  },
+  {
+    "task": "A07",
+    "model": "kimi-k3.1-pro",
+    "job": "/Users/link/Desktop/Finance Bench/exp/dcf_factory_v3/eval/jobs/v3full-kimi-k3.1-pro-A07-a1",
+    "trial": "A07__aDdav5j",
+    "task_checksum": "398aa1877c25235117b41eb4cc2d2bad06e44f6d9baddec092e28802f43793c9",
+    "configured_model": "kimi-k3.1-pro",
+    "agent_result": {
+      "n_input_tokens": 1956408,
+      "n_cache_tokens": 0,
+      "n_output_tokens": 45436,
+      "cost_usd": 4.367176,
+      "model_usage": {
+        "kimi-k3.1-pro": {
+          "n_input_tokens": 1956408,
+          "n_cache_tokens": 0,
+          "n_output_tokens": 45436,
+          "cost_usd": 4.367176
+        }
+      },
+      "rollout_details": null,
+      "metadata": null
+    },
+    "delivery": "/Users/link/Desktop/Finance Bench/exp/dcf_factory_v3/eval/deliveries/kimi-k3.1-pro/A07/v3full-kimi-k3.1-pro-A07-a1"
+  },
+  {
+    "task": "E04",
+    "model": "kimi-k3.1-pro",
+    "job": "/Users/link/Desktop/Finance Bench/exp/dcf_factory_v3/eval/jobs/v3full-kimi-k3.1-pro-E04-a1",
+    "trial": "E04__7UXXhGU",
+    "task_checksum": "0b2f4e1748b60cb23d6a604803b980c13d780b72a9200a13d8f4d554ce3eb8d5",
+    "configured_model": "kimi-k3.1-pro",
+    "agent_result": {
+      "n_input_tokens": 2233594,
+      "n_cache_tokens": 0,
+      "n_output_tokens": 55528,
+      "cost_usd": 5.022468,
+      "model_usage": {
+        "kimi-k3.1-pro": {
+          "n_input_tokens": 2233594,
+          "n_cache_tokens": 0,
+          "n_output_tokens": 55528,
+          "cost_usd": 5.022468
+        }
+      },
+      "rollout_details": null,
+      "metadata": null
+    },
+    "delivery": "/Users/link/Desktop/Finance Bench/exp/dcf_factory_v3/eval/deliveries/kimi-k3.1-pro/E04/v3full-kimi-k3.1-pro-E04-a1"
+  },
+  {
+    "task": "R02",
+    "model": "kimi-k3.1-pro",
+    "job": "/Users/link/Desktop/Finance Bench/exp/dcf_factory_v3/eval/jobs/v3full-kimi-k3.1-pro-R02-a1",
+    "trial": "R02__DbQnYsL",
+    "task_checksum": "837703f4ddd103a034c147bc6e4d3c810143ab27b92fb9ae65ecb73397d310bc",
+    "configured_model": "kimi-k3.1-pro",
+    "agent_result": {
+      "n_input_tokens": 8215187,
+      "n_cache_tokens": 0,
+      "n_output_tokens": 75077,
+      "cost_usd": 17.181144,
+      "model_usage": {
+        "kimi-k3.1-pro": {
+          "n_input_tokens": 8215187,
+          "n_cache_tokens": 0,
+          "n_output_tokens": 75077,
+          "cost_usd": 17.181144
+        }
+      },
+      "rollout_details": null,
+      "metadata": null
+    },
+    "delivery": "/Users/link/Desktop/Finance Bench/exp/dcf_factory_v3/eval/deliveries/kimi-k3.1-pro/R02/v3full-kimi-k3.1-pro-R02-a1"
+  },
+  {
+    "task": "A06",
+    "model": "deepseek-v4-pro",
+    "job": "/Users/link/Desktop/Finance Bench/exp/dcf_factory_v3/eval/jobs/v3full-deepseek-v4-pro-A06-a1",
+    "trial": "A06__6mJigCm",
+    "task_checksum": "167ad648d405f42a0025142a65388008e990740d65d6f9234ad1668c6be9662b",
+    "configured_model": "deepseek-v4-pro",
+    "agent_result": {
+      "n_input_tokens": 550347,
+      "n_cache_tokens": 0,
+      "n_output_tokens": 45716,
+      "cost_usd": null,
+      "model_usage": {
+        "deepseek-v4-pro": {
+          "n_input_tokens": 550347,
+          "n_cache_tokens": 0,
+          "n_output_tokens": 45716,
+          "cost_usd": null
+        }
+      },
+      "rollout_details": null,
+      "metadata": null
+    },
+    "delivery": "/Users/link/Desktop/Finance Bench/exp/dcf_factory_v3/eval/deliveries/deepseek-v4-pro/A06/v3full-deepseek-v4-pro-A06-a1"
+  },
+  {
+    "task": "W01",
+    "model": "deepseek-v4-pro",
+    "job": "/Users/link/Desktop/Finance Bench/exp/dcf_factory_v3/eval/jobs/v3full-deepseek-v4-pro-W01-a1",
+    "trial": "W01__EL4QUng",
+    "task_checksum": "aef63be888b4e305d5437b7dff93e61d1b75e80e76b8437928f73505fc04dd6b",
+    "configured_model": "deepseek-v4-pro",
+    "agent_result": {
+      "n_input_tokens": 1792609,
+      "n_cache_tokens": 0,
+      "n_output_tokens": 56575,
+      "cost_usd": null,
+      "model_usage": {
+        "deepseek-v4-pro": {
+          "n_input_tokens": 1792609,
+          "n_cache_tokens": 0,
+          "n_output_tokens": 56575,
+          "cost_usd": null
+        }
+      },
+      "rollout_details": null,
+      "metadata": null
+    },
+    "delivery": "/Users/link/Desktop/Finance Bench/exp/dcf_factory_v3/eval/deliveries/deepseek-v4-pro/W01/v3full-deepseek-v4-pro-W01-a1"
+  },
+  {
+    "task": "A08",
+    "model": "kimi-k3.1-pro",
+    "job": "/Users/link/Desktop/Finance Bench/exp/dcf_factory_v3/eval/jobs/v3full-kimi-k3.1-pro-A08-a1",
+    "trial": "A08__r4Jq8zh",
+    "task_checksum": "bed2a31bf974c71313f92cd0a09043cd8a61f19d9e40241e276e7a2de8b68da2",
+    "configured_model": "kimi-k3.1-pro",
+    "agent_result": {
+      "n_input_tokens": 407443,
+      "n_cache_tokens": 0,
+      "n_output_tokens": 23478,
+      "cost_usd": 1.049666,
+      "model_usage": {
+        "kimi-k3.1-pro": {
+          "n_input_tokens": 407443,
+          "n_cache_tokens": 0,
+          "n_output_tokens": 23478,
+          "cost_usd": 1.049666
+        }
+      },
+      "rollout_details": null,
+      "metadata": null
+    },
+    "delivery": "/Users/link/Desktop/Finance Bench/exp/dcf_factory_v3/eval/deliveries/kimi-k3.1-pro/A08/v3full-kimi-k3.1-pro-A08-a1"
+  },
+  {
+    "task": "E01",
+    "model": "kimi-k3.1-pro",
+    "job": "/Users/link/Desktop/Finance Bench/exp/dcf_factory_v3/eval/jobs/v3full-kimi-k3.1-pro-E01-a1",
+    "trial": "E01__GkSmo5y",
+    "task_checksum": "d7aa1f09c7c1dbe44a7746563a03eea90872cd8b9adfdfcaf31315e65c79631d",
+    "configured_model": "kimi-k3.1-pro",
+    "agent_result": {
+      "n_input_tokens": 11545437,
+      "n_cache_tokens": 0,
+      "n_output_tokens": 58990,
+      "cost_usd": 23.680774,
+      "model_usage": {
+        "kimi-k3.1-pro": {
+          "n_input_tokens": 11545437,
+          "n_cache_tokens": 0,
+          "n_output_tokens": 58990,
+          "cost_usd": 23.680773999999992
+        }
+      },
+      "rollout_details": null,
+      "metadata": null
+    },
+    "delivery": "/Users/link/Desktop/Finance Bench/exp/dcf_factory_v3/eval/deliveries/kimi-k3.1-pro/E01/v3full-kimi-k3.1-pro-E01-a1"
+  },
+  {
+    "task": "A07",
+    "model": "deepseek-v4-pro",
+    "job": "/Users/link/Desktop/Finance Bench/exp/dcf_factory_v3/eval/jobs/v3full-deepseek-v4-pro-A07-a1",
+    "trial": "A07__FtqTVMZ",
+    "task_checksum": "398aa1877c25235117b41eb4cc2d2bad06e44f6d9baddec092e28802f43793c9",
+    "configured_model": "deepseek-v4-pro",
+    "agent_result": {
+      "n_input_tokens": 503343,
+      "n_cache_tokens": 0,
+      "n_output_tokens": 46608,
+      "cost_usd": null,
+      "model_usage": {
+        "deepseek-v4-pro": {
+          "n_input_tokens": 503343,
+          "n_cache_tokens": 0,
+          "n_output_tokens": 46608,
+          "cost_usd": null
+        }
+      },
+      "rollout_details": null,
+      "metadata": null
+    },
+    "delivery": "/Users/link/Desktop/Finance Bench/exp/dcf_factory_v3/eval/deliveries/deepseek-v4-pro/A07/v3full-deepseek-v4-pro-A07-a1"
+  }
+]

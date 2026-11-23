@@ -1,0 +1,25 @@
+schema_version = "1.4"
+artifacts = ["/app/output"]
+[metadata]
+category = "dcf-restricted-retrieval"
+difficulty = "very-hard"
+network = "allowlist-configured-runtime-verification-required"
+network_policy = "IPv4 GOST sidecar；配置文件存在不代表已验证生效，详见 open/validation.json"
+disable_web_search = true
+tags = ["W", "AAPL", "SEC", "Treasury", "allowlist"]
+[agent]
+timeout_sec = 5400.0
+network_mode = "allowlist"
+allowed_hosts = ["d18rn0p25nwr6d.cloudfront.net", "data.sec.gov", "home.treasury.gov", "investor.apple.com", "s201.q4cdn.com", "s22.q4cdn.com", "www.sec.gov"]
+[verifier]
+timeout_sec = 1800.0
+environment_mode = "separate"
+[verifier.environment]
+network_mode = "no-network"
+[environment]
+network_mode = "allowlist"
+allowed_hosts = ["d18rn0p25nwr6d.cloudfront.net", "data.sec.gov", "home.treasury.gov", "investor.apple.com", "s201.q4cdn.com", "s22.q4cdn.com", "www.sec.gov"]
+build_timeout_sec = 900.0
+cpus = 2
+memory_mb = 4096
+storage_mb = 4096

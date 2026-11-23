@@ -1,0 +1,101 @@
+{
+  "schema_version": "v3.0",
+  "task_id": "A07",
+  "family": "A",
+  "company": "砚川公用",
+  "industry": "utilities",
+  "industry_name": "公用事业与基础设施",
+  "base_structure": "N-期中滚动",
+  "industry_drivers": [
+    "受监管资产基数",
+    "允许回报率与折旧回收",
+    "长期资本开支"
+  ],
+  "valuation_date": "2026-04-22",
+  "last_fy_end": "2025-11-30",
+  "horizon": 5,
+  "time_axis": {
+    "midyear": false,
+    "history_frequency": "annual",
+    "day_count": "actual/365"
+  },
+  "accounting": {
+    "sbc_expense": true,
+    "industry_valuation": true
+  },
+  "residual_activity": 0.6082191780821918,
+  "enabled_modules": [
+    "industry_driver",
+    "residual_period"
+  ],
+  "history": [],
+  "bridge": {
+    "cash": 193,
+    "debt": 281,
+    "investments": 31,
+    "lease_liability": 19,
+    "minority": 12,
+    "valuation_cash_adjustment": 0,
+    "shares": 93,
+    "rsus": 1.2,
+    "options": 0,
+    "strike": 0,
+    "share_price": 15
+  },
+  "assumptions": {
+    "tax": 0.23,
+    "wacc": 0.10600000000000001,
+    "g": 0.025,
+    "driver0": 1520,
+    "ebit_margin": [
+      0.16,
+      0.164,
+      0.168,
+      0.17200000000000001,
+      0.176
+    ],
+    "da_pct": [
+      0.052,
+      0.052,
+      0.052,
+      0.052,
+      0.052
+    ],
+    "capex_pct": [
+      0.065,
+      0.065,
+      0.065,
+      0.065,
+      0.065
+    ],
+    "nwc_pct": [
+      0.13,
+      0.13,
+      0.13,
+      0.13,
+      0.13
+    ],
+    "opening_nwc": 87,
+    "rate_base_additions": [
+      90,
+      98,
+      106,
+      114,
+      122
+    ],
+    "allowed_return": [
+      0.068,
+      0.068,
+      0.068,
+      0.068,
+      0.068
+    ],
+    "regulatory_depreciation_rate": [
+      0.037,
+      0.037,
+      0.037,
+      0.037,
+      0.037
+    ]
+  }
+}

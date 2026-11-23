@@ -1,0 +1,101 @@
+{
+  "schema_version": "v3.0",
+  "task_id": "A01",
+  "family": "A",
+  "company": "弦庭软科",
+  "industry": "software_subscription",
+  "industry_name": "软件与订阅 SaaS",
+  "base_structure": "P-ARR中枢",
+  "industry_drivers": [
+    "ARR 净留存与新签",
+    "平均 ARR 收入确认",
+    "资本化研发"
+  ],
+  "valuation_date": "2025-09-27",
+  "last_fy_end": "2025-06-30",
+  "horizon": 5,
+  "time_axis": {
+    "midyear": false,
+    "history_frequency": "annual",
+    "day_count": "actual/365"
+  },
+  "accounting": {
+    "sbc_expense": true,
+    "industry_valuation": true
+  },
+  "residual_activity": 0.7561643835616438,
+  "enabled_modules": [
+    "industry_driver",
+    "residual_period"
+  ],
+  "history": [],
+  "bridge": {
+    "cash": 139,
+    "debt": 203,
+    "investments": 25,
+    "lease_liability": 13,
+    "minority": 6,
+    "valuation_cash_adjustment": 0,
+    "shares": 75,
+    "rsus": 1.2,
+    "options": 0,
+    "strike": 0,
+    "share_price": 15
+  },
+  "assumptions": {
+    "tax": 0.23,
+    "wacc": 0.1,
+    "g": 0.025,
+    "driver0": 730,
+    "ebit_margin": [
+      0.16,
+      0.164,
+      0.168,
+      0.17200000000000001,
+      0.176
+    ],
+    "da_pct": [
+      0.052,
+      0.052,
+      0.052,
+      0.052,
+      0.052
+    ],
+    "capex_pct": [
+      0.065,
+      0.065,
+      0.065,
+      0.065,
+      0.065
+    ],
+    "nwc_pct": [
+      0.13,
+      0.13,
+      0.13,
+      0.13,
+      0.13
+    ],
+    "opening_nwc": 63,
+    "net_revenue_retention": [
+      1.04,
+      1.045,
+      1.05,
+      1.055,
+      1.06
+    ],
+    "new_arr": [
+      98,
+      111,
+      124,
+      137,
+      150
+    ],
+    "capitalized_rd_pct": [
+      0.075,
+      0.075,
+      0.075,
+      0.075,
+      0.075
+    ]
+  }
+}

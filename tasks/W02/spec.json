@@ -1,0 +1,84 @@
+{
+  "ticker": "COST",
+  "cik": 909832,
+  "name": "Costco Wholesale Corporation",
+  "ir": "https://investor.costco.com/",
+  "fiscal_year": "FY2024",
+  "fiscal_year_start": "2023-09-04",
+  "fiscal_year_end": "2024-09-01",
+  "asof": "2024-10-31",
+  "treasury_date": "2024-10-31",
+  "task_id": "W02",
+  "family": "W",
+  "schema_version": "dcf-v3-task-v1",
+  "language": "zh-CN",
+  "required_fields": [
+    "revenue",
+    "operating_income",
+    "pretax_income",
+    "income_tax",
+    "net_income_consolidated",
+    "da",
+    "capex",
+    "diluted_shares",
+    "cash",
+    "short_term_investments",
+    "receivables",
+    "current_assets",
+    "current_liabilities",
+    "current_debt",
+    "noncurrent_debt",
+    "treasury_10y"
+  ],
+  "allowed_sources": [
+    {
+      "source_id": "SEC_COMPANYFACTS",
+      "domains": [
+        "data.sec.gov",
+        "www.sec.gov"
+      ],
+      "url": "https://data.sec.gov/api/xbrl/companyfacts/CIK0000909832.json"
+    },
+    {
+      "source_id": "COMPANY_IR_FILING",
+      "domains": [
+        "investor.costco.com",
+        "s22.q4cdn.com",
+        "s201.q4cdn.com",
+        "d18rn0p25nwr6d.cloudfront.net"
+      ],
+      "url": "https://investor.costco.com/"
+    },
+    {
+      "source_id": "UST_DAILY",
+      "domains": [
+        "home.treasury.gov"
+      ],
+      "url": "https://home.treasury.gov/resource-center/data-chart-center/interest-rates/daily-treasury-rates.csv/2024/all?type=daily_treasury_yield_curve&field_tdr_date_value=2024&page=&_format=csv"
+    }
+  ],
+  "required_artifacts": [
+    "model.xlsx",
+    "sources.json",
+    "cross_validation.json",
+    "retrieval_map.json",
+    "memo.md"
+  ],
+  "valuation_assumptions": {
+    "initial_growth": 0.07,
+    "steady_ebit_margin": 0.037,
+    "tax_rate": 0.25
+  },
+  "source_snapshot_sha256": {
+    "../data/raw/COST_facts.json": "b675ced201b27ede2b0d26ca6fd873befe96a1afa9679339a2d0b964187dcdff",
+    "../data/raw/DGS10.csv": "7e66e6c4d14dec358ccbaadd9b6d11d66e74c141e0df9caa8879d0f634668556"
+  },
+  "network": {
+    "mode": "allowlist",
+    "sidecar": "dcf-ipv4-gost-egress:v1",
+    "configured": true,
+    "verified": false,
+    "status": "not_verified_by_generation"
+  },
+  "nonmechanical_status": "W-NOFORBID 与 W-FAILURE 需另行语义/代理评审，本次机械评分不自动给分。"
+}

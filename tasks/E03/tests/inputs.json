@@ -1,0 +1,455 @@
+{
+  "schema_version": "dcf-v3-e-frozen-v1",
+  "task_id": "E03",
+  "title": "塔吉特：已报上半年与残余下半年开放预测",
+  "company": {
+    "ticker": "TGT",
+    "cik": 27419,
+    "name": "Target Corporation",
+    "sector": "零售与季节性营运资本"
+  },
+  "information_cutoff": "2025-09-16",
+  "valuation_date": "2025-09-16",
+  "units": "USD millions, shares millions, EPS USD; rates decimals",
+  "fiscal_years": [
+    "2021-01-30",
+    "2022-01-29",
+    "2023-01-28",
+    "2024-02-03",
+    "2025-02-01"
+  ],
+  "last_full_fiscal_year": "2025-02-01",
+  "historical": {
+    "revenue": {
+      "2021-01-30": 93561.0,
+      "2022-01-29": 106005.0,
+      "2023-01-28": 109120.0,
+      "2024-02-03": 107412.0,
+      "2025-02-01": 106566.0
+    },
+    "cogs": {
+      "2021-01-30": 66177.0,
+      "2022-01-29": 74963.0,
+      "2023-01-28": 82306.0,
+      "2024-02-03": 77828.0,
+      "2025-02-01": 76502.0
+    },
+    "gross_profit": {
+      "2021-01-30": null,
+      "2022-01-29": null,
+      "2023-01-28": null,
+      "2024-02-03": null,
+      "2025-02-01": null
+    },
+    "rnd": {
+      "2021-01-30": null,
+      "2022-01-29": null,
+      "2023-01-28": null,
+      "2024-02-03": null,
+      "2025-02-01": null
+    },
+    "sga": {
+      "2021-01-30": 18615.0,
+      "2022-01-29": 19752.0,
+      "2023-01-28": 20581.0,
+      "2024-02-03": 21462.0,
+      "2025-02-01": 21969.0
+    },
+    "operating_income": {
+      "2021-01-30": 6539.0,
+      "2022-01-29": 8946.0,
+      "2023-01-28": 3848.0,
+      "2024-02-03": 5707.0,
+      "2025-02-01": 5566.0
+    },
+    "interest_expense": {
+      "2021-01-30": 977.0,
+      "2022-01-29": 421.0,
+      "2023-01-28": 478.0,
+      "2024-02-03": 502.0,
+      "2025-02-01": 411.0
+    },
+    "pretax_income": {
+      "2021-01-30": 5546.0,
+      "2022-01-29": 8907.0,
+      "2023-01-28": 3418.0,
+      "2024-02-03": 5297.0,
+      "2025-02-01": 5261.0
+    },
+    "income_tax": {
+      "2021-01-30": 1178.0,
+      "2022-01-29": 1961.0,
+      "2023-01-28": 638.0,
+      "2024-02-03": 1159.0,
+      "2025-02-01": 1170.0
+    },
+    "net_income": {
+      "2021-01-30": 4368.0,
+      "2022-01-29": 6946.0,
+      "2023-01-28": 2780.0,
+      "2024-02-03": 4138.0,
+      "2025-02-01": 4091.0
+    },
+    "diluted_shares_wavg": {
+      "2021-01-30": 505.4,
+      "2022-01-29": 492.7,
+      "2023-01-28": 464.7,
+      "2024-02-03": 462.8,
+      "2025-02-01": 461.8
+    },
+    "eps_diluted": {
+      "2021-01-30": 8.64,
+      "2022-01-29": 14.1,
+      "2023-01-28": 5.98,
+      "2024-02-03": 8.94,
+      "2025-02-01": 8.86
+    },
+    "cash": {
+      "2021-01-30": 8511.0,
+      "2022-01-29": 5911.0,
+      "2023-01-28": 2229.0,
+      "2024-02-03": 3805.0,
+      "2025-02-01": 4762.0
+    },
+    "st_investments": {
+      "2021-01-30": 7644.0,
+      "2022-01-29": 4985.0,
+      "2023-01-28": 1343.0,
+      "2024-02-03": 2897.0,
+      "2025-02-01": 3893.0
+    },
+    "receivables": {
+      "2021-01-30": null,
+      "2022-01-29": null,
+      "2023-01-28": null,
+      "2024-02-03": null,
+      "2025-02-01": null
+    },
+    "inventory": {
+      "2021-01-30": 10653.0,
+      "2022-01-29": 13902.0,
+      "2023-01-28": 13499.0,
+      "2024-02-03": 11886.0,
+      "2025-02-01": 12740.0
+    },
+    "current_assets": {
+      "2021-01-30": 20756.0,
+      "2022-01-29": 21573.0,
+      "2023-01-28": 17846.0,
+      "2024-02-03": 17498.0,
+      "2025-02-01": 19454.0
+    },
+    "ppe_net": {
+      "2021-01-30": 26879.0,
+      "2022-01-29": 28181.0,
+      "2023-01-28": 31512.0,
+      "2024-02-03": 33096.0,
+      "2025-02-01": null
+    },
+    "goodwill": {
+      "2021-01-30": 631.0,
+      "2022-01-29": 631.0,
+      "2023-01-28": 631.0,
+      "2024-02-03": 631.0,
+      "2025-02-01": 631.0
+    },
+    "total_assets": {
+      "2021-01-30": 51248.0,
+      "2022-01-29": 53811.0,
+      "2023-01-28": 53335.0,
+      "2024-02-03": 55356.0,
+      "2025-02-01": 57769.0
+    },
+    "accounts_payable": {
+      "2021-01-30": 12859.0,
+      "2022-01-29": 15478.0,
+      "2023-01-28": 13487.0,
+      "2024-02-03": 12098.0,
+      "2025-02-01": 13053.0
+    },
+    "current_liabilities": {
+      "2021-01-30": 20125.0,
+      "2022-01-29": 21747.0,
+      "2023-01-28": 19500.0,
+      "2024-02-03": 19304.0,
+      "2025-02-01": 20799.0
+    },
+    "debt_current": {
+      "2021-01-30": null,
+      "2022-01-29": null,
+      "2023-01-28": null,
+      "2024-02-03": null,
+      "2025-02-01": null
+    },
+    "debt_noncurrent": {
+      "2021-01-30": 10643.0,
+      "2022-01-29": 11568.0,
+      "2023-01-28": 14141.0,
+      "2024-02-03": 14151.0,
+      "2025-02-01": 13904.0
+    },
+    "total_liabilities": {
+      "2021-01-30": null,
+      "2022-01-29": null,
+      "2023-01-28": null,
+      "2024-02-03": null,
+      "2025-02-01": null
+    },
+    "equity": {
+      "2021-01-30": 14440.0,
+      "2022-01-29": 12827.0,
+      "2023-01-28": 11232.0,
+      "2024-02-03": 13432.0,
+      "2025-02-01": 14666.0
+    },
+    "liabilities_and_equity": {
+      "2021-01-30": 51248.0,
+      "2022-01-29": 53811.0,
+      "2023-01-28": 53335.0,
+      "2024-02-03": 55356.0,
+      "2025-02-01": 57769.0
+    },
+    "da": {
+      "2021-01-30": 2485.0,
+      "2022-01-29": 2642.0,
+      "2023-01-28": 2700.0,
+      "2024-02-03": 2801.0,
+      "2025-02-01": 2981.0
+    },
+    "sbc": {
+      "2021-01-30": 200.0,
+      "2022-01-29": 228.0,
+      "2023-01-28": 220.0,
+      "2024-02-03": 251.0,
+      "2025-02-01": 304.0
+    },
+    "cfo": {
+      "2021-01-30": 10525.0,
+      "2022-01-29": 8625.0,
+      "2023-01-28": 4018.0,
+      "2024-02-03": 8621.0,
+      "2025-02-01": 7367.0
+    },
+    "capex": {
+      "2021-01-30": 2649.0,
+      "2022-01-29": 3544.0,
+      "2023-01-28": 5528.0,
+      "2024-02-03": 4806.0,
+      "2025-02-01": 2891.0
+    },
+    "cfi": {
+      "2021-01-30": -2591.0,
+      "2022-01-29": -3154.0,
+      "2023-01-28": -5504.0,
+      "2024-02-03": -4760.0,
+      "2025-02-01": -2860.0
+    },
+    "cff": {
+      "2021-01-30": -2000.0,
+      "2022-01-29": -8071.0,
+      "2023-01-28": -2196.0,
+      "2024-02-03": -2285.0,
+      "2025-02-01": -3550.0
+    },
+    "dividends_paid": {
+      "2021-01-30": 1343.0,
+      "2022-01-29": 1548.0,
+      "2023-01-28": 1836.0,
+      "2024-02-03": 2011.0,
+      "2025-02-01": 2046.0
+    },
+    "buybacks": {
+      "2021-01-30": 745.0,
+      "2022-01-29": 7188.0,
+      "2023-01-28": 2646.0,
+      "2024-02-03": 0.0,
+      "2025-02-01": 1007.0
+    },
+    "operating_income_raw_sec": {
+      "2021-01-30": 6539.0,
+      "2022-01-29": 8946.0,
+      "2023-01-28": 3848.0,
+      "2024-02-03": 5707.0,
+      "2025-02-01": 5566.0
+    },
+    "operating_income_basis": "reported_operating_income"
+  },
+  "reported_partial_period": {
+    "type": "h1",
+    "quarters": [
+      {
+        "period": "2025-02-02..2025-05-03",
+        "end": "2025-05-03",
+        "operating_income_raw_sec": 1472.0,
+        "revenue": 23846.0,
+        "cogs": 17128.0,
+        "gross_profit": null,
+        "rnd": null,
+        "sga": 4591.0,
+        "operating_income": 1472.0,
+        "interest_expense": 116.0,
+        "pretax_income": 1382.0,
+        "income_tax": 346.0,
+        "net_income": 1036.0,
+        "diluted_shares_wavg": null,
+        "eps_diluted": null,
+        "cash": 2887.0,
+        "st_investments": null,
+        "receivables": null,
+        "inventory": 13048.0,
+        "current_assets": 17759.0,
+        "ppe_net": null,
+        "goodwill": null,
+        "total_assets": 56185.0,
+        "accounts_payable": 11823.0,
+        "current_liabilities": 18991.0,
+        "debt_current": null,
+        "debt_noncurrent": null,
+        "total_liabilities": null,
+        "equity": 14947.0,
+        "liabilities_and_equity": 56185.0,
+        "da": 787.0,
+        "sbc": 69.0,
+        "cfo": 275.0,
+        "capex": 790.0,
+        "cfi": -787.0,
+        "cff": -1363.0,
+        "dividends_paid": 510.0,
+        "buybacks": 250.0
+      },
+      {
+        "period": "2025-05-04..2025-08-02",
+        "end": "2025-08-02",
+        "operating_income_raw_sec": 1317.0,
+        "revenue": 25211.0,
+        "cogs": 17903.0,
+        "gross_profit": null,
+        "rnd": null,
+        "sga": 5359.0,
+        "operating_income": 1317.0,
+        "interest_expense": 116.0,
+        "pretax_income": 1218.0,
+        "income_tax": 283.0,
+        "net_income": 935.0,
+        "diluted_shares_wavg": null,
+        "eps_diluted": null,
+        "cash": 4341.0,
+        "st_investments": null,
+        "receivables": null,
+        "inventory": 12881.0,
+        "current_assets": 19034.0,
+        "ppe_net": null,
+        "goodwill": null,
+        "total_assets": 57851.0,
+        "accounts_payable": 12019.0,
+        "current_liabilities": 19223.0,
+        "debt_current": null,
+        "debt_noncurrent": null,
+        "total_liabilities": null,
+        "equity": 15420.0,
+        "liabilities_and_equity": 57851.0,
+        "da": 632.0,
+        "sbc": null,
+        "cfo": null,
+        "capex": null,
+        "cfi": null,
+        "cff": null,
+        "dividends_paid": null,
+        "buybacks": null
+      }
+    ],
+    "remaining": "H2",
+    "timing": {
+      "residual_start": "2025-08-03",
+      "next_fiscal_year_end": "2026-01-31",
+      "remaining_days": 137,
+      "remaining_years": 0.37534246575342467,
+      "discount_years": [
+        0.37534246575342467,
+        1.3753424657534246,
+        2.3753424657534246,
+        3.3753424657534246,
+        4.375342465753425
+      ],
+      "remaining_fractions": [
+        1,
+        1,
+        1,
+        1,
+        1
+      ]
+    },
+    "prior_year_quarters": [
+      {
+        "period": "2024-02-04..2024-05-04",
+        "end": "2024-05-04",
+        "revenue": 24531.0,
+        "operating_income": 1296.0
+      },
+      {
+        "period": "2024-05-05..2024-08-03",
+        "end": "2024-08-03",
+        "revenue": 25452.0,
+        "operating_income": 1635.0
+      }
+    ]
+  },
+  "market_observation": {
+    "treasury_10y": 0.0404,
+    "treasury_date": "2025-09-16",
+    "source_id": "UST_DGS10"
+  },
+  "sources": [
+    {
+      "source_id": "SEC_XBRL",
+      "publisher": "US Securities and Exchange Commission",
+      "document": "companyfacts XBRL; historical facts extracted using the disclosed tag-priority map",
+      "url": "https://data.sec.gov/api/xbrl/companyfacts/CIK0000027419.json",
+      "accession": "0000027419-25-000118",
+      "filing_form": "10-Q",
+      "period_end": "2025-02-01",
+      "filed": "2025-08-29",
+      "retrieval_status": "local snapshot; hash verified, not retrieved by this generator",
+      "source_sha256": "eb15a2cd524e99ff27675db78840d039ec4a68b9cc2dcb10accbcb299933a487"
+    },
+    {
+      "source_id": "UST_DGS10",
+      "publisher": "US Treasury / Federal Reserve DGS10 mirror in supplied snapshot",
+      "document": "Daily 10-year Treasury constant maturity yield; last observation on or before cutoff",
+      "url": "https://home.treasury.gov/resource-center/data-chart-center/interest-rates/TextView?type=daily_treasury_yield_curve",
+      "filed": "daily observation",
+      "retrieval_status": "local DGS10 CSV; hash verified; original retrieval timestamp not recorded",
+      "source_sha256": "7e66e6c4d14dec358ccbaadd9b6d11d66e74c141e0df9caa8879d0f634668556"
+    },
+    {
+      "source_id": "HISTORICAL_PRICE",
+      "publisher": "Nasdaq supplied snapshot",
+      "document": "Unadjusted daily close used only for market diagnostics",
+      "url": "https://api.nasdaq.com/api/quote/TGT/historical?assetclass=stocks",
+      "filed": "daily observations",
+      "retrieval_status": "local snapshot; hash verified; not a permitted E05/E06 retrieval source",
+      "source_sha256": "7dadf0b1e66fedbe7d7fcb32b3826728ee77b3f5013acafc0002ab2bcbf2403b"
+    }
+  ],
+  "data_scope": {
+    "history": "历史来自本地 SEC XBRL 快照；金额和股数均为百万，EPS 为美元，比率为小数。",
+    "blanks": "null 表示没有单独可得的字段，不得当作零。",
+    "partial_period": "quarters 是离散实际季度而非年初至今累计，不能重复加总；prior_year_quarters 仅提供上年同期收入/经营利润作为残余基数。",
+    "forecast_convention": "H1 变体的 FY1 revenue/ebit/eps 是完整财年，da/capex/delta_nwc/reinvestment_component/fcff 均为未报残余期。年度变体全为完整财年。",
+    "discount": "折现年数为估值日至对应完整财年末的实际天数/365，其后逐年加一。折现因子=1/(1+WACC)^年数，不再乘残余比例。",
+    "price": "不提供当前股价、目标价或市场一致预期；未来实际值和股价仅是隐藏诊断。"
+  },
+  "restricted_retrieval": {
+    "enabled": false,
+    "network": "offline",
+    "prohibited": [
+      "网络检索",
+      "截止日后信息",
+      "当前股价",
+      "目标价",
+      "市场一致预期"
+    ],
+    "enforcement": "任务及容器均配置为离线；验证记录单独说明实际运行范围。"
+  },
+  "business_driver_prompt": "结合可比销售、客流与客单价、季节性库存及假日权重分析。已报上半年是实际值，不得机械年化为全年。"
+}

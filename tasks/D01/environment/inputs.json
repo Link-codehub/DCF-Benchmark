@@ -1,0 +1,391 @@
+{
+  "schema_version": "v3.0",
+  "task_id": "D01",
+  "family": "D",
+  "step": 1,
+  "company": "砾川数科",
+  "b_items": [
+    "fiscal_timing",
+    "history_normalization",
+    "residual_period",
+    "actual_day_discount",
+    "nwc_fye_open",
+    "equity_bridge"
+  ],
+  "c_structure": "multi_method",
+  "valuation_date": "2025-03-05",
+  "last_fy_end": "2024-08-31",
+  "horizon": 4,
+  "history": [
+    {
+      "start": "2022-03-01",
+      "end": "2022-05-31",
+      "fiscal_year": "2022",
+      "revenue": 247.496366,
+      "ebit": 25.28879,
+      "operating_cost_ex_sbc": 197.741294,
+      "sbc": 5.877544,
+      "nonrecurring_gain": 0.0
+    },
+    {
+      "start": "2022-06-01",
+      "end": "2022-08-31",
+      "fiscal_year": "2022",
+      "revenue": 254.506512,
+      "ebit": 27.573806,
+      "operating_cost_ex_sbc": 202.426078,
+      "sbc": 6.405235,
+      "nonrecurring_gain": 0.37
+    },
+    {
+      "start": "2022-09-01",
+      "end": "2022-11-30",
+      "fiscal_year": "2023",
+      "revenue": 261.51666,
+      "ebit": 29.92344,
+      "operating_cost_ex_sbc": 207.059102,
+      "sbc": 6.932925,
+      "nonrecurring_gain": 0.74
+    },
+    {
+      "start": "2022-12-01",
+      "end": "2023-02-28",
+      "fiscal_year": "2023",
+      "revenue": 268.526806,
+      "ebit": 32.33769,
+      "operating_cost_ex_sbc": 211.640368,
+      "sbc": 7.460615,
+      "nonrecurring_gain": 1.11
+    },
+    {
+      "start": "2023-03-01",
+      "end": "2023-05-31",
+      "fiscal_year": "2023",
+      "revenue": 275.536952,
+      "ebit": 34.816558,
+      "operating_cost_ex_sbc": 216.169876,
+      "sbc": 7.988305,
+      "nonrecurring_gain": 1.48
+    },
+    {
+      "start": "2023-06-01",
+      "end": "2023-08-31",
+      "fiscal_year": "2023",
+      "revenue": 282.547099,
+      "ebit": 37.360043,
+      "operating_cost_ex_sbc": 220.647626,
+      "sbc": 8.515996,
+      "nonrecurring_gain": 1.85
+    },
+    {
+      "start": "2023-09-01",
+      "end": "2023-11-30",
+      "fiscal_year": "2024",
+      "revenue": 289.557245,
+      "ebit": 39.968145,
+      "operating_cost_ex_sbc": 225.073615,
+      "sbc": 9.043686,
+      "nonrecurring_gain": 2.22
+    },
+    {
+      "start": "2023-12-01",
+      "end": "2024-02-29",
+      "fiscal_year": "2024",
+      "revenue": 296.567391,
+      "ebit": 42.640864,
+      "operating_cost_ex_sbc": 229.447848,
+      "sbc": 9.571376,
+      "nonrecurring_gain": 2.59
+    },
+    {
+      "start": "2024-03-01",
+      "end": "2024-05-31",
+      "fiscal_year": "2024",
+      "revenue": 303.577537,
+      "ebit": 45.3782,
+      "operating_cost_ex_sbc": 233.770321,
+      "sbc": 10.099066,
+      "nonrecurring_gain": 2.96
+    },
+    {
+      "start": "2024-06-01",
+      "end": "2024-08-31",
+      "fiscal_year": "2024",
+      "revenue": 310.587684,
+      "ebit": 48.180153,
+      "operating_cost_ex_sbc": 238.041036,
+      "sbc": 10.626757,
+      "nonrecurring_gain": 6.874015
+    }
+  ],
+  "time_axis": {
+    "history_frequency": "semiannual",
+    "midyear": true,
+    "day_count": "actual/365",
+    "terminal_at_last_fye": true
+  },
+  "accounting": {
+    "normalized_history": true,
+    "sbc_expense": true,
+    "lease_in_debt": false
+  },
+  "business": {
+    "driver": "capacity",
+    "unit": "千吨年产能",
+    "price_unit": "百万元/千吨",
+    "description": "区域低温加工"
+  },
+  "opening_nwc": 303.483176,
+  "opening_ppe": 254.82,
+  "opening_intangible": 249.3,
+  "opening_debt": 164.4,
+  "opening_cash": 82.2,
+  "assumptions": {
+    "driver0": 120.7,
+    "price0": 12.2298092583,
+    "driver_add": [
+      8.16,
+      9.282,
+      10.404,
+      11.526
+    ],
+    "driver_growth": [
+      0.09,
+      0.081,
+      0.072,
+      0.063
+    ],
+    "attrition_rate": [
+      0.045,
+      0.05,
+      0.055,
+      0.06
+    ],
+    "price_growth": [
+      0.03,
+      0.028,
+      0.026,
+      0.024
+    ],
+    "ebit_margin": [
+      0.16,
+      0.167,
+      0.174,
+      0.181
+    ],
+    "da_pct": [
+      0.04,
+      0.042,
+      0.04,
+      0.042
+    ],
+    "capex_pct": [
+      0.061,
+      0.065,
+      0.069,
+      0.061
+    ],
+    "nwc_pct": [
+      0.18,
+      0.186,
+      0.192,
+      0.18
+    ],
+    "tax": 0.235,
+    "wacc": 0.11570000000000001,
+    "g": 0.022,
+    "gordon_weight": 1.0,
+    "exit_multiple": 8.1,
+    "deferred_pct": [
+      0.08,
+      0.08,
+      0.08,
+      0.08
+    ],
+    "cogs_ratio": [
+      0.48,
+      0.48,
+      0.48,
+      0.48
+    ],
+    "dso": [
+      47,
+      48,
+      49,
+      50
+    ],
+    "dio": [
+      62,
+      61,
+      60,
+      59
+    ],
+    "dpo": [
+      43,
+      44,
+      45,
+      46
+    ],
+    "nol0": 90.42,
+    "ppe_rate": 0.13,
+    "rou_rate": 0.2,
+    "lease_additions": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "interest_rate": 0.052,
+    "new_borrowing": [
+      20.55,
+      0,
+      0,
+      0
+    ],
+    "debt_repayment": [
+      8.22,
+      16.44,
+      24.660000000000004,
+      32.88
+    ],
+    "beta_unlevered": 0.84,
+    "target_de": 0.27,
+    "risk_free": 0.034,
+    "erp": 0.049,
+    "specific_premium": 0.006,
+    "cost_of_debt": 0.053,
+    "scenario": 1,
+    "upside_demand_delta": 0.025,
+    "downside_demand_delta": -0.025,
+    "upside_margin_delta": 0.012,
+    "downside_margin_delta": -0.014,
+    "wacc_deltas": [
+      -0.01,
+      0,
+      0.01
+    ],
+    "g_deltas": [
+      -0.005,
+      0,
+      0.005
+    ],
+    "utilization": [
+      0.74,
+      0.758,
+      0.776,
+      0.794
+    ],
+    "sbc_pct": [
+      0.025,
+      0.025,
+      0.025,
+      0.025
+    ],
+    "upside_reinvestment_delta": 0.12,
+    "downside_reinvestment_delta": -0.1,
+    "upside_wacc_delta": -0.005,
+    "downside_wacc_delta": 0.006,
+    "valuation_wacc_delta": 0.0075,
+    "valuation_g_delta": 0.004,
+    "intangible_additions": [
+      53.7,
+      57.7,
+      61.7,
+      65.7
+    ],
+    "intangible_rate": 0.16
+  },
+  "bridge": {
+    "cash": 82.2,
+    "debt": 164.4,
+    "investments": 12.33,
+    "lease_liability": 0,
+    "minority": 9.864,
+    "valuation_cash_adjustment": 9.864,
+    "shares": 128,
+    "rsus": 2.4,
+    "options": 6.0,
+    "strike": 7.0,
+    "share_price": 12.8
+  },
+  "market": {
+    "market_price": 32.11
+  },
+  "nwc_opening_basis": "last_fiscal_year_end",
+  "enabled_modules": [
+    "residual_period",
+    "working_capital",
+    "rolling_assets",
+    "nwc_days"
+  ],
+  "public_output_keys": [
+    "fy_revenue",
+    "fy_normalized_ebit",
+    "fy_reported_ebit",
+    "ltm_revenue",
+    "ltm_normalized_ebit",
+    "ltm_reported_ebit",
+    "gordon_wacc",
+    "gordon_terminal_growth",
+    "gordon_exit_multiple",
+    "gordon_tv_gordon",
+    "gordon_tv_exit",
+    "gordon_terminal_value",
+    "gordon_pv_explicit",
+    "gordon_pv_terminal",
+    "gordon_enterprise_value",
+    "gordon_equity_value",
+    "gordon_diluted_shares",
+    "gordon_value_per_share",
+    "exit_wacc",
+    "exit_terminal_growth",
+    "exit_exit_multiple",
+    "exit_tv_gordon",
+    "exit_tv_exit",
+    "exit_terminal_value",
+    "exit_pv_explicit",
+    "exit_pv_terminal",
+    "exit_enterprise_value",
+    "exit_equity_value",
+    "exit_diluted_shares",
+    "exit_value_per_share",
+    "implied_ev_ebitda_gordon",
+    "implied_g_exit",
+    "implied_wacc_market",
+    "revenue_p1",
+    "ebit_p1",
+    "da_p1",
+    "capex_p1",
+    "delta_nwc_p1",
+    "fcff_p1",
+    "discount_time_p1",
+    "revenue_p2",
+    "ebit_p2",
+    "da_p2",
+    "capex_p2",
+    "delta_nwc_p2",
+    "fcff_p2",
+    "discount_time_p2",
+    "revenue_p3",
+    "ebit_p3",
+    "da_p3",
+    "capex_p3",
+    "delta_nwc_p3",
+    "fcff_p3",
+    "discount_time_p3",
+    "revenue_p4",
+    "ebit_p4",
+    "da_p4",
+    "capex_p4",
+    "delta_nwc_p4",
+    "fcff_p4",
+    "discount_time_p4",
+    "valuation_low_vps",
+    "valuation_high_vps"
+  ],
+  "units": {
+    "money": "百万元",
+    "shares": "百万股",
+    "rates": "小数"
+  }
+}

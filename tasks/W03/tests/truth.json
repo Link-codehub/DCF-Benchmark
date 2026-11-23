@@ -1,0 +1,478 @@
+{
+  "task_id": "W03",
+  "cutoff": "2024-11-27",
+  "fields": {
+    "revenue": {
+      "field_id": "revenue",
+      "label": "合并收入",
+      "value": 36176.2,
+      "raw_value": 36176200000,
+      "raw_unit": "USD",
+      "unit": "USD_millions",
+      "tag": "Revenues",
+      "taxonomy": "us-gaap",
+      "start": "2023-10-02",
+      "end": "2024-09-29",
+      "form": "10-K",
+      "filed": "2024-11-20",
+      "accession": "0000829224-24-000057",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/829224/000082922424000057/0000829224-24-000057-index.htm",
+      "source_type": "sec_edgar",
+      "tolerance": {
+        "relative": 0.001,
+        "absolute": 1e-06
+      }
+    },
+    "operating_income": {
+      "field_id": "operating_income",
+      "label": "经营利润（EBIT）",
+      "value": 5408.8,
+      "raw_value": 5408800000,
+      "raw_unit": "USD",
+      "unit": "USD_millions",
+      "tag": "OperatingIncomeLoss",
+      "taxonomy": "us-gaap",
+      "start": "2023-10-02",
+      "end": "2024-09-29",
+      "form": "10-K",
+      "filed": "2024-11-20",
+      "accession": "0000829224-24-000057",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/829224/000082922424000057/0000829224-24-000057-index.htm",
+      "source_type": "sec_edgar",
+      "tolerance": {
+        "relative": 0.001,
+        "absolute": 1e-06
+      }
+    },
+    "pretax_income": {
+      "field_id": "pretax_income",
+      "label": "税前利润",
+      "value": 4969.6,
+      "raw_value": 4969600000,
+      "raw_unit": "USD",
+      "unit": "USD_millions",
+      "tag": "IncomeLossFromContinuingOperationsBeforeIncomeTaxesExtraordinaryItemsNoncontrollingInterest",
+      "taxonomy": "us-gaap",
+      "start": "2023-10-02",
+      "end": "2024-09-29",
+      "form": "10-K",
+      "filed": "2024-11-20",
+      "accession": "0000829224-24-000057",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/829224/000082922424000057/0000829224-24-000057-index.htm",
+      "source_type": "sec_edgar",
+      "tolerance": {
+        "relative": 0.001,
+        "absolute": 1e-06
+      }
+    },
+    "income_tax": {
+      "field_id": "income_tax",
+      "label": "所得税费用",
+      "value": 1207.3,
+      "raw_value": 1207300000,
+      "raw_unit": "USD",
+      "unit": "USD_millions",
+      "tag": "IncomeTaxExpenseBenefit",
+      "taxonomy": "us-gaap",
+      "start": "2023-10-02",
+      "end": "2024-09-29",
+      "form": "10-K",
+      "filed": "2024-11-20",
+      "accession": "0000829224-24-000057",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/829224/000082922424000057/0000829224-24-000057-index.htm",
+      "source_type": "sec_edgar",
+      "tolerance": {
+        "relative": 0.001,
+        "absolute": 1e-06
+      }
+    },
+    "net_income_consolidated": {
+      "field_id": "net_income_consolidated",
+      "label": "含非控股权益的合并净利润",
+      "value": 3762.3,
+      "raw_value": 3762300000,
+      "raw_unit": "USD",
+      "unit": "USD_millions",
+      "tag": "ProfitLoss",
+      "taxonomy": "us-gaap",
+      "start": "2023-10-02",
+      "end": "2024-09-29",
+      "form": "10-K",
+      "filed": "2024-11-20",
+      "accession": "0000829224-24-000057",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/829224/000082922424000057/0000829224-24-000057-index.htm",
+      "source_type": "sec_edgar",
+      "tolerance": {
+        "relative": 0.001,
+        "absolute": 1e-06
+      }
+    },
+    "da": {
+      "field_id": "da",
+      "label": "折旧与摊销",
+      "value": 1592.4,
+      "raw_value": 1592400000,
+      "raw_unit": "USD",
+      "unit": "USD_millions",
+      "tag": "DepreciationDepletionAndAmortization",
+      "taxonomy": "us-gaap",
+      "start": "2023-10-02",
+      "end": "2024-09-29",
+      "form": "10-K",
+      "filed": "2024-11-20",
+      "accession": "0000829224-24-000057",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/829224/000082922424000057/0000829224-24-000057-index.htm",
+      "source_type": "sec_edgar",
+      "tolerance": {
+        "relative": 0.001,
+        "absolute": 1e-06
+      }
+    },
+    "capex": {
+      "field_id": "capex",
+      "label": "购置固定资产现金支出（正数）",
+      "value": 2777.5,
+      "raw_value": 2777500000,
+      "raw_unit": "USD",
+      "unit": "USD_millions",
+      "tag": "PaymentsToAcquirePropertyPlantAndEquipment",
+      "taxonomy": "us-gaap",
+      "start": "2023-10-02",
+      "end": "2024-09-29",
+      "form": "10-K",
+      "filed": "2024-11-20",
+      "accession": "0000829224-24-000057",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/829224/000082922424000057/0000829224-24-000057-index.htm",
+      "source_type": "sec_edgar",
+      "tolerance": {
+        "relative": 0.001,
+        "absolute": 1e-06
+      }
+    },
+    "diluted_shares": {
+      "field_id": "diluted_shares",
+      "label": "加权平均稀释股数",
+      "value": 1137.3,
+      "raw_value": 1137300000,
+      "raw_unit": "shares",
+      "unit": "shares_millions",
+      "tag": "WeightedAverageNumberOfDilutedSharesOutstanding",
+      "taxonomy": "us-gaap",
+      "start": "2023-10-02",
+      "end": "2024-09-29",
+      "form": "10-K",
+      "filed": "2024-11-20",
+      "accession": "0000829224-24-000057",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/829224/000082922424000057/0000829224-24-000057-index.htm",
+      "source_type": "sec_edgar",
+      "tolerance": {
+        "relative": 0.001,
+        "absolute": 1e-06
+      }
+    },
+    "cash": {
+      "field_id": "cash",
+      "label": "现金及现金等价物",
+      "value": 3286.2,
+      "raw_value": 3286200000,
+      "raw_unit": "USD",
+      "unit": "USD_millions",
+      "tag": "CashCashEquivalentsRestrictedCashAndRestrictedCashEquivalents",
+      "taxonomy": "us-gaap",
+      "start": null,
+      "end": "2024-09-29",
+      "form": "10-K",
+      "filed": "2024-11-20",
+      "accession": "0000829224-24-000057",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/829224/000082922424000057/0000829224-24-000057-index.htm",
+      "source_type": "sec_edgar",
+      "tolerance": {
+        "relative": 0.001,
+        "absolute": 1e-06
+      }
+    },
+    "short_term_investments": {
+      "field_id": "short_term_investments",
+      "label": "短期投资",
+      "value": 257.0,
+      "raw_value": 257000000,
+      "raw_unit": "USD",
+      "unit": "USD_millions",
+      "tag": "ShortTermInvestments",
+      "taxonomy": "us-gaap",
+      "start": null,
+      "end": "2024-09-29",
+      "form": "10-K",
+      "filed": "2024-11-20",
+      "accession": "0000829224-24-000057",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/829224/000082922424000057/0000829224-24-000057-index.htm",
+      "source_type": "sec_edgar",
+      "tolerance": {
+        "relative": 0.001,
+        "absolute": 1e-06
+      }
+    },
+    "receivables": {
+      "field_id": "receivables",
+      "label": "应收账款净额",
+      "value": 1213.8,
+      "raw_value": 1213800000,
+      "raw_unit": "USD",
+      "unit": "USD_millions",
+      "tag": "AccountsReceivableNetCurrent",
+      "taxonomy": "us-gaap",
+      "start": null,
+      "end": "2024-09-29",
+      "form": "10-K",
+      "filed": "2024-11-20",
+      "accession": "0000829224-24-000057",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/829224/000082922424000057/0000829224-24-000057-index.htm",
+      "source_type": "sec_edgar",
+      "tolerance": {
+        "relative": 0.001,
+        "absolute": 1e-06
+      }
+    },
+    "current_assets": {
+      "field_id": "current_assets",
+      "label": "流动资产合计",
+      "value": 6847.4,
+      "raw_value": 6847400000,
+      "raw_unit": "USD",
+      "unit": "USD_millions",
+      "tag": "AssetsCurrent",
+      "taxonomy": "us-gaap",
+      "start": null,
+      "end": "2024-09-29",
+      "form": "10-K",
+      "filed": "2024-11-20",
+      "accession": "0000829224-24-000057",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/829224/000082922424000057/0000829224-24-000057-index.htm",
+      "source_type": "sec_edgar",
+      "tolerance": {
+        "relative": 0.001,
+        "absolute": 1e-06
+      }
+    },
+    "current_liabilities": {
+      "field_id": "current_liabilities",
+      "label": "流动负债合计",
+      "value": 9070.0,
+      "raw_value": 9070000000,
+      "raw_unit": "USD",
+      "unit": "USD_millions",
+      "tag": "LiabilitiesCurrent",
+      "taxonomy": "us-gaap",
+      "start": null,
+      "end": "2024-09-29",
+      "form": "10-K",
+      "filed": "2024-11-20",
+      "accession": "0000829224-24-000057",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/829224/000082922424000057/0000829224-24-000057-index.htm",
+      "source_type": "sec_edgar",
+      "tolerance": {
+        "relative": 0.001,
+        "absolute": 1e-06
+      }
+    },
+    "current_debt": {
+      "field_id": "current_debt",
+      "label": "当期债务",
+      "value": 1248.9,
+      "raw_value": 1248900000,
+      "raw_unit": "USD",
+      "unit": "USD_millions",
+      "tag": "LongTermDebtCurrent",
+      "taxonomy": "us-gaap",
+      "start": null,
+      "end": "2024-09-29",
+      "form": "10-K",
+      "filed": "2024-11-20",
+      "accession": "0000829224-24-000057",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/829224/000082922424000057/0000829224-24-000057-index.htm",
+      "source_type": "sec_edgar",
+      "tolerance": {
+        "relative": 0.001,
+        "absolute": 1e-06
+      }
+    },
+    "noncurrent_debt": {
+      "field_id": "noncurrent_debt",
+      "label": "非当期债务",
+      "value": 14319.5,
+      "raw_value": 14319500000,
+      "raw_unit": "USD",
+      "unit": "USD_millions",
+      "tag": "LongTermDebtNoncurrent",
+      "taxonomy": "us-gaap",
+      "start": null,
+      "end": "2024-09-29",
+      "form": "10-K",
+      "filed": "2024-11-20",
+      "accession": "0000829224-24-000057",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/829224/000082922424000057/0000829224-24-000057-index.htm",
+      "source_type": "sec_edgar",
+      "tolerance": {
+        "relative": 0.001,
+        "absolute": 1e-06
+      }
+    },
+    "treasury_10y": {
+      "field_id": "treasury_10y",
+      "label": "10 年期美国国债固定期限收益率",
+      "value": 0.0425,
+      "raw_value": 4.25,
+      "raw_unit": "percent",
+      "unit": "decimal",
+      "tag": "DGS10",
+      "start": "2024-11-27",
+      "end": "2024-11-27",
+      "form": "daily observation",
+      "filed": "2024-11-27",
+      "accession": null,
+      "source_url": "https://home.treasury.gov/resource-center/data-chart-center/interest-rates/daily-treasury-rates.csv/2024/all?type=daily_treasury_yield_curve&field_tdr_date_value=2024&page=&_format=csv",
+      "source_type": "us_treasury",
+      "tolerance": {
+        "relative": 0,
+        "absolute": 0.0001
+      }
+    }
+  },
+  "source_files": [
+    {
+      "file": "../data/raw/SBUX_facts.json",
+      "publisher": "SEC EDGAR companyfacts",
+      "url": "https://data.sec.gov/api/xbrl/companyfacts/CIK0000829224.json",
+      "sha256": "0deec882c9ad1727f308f0279acd19cbfa52669bb724fdcd1ce75d970d67015e"
+    },
+    {
+      "file": "../data/raw/DGS10.csv",
+      "publisher": "DGS10 本地冻结序列（题面指定美国财政部取数）",
+      "url": "https://home.treasury.gov/resource-center/data-chart-center/interest-rates/daily-treasury-rates.csv/2024/all?type=daily_treasury_yield_curve&field_tdr_date_value=2024&page=&_format=csv",
+      "sha256": "7e66e6c4d14dec358ccbaadd9b6d11d66e74c141e0df9caa8879d0f634668556"
+    }
+  ],
+  "pack_reconciliation": [
+    {
+      "field_id": "revenue",
+      "pack_field": "revenue",
+      "pack_value": 36176.2,
+      "original_value": 36176.2,
+      "exact_match": true,
+      "treatment": "一致"
+    },
+    {
+      "field_id": "operating_income",
+      "pack_field": "operating_income",
+      "pack_value": 5408.8,
+      "original_value": 5408.8,
+      "exact_match": true,
+      "treatment": "一致"
+    },
+    {
+      "field_id": "pretax_income",
+      "pack_field": "pretax_income",
+      "pack_value": 4969.6,
+      "original_value": 4969.6,
+      "exact_match": true,
+      "treatment": "一致"
+    },
+    {
+      "field_id": "income_tax",
+      "pack_field": "income_tax",
+      "pack_value": 1207.3,
+      "original_value": 1207.3,
+      "exact_match": true,
+      "treatment": "一致"
+    },
+    {
+      "field_id": "net_income_consolidated",
+      "pack_field": "ProfitLoss_raw",
+      "pack_value": 3762.3,
+      "original_value": 3762.3,
+      "exact_match": true,
+      "treatment": "一致"
+    },
+    {
+      "field_id": "da",
+      "pack_field": "da",
+      "pack_value": 1592.4,
+      "original_value": 1592.4,
+      "exact_match": true,
+      "treatment": "一致"
+    },
+    {
+      "field_id": "capex",
+      "pack_field": "capex",
+      "pack_value": 2777.5,
+      "original_value": 2777.5,
+      "exact_match": true,
+      "treatment": "一致"
+    },
+    {
+      "field_id": "diluted_shares",
+      "pack_field": "diluted_shares_wavg",
+      "pack_value": 1137.3,
+      "original_value": 1137.3,
+      "exact_match": true,
+      "treatment": "一致"
+    },
+    {
+      "field_id": "cash",
+      "pack_field": "cash",
+      "pack_value": 3286.2,
+      "original_value": 3286.2,
+      "exact_match": true,
+      "treatment": "一致"
+    },
+    {
+      "field_id": "short_term_investments",
+      "pack_field": "st_investments",
+      "pack_value": 257.0,
+      "original_value": 257.0,
+      "exact_match": true,
+      "treatment": "一致"
+    },
+    {
+      "field_id": "receivables",
+      "pack_field": "receivables",
+      "pack_value": 1213.8,
+      "original_value": 1213.8,
+      "exact_match": true,
+      "treatment": "一致"
+    },
+    {
+      "field_id": "current_assets",
+      "pack_field": "current_assets",
+      "pack_value": 6847.4,
+      "original_value": 6847.4,
+      "exact_match": true,
+      "treatment": "一致"
+    },
+    {
+      "field_id": "current_liabilities",
+      "pack_field": "current_liabilities",
+      "pack_value": 9070.0,
+      "original_value": 9070.0,
+      "exact_match": true,
+      "treatment": "一致"
+    },
+    {
+      "field_id": "current_debt",
+      "pack_field": "debt_current",
+      "pack_value": 1248.9,
+      "original_value": 1248.9,
+      "exact_match": true,
+      "treatment": "一致"
+    },
+    {
+      "field_id": "noncurrent_debt",
+      "pack_field": "debt_noncurrent",
+      "pack_value": 14319.5,
+      "original_value": 14319.5,
+      "exact_match": true,
+      "treatment": "一致"
+    }
+  ],
+  "scope": "只把截止日前原始 10-K/10-K/A 事实作为权威值；数据包仅用于对账，不代替原始来源。"
+}

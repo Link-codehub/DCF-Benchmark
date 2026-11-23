@@ -1,0 +1,22 @@
+services:
+  dcf-egress-firewall:
+    image: dcf-ipv4-gost-egress:v1
+    build:
+      context: /Users/link/Desktop/Finance Bench/exp/dcf_factory/ipv4_egress/gost
+      dockerfile: Dockerfile
+    entrypoint: ["/opt/egress-sidecar/entrypoint.sh"]
+    environment:
+      EGRESS_CONTROL_INITIAL_NETWORK_MODE: allowlist
+      EGRESS_CONTROL_INITIAL_ALLOWED_HOSTS: "d18rn0p25nwr6d.cloudfront.net data.sec.gov home.treasury.gov investor.starbucks.com s201.q4cdn.com s22.q4cdn.com www.sec.gov"
+    init: true
+    cap_add: [NET_ADMIN, NET_RAW]
+    healthcheck:
+      test: ["CMD", "test", "-f", "/tmp/dcf-egress-ready"]
+      interval: 1s
+      timeout: 5s
+      retries: 30
+  main:
+    network_mode: service:dcf-egress-firewall
+    depends_on:
+      dcf-egress-firewall:
+        condition: service_healthy

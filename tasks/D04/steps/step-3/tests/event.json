@@ -1,0 +1,1019 @@
+{
+  "step": 3,
+  "type": "project_capex_and_scope_revision",
+  "description": "项目规模重排，收入与建设开支按本步事件输入更新，概率继续作用于项目现金流",
+  "project": "project_boreal",
+  "instructions": "只重连本步事件影响的依赖；原始历史与前步快照不可改写",
+  "previous_state": {
+    "schema_version": "v3.0",
+    "task_id": "D04_S2",
+    "family": "D",
+    "step": 2,
+    "company": "禾汐药业",
+    "b_items": [
+      "fiscal_timing",
+      "history_normalization",
+      "residual_period",
+      "actual_day_discount",
+      "nwc_fye_open",
+      "equity_bridge",
+      "dual_asset_pool"
+    ],
+    "c_structure": "risk_adjusted_pipeline",
+    "valuation_date": "2025-03-09",
+    "last_fy_end": "2024-10-31",
+    "horizon": 4,
+    "history": [
+      {
+        "start": "2022-05-01",
+        "end": "2022-07-31",
+        "fiscal_year": "2022",
+        "revenue": 434.180198,
+        "ebit": 44.291501,
+        "operating_cost_ex_sbc": 345.628899,
+        "sbc": 10.273268,
+        "nonrecurring_gain": 0.0
+      },
+      {
+        "start": "2022-08-01",
+        "end": "2022-10-31",
+        "fiscal_year": "2022",
+        "revenue": 446.198936,
+        "ebit": 48.015515,
+        "operating_cost_ex_sbc": 353.540641,
+        "sbc": 10.918892,
+        "nonrecurring_gain": 0.37
+      },
+      {
+        "start": "2022-11-01",
+        "end": "2023-01-31",
+        "fiscal_year": "2023",
+        "revenue": 458.217672,
+        "ebit": 51.852701,
+        "operating_cost_ex_sbc": 361.361914,
+        "sbc": 11.564516,
+        "nonrecurring_gain": 0.74
+      },
+      {
+        "start": "2023-02-01",
+        "end": "2023-04-30",
+        "fiscal_year": "2023",
+        "revenue": 470.236409,
+        "ebit": 55.80306,
+        "operating_cost_ex_sbc": 369.09272,
+        "sbc": 12.210141,
+        "nonrecurring_gain": 1.11
+      },
+      {
+        "start": "2023-05-01",
+        "end": "2023-07-31",
+        "fiscal_year": "2023",
+        "revenue": 482.255147,
+        "ebit": 59.86659,
+        "operating_cost_ex_sbc": 376.733059,
+        "sbc": 12.855765,
+        "nonrecurring_gain": 1.48
+      },
+      {
+        "start": "2023-08-01",
+        "end": "2023-10-31",
+        "fiscal_year": "2023",
+        "revenue": 494.273882,
+        "ebit": 64.043294,
+        "operating_cost_ex_sbc": 384.282928,
+        "sbc": 13.50139,
+        "nonrecurring_gain": 1.85
+      },
+      {
+        "start": "2023-11-01",
+        "end": "2024-01-31",
+        "fiscal_year": "2024",
+        "revenue": 506.29262,
+        "ebit": 68.333168,
+        "operating_cost_ex_sbc": 391.742329,
+        "sbc": 14.147013,
+        "nonrecurring_gain": 2.22
+      },
+      {
+        "start": "2024-02-01",
+        "end": "2024-04-30",
+        "fiscal_year": "2024",
+        "revenue": 518.311357,
+        "ebit": 72.736216,
+        "operating_cost_ex_sbc": 399.111263,
+        "sbc": 14.792638,
+        "nonrecurring_gain": 2.59
+      },
+      {
+        "start": "2024-05-01",
+        "end": "2024-07-31",
+        "fiscal_year": "2024",
+        "revenue": 530.330095,
+        "ebit": 77.252435,
+        "operating_cost_ex_sbc": 406.389729,
+        "sbc": 15.438261,
+        "nonrecurring_gain": 2.96
+      },
+      {
+        "start": "2024-08-01",
+        "end": "2024-10-31",
+        "fiscal_year": "2024",
+        "revenue": 542.348831,
+        "ebit": 81.881827,
+        "operating_cost_ex_sbc": 413.577726,
+        "sbc": 16.083884,
+        "nonrecurring_gain": 9.524529
+      }
+    ],
+    "time_axis": {
+      "history_frequency": "quarterly",
+      "midyear": false,
+      "day_count": "actual/365",
+      "terminal_at_last_fye": true
+    },
+    "accounting": {
+      "normalized_history": true,
+      "sbc_expense": true,
+      "lease_in_debt": true
+    },
+    "business": {
+      "driver": "installed_base",
+      "unit": "千台",
+      "price_unit": "百万元/台次",
+      "description": "楼宇监测装机服务"
+    },
+    "opening_nwc": 438.462856,
+    "opening_ppe": 386.57,
+    "opening_intangible": 271.2,
+    "opening_debt": 249.4,
+    "opening_cash": 124.7,
+    "assumptions": {
+      "driver0": 161.8,
+      "price0": 5.204791705400001,
+      "driver_add": [
+        6.96,
+        7.917,
+        8.874,
+        9.831
+      ],
+      "driver_growth": [
+        0.09,
+        0.081,
+        0.072,
+        0.063
+      ],
+      "attrition_rate": [
+        0.045,
+        0.05,
+        0.055,
+        0.06
+      ],
+      "price_growth": [
+        0.03,
+        0.028,
+        0.026,
+        0.024
+      ],
+      "ebit_margin": [
+        0.16,
+        0.167,
+        0.174,
+        0.181
+      ],
+      "da_pct": [
+        0.04,
+        0.042,
+        0.04,
+        0.042
+      ],
+      "capex_pct": [
+        0.061,
+        0.065,
+        0.069,
+        0.061
+      ],
+      "nwc_pct": [
+        0.18,
+        0.186,
+        0.192,
+        0.18
+      ],
+      "tax": 0.235,
+      "wacc": 0.109,
+      "g": 0.022,
+      "gordon_weight": 1.0,
+      "exit_multiple": 8.7,
+      "deferred_pct": [
+        0.08,
+        0.08,
+        0.08,
+        0.08
+      ],
+      "cogs_ratio": [
+        0.48,
+        0.48,
+        0.48,
+        0.48
+      ],
+      "dso": [
+        47,
+        48,
+        49,
+        50
+      ],
+      "dio": [
+        62,
+        61,
+        60,
+        59
+      ],
+      "dpo": [
+        43,
+        44,
+        45,
+        46
+      ],
+      "nol0": 137.17,
+      "ppe_rate": 0.13,
+      "rou_rate": 0.2,
+      "lease_additions": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "interest_rate": 0.052,
+      "new_borrowing": [
+        31.175,
+        0,
+        0,
+        0
+      ],
+      "debt_repayment": [
+        12.47,
+        24.94,
+        37.410000000000004,
+        49.88
+      ],
+      "beta_unlevered": 0.88,
+      "target_de": 0.27,
+      "risk_free": 0.034,
+      "erp": 0.049,
+      "specific_premium": 0.006,
+      "cost_of_debt": 0.053,
+      "scenario": 1,
+      "upside_demand_delta": 0.025,
+      "downside_demand_delta": -0.025,
+      "upside_margin_delta": 0.012,
+      "downside_margin_delta": -0.014,
+      "wacc_deltas": [
+        -0.01,
+        0,
+        0.01
+      ],
+      "g_deltas": [
+        -0.005,
+        0,
+        0.005
+      ],
+      "service_frequency": [
+        3.2,
+        3.2800000000000002,
+        3.3600000000000003,
+        3.4400000000000004
+      ],
+      "sbc_pct": [
+        0.025,
+        0.025,
+        0.025,
+        0.025
+      ],
+      "upside_reinvestment_delta": 0.12,
+      "downside_reinvestment_delta": -0.1,
+      "upside_wacc_delta": -0.005,
+      "downside_wacc_delta": 0.006,
+      "valuation_wacc_delta": 0.0075,
+      "valuation_g_delta": 0.004,
+      "intangible_additions": [
+        58.8,
+        62.8,
+        66.8,
+        70.8
+      ],
+      "intangible_rate": 0.16
+    },
+    "bridge": {
+      "cash": 124.7,
+      "debt": 249.4,
+      "investments": 18.705,
+      "lease_liability": 0,
+      "minority": 14.964,
+      "valuation_cash_adjustment": 14.964,
+      "shares": 119,
+      "rsus": 2.4,
+      "options": 6.0,
+      "strike": 7.0,
+      "share_price": 11.9
+    },
+    "projects": {
+      "project_atlas": {
+        "commissioning_period": 2,
+        "construction_capex": [
+          136,
+          0,
+          0,
+          0
+        ],
+        "project_revenue": [
+          159.8,
+          175.8,
+          191.8,
+          207.8
+        ],
+        "project_margin": 0.21,
+        "project_da": [
+          7,
+          9,
+          11,
+          13
+        ],
+        "project_operating_capex": [
+          8,
+          8,
+          8,
+          8
+        ],
+        "project_delta_nwc": [
+          2,
+          3,
+          4,
+          5
+        ],
+        "project_fcff": [
+          -136,
+          26.24227,
+          29.81267,
+          33.38307
+        ],
+        "success_probability": 0.67
+      },
+      "project_boreal": {
+        "commissioning_period": 4,
+        "construction_capex": [
+          0,
+          48,
+          42,
+          0
+        ],
+        "project_revenue": [
+          182.8,
+          198.8,
+          214.8,
+          230.8
+        ],
+        "project_margin": 0.245,
+        "project_da": [
+          7,
+          9,
+          11,
+          13
+        ],
+        "project_operating_capex": [
+          11,
+          11,
+          11,
+          11
+        ],
+        "project_delta_nwc": [
+          2,
+          3,
+          4,
+          5
+        ],
+        "project_fcff": [
+          0,
+          -165,
+          36.25889,
+          40.25769
+        ],
+        "success_probability": 0.53
+      }
+    },
+    "market": {
+      "market_price": 34.84
+    },
+    "nwc_opening_basis": "last_fiscal_year_end",
+    "enabled_modules": [
+      "residual_period",
+      "working_capital",
+      "rolling_assets",
+      "nwc_days",
+      "intangible_pool"
+    ],
+    "public_output_keys": [
+      "fy_revenue",
+      "fy_normalized_ebit",
+      "fy_reported_ebit",
+      "ltm_revenue",
+      "ltm_normalized_ebit",
+      "ltm_reported_ebit",
+      "existing_wacc",
+      "existing_terminal_growth",
+      "existing_exit_multiple",
+      "existing_tv_gordon",
+      "existing_tv_exit",
+      "existing_terminal_value",
+      "existing_pv_explicit",
+      "existing_pv_terminal",
+      "existing_enterprise_value",
+      "existing_equity_value",
+      "existing_diluted_shares",
+      "existing_value_per_share",
+      "project_atlas_revenue_p1",
+      "project_atlas_construction_capex_p1",
+      "project_atlas_unrisked_fcff_p1",
+      "project_atlas_risk_adjusted_fcff_p1",
+      "project_atlas_discount_time_p1",
+      "project_atlas_revenue_p2",
+      "project_atlas_construction_capex_p2",
+      "project_atlas_unrisked_fcff_p2",
+      "project_atlas_risk_adjusted_fcff_p2",
+      "project_atlas_discount_time_p2",
+      "project_atlas_revenue_p3",
+      "project_atlas_construction_capex_p3",
+      "project_atlas_unrisked_fcff_p3",
+      "project_atlas_risk_adjusted_fcff_p3",
+      "project_atlas_discount_time_p3",
+      "project_atlas_revenue_p4",
+      "project_atlas_construction_capex_p4",
+      "project_atlas_unrisked_fcff_p4",
+      "project_atlas_risk_adjusted_fcff_p4",
+      "project_atlas_discount_time_p4",
+      "project_atlas_success_probability",
+      "project_atlas_risk_adjusted_pv",
+      "project_boreal_revenue_p1",
+      "project_boreal_construction_capex_p1",
+      "project_boreal_unrisked_fcff_p1",
+      "project_boreal_risk_adjusted_fcff_p1",
+      "project_boreal_discount_time_p1",
+      "project_boreal_revenue_p2",
+      "project_boreal_construction_capex_p2",
+      "project_boreal_unrisked_fcff_p2",
+      "project_boreal_risk_adjusted_fcff_p2",
+      "project_boreal_discount_time_p2",
+      "project_boreal_revenue_p3",
+      "project_boreal_construction_capex_p3",
+      "project_boreal_unrisked_fcff_p3",
+      "project_boreal_risk_adjusted_fcff_p3",
+      "project_boreal_discount_time_p3",
+      "project_boreal_revenue_p4",
+      "project_boreal_construction_capex_p4",
+      "project_boreal_unrisked_fcff_p4",
+      "project_boreal_risk_adjusted_fcff_p4",
+      "project_boreal_discount_time_p4",
+      "project_boreal_success_probability",
+      "project_boreal_risk_adjusted_pv",
+      "pipeline_risk_adjusted_pv",
+      "enterprise_value",
+      "equity_value",
+      "diluted_shares",
+      "value_per_share",
+      "wacc",
+      "existing_revenue_p1",
+      "existing_ebit_p1",
+      "existing_capex_p1",
+      "existing_da_p1",
+      "existing_delta_nwc_p1",
+      "existing_fcff_p1",
+      "existing_revenue_p2",
+      "existing_ebit_p2",
+      "existing_capex_p2",
+      "existing_da_p2",
+      "existing_delta_nwc_p2",
+      "existing_fcff_p2",
+      "existing_revenue_p3",
+      "existing_ebit_p3",
+      "existing_capex_p3",
+      "existing_da_p3",
+      "existing_delta_nwc_p3",
+      "existing_fcff_p3",
+      "existing_revenue_p4",
+      "existing_ebit_p4",
+      "existing_capex_p4",
+      "existing_da_p4",
+      "existing_delta_nwc_p4",
+      "existing_fcff_p4"
+    ],
+    "units": {
+      "money": "百万元",
+      "shares": "百万股",
+      "rates": "小数"
+    }
+  },
+  "new_inputs": {
+    "schema_version": "v3.0",
+    "task_id": "D04_S3",
+    "family": "D",
+    "step": 3,
+    "company": "禾汐药业",
+    "b_items": [
+      "fiscal_timing",
+      "history_normalization",
+      "residual_period",
+      "actual_day_discount",
+      "nwc_fye_open",
+      "equity_bridge",
+      "dual_asset_pool"
+    ],
+    "c_structure": "risk_adjusted_pipeline",
+    "valuation_date": "2025-03-09",
+    "last_fy_end": "2024-10-31",
+    "horizon": 4,
+    "history": [
+      {
+        "start": "2022-05-01",
+        "end": "2022-07-31",
+        "fiscal_year": "2022",
+        "revenue": 434.180198,
+        "ebit": 44.291501,
+        "operating_cost_ex_sbc": 345.628899,
+        "sbc": 10.273268,
+        "nonrecurring_gain": 0.0
+      },
+      {
+        "start": "2022-08-01",
+        "end": "2022-10-31",
+        "fiscal_year": "2022",
+        "revenue": 446.198936,
+        "ebit": 48.015515,
+        "operating_cost_ex_sbc": 353.540641,
+        "sbc": 10.918892,
+        "nonrecurring_gain": 0.37
+      },
+      {
+        "start": "2022-11-01",
+        "end": "2023-01-31",
+        "fiscal_year": "2023",
+        "revenue": 458.217672,
+        "ebit": 51.852701,
+        "operating_cost_ex_sbc": 361.361914,
+        "sbc": 11.564516,
+        "nonrecurring_gain": 0.74
+      },
+      {
+        "start": "2023-02-01",
+        "end": "2023-04-30",
+        "fiscal_year": "2023",
+        "revenue": 470.236409,
+        "ebit": 55.80306,
+        "operating_cost_ex_sbc": 369.09272,
+        "sbc": 12.210141,
+        "nonrecurring_gain": 1.11
+      },
+      {
+        "start": "2023-05-01",
+        "end": "2023-07-31",
+        "fiscal_year": "2023",
+        "revenue": 482.255147,
+        "ebit": 59.86659,
+        "operating_cost_ex_sbc": 376.733059,
+        "sbc": 12.855765,
+        "nonrecurring_gain": 1.48
+      },
+      {
+        "start": "2023-08-01",
+        "end": "2023-10-31",
+        "fiscal_year": "2023",
+        "revenue": 494.273882,
+        "ebit": 64.043294,
+        "operating_cost_ex_sbc": 384.282928,
+        "sbc": 13.50139,
+        "nonrecurring_gain": 1.85
+      },
+      {
+        "start": "2023-11-01",
+        "end": "2024-01-31",
+        "fiscal_year": "2024",
+        "revenue": 506.29262,
+        "ebit": 68.333168,
+        "operating_cost_ex_sbc": 391.742329,
+        "sbc": 14.147013,
+        "nonrecurring_gain": 2.22
+      },
+      {
+        "start": "2024-02-01",
+        "end": "2024-04-30",
+        "fiscal_year": "2024",
+        "revenue": 518.311357,
+        "ebit": 72.736216,
+        "operating_cost_ex_sbc": 399.111263,
+        "sbc": 14.792638,
+        "nonrecurring_gain": 2.59
+      },
+      {
+        "start": "2024-05-01",
+        "end": "2024-07-31",
+        "fiscal_year": "2024",
+        "revenue": 530.330095,
+        "ebit": 77.252435,
+        "operating_cost_ex_sbc": 406.389729,
+        "sbc": 15.438261,
+        "nonrecurring_gain": 2.96
+      },
+      {
+        "start": "2024-08-01",
+        "end": "2024-10-31",
+        "fiscal_year": "2024",
+        "revenue": 542.348831,
+        "ebit": 81.881827,
+        "operating_cost_ex_sbc": 413.577726,
+        "sbc": 16.083884,
+        "nonrecurring_gain": 9.524529
+      }
+    ],
+    "time_axis": {
+      "history_frequency": "quarterly",
+      "midyear": false,
+      "day_count": "actual/365",
+      "terminal_at_last_fye": true
+    },
+    "accounting": {
+      "normalized_history": true,
+      "sbc_expense": true,
+      "lease_in_debt": true
+    },
+    "business": {
+      "driver": "installed_base",
+      "unit": "千台",
+      "price_unit": "百万元/台次",
+      "description": "楼宇监测装机服务"
+    },
+    "opening_nwc": 438.462856,
+    "opening_ppe": 386.57,
+    "opening_intangible": 271.2,
+    "opening_debt": 249.4,
+    "opening_cash": 124.7,
+    "assumptions": {
+      "driver0": 161.8,
+      "price0": 5.204791705400001,
+      "driver_add": [
+        6.96,
+        7.917,
+        8.874,
+        9.831
+      ],
+      "driver_growth": [
+        0.09,
+        0.081,
+        0.072,
+        0.063
+      ],
+      "attrition_rate": [
+        0.045,
+        0.05,
+        0.055,
+        0.06
+      ],
+      "price_growth": [
+        0.03,
+        0.028,
+        0.026,
+        0.024
+      ],
+      "ebit_margin": [
+        0.16,
+        0.167,
+        0.174,
+        0.181
+      ],
+      "da_pct": [
+        0.04,
+        0.042,
+        0.04,
+        0.042
+      ],
+      "capex_pct": [
+        0.061,
+        0.065,
+        0.069,
+        0.061
+      ],
+      "nwc_pct": [
+        0.18,
+        0.186,
+        0.192,
+        0.18
+      ],
+      "tax": 0.235,
+      "wacc": 0.109,
+      "g": 0.022,
+      "gordon_weight": 1.0,
+      "exit_multiple": 8.7,
+      "deferred_pct": [
+        0.08,
+        0.08,
+        0.08,
+        0.08
+      ],
+      "cogs_ratio": [
+        0.48,
+        0.48,
+        0.48,
+        0.48
+      ],
+      "dso": [
+        47,
+        48,
+        49,
+        50
+      ],
+      "dio": [
+        62,
+        61,
+        60,
+        59
+      ],
+      "dpo": [
+        43,
+        44,
+        45,
+        46
+      ],
+      "nol0": 137.17,
+      "ppe_rate": 0.13,
+      "rou_rate": 0.2,
+      "lease_additions": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "interest_rate": 0.052,
+      "new_borrowing": [
+        31.175,
+        0,
+        0,
+        0
+      ],
+      "debt_repayment": [
+        12.47,
+        24.94,
+        37.410000000000004,
+        49.88
+      ],
+      "beta_unlevered": 0.88,
+      "target_de": 0.27,
+      "risk_free": 0.034,
+      "erp": 0.049,
+      "specific_premium": 0.006,
+      "cost_of_debt": 0.053,
+      "scenario": 1,
+      "upside_demand_delta": 0.025,
+      "downside_demand_delta": -0.025,
+      "upside_margin_delta": 0.012,
+      "downside_margin_delta": -0.014,
+      "wacc_deltas": [
+        -0.01,
+        0,
+        0.01
+      ],
+      "g_deltas": [
+        -0.005,
+        0,
+        0.005
+      ],
+      "service_frequency": [
+        3.2,
+        3.2800000000000002,
+        3.3600000000000003,
+        3.4400000000000004
+      ],
+      "sbc_pct": [
+        0.025,
+        0.025,
+        0.025,
+        0.025
+      ],
+      "upside_reinvestment_delta": 0.12,
+      "downside_reinvestment_delta": -0.1,
+      "upside_wacc_delta": -0.005,
+      "downside_wacc_delta": 0.006,
+      "valuation_wacc_delta": 0.0075,
+      "valuation_g_delta": 0.004,
+      "intangible_additions": [
+        58.8,
+        62.8,
+        66.8,
+        70.8
+      ],
+      "intangible_rate": 0.16
+    },
+    "bridge": {
+      "cash": 124.7,
+      "debt": 249.4,
+      "investments": 18.705,
+      "lease_liability": 0,
+      "minority": 14.964,
+      "valuation_cash_adjustment": 14.964,
+      "shares": 119,
+      "rsus": 2.4,
+      "options": 6.0,
+      "strike": 7.0,
+      "share_price": 11.9
+    },
+    "projects": {
+      "project_atlas": {
+        "commissioning_period": 2,
+        "construction_capex": [
+          136,
+          0,
+          0,
+          0
+        ],
+        "project_revenue": [
+          159.8,
+          175.8,
+          191.8,
+          207.8
+        ],
+        "project_margin": 0.21,
+        "project_da": [
+          7,
+          9,
+          11,
+          13
+        ],
+        "project_operating_capex": [
+          8,
+          8,
+          8,
+          8
+        ],
+        "project_delta_nwc": [
+          2,
+          3,
+          4,
+          5
+        ],
+        "project_fcff": [
+          -136,
+          26.24227,
+          29.81267,
+          33.38307
+        ],
+        "success_probability": 0.67
+      },
+      "project_boreal": {
+        "commissioning_period": 4,
+        "construction_capex": [
+          0,
+          48,
+          42,
+          0
+        ],
+        "project_revenue": [
+          151.724,
+          165.004,
+          178.284,
+          191.564
+        ],
+        "project_margin": 0.245,
+        "project_da": [
+          7,
+          9,
+          11,
+          13
+        ],
+        "project_operating_capex": [
+          11,
+          11,
+          11,
+          11
+        ],
+        "project_delta_nwc": [
+          2,
+          3,
+          4,
+          5
+        ],
+        "project_fcff": [
+          0,
+          -165,
+          36.25889,
+          40.25769
+        ],
+        "success_probability": 0.53
+      }
+    },
+    "market": {
+      "market_price": 34.84
+    },
+    "nwc_opening_basis": "last_fiscal_year_end",
+    "enabled_modules": [
+      "residual_period",
+      "working_capital",
+      "rolling_assets",
+      "nwc_days",
+      "intangible_pool"
+    ],
+    "public_output_keys": [
+      "fy_revenue",
+      "fy_normalized_ebit",
+      "fy_reported_ebit",
+      "ltm_revenue",
+      "ltm_normalized_ebit",
+      "ltm_reported_ebit",
+      "existing_wacc",
+      "existing_terminal_growth",
+      "existing_exit_multiple",
+      "existing_tv_gordon",
+      "existing_tv_exit",
+      "existing_terminal_value",
+      "existing_pv_explicit",
+      "existing_pv_terminal",
+      "existing_enterprise_value",
+      "existing_equity_value",
+      "existing_diluted_shares",
+      "existing_value_per_share",
+      "project_atlas_revenue_p1",
+      "project_atlas_construction_capex_p1",
+      "project_atlas_unrisked_fcff_p1",
+      "project_atlas_risk_adjusted_fcff_p1",
+      "project_atlas_discount_time_p1",
+      "project_atlas_revenue_p2",
+      "project_atlas_construction_capex_p2",
+      "project_atlas_unrisked_fcff_p2",
+      "project_atlas_risk_adjusted_fcff_p2",
+      "project_atlas_discount_time_p2",
+      "project_atlas_revenue_p3",
+      "project_atlas_construction_capex_p3",
+      "project_atlas_unrisked_fcff_p3",
+      "project_atlas_risk_adjusted_fcff_p3",
+      "project_atlas_discount_time_p3",
+      "project_atlas_revenue_p4",
+      "project_atlas_construction_capex_p4",
+      "project_atlas_unrisked_fcff_p4",
+      "project_atlas_risk_adjusted_fcff_p4",
+      "project_atlas_discount_time_p4",
+      "project_atlas_success_probability",
+      "project_atlas_risk_adjusted_pv",
+      "project_boreal_revenue_p1",
+      "project_boreal_construction_capex_p1",
+      "project_boreal_unrisked_fcff_p1",
+      "project_boreal_risk_adjusted_fcff_p1",
+      "project_boreal_discount_time_p1",
+      "project_boreal_revenue_p2",
+      "project_boreal_construction_capex_p2",
+      "project_boreal_unrisked_fcff_p2",
+      "project_boreal_risk_adjusted_fcff_p2",
+      "project_boreal_discount_time_p2",
+      "project_boreal_revenue_p3",
+      "project_boreal_construction_capex_p3",
+      "project_boreal_unrisked_fcff_p3",
+      "project_boreal_risk_adjusted_fcff_p3",
+      "project_boreal_discount_time_p3",
+      "project_boreal_revenue_p4",
+      "project_boreal_construction_capex_p4",
+      "project_boreal_unrisked_fcff_p4",
+      "project_boreal_risk_adjusted_fcff_p4",
+      "project_boreal_discount_time_p4",
+      "project_boreal_success_probability",
+      "project_boreal_risk_adjusted_pv",
+      "pipeline_risk_adjusted_pv",
+      "enterprise_value",
+      "equity_value",
+      "diluted_shares",
+      "value_per_share",
+      "wacc",
+      "existing_revenue_p1",
+      "existing_ebit_p1",
+      "existing_capex_p1",
+      "existing_da_p1",
+      "existing_delta_nwc_p1",
+      "existing_fcff_p1",
+      "existing_revenue_p2",
+      "existing_ebit_p2",
+      "existing_capex_p2",
+      "existing_da_p2",
+      "existing_delta_nwc_p2",
+      "existing_fcff_p2",
+      "existing_revenue_p3",
+      "existing_ebit_p3",
+      "existing_capex_p3",
+      "existing_da_p3",
+      "existing_delta_nwc_p3",
+      "existing_fcff_p3",
+      "existing_revenue_p4",
+      "existing_ebit_p4",
+      "existing_capex_p4",
+      "existing_da_p4",
+      "existing_delta_nwc_p4",
+      "existing_fcff_p4"
+    ],
+    "units": {
+      "money": "百万元",
+      "shares": "百万股",
+      "rates": "小数"
+    }
+  }
+}

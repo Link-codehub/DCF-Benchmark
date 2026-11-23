@@ -1,0 +1,647 @@
+{
+  "schema_version": "B1",
+  "task_id": "B01",
+  "candidate_index": 0,
+  "seed": 11228547392784142394,
+  "master_seed": 20261122,
+  "company": "衡岳流体装备",
+  "scene": "volume_price",
+  "history_kind": "semiannual",
+  "fy_end": "2025-09-30",
+  "val_date": "2026-02-13",
+  "discount": "midyear",
+  "terminal": {
+    "type": "gordon",
+    "g": 0.027,
+    "exit_multiple": 9.2
+  },
+  "assets": 1,
+  "difficulty": "D1",
+  "currency": "人民币",
+  "money_unit": "百万元",
+  "share_unit": "百万股",
+  "valuation_date": "2026-02-13",
+  "fiscal_year_end": "2025-09-30",
+  "next_fiscal_year_ends": [
+    "2026-09-30",
+    "2027-09-30",
+    "2028-09-30",
+    "2029-09-30"
+  ],
+  "history": [
+    {
+      "start": "2022-10-01",
+      "end": "2023-03-31",
+      "volume": 665,
+      "price": 3.637594,
+      "revenue": 1206.186,
+      "days": 182,
+      "annualizer": 2.0054945054945055,
+      "cogs": 482.474,
+      "other_opex": 229.175,
+      "fiscal_year": "FY2023"
+    },
+    {
+      "start": "2023-04-01",
+      "end": "2023-09-30",
+      "volume": 765,
+      "price": 3.335621,
+      "revenue": 1279.371,
+      "days": 183,
+      "annualizer": 1.994535519125683,
+      "cogs": 498.955,
+      "other_opex": 198.303,
+      "fiscal_year": "FY2023"
+    },
+    {
+      "start": "2023-10-01",
+      "end": "2024-03-31",
+      "volume": 825,
+      "price": 3.253939,
+      "revenue": 1345.927,
+      "days": 183,
+      "annualizer": 1.994535519125683,
+      "cogs": 578.749,
+      "other_opex": 235.537,
+      "fiscal_year": "FY2024"
+    },
+    {
+      "start": "2024-04-01",
+      "end": "2024-09-30",
+      "volume": 770,
+      "price": 3.658766,
+      "revenue": 1412.484,
+      "days": 183,
+      "annualizer": 1.994535519125683,
+      "cogs": 550.869,
+      "other_opex": 247.185,
+      "fiscal_year": "FY2024"
+    },
+    {
+      "start": "2024-10-01",
+      "end": "2025-03-31",
+      "volume": 880,
+      "price": 3.352273,
+      "revenue": 1470.959,
+      "days": 182,
+      "annualizer": 2.0054945054945055,
+      "cogs": 654.577,
+      "other_opex": 250.063,
+      "fiscal_year": "FY2025"
+    },
+    {
+      "start": "2025-04-01",
+      "end": "2025-09-30",
+      "volume": 780,
+      "price": 3.952244,
+      "revenue": 1545.598,
+      "days": 183,
+      "annualizer": 1.994535519125683,
+      "cogs": 664.607,
+      "other_opex": 278.208,
+      "fiscal_year": "FY2025"
+    }
+  ],
+  "opening": {
+    "ar": 649.0,
+    "inventory": 442.5,
+    "ap": 309.75,
+    "other_nwc": 82.6,
+    "gross_ppe": 1888.0,
+    "gross_intangibles": 649.0,
+    "net_ppe": 1121.0,
+    "net_intangibles": 354.0
+  },
+  "forecast": [
+    {
+      "volume": 815.1,
+      "price": 4.047098
+    },
+    {
+      "volume": 824.46,
+      "price": 4.055002
+    },
+    {
+      "volume": 833.82,
+      "price": 4.062907
+    },
+    {
+      "volume": 843.18,
+      "price": 4.070811
+    }
+  ],
+  "cogs_ratio": [
+    0.39,
+    0.396,
+    0.402,
+    0.408
+  ],
+  "other_opex_ratio": [
+    0.19,
+    0.187,
+    0.184,
+    0.181
+  ],
+  "tax_rate": [
+    0.23,
+    0.23,
+    0.24,
+    0.24
+  ],
+  "ar_days": [
+    55,
+    57,
+    59,
+    61
+  ],
+  "inventory_days": [
+    78,
+    76,
+    74,
+    72
+  ],
+  "ap_days": [
+    48,
+    49,
+    50,
+    51
+  ],
+  "other_nwc_ratio": [
+    0.026,
+    0.025,
+    0.024,
+    0.023
+  ],
+  "capex": [
+    194.7,
+    185.85,
+    177.0,
+    168.15
+  ],
+  "intangible_additions": [
+    41.3,
+    41.3,
+    41.3,
+    41.3
+  ],
+  "ppe_depreciation_rate": 0.14,
+  "intangible_amortization_rate": 0.1,
+  "wacc": {
+    "cost_of_equity": 0.105,
+    "pre_tax_cost_of_debt": 0.048,
+    "tax_rate_for_debt": 0.25,
+    "equity_weight": 0.78
+  },
+  "bridge": {
+    "cash": 472.0,
+    "investments": 94.4,
+    "short_term_debt": 236.0,
+    "long_term_debt": 442.5,
+    "minority_interest": 64.9,
+    "other_adjustments": 0.0,
+    "basic_shares": 179.95,
+    "dilution": 5.31
+  },
+  "discounting": "midyear",
+  "residual_rule": "actual_days_over_fiscal_year_days",
+  "rules": {
+    "historical_aggregation": "Complete fiscal-year flow = disclosed period sum; LTM = latest four quarters (or two half-years). Never annualize a short period in place of disclosed data.",
+    "nwc": "AR = annualized revenue*AR days/365; inventory = annualized COGS*inventory days/365; AP = annualized COGS*AP days/365; NWC = AR+inventory-AP+other operating NWC. Delta NWC is closing less immediately preceding closing.",
+    "assets": "Net PP&E rolls by capex less depreciation; intangibles roll by additions less amortization. Existing depreciation = opening net*rate*period fraction. New depreciation = additions*rate*period fraction*0.5.",
+    "fcff": "EBIT*(1-cash tax rate)+D&A-capex-intangible additions-delta NWC",
+    "discount": "Actual days/365 from valuation date; midyear subtracts half each cash-flow interval, year-end subtracts zero. Terminal is at the last full fiscal year end.",
+    "equity": "EV+cash+investments-short debt-long debt-minority+other adjustments; divided by basic shares plus dilution."
+  },
+  "perturbations": [
+    {
+      "schema_version": "B1",
+      "task_id": "B01",
+      "candidate_index": 0,
+      "seed": 11228547392784142394,
+      "master_seed": 20261122,
+      "company": "衡岳流体装备",
+      "scene": "volume_price",
+      "history_kind": "semiannual",
+      "fy_end": "2025-09-30",
+      "val_date": "2026-02-13",
+      "discount": "midyear",
+      "terminal": {
+        "type": "gordon",
+        "g": 0.027,
+        "exit_multiple": 9.2
+      },
+      "assets": 1,
+      "difficulty": "D1",
+      "currency": "人民币",
+      "money_unit": "百万元",
+      "share_unit": "百万股",
+      "valuation_date": "2026-03-16",
+      "fiscal_year_end": "2025-09-30",
+      "next_fiscal_year_ends": [
+        "2026-09-30",
+        "2027-09-30",
+        "2028-09-30",
+        "2029-09-30"
+      ],
+      "history": [
+        {
+          "start": "2022-10-01",
+          "end": "2023-03-31",
+          "volume": 665,
+          "price": 3.637594,
+          "revenue": 1206.186,
+          "days": 182,
+          "annualizer": 2.0054945054945055,
+          "cogs": 482.474,
+          "other_opex": 229.175,
+          "fiscal_year": "FY2023"
+        },
+        {
+          "start": "2023-04-01",
+          "end": "2023-09-30",
+          "volume": 765,
+          "price": 3.335621,
+          "revenue": 1279.371,
+          "days": 183,
+          "annualizer": 1.994535519125683,
+          "cogs": 498.955,
+          "other_opex": 198.303,
+          "fiscal_year": "FY2023"
+        },
+        {
+          "start": "2023-10-01",
+          "end": "2024-03-31",
+          "volume": 825,
+          "price": 3.253939,
+          "revenue": 1345.927,
+          "days": 183,
+          "annualizer": 1.994535519125683,
+          "cogs": 578.749,
+          "other_opex": 235.537,
+          "fiscal_year": "FY2024"
+        },
+        {
+          "start": "2024-04-01",
+          "end": "2024-09-30",
+          "volume": 770,
+          "price": 3.658766,
+          "revenue": 1412.484,
+          "days": 183,
+          "annualizer": 1.994535519125683,
+          "cogs": 550.869,
+          "other_opex": 247.185,
+          "fiscal_year": "FY2024"
+        },
+        {
+          "start": "2024-10-01",
+          "end": "2025-03-31",
+          "volume": 880,
+          "price": 3.352273,
+          "revenue": 1470.959,
+          "days": 182,
+          "annualizer": 2.0054945054945055,
+          "cogs": 654.577,
+          "other_opex": 250.063,
+          "fiscal_year": "FY2025"
+        },
+        {
+          "start": "2025-04-01",
+          "end": "2025-09-30",
+          "volume": 780,
+          "price": 3.952244,
+          "revenue": 1545.598,
+          "days": 183,
+          "annualizer": 1.994535519125683,
+          "cogs": 664.607,
+          "other_opex": 278.208,
+          "fiscal_year": "FY2025"
+        }
+      ],
+      "opening": {
+        "ar": 649.0,
+        "inventory": 442.5,
+        "ap": 309.75,
+        "other_nwc": 82.6,
+        "gross_ppe": 1888.0,
+        "gross_intangibles": 649.0,
+        "net_ppe": 1121.0,
+        "net_intangibles": 354.0
+      },
+      "forecast": [
+        {
+          "volume": 864.0060000000001,
+          "price": 4.047098
+        },
+        {
+          "volume": 824.46,
+          "price": 4.15637705
+        },
+        {
+          "volume": 833.82,
+          "price": 4.062907
+        },
+        {
+          "volume": 843.18,
+          "price": 4.070811
+        }
+      ],
+      "cogs_ratio": [
+        0.39,
+        0.396,
+        0.402,
+        0.408
+      ],
+      "other_opex_ratio": [
+        0.19,
+        0.187,
+        0.184,
+        0.181
+      ],
+      "tax_rate": [
+        0.23,
+        0.23,
+        0.24,
+        0.24
+      ],
+      "ar_days": [
+        63,
+        57,
+        59,
+        61
+      ],
+      "inventory_days": [
+        78,
+        76,
+        74,
+        72
+      ],
+      "ap_days": [
+        48,
+        49,
+        50,
+        51
+      ],
+      "other_nwc_ratio": [
+        0.026,
+        0.025,
+        0.024,
+        0.023
+      ],
+      "capex": [
+        218.064,
+        185.85,
+        177.0,
+        168.15
+      ],
+      "intangible_additions": [
+        41.3,
+        41.3,
+        41.3,
+        41.3
+      ],
+      "ppe_depreciation_rate": 0.14,
+      "intangible_amortization_rate": 0.1,
+      "wacc": {
+        "cost_of_equity": 0.111,
+        "pre_tax_cost_of_debt": 0.048,
+        "tax_rate_for_debt": 0.25,
+        "equity_weight": 0.78
+      },
+      "bridge": {
+        "cash": 509.0,
+        "investments": 94.4,
+        "short_term_debt": 236.0,
+        "long_term_debt": 442.5,
+        "minority_interest": 64.9,
+        "other_adjustments": 0.0,
+        "basic_shares": 179.95,
+        "dilution": 5.31
+      },
+      "discounting": "midyear",
+      "residual_rule": "actual_days_over_fiscal_year_days",
+      "rules": {
+        "historical_aggregation": "Complete fiscal-year flow = disclosed period sum; LTM = latest four quarters (or two half-years). Never annualize a short period in place of disclosed data.",
+        "nwc": "AR = annualized revenue*AR days/365; inventory = annualized COGS*inventory days/365; AP = annualized COGS*AP days/365; NWC = AR+inventory-AP+other operating NWC. Delta NWC is closing less immediately preceding closing.",
+        "assets": "Net PP&E rolls by capex less depreciation; intangibles roll by additions less amortization. Existing depreciation = opening net*rate*period fraction. New depreciation = additions*rate*period fraction*0.5.",
+        "fcff": "EBIT*(1-cash tax rate)+D&A-capex-intangible additions-delta NWC",
+        "discount": "Actual days/365 from valuation date; midyear subtracts half each cash-flow interval, year-end subtracts zero. Terminal is at the last full fiscal year end.",
+        "equity": "EV+cash+investments-short debt-long debt-minority+other adjustments; divided by basic shares plus dilution."
+      }
+    },
+    {
+      "schema_version": "B1",
+      "task_id": "B01",
+      "candidate_index": 0,
+      "seed": 11228547392784142394,
+      "master_seed": 20261122,
+      "company": "衡岳流体装备",
+      "scene": "volume_price",
+      "history_kind": "semiannual",
+      "fy_end": "2025-09-30",
+      "val_date": "2026-02-13",
+      "discount": "midyear",
+      "terminal": {
+        "type": "gordon",
+        "g": 0.021,
+        "exit_multiple": 8.1
+      },
+      "assets": 1,
+      "difficulty": "D1",
+      "currency": "人民币",
+      "money_unit": "百万元",
+      "share_unit": "百万股",
+      "valuation_date": "2026-01-20",
+      "fiscal_year_end": "2025-09-30",
+      "next_fiscal_year_ends": [
+        "2026-09-30",
+        "2027-09-30",
+        "2028-09-30",
+        "2029-09-30"
+      ],
+      "history": [
+        {
+          "start": "2022-10-01",
+          "end": "2023-03-31",
+          "volume": 665,
+          "price": 3.637594,
+          "revenue": 1206.186,
+          "days": 182,
+          "annualizer": 2.0054945054945055,
+          "cogs": 482.474,
+          "other_opex": 229.175,
+          "fiscal_year": "FY2023"
+        },
+        {
+          "start": "2023-04-01",
+          "end": "2023-09-30",
+          "volume": 765,
+          "price": 3.335621,
+          "revenue": 1279.371,
+          "days": 183,
+          "annualizer": 1.994535519125683,
+          "cogs": 498.955,
+          "other_opex": 198.303,
+          "fiscal_year": "FY2023"
+        },
+        {
+          "start": "2023-10-01",
+          "end": "2024-03-31",
+          "volume": 825,
+          "price": 3.253939,
+          "revenue": 1345.927,
+          "days": 183,
+          "annualizer": 1.994535519125683,
+          "cogs": 578.749,
+          "other_opex": 235.537,
+          "fiscal_year": "FY2024"
+        },
+        {
+          "start": "2024-04-01",
+          "end": "2024-09-30",
+          "volume": 770,
+          "price": 3.658766,
+          "revenue": 1412.484,
+          "days": 183,
+          "annualizer": 1.994535519125683,
+          "cogs": 550.869,
+          "other_opex": 247.185,
+          "fiscal_year": "FY2024"
+        },
+        {
+          "start": "2024-10-01",
+          "end": "2025-03-31",
+          "volume": 880,
+          "price": 3.352273,
+          "revenue": 1470.959,
+          "days": 182,
+          "annualizer": 2.0054945054945055,
+          "cogs": 654.577,
+          "other_opex": 250.063,
+          "fiscal_year": "FY2025"
+        },
+        {
+          "start": "2025-04-01",
+          "end": "2025-09-30",
+          "volume": 780,
+          "price": 3.952244,
+          "revenue": 1545.598,
+          "days": 183,
+          "annualizer": 1.994535519125683,
+          "cogs": 664.607,
+          "other_opex": 278.208,
+          "fiscal_year": "FY2025"
+        }
+      ],
+      "opening": {
+        "ar": 649.0,
+        "inventory": 442.5,
+        "ap": 309.75,
+        "other_nwc": 82.6,
+        "gross_ppe": 1888.0,
+        "gross_intangibles": 649.0,
+        "net_ppe": 1121.0,
+        "net_intangibles": 354.0
+      },
+      "forecast": [
+        {
+          "volume": 815.1,
+          "price": 4.047098
+        },
+        {
+          "volume": 824.46,
+          "price": 4.055002
+        },
+        {
+          "volume": 833.82,
+          "price": 4.062907
+        },
+        {
+          "volume": 843.18,
+          "price": 4.070811
+        }
+      ],
+      "cogs_ratio": [
+        0.39,
+        0.396,
+        0.402,
+        0.408
+      ],
+      "other_opex_ratio": [
+        0.19,
+        0.187,
+        0.184,
+        0.181
+      ],
+      "tax_rate": [
+        0.23,
+        0.23,
+        0.24,
+        0.24
+      ],
+      "ar_days": [
+        55,
+        57,
+        59,
+        61
+      ],
+      "inventory_days": [
+        78,
+        76,
+        74,
+        72
+      ],
+      "ap_days": [
+        48,
+        49,
+        50,
+        51
+      ],
+      "other_nwc_ratio": [
+        0.026,
+        0.025,
+        0.024,
+        0.023
+      ],
+      "capex": [
+        194.7,
+        185.85,
+        177.0,
+        168.15
+      ],
+      "intangible_additions": [
+        41.3,
+        41.3,
+        41.3,
+        41.3
+      ],
+      "ppe_depreciation_rate": 0.14,
+      "intangible_amortization_rate": 0.1,
+      "wacc": {
+        "cost_of_equity": 0.105,
+        "pre_tax_cost_of_debt": 0.057,
+        "tax_rate_for_debt": 0.25,
+        "equity_weight": 0.7
+      },
+      "bridge": {
+        "cash": 472.0,
+        "investments": 94.4,
+        "short_term_debt": 281.0,
+        "long_term_debt": 442.5,
+        "minority_interest": 64.9,
+        "other_adjustments": 0.0,
+        "basic_shares": 183.95,
+        "dilution": 5.31
+      },
+      "discounting": "midyear",
+      "residual_rule": "actual_days_over_fiscal_year_days",
+      "rules": {
+        "historical_aggregation": "Complete fiscal-year flow = disclosed period sum; LTM = latest four quarters (or two half-years). Never annualize a short period in place of disclosed data.",
+        "nwc": "AR = annualized revenue*AR days/365; inventory = annualized COGS*inventory days/365; AP = annualized COGS*AP days/365; NWC = AR+inventory-AP+other operating NWC. Delta NWC is closing less immediately preceding closing.",
+        "assets": "Net PP&E rolls by capex less depreciation; intangibles roll by additions less amortization. Existing depreciation = opening net*rate*period fraction. New depreciation = additions*rate*period fraction*0.5.",
+        "fcff": "EBIT*(1-cash tax rate)+D&A-capex-intangible additions-delta NWC",
+        "discount": "Actual days/365 from valuation date; midyear subtracts half each cash-flow interval, year-end subtracts zero. Terminal is at the last full fiscal year end.",
+        "equity": "EV+cash+investments-short debt-long debt-minority+other adjustments; divided by basic shares plus dilution."
+      }
+    }
+  ]
+}

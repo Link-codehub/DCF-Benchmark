@@ -1,0 +1,159 @@
+{
+  "schema_version": "v3.0",
+  "task_id": "A01",
+  "family": "A",
+  "company": "弦庭软科",
+  "base_structure": "P-ARR中枢",
+  "industry": "software_subscription",
+  "industry_drivers": [
+    "ARR 净留存与新签",
+    "平均 ARR 收入确认",
+    "资本化研发"
+  ],
+  "valuation_date": "2025-09-27",
+  "last_fy_end": "2025-06-30",
+  "horizon": 5,
+  "history": [],
+  "time_axis": {
+    "midyear": false,
+    "history_frequency": "annual",
+    "day_count": "actual/365"
+  },
+  "accounting": {
+    "sbc_expense": true,
+    "industry_valuation": true
+  },
+  "assumptions": {
+    "tax": 0.23,
+    "wacc": 0.1,
+    "g": 0.025,
+    "driver0": 730,
+    "ebit_margin": [
+      0.16,
+      0.164,
+      0.168,
+      0.17200000000000001,
+      0.176
+    ],
+    "da_pct": [
+      0.052,
+      0.052,
+      0.052,
+      0.052,
+      0.052
+    ],
+    "capex_pct": [
+      0.065,
+      0.065,
+      0.065,
+      0.065,
+      0.065
+    ],
+    "nwc_pct": [
+      0.13,
+      0.13,
+      0.13,
+      0.13,
+      0.13
+    ],
+    "opening_nwc": 63,
+    "net_revenue_retention": [
+      1.04,
+      1.045,
+      1.05,
+      1.055,
+      1.06
+    ],
+    "new_arr": [
+      98,
+      111,
+      124,
+      137,
+      150
+    ],
+    "capitalized_rd_pct": [
+      0.075,
+      0.075,
+      0.075,
+      0.075,
+      0.075
+    ]
+  },
+  "bridge": {
+    "cash": 139,
+    "debt": 203,
+    "investments": 25,
+    "lease_liability": 13,
+    "minority": 6,
+    "valuation_cash_adjustment": 0,
+    "shares": 75,
+    "rsus": 1.2,
+    "options": 0,
+    "strike": 0,
+    "share_price": 15
+  },
+  "residual_activity": 0.7561643835616438,
+  "enabled_modules": [
+    "industry_driver",
+    "residual_period"
+  ],
+  "public_output_keys": [
+    "arr_close_p1",
+    "revenue_p1",
+    "ebit_p1",
+    "capex_p1",
+    "da_p1",
+    "nwc_p1",
+    "delta_nwc_p1",
+    "fcff_p1",
+    "discount_time_p1",
+    "arr_close_p2",
+    "revenue_p2",
+    "ebit_p2",
+    "capex_p2",
+    "da_p2",
+    "nwc_p2",
+    "delta_nwc_p2",
+    "fcff_p2",
+    "discount_time_p2",
+    "arr_close_p3",
+    "revenue_p3",
+    "ebit_p3",
+    "capex_p3",
+    "da_p3",
+    "nwc_p3",
+    "delta_nwc_p3",
+    "fcff_p3",
+    "discount_time_p3",
+    "arr_close_p4",
+    "revenue_p4",
+    "ebit_p4",
+    "capex_p4",
+    "da_p4",
+    "nwc_p4",
+    "delta_nwc_p4",
+    "fcff_p4",
+    "discount_time_p4",
+    "arr_close_p5",
+    "revenue_p5",
+    "ebit_p5",
+    "capex_p5",
+    "da_p5",
+    "nwc_p5",
+    "delta_nwc_p5",
+    "fcff_p5",
+    "discount_time_p5",
+    "wacc",
+    "terminal_value",
+    "pv_terminal",
+    "enterprise_value",
+    "equity_value",
+    "diluted_shares",
+    "value_per_share"
+  ],
+  "units": {
+    "money": "百万元",
+    "shares": "百万股",
+    "rates": "小数"
+  }
+}

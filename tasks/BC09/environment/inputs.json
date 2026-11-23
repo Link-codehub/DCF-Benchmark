@@ -1,0 +1,534 @@
+{
+  "schema_version": "v3.0",
+  "task_id": "BC09",
+  "family": "BC",
+  "step": 1,
+  "company": "洲禾联合",
+  "b_items": [
+    "mixed_ltm",
+    "history_normalization",
+    "residual_period",
+    "actual_day_discount",
+    "nwc_fye_open",
+    "equity_bridge"
+  ],
+  "c_structure": "segment_sotp",
+  "valuation_date": "2024-12-14",
+  "last_fy_end": "2024-08-31",
+  "horizon": 4,
+  "history": [
+    {
+      "start": "2021-09-01",
+      "end": "2022-02-28",
+      "fiscal_year": "2022",
+      "period_type": "half_year",
+      "revenue": 327.8,
+      "operating_cost_ex_sbc": 247,
+      "sbc": 9.5,
+      "nonrecurring_gain": 0.0
+    },
+    {
+      "start": "2022-03-01",
+      "end": "2022-08-31",
+      "fiscal_year": "2022",
+      "period_type": "half_year",
+      "revenue": 512.8,
+      "operating_cost_ex_sbc": 392,
+      "sbc": 10.5,
+      "nonrecurring_gain": 2.2
+    },
+    {
+      "start": "2022-09-01",
+      "end": "2023-02-28",
+      "fiscal_year": "2023",
+      "period_type": "half_year",
+      "revenue": 347.8,
+      "operating_cost_ex_sbc": 261,
+      "sbc": 9.5,
+      "nonrecurring_gain": 0.0
+    },
+    {
+      "start": "2023-03-01",
+      "end": "2023-08-31",
+      "fiscal_year": "2023",
+      "period_type": "half_year",
+      "revenue": 532.8,
+      "operating_cost_ex_sbc": 406,
+      "sbc": 10.5,
+      "nonrecurring_gain": 2.2
+    },
+    {
+      "start": "2023-09-01",
+      "end": "2024-02-29",
+      "fiscal_year": "2024",
+      "period_type": "half_year",
+      "revenue": 367.8,
+      "operating_cost_ex_sbc": 275,
+      "sbc": 9.5,
+      "nonrecurring_gain": 0.0
+    },
+    {
+      "start": "2024-03-01",
+      "end": "2024-08-31",
+      "fiscal_year": "2024",
+      "period_type": "half_year",
+      "revenue": 552.8,
+      "operating_cost_ex_sbc": 420,
+      "sbc": 10.5,
+      "nonrecurring_gain": 2.2
+    },
+    {
+      "start": "2024-09-01",
+      "end": "2024-11-30",
+      "fiscal_year": "2025",
+      "period_type": "bridge_quarter",
+      "revenue": 298.0,
+      "operating_cost_ex_sbc": 215.2,
+      "sbc": 5.7,
+      "nonrecurring_gain": 1.1
+    }
+  ],
+  "time_axis": {
+    "history_frequency": "mixed_h1_q",
+    "midyear": true,
+    "day_count": "actual/365",
+    "terminal_at_last_fye": true
+  },
+  "accounting": {
+    "normalized_history": true,
+    "sbc_expense": true,
+    "lease_in_debt": false
+  },
+  "business": {
+    "driver": "capacity",
+    "unit": "千吨年产能",
+    "price_unit": "百万元/千吨",
+    "description": "特种涂层产线"
+  },
+  "opening_nwc": 402.846952,
+  "opening_ppe": 339.14,
+  "opening_intangible": 161.7,
+  "opening_debt": 218.8,
+  "opening_cash": 109.4,
+  "assumptions": {
+    "driver0": 162,
+    "price0": 9.1257925,
+    "driver_add": [
+      12.96,
+      14.742,
+      16.524,
+      18.306
+    ],
+    "driver_growth": [
+      0.09,
+      0.081,
+      0.072,
+      0.063
+    ],
+    "attrition_rate": [
+      0.045,
+      0.05,
+      0.055,
+      0.06
+    ],
+    "price_growth": [
+      0.03,
+      0.028,
+      0.026,
+      0.024
+    ],
+    "ebit_margin": [
+      0.16,
+      0.167,
+      0.174,
+      0.181
+    ],
+    "da_pct": [
+      0.04,
+      0.042,
+      0.04,
+      0.042
+    ],
+    "capex_pct": [
+      0.061,
+      0.065,
+      0.069,
+      0.061
+    ],
+    "nwc_pct": [
+      0.18,
+      0.186,
+      0.192,
+      0.18
+    ],
+    "tax": 0.235,
+    "wacc": 0.107,
+    "g": 0.022,
+    "gordon_weight": 1.0,
+    "exit_multiple": 8.7,
+    "deferred_pct": [
+      0.08,
+      0.08,
+      0.08,
+      0.08
+    ],
+    "cogs_ratio": [
+      0.48,
+      0.48,
+      0.48,
+      0.48
+    ],
+    "dso": [
+      47,
+      48,
+      49,
+      50
+    ],
+    "dio": [
+      62,
+      61,
+      60,
+      59
+    ],
+    "dpo": [
+      43,
+      44,
+      45,
+      46
+    ],
+    "nol0": 120.34,
+    "ppe_rate": 0.13,
+    "rou_rate": 0.2,
+    "lease_additions": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "interest_rate": 0.052,
+    "new_borrowing": [
+      27.35,
+      0,
+      0,
+      0
+    ],
+    "debt_repayment": [
+      10.94,
+      21.88,
+      32.82,
+      43.76
+    ],
+    "beta_unlevered": 0.84,
+    "target_de": 0.27,
+    "risk_free": 0.034,
+    "erp": 0.049,
+    "specific_premium": 0.006,
+    "cost_of_debt": 0.053,
+    "scenario": 1,
+    "upside_demand_delta": 0.025,
+    "downside_demand_delta": -0.025,
+    "upside_margin_delta": 0.012,
+    "downside_margin_delta": -0.014,
+    "wacc_deltas": [
+      -0.01,
+      0,
+      0.01
+    ],
+    "g_deltas": [
+      -0.005,
+      0,
+      0.005
+    ],
+    "utilization": [
+      0.74,
+      0.758,
+      0.776,
+      0.794
+    ],
+    "sbc_pct": [
+      0.025,
+      0.025,
+      0.025,
+      0.025
+    ],
+    "upside_reinvestment_delta": 0.12,
+    "downside_reinvestment_delta": -0.1,
+    "upside_wacc_delta": -0.005,
+    "downside_wacc_delta": 0.006,
+    "valuation_wacc_delta": 0.0075,
+    "valuation_g_delta": 0.004,
+    "intangible_additions": [
+      33.3,
+      37.3,
+      41.3,
+      45.3
+    ],
+    "intangible_rate": 0.16
+  },
+  "bridge": {
+    "cash": 109.4,
+    "debt": 218.8,
+    "investments": 16.41,
+    "lease_liability": 0,
+    "minority": 13.128,
+    "valuation_cash_adjustment": 13.128,
+    "shares": 164,
+    "rsus": 2.4,
+    "options": 6.0,
+    "strike": 7.0,
+    "share_price": 16.4
+  },
+  "segments": {
+    "segment_alpha": {
+      "driver0": 98,
+      "attrition_rate": [
+        0.04,
+        0.045,
+        0.05,
+        0.055
+      ],
+      "driver_add": [
+        12.6,
+        13.6,
+        14.6,
+        15.6
+      ],
+      "price0": 9.78,
+      "price_growth": [
+        0.022,
+        0.024,
+        0.026,
+        0.027999999999999997
+      ],
+      "ebit_margin": [
+        0.19,
+        0.193,
+        0.196,
+        0.199
+      ],
+      "capex_pct": [
+        0.065,
+        0.065,
+        0.065,
+        0.065
+      ],
+      "nwc_pct": [
+        0.14,
+        0.14,
+        0.14,
+        0.14
+      ],
+      "opening_nwc": 62,
+      "opening_ppe": 145,
+      "wacc_delta": -0.007,
+      "method": "gordon"
+    },
+    "segment_beta": {
+      "driver0": 123,
+      "attrition_rate": [
+        0.04,
+        0.045,
+        0.05,
+        0.055
+      ],
+      "driver_add": [
+        14.6,
+        15.6,
+        16.6,
+        17.6
+      ],
+      "price0": 11.88,
+      "price_growth": [
+        0.022,
+        0.024,
+        0.026,
+        0.027999999999999997
+      ],
+      "ebit_margin": [
+        0.225,
+        0.228,
+        0.231,
+        0.234
+      ],
+      "capex_pct": [
+        0.079,
+        0.079,
+        0.079,
+        0.079
+      ],
+      "nwc_pct": [
+        0.185,
+        0.185,
+        0.185,
+        0.185
+      ],
+      "opening_nwc": 91,
+      "opening_ppe": 203,
+      "wacc_delta": 0.005999999999999999,
+      "method": "exit"
+    }
+  },
+  "market": {
+    "market_price": 21.19
+  },
+  "nwc_opening_basis": "last_fiscal_year_end",
+  "enabled_modules": [
+    "residual_period",
+    "working_capital",
+    "rolling_assets",
+    "nwc_days"
+  ],
+  "public_output_keys": [
+    "fy_revenue",
+    "fy_normalized_ebit",
+    "fy_reported_ebit",
+    "ltm_revenue",
+    "ltm_normalized_ebit",
+    "ltm_reported_ebit",
+    "ltm_h1_revenue",
+    "ltm_bridge_quarter_revenue",
+    "segment_alpha_driver_close_p1",
+    "segment_alpha_average_driver_p1",
+    "segment_alpha_unit_price_p1",
+    "segment_alpha_revenue_p1",
+    "segment_alpha_ebit_p1",
+    "segment_alpha_capex_p1",
+    "segment_alpha_depreciation_p1",
+    "segment_alpha_da_p1",
+    "segment_alpha_ppe_close_p1",
+    "segment_alpha_nwc_p1",
+    "segment_alpha_delta_nwc_p1",
+    "segment_alpha_fcff_p1",
+    "segment_alpha_end_time_p1",
+    "segment_alpha_discount_time_p1",
+    "segment_alpha_driver_close_p2",
+    "segment_alpha_average_driver_p2",
+    "segment_alpha_unit_price_p2",
+    "segment_alpha_revenue_p2",
+    "segment_alpha_ebit_p2",
+    "segment_alpha_capex_p2",
+    "segment_alpha_depreciation_p2",
+    "segment_alpha_da_p2",
+    "segment_alpha_ppe_close_p2",
+    "segment_alpha_nwc_p2",
+    "segment_alpha_delta_nwc_p2",
+    "segment_alpha_fcff_p2",
+    "segment_alpha_end_time_p2",
+    "segment_alpha_discount_time_p2",
+    "segment_alpha_driver_close_p3",
+    "segment_alpha_average_driver_p3",
+    "segment_alpha_unit_price_p3",
+    "segment_alpha_revenue_p3",
+    "segment_alpha_ebit_p3",
+    "segment_alpha_capex_p3",
+    "segment_alpha_depreciation_p3",
+    "segment_alpha_da_p3",
+    "segment_alpha_ppe_close_p3",
+    "segment_alpha_nwc_p3",
+    "segment_alpha_delta_nwc_p3",
+    "segment_alpha_fcff_p3",
+    "segment_alpha_end_time_p3",
+    "segment_alpha_discount_time_p3",
+    "segment_alpha_driver_close_p4",
+    "segment_alpha_average_driver_p4",
+    "segment_alpha_unit_price_p4",
+    "segment_alpha_revenue_p4",
+    "segment_alpha_ebit_p4",
+    "segment_alpha_capex_p4",
+    "segment_alpha_depreciation_p4",
+    "segment_alpha_da_p4",
+    "segment_alpha_ppe_close_p4",
+    "segment_alpha_nwc_p4",
+    "segment_alpha_delta_nwc_p4",
+    "segment_alpha_fcff_p4",
+    "segment_alpha_end_time_p4",
+    "segment_alpha_discount_time_p4",
+    "segment_alpha_wacc",
+    "segment_alpha_terminal_growth",
+    "segment_alpha_exit_multiple",
+    "segment_alpha_tv_gordon",
+    "segment_alpha_tv_exit",
+    "segment_alpha_terminal_value",
+    "segment_alpha_pv_explicit",
+    "segment_alpha_pv_terminal",
+    "segment_alpha_enterprise_value",
+    "segment_alpha_segment_enterprise_value",
+    "segment_beta_driver_close_p1",
+    "segment_beta_average_driver_p1",
+    "segment_beta_unit_price_p1",
+    "segment_beta_revenue_p1",
+    "segment_beta_ebit_p1",
+    "segment_beta_capex_p1",
+    "segment_beta_depreciation_p1",
+    "segment_beta_da_p1",
+    "segment_beta_ppe_close_p1",
+    "segment_beta_nwc_p1",
+    "segment_beta_delta_nwc_p1",
+    "segment_beta_fcff_p1",
+    "segment_beta_end_time_p1",
+    "segment_beta_discount_time_p1",
+    "segment_beta_driver_close_p2",
+    "segment_beta_average_driver_p2",
+    "segment_beta_unit_price_p2",
+    "segment_beta_revenue_p2",
+    "segment_beta_ebit_p2",
+    "segment_beta_capex_p2",
+    "segment_beta_depreciation_p2",
+    "segment_beta_da_p2",
+    "segment_beta_ppe_close_p2",
+    "segment_beta_nwc_p2",
+    "segment_beta_delta_nwc_p2",
+    "segment_beta_fcff_p2",
+    "segment_beta_end_time_p2",
+    "segment_beta_discount_time_p2",
+    "segment_beta_driver_close_p3",
+    "segment_beta_average_driver_p3",
+    "segment_beta_unit_price_p3",
+    "segment_beta_revenue_p3",
+    "segment_beta_ebit_p3",
+    "segment_beta_capex_p3",
+    "segment_beta_depreciation_p3",
+    "segment_beta_da_p3",
+    "segment_beta_ppe_close_p3",
+    "segment_beta_nwc_p3",
+    "segment_beta_delta_nwc_p3",
+    "segment_beta_fcff_p3",
+    "segment_beta_end_time_p3",
+    "segment_beta_discount_time_p3",
+    "segment_beta_driver_close_p4",
+    "segment_beta_average_driver_p4",
+    "segment_beta_unit_price_p4",
+    "segment_beta_revenue_p4",
+    "segment_beta_ebit_p4",
+    "segment_beta_capex_p4",
+    "segment_beta_depreciation_p4",
+    "segment_beta_da_p4",
+    "segment_beta_ppe_close_p4",
+    "segment_beta_nwc_p4",
+    "segment_beta_delta_nwc_p4",
+    "segment_beta_fcff_p4",
+    "segment_beta_end_time_p4",
+    "segment_beta_discount_time_p4",
+    "segment_beta_wacc",
+    "segment_beta_terminal_growth",
+    "segment_beta_exit_multiple",
+    "segment_beta_tv_gordon",
+    "segment_beta_tv_exit",
+    "segment_beta_terminal_value",
+    "segment_beta_pv_explicit",
+    "segment_beta_pv_terminal",
+    "segment_beta_enterprise_value",
+    "segment_beta_segment_enterprise_value",
+    "sotp_enterprise_value",
+    "enterprise_value",
+    "equity_value",
+    "diluted_shares",
+    "value_per_share",
+    "wacc"
+  ],
+  "units": {
+    "money": "百万元",
+    "shares": "百万股",
+    "rates": "小数"
+  }
+}

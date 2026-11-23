@@ -1,0 +1,72 @@
+[
+  {
+    "start": "2021-09-01",
+    "end": "2022-02-28",
+    "fiscal_year": "2022",
+    "period_type": "half_year",
+    "revenue": 327.8,
+    "operating_cost_ex_sbc": 247,
+    "sbc": 9.5,
+    "nonrecurring_gain": 0.0
+  },
+  {
+    "start": "2022-03-01",
+    "end": "2022-08-31",
+    "fiscal_year": "2022",
+    "period_type": "half_year",
+    "revenue": 512.8,
+    "operating_cost_ex_sbc": 392,
+    "sbc": 10.5,
+    "nonrecurring_gain": 2.2
+  },
+  {
+    "start": "2022-09-01",
+    "end": "2023-02-28",
+    "fiscal_year": "2023",
+    "period_type": "half_year",
+    "revenue": 347.8,
+    "operating_cost_ex_sbc": 261,
+    "sbc": 9.5,
+    "nonrecurring_gain": 0.0
+  },
+  {
+    "start": "2023-03-01",
+    "end": "2023-08-31",
+    "fiscal_year": "2023",
+    "period_type": "half_year",
+    "revenue": 532.8,
+    "operating_cost_ex_sbc": 406,
+    "sbc": 10.5,
+    "nonrecurring_gain": 2.2
+  },
+  {
+    "start": "2023-09-01",
+    "end": "2024-02-29",
+    "fiscal_year": "2024",
+    "period_type": "half_year",
+    "revenue": 367.8,
+    "operating_cost_ex_sbc": 275,
+    "sbc": 9.5,
+    "nonrecurring_gain": 0.0
+  },
+  {
+    "start": "2024-03-01",
+    "end": "2024-08-31",
+    "fiscal_year": "2024",
+    "period_type": "half_year",
+    "revenue": 552.8,
+    "operating_cost_ex_sbc": 420,
+    "sbc": 10.5,
+    "nonrecurring_gain": 2.2
+  },
+  {
+    "start": "2024-09-01",
+    "end": "2024-11-30",
+    "fiscal_year": "2025",
+    "period_type": "bridge_quarter",
+    "revenue": 298.0,
+    "operating_cost_ex_sbc": 215.2,
+    "sbc": 5.7,
+    "nonrecurring_gain": 1.1
+  }
+]

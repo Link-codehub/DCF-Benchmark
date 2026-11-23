@@ -1,0 +1,31 @@
+schema_version = "1.4"
+artifacts = ["/app/output.xlsx", "/app/memo.md"]
+[task]
+name = "dcf-v3/r02"
+version = "2.0.0"
+description = "Multidimensional DCF with independent expected and live-formula reference"
+authors = []
+keywords = ["DCF", "multidimensional", "LibreOffice", "semantic-rubric"]
+[metadata]
+difficulty = "hard"
+category = "finance"
+tags = ["dcf-v2", "subscription", "fixed_outputs"]
+[environment]
+network_mode = "no-network"
+build_timeout_sec = 600.0
+cpus = 1
+memory_mb = 2048
+storage_mb = 4096
+gpus = 0
+mcp_servers = []
+[agent]
+timeout_sec = 2400.0
+disable_web_search = true
+network_mode = "allowlist"
+allowed_hosts = ["host.docker.internal"]
+[verifier]
+timeout_sec = 600.0
+environment_mode = "shared"
+[environment.env]
+[verifier.env]
+[solution.env]

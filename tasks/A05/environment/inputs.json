@@ -1,0 +1,166 @@
+{
+  "schema_version": "v3.0",
+  "task_id": "A05",
+  "family": "A",
+  "company": "敦衡银行",
+  "base_structure": "P-ARR中枢",
+  "industry": "banking",
+  "industry_drivers": [
+    "平均生息资产与净息差",
+    "贷款增长与资本充足率",
+    "股权现金流"
+  ],
+  "valuation_date": "2025-11-02",
+  "last_fy_end": "2025-06-30",
+  "horizon": 5,
+  "history": [],
+  "time_axis": {
+    "midyear": false,
+    "history_frequency": "annual",
+    "day_count": "actual/365"
+  },
+  "accounting": {
+    "sbc_expense": true,
+    "industry_valuation": true
+  },
+  "assumptions": {
+    "tax": 0.23,
+    "wacc": 0.10400000000000001,
+    "g": 0.027,
+    "driver0": 500,
+    "ebit_margin": [
+      0.16,
+      0.164,
+      0.168,
+      0.17200000000000001,
+      0.176
+    ],
+    "da_pct": [
+      0.052,
+      0.052,
+      0.052,
+      0.052,
+      0.052
+    ],
+    "capex_pct": [
+      0.065,
+      0.065,
+      0.065,
+      0.065,
+      0.065
+    ],
+    "nwc_pct": [
+      0.13,
+      0.13,
+      0.13,
+      0.13,
+      0.13
+    ],
+    "opening_nwc": 79,
+    "opening_loans": 16400,
+    "opening_equity": 1840,
+    "loan_growth": [
+      0.065,
+      0.061,
+      0.057,
+      0.053000000000000005,
+      0.049
+    ],
+    "risk_weight": 0.72,
+    "target_capital_ratio": 0.115,
+    "nim": [
+      0.027,
+      0.0275,
+      0.028,
+      0.0285,
+      0.028999999999999998
+    ],
+    "fee_pct": [
+      0.004,
+      0.004,
+      0.004,
+      0.004,
+      0.004
+    ],
+    "cost_pct": [
+      0.014,
+      0.014,
+      0.014,
+      0.014,
+      0.014
+    ],
+    "credit_cost": [
+      0.0035,
+      0.0035,
+      0.0035,
+      0.0035,
+      0.0035
+    ],
+    "cost_of_equity": 0.108
+  },
+  "bridge": {
+    "cash": 175,
+    "debt": 255,
+    "investments": 29,
+    "lease_liability": 17,
+    "minority": 10,
+    "valuation_cash_adjustment": 0,
+    "shares": 87,
+    "rsus": 1.2,
+    "options": 0,
+    "strike": 0,
+    "share_price": 15
+  },
+  "residual_activity": 0.6575342465753424,
+  "enabled_modules": [
+    "industry_driver",
+    "residual_period"
+  ],
+  "public_output_keys": [
+    "loans_close_p1",
+    "nim_p1",
+    "net_interest_income_p1",
+    "net_income_p1",
+    "required_equity_p1",
+    "fcfe_p1",
+    "equity_close_p1",
+    "loans_close_p2",
+    "nim_p2",
+    "net_interest_income_p2",
+    "net_income_p2",
+    "required_equity_p2",
+    "fcfe_p2",
+    "equity_close_p2",
+    "loans_close_p3",
+    "nim_p3",
+    "net_interest_income_p3",
+    "net_income_p3",
+    "required_equity_p3",
+    "fcfe_p3",
+    "equity_close_p3",
+    "loans_close_p4",
+    "nim_p4",
+    "net_interest_income_p4",
+    "net_income_p4",
+    "required_equity_p4",
+    "fcfe_p4",
+    "equity_close_p4",
+    "loans_close_p5",
+    "nim_p5",
+    "net_interest_income_p5",
+    "net_income_p5",
+    "required_equity_p5",
+    "fcfe_p5",
+    "equity_close_p5",
+    "equity_value",
+    "equity_cost",
+    "terminal_value",
+    "diluted_shares",
+    "value_per_share"
+  ],
+  "units": {
+    "money": "百万元",
+    "shares": "百万股",
+    "rates": "小数"
+  }
+}

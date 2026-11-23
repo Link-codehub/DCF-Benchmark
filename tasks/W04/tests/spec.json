@@ -1,0 +1,84 @@
+{
+  "ticker": "ADBE",
+  "cik": 796343,
+  "name": "Adobe Inc.",
+  "ir": "https://www.adobe.com/investor-relations.html",
+  "fiscal_year": "FY2024",
+  "fiscal_year_start": "2023-12-02",
+  "fiscal_year_end": "2024-11-29",
+  "asof": "2025-02-14",
+  "treasury_date": "2025-02-14",
+  "task_id": "W04",
+  "family": "W",
+  "schema_version": "dcf-v3-task-v1",
+  "language": "zh-CN",
+  "required_fields": [
+    "revenue",
+    "operating_income",
+    "pretax_income",
+    "income_tax",
+    "net_income_consolidated",
+    "da",
+    "capex",
+    "diluted_shares",
+    "cash",
+    "short_term_investments",
+    "receivables",
+    "current_assets",
+    "current_liabilities",
+    "current_debt",
+    "noncurrent_debt",
+    "treasury_10y"
+  ],
+  "allowed_sources": [
+    {
+      "source_id": "SEC_COMPANYFACTS",
+      "domains": [
+        "data.sec.gov",
+        "www.sec.gov"
+      ],
+      "url": "https://data.sec.gov/api/xbrl/companyfacts/CIK0000796343.json"
+    },
+    {
+      "source_id": "COMPANY_IR_FILING",
+      "domains": [
+        "www.adobe.com",
+        "s22.q4cdn.com",
+        "s201.q4cdn.com",
+        "d18rn0p25nwr6d.cloudfront.net"
+      ],
+      "url": "https://www.adobe.com/investor-relations.html"
+    },
+    {
+      "source_id": "UST_DAILY",
+      "domains": [
+        "home.treasury.gov"
+      ],
+      "url": "https://home.treasury.gov/resource-center/data-chart-center/interest-rates/daily-treasury-rates.csv/2025/all?type=daily_treasury_yield_curve&field_tdr_date_value=2025&page=&_format=csv"
+    }
+  ],
+  "required_artifacts": [
+    "model.xlsx",
+    "sources.json",
+    "cross_validation.json",
+    "retrieval_map.json",
+    "memo.md"
+  ],
+  "valuation_assumptions": {
+    "initial_growth": 0.09,
+    "steady_ebit_margin": 0.32,
+    "tax_rate": 0.2
+  },
+  "source_snapshot_sha256": {
+    "../data/raw/ADBE_facts.json": "86a5689aa9aa7b0f9e95be21b48b0305376e014c8dbf3b8bb3b4b131f1b6a0c4",
+    "../data/raw/DGS10.csv": "7e66e6c4d14dec358ccbaadd9b6d11d66e74c141e0df9caa8879d0f634668556"
+  },
+  "network": {
+    "mode": "allowlist",
+    "sidecar": "dcf-ipv4-gost-egress:v1",
+    "configured": true,
+    "verified": false,
+    "status": "not_verified_by_generation"
+  },
+  "nonmechanical_status": "W-NOFORBID 与 W-FAILURE 需另行语义/代理评审，本次机械评分不自动给分。"
+}

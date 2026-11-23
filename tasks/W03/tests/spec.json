@@ -1,0 +1,84 @@
+{
+  "ticker": "SBUX",
+  "cik": 829224,
+  "name": "Starbucks Corporation",
+  "ir": "https://investor.starbucks.com/",
+  "fiscal_year": "FY2024",
+  "fiscal_year_start": "2023-10-02",
+  "fiscal_year_end": "2024-09-29",
+  "asof": "2024-11-27",
+  "treasury_date": "2024-11-27",
+  "task_id": "W03",
+  "family": "W",
+  "schema_version": "dcf-v3-task-v1",
+  "language": "zh-CN",
+  "required_fields": [
+    "revenue",
+    "operating_income",
+    "pretax_income",
+    "income_tax",
+    "net_income_consolidated",
+    "da",
+    "capex",
+    "diluted_shares",
+    "cash",
+    "short_term_investments",
+    "receivables",
+    "current_assets",
+    "current_liabilities",
+    "current_debt",
+    "noncurrent_debt",
+    "treasury_10y"
+  ],
+  "allowed_sources": [
+    {
+      "source_id": "SEC_COMPANYFACTS",
+      "domains": [
+        "data.sec.gov",
+        "www.sec.gov"
+      ],
+      "url": "https://data.sec.gov/api/xbrl/companyfacts/CIK0000829224.json"
+    },
+    {
+      "source_id": "COMPANY_IR_FILING",
+      "domains": [
+        "investor.starbucks.com",
+        "s22.q4cdn.com",
+        "s201.q4cdn.com",
+        "d18rn0p25nwr6d.cloudfront.net"
+      ],
+      "url": "https://investor.starbucks.com/"
+    },
+    {
+      "source_id": "UST_DAILY",
+      "domains": [
+        "home.treasury.gov"
+      ],
+      "url": "https://home.treasury.gov/resource-center/data-chart-center/interest-rates/daily-treasury-rates.csv/2024/all?type=daily_treasury_yield_curve&field_tdr_date_value=2024&page=&_format=csv"
+    }
+  ],
+  "required_artifacts": [
+    "model.xlsx",
+    "sources.json",
+    "cross_validation.json",
+    "retrieval_map.json",
+    "memo.md"
+  ],
+  "valuation_assumptions": {
+    "initial_growth": 0.06,
+    "steady_ebit_margin": 0.15,
+    "tax_rate": 0.24
+  },
+  "source_snapshot_sha256": {
+    "../data/raw/SBUX_facts.json": "0deec882c9ad1727f308f0279acd19cbfa52669bb724fdcd1ce75d970d67015e",
+    "../data/raw/DGS10.csv": "7e66e6c4d14dec358ccbaadd9b6d11d66e74c141e0df9caa8879d0f634668556"
+  },
+  "network": {
+    "mode": "allowlist",
+    "sidecar": "dcf-ipv4-gost-egress:v1",
+    "configured": true,
+    "verified": false,
+    "status": "not_verified_by_generation"
+  },
+  "nonmechanical_status": "W-NOFORBID 与 W-FAILURE 需另行语义/代理评审，本次机械评分不自动给分。"
+}

@@ -1,0 +1,435 @@
+{
+  "task_id": "F01",
+  "category_rule": "同一类任一适用原子项失败，该类得分为零；每个类别仅计一次权重，无额外封顶",
+  "category_weights": {
+    "交付与来源完整性": 8,
+    "历史与会计口径": 10,
+    "经营预测": 18,
+    "DCF与估值桥": 24,
+    "公式与模型工程": 20,
+    "表达与专业可用性": 4
+  },
+  "score_range": [
+    0,
+    100
+  ],
+  "rule_score_range": [
+    0,
+    80
+  ],
+  "judge_calls": {
+    "llm": "每次仅一个原子项",
+    "agent": "每次同一题一个相关小组",
+    "schema": {
+      "score": "0|1",
+      "evidence": "string"
+    }
+  },
+  "judge_input": {
+    "public_instruction": "instruction.md",
+    "candidate": "/app/output.xlsx",
+    "rubric_item": "one item or related group",
+    "expected_numbers": "never sent"
+  },
+  "output_mode": {
+    "mode": "segment_dcf",
+    "template": "fixed_outputs",
+    "fixed_sheet": "Outputs"
+  },
+  "criteria": [
+    {
+      "id": "01-FILE",
+      "category": "交付与来源完整性",
+      "text": "按要求提交可读取的 Excel 工作簿",
+      "applicability": "all",
+      "evidence": "/app/output.xlsx",
+      "condition": "file_exists",
+      "weight": 8,
+      "method": "rule",
+      "severity": "critical",
+      "check": {
+        "kind": "file_exists"
+      }
+    },
+    {
+      "id": "01-KEYS",
+      "category": "交付与来源完整性",
+      "text": "每一个要求的语义输出键均存在且只有一个数值",
+      "applicability": "all",
+      "evidence": "Outputs 或语义键映射",
+      "condition": "required_keys",
+      "weight": 8,
+      "method": "rule",
+      "severity": "major",
+      "check": {
+        "kind": "required_keys"
+      }
+    },
+    {
+      "id": "01-UNIT",
+      "category": "交付与来源完整性",
+      "text": "金额、股数与比率的单位在提交中明确",
+      "applicability": "all",
+      "evidence": "工作簿表头与单位标签",
+      "condition": "units_documented",
+      "weight": 8,
+      "method": "agent",
+      "severity": "major"
+    },
+    {
+      "id": "02-FY",
+      "category": "历史与会计口径",
+      "text": "完整财年历史收入与规范化 EBIT 来自正确期间聚合",
+      "applicability": "subannual history",
+      "evidence": "历史聚合与原始期间",
+      "condition": "historical_fy",
+      "weight": 10,
+      "method": "rule",
+      "severity": "major",
+      "check": {
+        "kind": "numeric",
+        "keys": [
+          "fy_revenue",
+          "fy_normalized_ebit",
+          "fy_reported_ebit"
+        ]
+      }
+    },
+    {
+      "id": "02-LTM",
+      "category": "历史与会计口径",
+      "text": "LTM 恰包含要求的季度或半年，未重复年化",
+      "applicability": "subannual history",
+      "evidence": "历史聚合与估值日",
+      "condition": "historical_ltm",
+      "weight": 10,
+      "method": "rule",
+      "severity": "major",
+      "check": {
+        "kind": "numeric",
+        "keys": [
+          "ltm_revenue",
+          "ltm_normalized_ebit",
+          "ltm_reported_ebit"
+        ]
+      }
+    },
+    {
+      "id": "02-REPORTED",
+      "category": "历史与会计口径",
+      "text": "非经常收益未混入规范化经营 EBIT",
+      "applicability": "normalization",
+      "evidence": "历史披露与调整",
+      "condition": "historical_reported",
+      "weight": 10,
+      "method": "rule",
+      "severity": "major",
+      "check": {
+        "kind": "numeric",
+        "keys": [
+          "fy_reported_ebit",
+          "ltm_reported_ebit"
+        ]
+      }
+    },
+    {
+      "id": "02-COLLECT",
+      "category": "历史与会计口径",
+      "text": "现金收款等于确认收入加合同负债增加",
+      "applicability": "deferred revenue",
+      "evidence": "现金收款与递延收入",
+      "condition": "cash_collections",
+      "weight": 10,
+      "method": "rule",
+      "severity": "major",
+      "check": {
+        "kind": "numeric_prefix",
+        "prefixes": [
+          "cash_collections"
+        ]
+      }
+    },
+    {
+      "id": "03-DRIVER",
+      "category": "经营预测",
+      "text": "期末经营基数等于期初减流失加新增",
+      "applicability": "queue driver",
+      "evidence": "经营预测期",
+      "condition": "operating_driver",
+      "weight": 18,
+      "method": "rule",
+      "severity": "major",
+      "check": {
+        "kind": "numeric_prefix",
+        "prefixes": [
+          "driver_close"
+        ]
+      }
+    },
+    {
+      "id": "03-AVERAGE",
+      "category": "经营预测",
+      "text": "收入采用平均经营基数乘以单位收入及期间活动比例",
+      "applicability": "queue driver",
+      "evidence": "收入预测",
+      "condition": "operating_average",
+      "weight": 18,
+      "method": "rule",
+      "severity": "major",
+      "check": {
+        "kind": "numeric_prefix",
+        "prefixes": [
+          "average_driver"
+        ]
+      }
+    },
+    {
+      "id": "03-MARGIN",
+      "category": "经营预测",
+      "text": "各期 EBIT 使用本期的分部或核心利润率",
+      "applicability": "all",
+      "evidence": "EBIT 预测",
+      "condition": "operating_ebit",
+      "weight": 18,
+      "method": "rule",
+      "severity": "major",
+      "check": {
+        "kind": "numeric_prefix",
+        "prefixes": [
+          "ebit"
+        ]
+      }
+    },
+    {
+      "id": "03-NWC",
+      "category": "经营预测",
+      "text": "营运资本变动使用正确期初、期末与符号",
+      "applicability": "all",
+      "evidence": "营运资本表",
+      "condition": "delta_nwc",
+      "weight": 18,
+      "method": "rule",
+      "severity": "major",
+      "check": {
+        "kind": "numeric_prefix",
+        "prefixes": [
+          "delta_nwc"
+        ]
+      }
+    },
+    {
+      "id": "05-FCFF",
+      "category": "DCF与估值桥",
+      "text": "FCFF 从无杠杆税后 EBIT 出发并扣除再投资与营运资本增加",
+      "applicability": "all",
+      "evidence": "FCFF 表",
+      "condition": "fcff",
+      "weight": 24,
+      "method": "rule",
+      "severity": "major",
+      "check": {
+        "kind": "numeric_prefix",
+        "prefixes": [
+          "fcff"
+        ]
+      }
+    },
+    {
+      "id": "05-DF",
+      "category": "DCF与估值桥",
+      "text": "折现期从估值日按实际天数计量并遵守年中约定",
+      "applicability": "all",
+      "evidence": "折现时间表",
+      "condition": "discount_factor",
+      "weight": 24,
+      "method": "rule",
+      "severity": "major",
+      "check": {
+        "kind": "numeric_prefix",
+        "prefixes": [
+          "discount_factor"
+        ]
+      }
+    },
+    {
+      "id": "05-DUAL",
+      "category": "DCF与估值桥",
+      "text": "Gordon 与退出终值分别计算再按权重合成",
+      "applicability": "dual terminal",
+      "evidence": "终值计算",
+      "condition": "dual_terminal",
+      "weight": 24,
+      "method": "rule",
+      "severity": "major",
+      "check": {
+        "kind": "numeric",
+        "keys": [
+          "tv_gordon",
+          "tv_exit",
+          "terminal_value"
+        ]
+      }
+    },
+    {
+      "id": "05-TV",
+      "category": "DCF与估值桥",
+      "text": "终值以最后完整年度为时点且以 WACC 折现",
+      "applicability": "all",
+      "evidence": "终值现值",
+      "condition": "terminal",
+      "weight": 24,
+      "method": "rule",
+      "severity": "major",
+      "check": {
+        "kind": "numeric",
+        "keys": [
+          "terminal_value",
+          "pv_terminal"
+        ]
+      }
+    },
+    {
+      "id": "05-BRIDGE",
+      "category": "DCF与估值桥",
+      "text": "企业价值桥包含全部现金、投资、债务、租赁和少数股权",
+      "applicability": "all",
+      "evidence": "股权桥",
+      "condition": "equity",
+      "weight": 24,
+      "method": "rule",
+      "severity": "major",
+      "check": {
+        "kind": "numeric_prefix",
+        "prefixes": [
+          "equity_value"
+        ]
+      }
+    },
+    {
+      "id": "05-DILUTION",
+      "category": "DCF与估值桥",
+      "text": "库存股法增量与 RSU 均进入稀释股数",
+      "applicability": "dilution",
+      "evidence": "股数桥",
+      "condition": "diluted_shares",
+      "weight": 24,
+      "method": "rule",
+      "severity": "major",
+      "check": {
+        "kind": "numeric_prefix",
+        "prefixes": [
+          "diluted_shares"
+        ]
+      }
+    },
+    {
+      "id": "05-VPS",
+      "category": "DCF与估值桥",
+      "text": "每股价值以股权价值除以稀释股数",
+      "applicability": "all",
+      "evidence": "估值结果",
+      "condition": "value_per_share",
+      "weight": 24,
+      "method": "rule",
+      "severity": "major",
+      "check": {
+        "kind": "numeric_prefix",
+        "prefixes": [
+          "value_per_share"
+        ]
+      }
+    },
+    {
+      "id": "06-FORMULA",
+      "category": "公式与模型工程",
+      "text": "每个要求的结果单元格为活公式而非粘贴数值",
+      "applicability": "all",
+      "evidence": "结果单元格 XML/openpyxl",
+      "condition": "formula",
+      "weight": 20,
+      "method": "rule",
+      "severity": "critical",
+      "check": {
+        "kind": "formula"
+      }
+    },
+    {
+      "id": "06-RECALC",
+      "category": "公式与模型工程",
+      "text": "LibreOffice 重算后结果与独立真值一致",
+      "applicability": "all",
+      "evidence": "重算后的候选与 expected",
+      "condition": "baseline",
+      "weight": 20,
+      "method": "rule",
+      "severity": "critical",
+      "check": {
+        "kind": "baseline"
+      }
+    },
+    {
+      "id": "06-PERTURB1",
+      "category": "公式与模型工程",
+      "text": "第一组经营及估值/桥接扰动按依赖传导",
+      "applicability": "all",
+      "evidence": "隐藏扰动一",
+      "condition": "perturbation_1",
+      "weight": 20,
+      "method": "rule",
+      "severity": "critical",
+      "check": {
+        "kind": "perturbation_1"
+      }
+    },
+    {
+      "id": "06-PERTURB2",
+      "category": "公式与模型工程",
+      "text": "第二组经营及估值/桥接扰动按依赖传导",
+      "applicability": "all",
+      "evidence": "隐藏扰动二",
+      "condition": "perturbation_2",
+      "weight": 20,
+      "method": "rule",
+      "severity": "critical",
+      "check": {
+        "kind": "perturbation_2"
+      }
+    },
+    {
+      "id": "06-LINKS",
+      "category": "公式与模型工程",
+      "text": "无外部工作簿链接或公式错误值",
+      "applicability": "all",
+      "evidence": "重算工作簿",
+      "condition": "links_errors",
+      "weight": 20,
+      "method": "rule",
+      "severity": "critical",
+      "check": {
+        "kind": "links_errors"
+      }
+    },
+    {
+      "id": "09-MEMO",
+      "category": "表达与专业可用性",
+      "text": "提交 memo.md，说明最重要的价值驱动与至少一个局限",
+      "applicability": "all",
+      "evidence": "memo.md 说明文字",
+      "condition": "memo_drivers",
+      "weight": 4,
+      "method": "llm",
+      "severity": "minor"
+    },
+    {
+      "id": "09-READABLE",
+      "category": "表达与专业可用性",
+      "text": "中间结构有明确期间与项目标签且不依赖未披露技巧",
+      "applicability": "all",
+      "evidence": "工作簿布局",
+      "condition": "readability",
+      "weight": 4,
+      "method": "agent",
+      "severity": "minor"
+    }
+  ]
+}

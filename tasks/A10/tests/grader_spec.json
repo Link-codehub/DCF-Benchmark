@@ -1,0 +1,417 @@
+{
+  "schema_version": "v3.0",
+  "task_id": "A10",
+  "family": "A",
+  "company": "濯川生物",
+  "industry": "pharmaceutical",
+  "industry_name": "医药与生物科技",
+  "base_structure": "E-事件终值",
+  "industry_drivers": [
+    "患者漏斗与年净价格",
+    "上市延迟与承诺研发事件",
+    "PoS 风险调整与有限专利期"
+  ],
+  "valuation_date": "2024-07-25",
+  "last_fy_end": "2024-03-31",
+  "horizon": 8,
+  "time_axis": {
+    "midyear": true,
+    "history_frequency": "annual",
+    "day_count": "actual/365"
+  },
+  "accounting": {
+    "sbc_expense": true,
+    "industry_valuation": true
+  },
+  "residual_activity": 0.6821917808219178,
+  "enabled_modules": [
+    "industry_driver",
+    "residual_period",
+    "cash_tax_nol",
+    "risk_adjusted_pipeline"
+  ],
+  "history": [],
+  "opening": {
+    "commercial_nwc": 78.0,
+    "lead_nwc": 0.0,
+    "next_nwc": 0.0,
+    "commercial_ppe": 210.0,
+    "lead_ppe": 36.0,
+    "next_ppe": 18.0,
+    "nol": 185.0
+  },
+  "products": {
+    "commercial": {
+      "name": "川宁片（已上市慢病药）",
+      "fy2024_revenue": 620.0,
+      "patient_base": 2600000,
+      "diagnosis_rate": 0.72,
+      "adherence": 0.82,
+      "annual_doses": 12,
+      "net_price_per_dose": 0.0045,
+      "growth": [
+        0.075,
+        0.065,
+        0.05,
+        0.035,
+        0.02,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "loe_period": 5,
+      "erosion": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.18,
+        0.24,
+        0.22,
+        0.18
+      ],
+      "pos": 1.0,
+      "cogs_pct": [
+        0.19,
+        0.19,
+        0.185,
+        0.185,
+        0.19,
+        0.2,
+        0.21,
+        0.22
+      ],
+      "selling_pct": [
+        0.24,
+        0.235,
+        0.23,
+        0.225,
+        0.21,
+        0.18,
+        0.16,
+        0.15
+      ],
+      "maintenance_rd_pct": [
+        0.065,
+        0.06,
+        0.058,
+        0.055,
+        0.052,
+        0.05,
+        0.05,
+        0.05
+      ],
+      "sbc_pct": [
+        0.018,
+        0.018,
+        0.017,
+        0.017,
+        0.016,
+        0.016,
+        0.015,
+        0.015
+      ],
+      "fixed_capex": [
+        6.0,
+        7.0,
+        7.5,
+        8.0,
+        8.0,
+        7.0,
+        6.5,
+        6.0
+      ],
+      "capex_pct": [
+        0.025,
+        0.025,
+        0.024,
+        0.024,
+        0.023,
+        0.023,
+        0.022,
+        0.022
+      ],
+      "depreciation_rate": 0.095,
+      "nwc_pct": [
+        0.13,
+        0.13,
+        0.128,
+        0.128,
+        0.13,
+        0.135,
+        0.14,
+        0.14
+      ]
+    },
+    "lead": {
+      "name": "ZC-201（免疫调节 lead 管线）",
+      "launch_period": 3,
+      "loe_period": 7,
+      "patient_base": 480000,
+      "diagnosis_rate": 0.68,
+      "penetration": [
+        0.04,
+        0.1,
+        0.19,
+        0.29,
+        0.38,
+        0.45,
+        0.48
+      ],
+      "adherence": 0.78,
+      "annual_doses": 6,
+      "net_price_per_dose": 0.058,
+      "erosion": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.25,
+        0.32
+      ],
+      "pos": 0.62,
+      "committed_rd_offsets": [
+        -3,
+        -2,
+        -1
+      ],
+      "committed_rd_amounts": [
+        38.0,
+        64.0,
+        92.0
+      ],
+      "historical_committed_rd": 24.0,
+      "prelaunch_selling_amount": 32.0,
+      "cogs_pct": [
+        0.0,
+        0.0,
+        0.22,
+        0.21,
+        0.2,
+        0.19,
+        0.2,
+        0.22
+      ],
+      "selling_pct": [
+        0.0,
+        0.0,
+        0.34,
+        0.3,
+        0.27,
+        0.24,
+        0.2,
+        0.18
+      ],
+      "maintenance_rd_pct": [
+        0.0,
+        0.0,
+        0.12,
+        0.105,
+        0.09,
+        0.08,
+        0.075,
+        0.07
+      ],
+      "sbc_pct": [
+        0.0,
+        0.0,
+        0.016,
+        0.016,
+        0.015,
+        0.015,
+        0.014,
+        0.014
+      ],
+      "fixed_capex": [
+        0.0,
+        12.0,
+        20.0,
+        4.0,
+        4.0,
+        4.0,
+        3.0,
+        3.0
+      ],
+      "capex_pct": [
+        0.0,
+        0.0,
+        0.045,
+        0.04,
+        0.035,
+        0.035,
+        0.03,
+        0.03
+      ],
+      "depreciation_rate": 0.085,
+      "nwc_pct": [
+        0.0,
+        0.0,
+        0.18,
+        0.17,
+        0.16,
+        0.16,
+        0.17,
+        0.18
+      ]
+    },
+    "next": {
+      "name": "ZC-307（罕见病 next 管线）",
+      "launch_period": 4,
+      "loe_period": 8,
+      "patient_base": 92000,
+      "diagnosis_rate": 0.76,
+      "penetration": [
+        0.06,
+        0.16,
+        0.28,
+        0.38,
+        0.44
+      ],
+      "adherence": 0.86,
+      "annual_doses": 4,
+      "net_price_per_dose": 0.135,
+      "erosion": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.28
+      ],
+      "pos": 0.38,
+      "committed_rd_offsets": [
+        -4,
+        -3,
+        -2,
+        -1
+      ],
+      "committed_rd_amounts": [
+        18.0,
+        30.0,
+        46.0,
+        68.0
+      ],
+      "historical_committed_rd": 12.0,
+      "prelaunch_selling_amount": 22.0,
+      "cogs_pct": [
+        0.0,
+        0.0,
+        0.0,
+        0.19,
+        0.18,
+        0.17,
+        0.17,
+        0.19
+      ],
+      "selling_pct": [
+        0.0,
+        0.0,
+        0.0,
+        0.38,
+        0.33,
+        0.29,
+        0.25,
+        0.21
+      ],
+      "maintenance_rd_pct": [
+        0.0,
+        0.0,
+        0.0,
+        0.13,
+        0.11,
+        0.095,
+        0.085,
+        0.08
+      ],
+      "sbc_pct": [
+        0.0,
+        0.0,
+        0.0,
+        0.015,
+        0.015,
+        0.014,
+        0.014,
+        0.013
+      ],
+      "fixed_capex": [
+        0.0,
+        8.0,
+        14.0,
+        16.0,
+        2.5,
+        2.5,
+        2.5,
+        2.0
+      ],
+      "capex_pct": [
+        0.0,
+        0.0,
+        0.0,
+        0.05,
+        0.045,
+        0.04,
+        0.04,
+        0.035
+      ],
+      "depreciation_rate": 0.085,
+      "nwc_pct": [
+        0.0,
+        0.0,
+        0.0,
+        0.2,
+        0.19,
+        0.18,
+        0.18,
+        0.19
+      ]
+    }
+  },
+  "assumptions": {
+    "tax": 0.21,
+    "wacc": 0.105,
+    "g": 0.02,
+    "nol_use_limit": 0.8,
+    "pos_switch": 1,
+    "terminal_method": "gordon",
+    "terminal_date_convention": "last_fiscal_year_end",
+    "sensitivity_lead_delay": [
+      -2,
+      -1,
+      0,
+      1,
+      2
+    ],
+    "sensitivity_pos_multiplier": [
+      0.75,
+      0.875,
+      1.0,
+      1.125,
+      1.25
+    ]
+  },
+  "bridge": {
+    "cash": 385.0,
+    "debt": 260.0,
+    "investments": 72.0,
+    "lease_liability": 34.0,
+    "minority": 18.0,
+    "valuation_cash_adjustment": 0.0,
+    "shares": 108.0,
+    "rsus": 2.4,
+    "options": 5.2,
+    "strike": 13.5,
+    "share_price": 22.0
+  },
+  "units": {
+    "money": "百万元",
+    "shares": "百万股",
+    "patients": "人",
+    "rates": "小数",
+    "net_price_per_dose": "百万元/给药人次",
+    "annual_doses": "次/患者/年"
+  }
+}

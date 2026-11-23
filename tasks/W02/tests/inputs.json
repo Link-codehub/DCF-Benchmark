@@ -1,0 +1,364 @@
+{
+  "schema_version": "dcf-v3-w-retrieval-v1",
+  "task_id": "W02",
+  "company": {
+    "ticker": "COST",
+    "cik": 909832,
+    "name": "Costco Wholesale Corporation"
+  },
+  "information_cutoff": "2024-10-31",
+  "fiscal_year": "FY2024",
+  "fiscal_year_start": "2023-09-04",
+  "fiscal_year_end": "2024-09-01",
+  "required_fields": [
+    {
+      "field_id": "revenue",
+      "label": "合并收入",
+      "allowed_tags": [
+        "RevenueFromContractWithCustomerExcludingAssessedTax",
+        "Revenues",
+        "SalesRevenueNet",
+        "RevenueFromContractWithCustomerIncludingAssessedTax"
+      ],
+      "kind": "flow",
+      "raw_unit": "USD",
+      "start": "2023-09-04",
+      "end": "2024-09-01",
+      "fiscal_period": "FY",
+      "reported_unit": "USD_millions",
+      "allowed_source_ids": [
+        "SEC_COMPANYFACTS",
+        "COMPANY_IR_FILING"
+      ]
+    },
+    {
+      "field_id": "operating_income",
+      "label": "经营利润（EBIT）",
+      "allowed_tags": [
+        "OperatingIncomeLoss"
+      ],
+      "kind": "flow",
+      "raw_unit": "USD",
+      "start": "2023-09-04",
+      "end": "2024-09-01",
+      "fiscal_period": "FY",
+      "reported_unit": "USD_millions",
+      "allowed_source_ids": [
+        "SEC_COMPANYFACTS",
+        "COMPANY_IR_FILING"
+      ]
+    },
+    {
+      "field_id": "pretax_income",
+      "label": "税前利润",
+      "allowed_tags": [
+        "IncomeLossFromContinuingOperationsBeforeIncomeTaxesExtraordinaryItemsNoncontrollingInterest",
+        "IncomeLossFromContinuingOperationsBeforeIncomeTaxesMinorityInterestAndIncomeLossFromEquityMethodInvestments"
+      ],
+      "kind": "flow",
+      "raw_unit": "USD",
+      "start": "2023-09-04",
+      "end": "2024-09-01",
+      "fiscal_period": "FY",
+      "reported_unit": "USD_millions",
+      "allowed_source_ids": [
+        "SEC_COMPANYFACTS",
+        "COMPANY_IR_FILING"
+      ]
+    },
+    {
+      "field_id": "income_tax",
+      "label": "所得税费用",
+      "allowed_tags": [
+        "IncomeTaxExpenseBenefit"
+      ],
+      "kind": "flow",
+      "raw_unit": "USD",
+      "start": "2023-09-04",
+      "end": "2024-09-01",
+      "fiscal_period": "FY",
+      "reported_unit": "USD_millions",
+      "allowed_source_ids": [
+        "SEC_COMPANYFACTS",
+        "COMPANY_IR_FILING"
+      ]
+    },
+    {
+      "field_id": "net_income_consolidated",
+      "label": "含非控股权益的合并净利润",
+      "allowed_tags": [
+        "ProfitLoss",
+        "NetIncomeLoss"
+      ],
+      "kind": "flow",
+      "raw_unit": "USD",
+      "start": "2023-09-04",
+      "end": "2024-09-01",
+      "fiscal_period": "FY",
+      "reported_unit": "USD_millions",
+      "allowed_source_ids": [
+        "SEC_COMPANYFACTS",
+        "COMPANY_IR_FILING"
+      ]
+    },
+    {
+      "field_id": "da",
+      "label": "折旧与摊销",
+      "allowed_tags": [
+        "DepreciationDepletionAndAmortization",
+        "DepreciationAmortizationAndAccretionNet",
+        "DepreciationAndAmortization",
+        "Depreciation"
+      ],
+      "kind": "flow",
+      "raw_unit": "USD",
+      "start": "2023-09-04",
+      "end": "2024-09-01",
+      "fiscal_period": "FY",
+      "reported_unit": "USD_millions",
+      "allowed_source_ids": [
+        "SEC_COMPANYFACTS",
+        "COMPANY_IR_FILING"
+      ]
+    },
+    {
+      "field_id": "capex",
+      "label": "购置固定资产现金支出（正数）",
+      "allowed_tags": [
+        "PaymentsToAcquirePropertyPlantAndEquipment",
+        "PaymentsToAcquireProductiveAssets"
+      ],
+      "kind": "flow",
+      "raw_unit": "USD",
+      "start": "2023-09-04",
+      "end": "2024-09-01",
+      "fiscal_period": "FY",
+      "reported_unit": "USD_millions",
+      "allowed_source_ids": [
+        "SEC_COMPANYFACTS",
+        "COMPANY_IR_FILING"
+      ]
+    },
+    {
+      "field_id": "diluted_shares",
+      "label": "加权平均稀释股数",
+      "allowed_tags": [
+        "WeightedAverageNumberOfDilutedSharesOutstanding"
+      ],
+      "kind": "flow",
+      "raw_unit": "shares",
+      "start": "2023-09-04",
+      "end": "2024-09-01",
+      "fiscal_period": "FY",
+      "reported_unit": "shares_millions",
+      "allowed_source_ids": [
+        "SEC_COMPANYFACTS",
+        "COMPANY_IR_FILING"
+      ]
+    },
+    {
+      "field_id": "cash",
+      "label": "现金及现金等价物",
+      "allowed_tags": [
+        "CashAndCashEquivalentsAtCarryingValue",
+        "CashCashEquivalentsRestrictedCashAndRestrictedCashEquivalents"
+      ],
+      "kind": "instant",
+      "raw_unit": "USD",
+      "end": "2024-09-01",
+      "reported_unit": "USD_millions",
+      "allowed_source_ids": [
+        "SEC_COMPANYFACTS",
+        "COMPANY_IR_FILING"
+      ]
+    },
+    {
+      "field_id": "short_term_investments",
+      "label": "短期投资",
+      "allowed_tags": [
+        "ShortTermInvestments",
+        "MarketableSecuritiesCurrent",
+        "AvailableForSaleSecuritiesDebtSecuritiesCurrent"
+      ],
+      "kind": "instant",
+      "raw_unit": "USD",
+      "end": "2024-09-01",
+      "reported_unit": "USD_millions",
+      "allowed_source_ids": [
+        "SEC_COMPANYFACTS",
+        "COMPANY_IR_FILING"
+      ]
+    },
+    {
+      "field_id": "receivables",
+      "label": "应收账款净额",
+      "allowed_tags": [
+        "AccountsReceivableNetCurrent",
+        "ReceivablesNetCurrent"
+      ],
+      "kind": "instant",
+      "raw_unit": "USD",
+      "end": "2024-09-01",
+      "reported_unit": "USD_millions",
+      "allowed_source_ids": [
+        "SEC_COMPANYFACTS",
+        "COMPANY_IR_FILING"
+      ]
+    },
+    {
+      "field_id": "current_assets",
+      "label": "流动资产合计",
+      "allowed_tags": [
+        "AssetsCurrent"
+      ],
+      "kind": "instant",
+      "raw_unit": "USD",
+      "end": "2024-09-01",
+      "reported_unit": "USD_millions",
+      "allowed_source_ids": [
+        "SEC_COMPANYFACTS",
+        "COMPANY_IR_FILING"
+      ]
+    },
+    {
+      "field_id": "current_liabilities",
+      "label": "流动负债合计",
+      "allowed_tags": [
+        "LiabilitiesCurrent"
+      ],
+      "kind": "instant",
+      "raw_unit": "USD",
+      "end": "2024-09-01",
+      "reported_unit": "USD_millions",
+      "allowed_source_ids": [
+        "SEC_COMPANYFACTS",
+        "COMPANY_IR_FILING"
+      ]
+    },
+    {
+      "field_id": "current_debt",
+      "label": "当期债务",
+      "allowed_tags": [
+        "LongTermDebtCurrent",
+        "DebtCurrent",
+        "ShortTermBorrowings"
+      ],
+      "kind": "instant",
+      "raw_unit": "USD",
+      "end": "2024-09-01",
+      "reported_unit": "USD_millions",
+      "allowed_source_ids": [
+        "SEC_COMPANYFACTS",
+        "COMPANY_IR_FILING"
+      ]
+    },
+    {
+      "field_id": "noncurrent_debt",
+      "label": "非当期债务",
+      "allowed_tags": [
+        "LongTermDebtNoncurrent",
+        "LongTermDebt"
+      ],
+      "kind": "instant",
+      "raw_unit": "USD",
+      "end": "2024-09-01",
+      "reported_unit": "USD_millions",
+      "allowed_source_ids": [
+        "SEC_COMPANYFACTS",
+        "COMPANY_IR_FILING"
+      ]
+    },
+    {
+      "field_id": "treasury_10y",
+      "label": "10 年期美国国债固定期限收益率",
+      "allowed_tags": [
+        "DGS10"
+      ],
+      "kind": "market",
+      "raw_unit": "percent",
+      "observation_date": "2024-10-31",
+      "selection": "该日非空 DGS10 观测；若官方无当日值，只能用之前最近观测并披露实际日期",
+      "reported_unit": "decimal",
+      "allowed_source_ids": [
+        "UST_DAILY"
+      ]
+    }
+  ],
+  "allowed_sources": [
+    {
+      "source_id": "SEC_COMPANYFACTS",
+      "publisher": "SEC EDGAR",
+      "domains": [
+        "data.sec.gov",
+        "www.sec.gov"
+      ],
+      "url": "https://data.sec.gov/api/xbrl/companyfacts/CIK0000909832.json",
+      "scope": "只取 filed 不晚于截止日的 10-K/10-K/A 事实；记录 tag、期间、form、filed、accession 与 URL。"
+    },
+    {
+      "source_id": "COMPANY_IR_FILING",
+      "publisher": "Costco Wholesale Corporation 投资者关系",
+      "domains": [
+        "investor.costco.com",
+        "s22.q4cdn.com",
+        "s201.q4cdn.com",
+        "d18rn0p25nwr6d.cloudfront.net"
+      ],
+      "url": "https://investor.costco.com/",
+      "scope": "用于取回同一 10-K 或作为第二来源核验；必须是截止日前已公开的文件。SEC XBRL 与 IR 转载同一申报不是独立会计事实。"
+    },
+    {
+      "source_id": "UST_DAILY",
+      "publisher": "美国财政部",
+      "domains": [
+        "home.treasury.gov"
+      ],
+      "url": "https://home.treasury.gov/resource-center/data-chart-center/interest-rates/daily-treasury-rates.csv/2024/all?type=daily_treasury_yield_curve&field_tdr_date_value=2024&page=&_format=csv",
+      "scope": "Daily Treasury Par Yield Curve Rates 的 10 Yr 字段；百分数换算为小数。"
+    }
+  ],
+  "prohibited": [
+    "自由搜索当前股价或历史股价",
+    "现成目标价",
+    "市场一致预期",
+    "截止日后才公开的信息",
+    "未披露来源的数据补零"
+  ],
+  "fetch_failure_schema": {
+    "field_id": "字段 ID",
+    "status": "failed",
+    "value": null,
+    "source_url": "尝试过的允许 URL",
+    "error": "HTTP/解析/缺失/冲突的简明原因",
+    "action": "不得猜测；不得用当前网站信息替换截止日快照"
+  },
+  "valuation_convention": {
+    "forecast_years": 5,
+    "growth": "FY1 使用 initial_growth，FY2–FY5 线性收敛至 terminal_growth",
+    "ebit_margin": "预测期保持 steady_ebit_margin",
+    "da_capex": "每年收入乘相应比率",
+    "nwc": "经营 NWC=流动资产−现金−短期投资−(流动负债−当期债务)；FY1 ΔNWC=FY0 NWC×(FY1 收入/FY0 收入−1)，其后为本年减上年",
+    "fcff": "EBIT×(1−tax_rate)+D&A−CapEx−ΔNWC",
+    "discount_years": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "terminal": "Gordon，FY5 FCFF×(1+g)/(WACC−g) 再折现五年",
+    "equity": "股权价值=企业价值+现金+短期投资−当期债务−非当期债务；每股价值除以加权平均稀释股数",
+    "assumptions": "initial_growth、steady_ebit_margin、tax_rate、da_to_revenue、capex_to_revenue、wacc、terminal_growth 为透明开放假设；WACC>g，债务与现金的口径不得重复。"
+  },
+  "deliverables": [
+    "model.xlsx",
+    "sources.json",
+    "cross_validation.json",
+    "retrieval_map.json",
+    "memo.md"
+  ],
+  "network": {
+    "declared_mode": "IPv4 sidecar allowlist",
+    "enforcement_status": "配置已提供；是否生效仅以运行验证记录为准，不由本文件声称已生效。"
+  }
+}

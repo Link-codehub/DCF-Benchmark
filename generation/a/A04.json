@@ -1,0 +1,96 @@
+{
+  "schema_version": "v3.0",
+  "task_id": "A04",
+  "family": "A",
+  "company": "澜序医药",
+  "industry": "pharmaceutical",
+  "industry_name": "医药与生物科技",
+  "base_structure": "E-事件终值",
+  "industry_drivers": [
+    "核心产品量",
+    "专利悬崖侵蚀",
+    "研发后利润率"
+  ],
+  "valuation_date": "2024-07-25",
+  "last_fy_end": "2024-03-31",
+  "horizon": 5,
+  "time_axis": {
+    "midyear": true,
+    "history_frequency": "annual",
+    "day_count": "actual/365"
+  },
+  "accounting": {
+    "sbc_expense": true,
+    "industry_valuation": true
+  },
+  "residual_activity": 0.6821917808219178,
+  "enabled_modules": [
+    "industry_driver",
+    "residual_period"
+  ],
+  "history": [],
+  "bridge": {
+    "cash": 166,
+    "debt": 242,
+    "investments": 28,
+    "lease_liability": 16,
+    "minority": 9,
+    "valuation_cash_adjustment": 0,
+    "shares": 84,
+    "rsus": 1.2,
+    "options": 0,
+    "strike": 0,
+    "share_price": 15
+  },
+  "assumptions": {
+    "tax": 0.23,
+    "wacc": 0.10300000000000001,
+    "g": 0.025,
+    "driver0": 165,
+    "ebit_margin": [
+      0.16,
+      0.164,
+      0.168,
+      0.17200000000000001,
+      0.176
+    ],
+    "da_pct": [
+      0.052,
+      0.052,
+      0.052,
+      0.052,
+      0.052
+    ],
+    "capex_pct": [
+      0.065,
+      0.065,
+      0.065,
+      0.065,
+      0.065
+    ],
+    "nwc_pct": [
+      0.13,
+      0.13,
+      0.13,
+      0.13,
+      0.13
+    ],
+    "opening_nwc": 75,
+    "pre_cliff_growth": [
+      0.08,
+      0.08,
+      0.08,
+      0.08,
+      0.08
+    ],
+    "cliff_period": 3,
+    "erosion_rate": [
+      0.28,
+      0.28,
+      0.28,
+      0.28,
+      0.28
+    ],
+    "unit_price": 4.9
+  }
+}
