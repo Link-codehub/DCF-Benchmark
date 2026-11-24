@@ -1,0 +1,166 @@
+{
+  "schema_version": "dcf-v3-w-retrieval-v1",
+  "task_id": "W01",
+  "workbook": "model.xlsx",
+  "sheets": {
+    "Sources": {
+      "description": "A 列 field_id, B 列 value, C 列 unit",
+      "columns": {
+        "A": "field_id",
+        "B": "value",
+        "C": "unit"
+      }
+    },
+    "Assumptions": {
+      "description": "A 列 assumption, B 列 value, C 列 description",
+      "columns": {
+        "A": "assumption",
+        "B": "value",
+        "C": "description"
+      }
+    },
+    "Forecast": {
+      "description": "A 列 key, C:G 列为 FY1–FY5",
+      "columns": {
+        "A": "key",
+        "B": "FY0",
+        "C": "FY1",
+        "D": "FY2",
+        "E": "FY3",
+        "F": "FY4",
+        "G": "FY5"
+      }
+    },
+    "DCF": {
+      "description": "A 列 item, B 列 value, C 列 formula_description",
+      "columns": {
+        "A": "item",
+        "B": "value",
+        "C": "formula_description"
+      }
+    },
+    "Outputs": {
+      "description": "A 列 metric, C 列 value, D 列 unit",
+      "columns": {
+        "A": "metric",
+        "C": "value",
+        "D": "unit"
+      }
+    }
+  },
+  "items": [
+    {
+      "field_id": "revenue",
+      "source_item_index": 1,
+      "sheet": "Sources",
+      "cell": "B2",
+      "used_by": ["Forecast.B3", "Assumptions.B5", "Assumptions.B7", "Assumptions.B8"]
+    },
+    {
+      "field_id": "operating_income",
+      "source_item_index": 2,
+      "sheet": "Sources",
+      "cell": "B3",
+      "used_by": ["Forecast.B4", "Assumptions.B5"]
+    },
+    {
+      "field_id": "pretax_income",
+      "source_item_index": 3,
+      "sheet": "Sources",
+      "cell": "B4",
+      "used_by": ["Assumptions.B6"]
+    },
+    {
+      "field_id": "income_tax",
+      "source_item_index": 4,
+      "sheet": "Sources",
+      "cell": "B5",
+      "used_by": ["Assumptions.B6"]
+    },
+    {
+      "field_id": "net_income_consolidated",
+      "source_item_index": 5,
+      "sheet": "Sources",
+      "cell": "B6",
+      "used_by": ["cross_validation"]
+    },
+    {
+      "field_id": "da",
+      "source_item_index": 6,
+      "sheet": "Sources",
+      "cell": "B7",
+      "used_by": ["Forecast.B5", "Assumptions.B7"]
+    },
+    {
+      "field_id": "capex",
+      "source_item_index": 7,
+      "sheet": "Sources",
+      "cell": "B8",
+      "used_by": ["Forecast.B6", "Assumptions.B8"]
+    },
+    {
+      "field_id": "diluted_shares",
+      "source_item_index": 8,
+      "sheet": "Sources",
+      "cell": "B9",
+      "used_by": ["DCF.B16"]
+    },
+    {
+      "field_id": "cash",
+      "source_item_index": 9,
+      "sheet": "Sources",
+      "cell": "B10",
+      "used_by": ["Forecast.B7", "DCF.B11"]
+    },
+    {
+      "field_id": "short_term_investments",
+      "source_item_index": 10,
+      "sheet": "Sources",
+      "cell": "B11",
+      "used_by": ["Forecast.B7", "DCF.B12"]
+    },
+    {
+      "field_id": "receivables",
+      "source_item_index": 11,
+      "sheet": "Sources",
+      "cell": "B12",
+      "used_by": ["reference only（间接通过 current_assets 进入 NWC）"]
+    },
+    {
+      "field_id": "current_assets",
+      "source_item_index": 12,
+      "sheet": "Sources",
+      "cell": "B13",
+      "used_by": ["Forecast.B7（NWC 计算）"]
+    },
+    {
+      "field_id": "current_liabilities",
+      "source_item_index": 13,
+      "sheet": "Sources",
+      "cell": "B14",
+      "used_by": ["Forecast.B7（NWC 计算）"]
+    },
+    {
+      "field_id": "current_debt",
+      "source_item_index": 14,
+      "sheet": "Sources",
+      "cell": "B15",
+      "used_by": ["Forecast.B7", "DCF.B13"]
+    },
+    {
+      "field_id": "noncurrent_debt",
+      "source_item_index": 15,
+      "sheet": "Sources",
+      "cell": "B16",
+      "used_by": ["DCF.B14"]
+    },
+    {
+      "field_id": "treasury_10y",
+      "source_item_index": null,
+      "sheet": null,
+      "cell": null,
+      "used_by": ["不作为 WACC 直接输入；WACC 是 Assumptions 中的透明假设"]
+    }
+  ],
+  "memo": "所有取数字段在 Sources 页中，并通过 Forecast/Assumptions/DCF 页的活公式被引用。revenue、operating_income、pretax_income、income_tax、da、capex、cash、current_assets、current_liabilities、current_debt、short_term_investments、noncurrent_debt、diluted_shares 均有活公式引用链。net_income_consolidated 用于交叉验证。receivables 间接通过 current_assets 参与 NWC。treasury_10y 作为市场参考利率记录但不直接输入 WACC（WACC 为 Assumptions 中独立假设）。"
+}

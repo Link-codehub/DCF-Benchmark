@@ -1,0 +1,154 @@
+{
+    "schema_version": 1,
+    "id": "96798d16-8b9f-4a60-b3c1-2849d1a0ba51",
+    "task_name": "W04",
+    "trial_name": "W04__BrnjyKg",
+    "trial_uri": "file:///Users/link/Desktop/Finance%20Bench/exp/dcf_factory_v3/eval/jobs/v3full-kimi-k3.1-pro-W04-a1/W04__BrnjyKg",
+    "task_id": {
+        "path": "/Users/link/Desktop/Finance Bench/exp/dcf_factory_v3/tasks/W04"
+    },
+    "source": null,
+    "task_checksum": "2a81fbce7506baa998ff7ff93b623ffc8688117a7eee3eb1b2fef5571b0c05c4",
+    "config": {
+        "schema_version": 1,
+        "task": {
+            "path": "/Users/link/Desktop/Finance Bench/exp/dcf_factory_v3/tasks/W04",
+            "git_url": null,
+            "git_commit_id": null,
+            "name": null,
+            "ref": null,
+            "overwrite": false,
+            "download_dir": null,
+            "source": null
+        },
+        "trial_name": "W04__BrnjyKg",
+        "trials_dir": "/Users/link/Desktop/Finance Bench/exp/dcf_factory_v3/eval/jobs/v3full-kimi-k3.1-pro-W04-a1",
+        "install_only": false,
+        "timeout_multiplier": 1.0,
+        "agent_timeout_multiplier": null,
+        "verifier_timeout_multiplier": null,
+        "agent_setup_timeout_multiplier": null,
+        "environment_build_timeout_multiplier": null,
+        "agent": {
+            "name": "kimi-code",
+            "import_path": null,
+            "model_name": "kimi-k3.1-pro",
+            "base_url": "http://host.docker.internal:4311",
+            "model_api_key_name": null,
+            "model_api_format": "anthropic_messages",
+            "skip_model_parsing": true,
+            "n_concurrent": null,
+            "concurrency_group": null,
+            "skills": [],
+            "override_timeout_sec": 4800.0,
+            "override_setup_timeout_sec": null,
+            "max_timeout_sec": null,
+            "resume_trajectory": false,
+            "load_trajectory": null,
+            "extra_allowed_hosts": [],
+            "kwargs": {
+                "version": "2.3.3",
+                "skip_install": true,
+                "disable_web_search": true
+            },
+            "env": {
+                "KIMI_MODEL_API_KEY": "****",
+                "KIMI_MODEL_MAX_CONTEXT_SIZE": "1048576",
+                "KIMI_MODEL_THINKING_EFFORT": "high",
+                "KIMI_MODEL_CAPABILITIES": "thinking,tool_use",
+                "KIMI_MODEL_MAX_OUTPUT_SIZE": "64000",
+                "KIMI_MODEL_THINKING_KEEP": "off",
+                "KIMI_LOOP_MAX_ATTEMPTS_PER_STEP": "5",
+                "HTTP_PROXY": "",
+                "HTTPS_PROXY": "",
+                "ALL_PROXY": ""
+            },
+            "mcp_servers": []
+        },
+        "user_agent": null,
+        "environment": {
+            "type": null,
+            "import_path": "ipv4_docker_environment:IPv4DockerEnvironment",
+            "force_build": false,
+            "delete": true,
+            "stream": false,
+            "cpu_enforcement_policy": "auto",
+            "memory_enforcement_policy": "auto",
+            "override_cpus": null,
+            "override_memory_mb": null,
+            "override_storage_mb": null,
+            "override_gpus": null,
+            "override_tpu": null,
+            "mounts": null,
+            "extra_docker_compose": [],
+            "kwargs": {},
+            "extra_allowed_hosts": []
+        },
+        "verifier": {
+            "override_timeout_sec": null,
+            "max_timeout_sec": null,
+            "disable": false
+        },
+        "override_error_policy": {},
+        "artifacts": [
+            "/app/output.xlsx",
+            "/app/memo.md",
+            "/app/output"
+        ],
+        "extra_instruction_paths": [],
+        "extra_instructions": [],
+        "job_id": "ba70cd66-813e-4ccd-b295-4216581aa679",
+        "source_trial": null
+    },
+    "agent_info": {
+        "name": "kimi-code",
+        "version": "2.3.3",
+        "model_info": {
+            "name": "kimi-k3.1-pro",
+            "provider": "harbor-skip-parsing"
+        }
+    },
+    "agent_result": {
+        "n_input_tokens": 2517038,
+        "n_cache_tokens": 0,
+        "n_output_tokens": 43767,
+        "cost_usd": 5.4717459999999996,
+        "model_usage": {
+            "kimi-k3.1-pro": {
+                "n_input_tokens": 2517038,
+                "n_cache_tokens": 0,
+                "n_output_tokens": 43767,
+                "cost_usd": 5.471745999999998
+            }
+        },
+        "rollout_details": null,
+        "metadata": null
+    },
+    "verifier_result": {
+        "rewards": {
+            "reward": 0.0
+        }
+    },
+    "verifier_environment_mode": "separate",
+    "exception_info": null,
+    "started_at": "2026-11-23T02:07:34.098397Z",
+    "finished_at": "2026-11-23T02:31:33.973520Z",
+    "environment_setup": {
+        "started_at": "2026-11-23T02:07:34.237424Z",
+        "finished_at": "2026-11-23T02:07:40.787904Z"
+    },
+    "agent_setup": {
+        "started_at": "2026-11-23T02:07:40.788177Z",
+        "finished_at": "2026-11-23T02:07:43.628330Z"
+    },
+    "agent_execution": {
+        "started_at": "2026-11-23T02:07:43.629475Z",
+        "finished_at": "2026-11-23T02:27:55.367690Z"
+    },
+    "verifier": {
+        "started_at": "2026-11-23T02:29:47.227396Z",
+        "finished_at": "2026-11-23T02:31:33.968861Z"
+    },
+    "step_results": null,
+    "reward_valid": true
+}

@@ -1,0 +1,33 @@
+{
+  "task_id": "tests",
+  "baseline": {
+    "passed": true,
+    "mismatches": [],
+    "mismatches_all": [],
+    "nonformula_or_missing": [],
+    "nonformula_or_missing_all": [],
+    "duplicates": [],
+    "errors": [],
+    "errors_all": [],
+    "links": [],
+    "links_all": [],
+    "checked": 52
+  },
+  "perturbations": [
+    {
+      "id": 1,
+      "passed": true,
+      "mismatches": [],
+      "mismatches_all": [],
+      "checked": 52
+    },
+    {
+      "id": 2,
+      "passed": true,
+      "mismatches": [],
+      "mismatches_all": [],
+      "checked": 52
+    }
+  ],
+  "passed": true
+}

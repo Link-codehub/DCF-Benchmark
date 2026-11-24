@@ -1,0 +1,307 @@
+{
+  "schema_version": "dcf-v3-e-grade-v1",
+  "task_id": "E01",
+  "reward": 1.0,
+  "mechanism_score": 1.0,
+  "hard_gate_failures": [],
+  "checks": {
+    "E-deliver_model": {
+      "passed": true,
+      "evidence": "xlsx",
+      "weight": 3,
+      "method": "rule"
+    },
+    "E-deliver_simulator": {
+      "passed": true,
+      "evidence": null,
+      "weight": 3,
+      "method": "rule"
+    },
+    "E-deliver_trials": {
+      "passed": true,
+      "evidence": null,
+      "weight": 3,
+      "method": "rule"
+    },
+    "E-deliver_memo": {
+      "passed": true,
+      "evidence": 46,
+      "weight": 1,
+      "method": "rule"
+    },
+    "01-KEYS": {
+      "passed": true,
+      "evidence": [],
+      "weight": 3,
+      "method": "rule"
+    },
+    "E-hist_revenue": {
+      "passed": true,
+      "evidence": 245122,
+      "weight": 3,
+      "method": "rule"
+    },
+    "E-hist_ebit": {
+      "passed": true,
+      "evidence": 109433,
+      "weight": 3,
+      "method": "rule"
+    },
+    "E-hist_eps": {
+      "passed": true,
+      "evidence": 11.8,
+      "weight": 1,
+      "method": "rule"
+    },
+    "E-forecast_revenue": {
+      "passed": true,
+      "evidence": null,
+      "weight": 1,
+      "method": "rule"
+    },
+    "E-forecast_ebit": {
+      "passed": true,
+      "evidence": null,
+      "weight": 1,
+      "method": "rule"
+    },
+    "E-forecast_reinvestment": {
+      "passed": true,
+      "evidence": null,
+      "weight": 3,
+      "method": "rule"
+    },
+    "E-dcf_fcff": {
+      "passed": true,
+      "evidence": null,
+      "weight": 3,
+      "method": "rule"
+    },
+    "E-dcf_discount": {
+      "passed": true,
+      "evidence": null,
+      "weight": 3,
+      "method": "rule"
+    },
+    "05-TV": {
+      "passed": true,
+      "evidence": 1219614.2059415265,
+      "weight": 3,
+      "method": "rule"
+    },
+    "05-BRIDGE": {
+      "passed": true,
+      "evidence": null,
+      "weight": 3,
+      "method": "rule"
+    },
+    "05-VPS": {
+      "passed": true,
+      "evidence": null,
+      "weight": 3,
+      "method": "rule"
+    },
+    "06-FORMULA": {
+      "passed": true,
+      "evidence": null,
+      "weight": 3,
+      "method": "rule"
+    },
+    "06-RECALC": {
+      "passed": true,
+      "evidence": [],
+      "weight": 3,
+      "method": "rule"
+    },
+    "E-deterministic_model": {
+      "passed": true,
+      "evidence": [],
+      "weight": 3,
+      "method": "rule"
+    },
+    "E-formula_perturb_wacc": {
+      "passed": true,
+      "evidence": 1130348.56850863,
+      "weight": 1,
+      "method": "rule"
+    },
+    "E-formula_perturb_g": {
+      "passed": true,
+      "evidence": 1250860.93987347,
+      "weight": 1,
+      "method": "rule"
+    },
+    "07-PATHS": {
+      "passed": true,
+      "evidence": 6000,
+      "weight": 3,
+      "method": "rule"
+    },
+    "E-mc_seed": {
+      "passed": true,
+      "evidence": 1830,
+      "weight": 1,
+      "method": "rule"
+    },
+    "E-mc_distributions": {
+      "passed": true,
+      "evidence": {
+        "revenue_growth": {
+          "legal": true,
+          "distribution": "normal_truncated"
+        },
+        "ebit_margin": {
+          "legal": true,
+          "distribution": "normal_truncated"
+        },
+        "reinvestment_intensity": {
+          "legal": true,
+          "distribution": "triangular"
+        },
+        "discount_rate": {
+          "legal": true,
+          "distribution": "uniform"
+        }
+      },
+      "weight": 3,
+      "method": "rule"
+    },
+    "E-mc_dependence": {
+      "passed": true,
+      "evidence": {
+        "realized": [
+          [
+            1.0000000000000002,
+            0.23934713753844772,
+            -0.01005525758768562,
+            -0.005446912493291587
+          ],
+          [
+            0.23934713753844772,
+            1.0000000000000002,
+            0.0020144879663775237,
+            -0.0341435070876258
+          ],
+          [
+            -0.01005525758768562,
+            0.0020144879663775237,
+            1.0,
+            -0.005870231853552826
+          ],
+          [
+            -0.005446912493291588,
+            -0.0341435070876258,
+            -0.005870231853552827,
+            0.9999999999999999
+          ]
+        ]
+      },
+      "weight": 3,
+      "method": "rule"
+    },
+    "E-mc_recompute": {
+      "passed": true,
+      "evidence": [],
+      "weight": 3,
+      "method": "rule"
+    },
+    "07-QUANTILE": {
+      "passed": true,
+      "evidence": null,
+      "weight": 3,
+      "method": "rule"
+    },
+    "E-mc_not_degenerate": {
+      "passed": true,
+      "evidence": null,
+      "weight": 1,
+      "method": "rule"
+    },
+    "E-evidence_numeric_citations": {
+      "passed": true,
+      "evidence": [
+        {
+          "source": "SEC_XBRL",
+          "period": "2024-06-30",
+          "field": "revenue",
+          "value": 245122.0
+        },
+        {
+          "source": "SEC_XBRL",
+          "period": "2024-06-30",
+          "field": "revenue",
+          "value": 245122.0
+        },
+        {
+          "source": "SEC_XBRL",
+          "period": "2024-06-30",
+          "field": "operating_income",
+          "value": 109433.0
+        },
+        {
+          "source": "SEC_XBRL",
+          "period": "2024-06-30",
+          "field": "eps_diluted",
+          "value": 11.8
+        },
+        {
+          "source": "SEC_XBRL",
+          "period": "2024-06-30",
+          "field": "operating_income_raw_sec",
+          "value": 109433.0
+        }
+      ],
+      "weight": 1,
+      "method": "rule"
+    },
+    "E-evidence_limits": {
+      "passed": true,
+      "evidence": null,
+      "weight": 1,
+      "method": "rule"
+    },
+    "E-simulator_rerun": {
+      "passed": true,
+      "evidence": {
+        "status": "passed",
+        "n": 6000
+      },
+      "weight": 3,
+      "method": "rule"
+    }
+  },
+  "forecast_accuracy_diagnostic": {
+    "2025-06-30": {
+      "revenue": {
+        "absolute_percentage_error": 0.013326101846917569
+      },
+      "ebit": {
+        "absolute_percentage_error": 0.07383467855186417
+      },
+      "eps": {
+        "absolute_percentage_error": 0.03673005576384167
+      }
+    },
+    "2026-06-30": {
+      "revenue": {
+        "absolute_percentage_error": 0.07291141431708155
+      },
+      "ebit": {
+        "absolute_percentage_error": 0.15132345709109943
+      },
+      "eps": {
+        "absolute_percentage_error": 0.1891359806360278
+      }
+    }
+  },
+  "market_calibration_diagnostic": {
+    "future_price_p10_p90_coverage": false,
+    "future_price_count": 559,
+    "role": "diagnostic_only"
+  },
+  "nonmechanical_judgments": {
+    "status": "not_run",
+    "reason": "本验证未选择或执行 llm/agent rubric，不将缺失评审当作通过。"
+  },
+  "diagnostics_do_not_affect_reward": true
+}

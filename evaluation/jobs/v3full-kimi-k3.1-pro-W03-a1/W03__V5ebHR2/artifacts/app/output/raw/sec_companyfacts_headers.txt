@@ -1,0 +1,8 @@
+HTTP/2 200 
+x-amzn-requestid: 04b1ae60-7cdd-4958-acec-233da2d3a0bb
+x-amz-apigw-id: HRE1KHv_IAMEA2A=
+x-amzn-trace-id: Root=1-6b0381ba-8367f4fc5cb275bfbec90928
+content-type: application/json
+date: Sun, 22 Nov 2026 23:59:04 GMT
+strict-transport-security: max-age=31536000 ; preload
+

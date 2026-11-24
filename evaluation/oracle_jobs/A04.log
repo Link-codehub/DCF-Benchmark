@@ -1,0 +1,134 @@
+╭───────────────────── Traceback (most recent call last) ──────────────────────╮
+│ /Users/link/.local/share/uv/tools/harbor/lib/python3.13/site-packages/harbor │
+│ /cli/jobs.py:2083 in start                                                   │
+│                                                                              │
+│   2080 │   options.apply_defaults()                                          │
+│   2081 │   try:                                                              │
+│   2082 │   │   config = build_job_config(**options.arguments)                │
+│ ❱ 2083 │   │   return _execute_job(                                          │
+│   2084 │   │   │   config,                                                   │
+│   2085 │   │   │   diff_sources=options.arguments["diff_sources"],           │
+│   2086 │   │   │   print_config=options.arguments["print_config"],           │
+│                                                                              │
+│ /Users/link/.local/share/uv/tools/harbor/lib/python3.13/site-packages/harbor │
+│ /cli/jobs.py:2437 in _execute_job                                            │
+│                                                                              │
+│   2434 │   # (when --upload is set) so everything stays on one event loop.   │
+│        See                                                                   │
+│   2435 │   # the long comment in `HarborHubUploadPlugin.on_job_end` for why  │
+│        this matters.                                                         │
+│   2436 │   try:                                                              │
+│ ❱ 2437 │   │   job, job_result = run_async(_run_job())                       │
+│   2438 │   except DATASET_RESOLUTION_ERRORS as exc:                          │
+│   2439 │   │   abort_dataset_resolution(console, exc, "No job was started.") │
+│   2440                                                                       │
+│                                                                              │
+│ /Users/link/.local/share/uv/tools/harbor/lib/python3.13/site-packages/harbor │
+│ /cli/utils.py:133 in run_async                                               │
+│                                                                              │
+│   130 │   │   return asyncio.run(                                            │
+│   131 │   │   │   _with_command_cleanup(coro),                               │
+│       loop_factory=asyncio.ProactorEventLoop                                 │
+│   132 │   │   )                                                              │
+│ ❱ 133 │   return asyncio.run(_with_command_cleanup(coro))                    │
+│   134                                                                        │
+│   135                                                                        │
+│   136 def parse_kwargs(kwargs_list: list[str] | None) -> dict[str, Any]:     │
+│                                                                              │
+│ /Users/link/.local/share/uv/python/cpython-3.13.14-macos-aarch64-none/lib/py │
+│ thon3.13/asyncio/runners.py:196 in run                                       │
+│                                                                              │
+│   193 │   │   │   "asyncio.run() cannot be called from a running event       │
+│       loop")                                                                 │
+│   194 │                                                                      │
+│   195 │   with Runner(debug=debug, loop_factory=loop_factory) as runner:     │
+│ ❱ 196 │   │   return runner.run(main)                                        │
+│   197                                                                        │
+│   198                                                                        │
+│   199 def _cancel_all_tasks(loop):                                           │
+│                                                                              │
+│ /Users/link/.local/share/uv/python/cpython-3.13.14-macos-aarch64-none/lib/py │
+│ thon3.13/asyncio/runners.py:119 in run                                       │
+│                                                                              │
+│   116 │   │                                                                  │
+│   117 │   │   self._interrupt_count = 0                                      │
+│   118 │   │   try:                                                           │
+│ ❱ 119 │   │   │   return self._loop.run_until_complete(task)                 │
+│   120 │   │   except exceptions.CancelledError:                              │
+│   121 │   │   │   if self._interrupt_count > 0:                              │
+│   122 │   │   │   │   uncancel = getattr(task, "uncancel", None)             │
+│                                                                              │
+│ /Users/link/.local/share/uv/python/cpython-3.13.14-macos-aarch64-none/lib/py │
+│ thon3.13/asyncio/base_events.py:725 in run_until_complete                    │
+│                                                                              │
+│    722 │   │   if not future.done():                                         │
+│    723 │   │   │   raise RuntimeError('Event loop stopped before Future      │
+│        completed.')                                                          │
+│    724 │   │                                                                 │
+│ ❱  725 │   │   return future.result()                                        │
+│    726 │                                                                     │
+│    727 │   def stop(self):                                                   │
+│    728 │   │   """Stop running the event loop.                               │
+│                                                                              │
+│ /Users/link/.local/share/uv/tools/harbor/lib/python3.13/site-packages/harbor │
+│ /cli/utils.py:118 in _with_command_cleanup                                   │
+│                                                                              │
+│   115                                                                        │
+│   116 async def _with_command_cleanup[T](coro: Awaitable[T]) -> T:           │
+│   117 │   async with api_client_scope():                                     │
+│ ❱ 118 │   │   return await with_async_cleanup(coro)                          │
+│   119                                                                        │
+│   120                                                                        │
+│   121 def run_async[T](coro: Awaitable[T]) -> T:                             │
+│                                                                              │
+│ /Users/link/.local/share/uv/tools/harbor/lib/python3.13/site-packages/harbor │
+│ /utils/async_cleanup.py:19 in with_async_cleanup                             │
+│                                                                              │
+│   16 │   async with AsyncExitStack() as stack:                               │
+│   17 │   │   token = _exit_stack.set(stack)                                  │
+│   18 │   │   try:                                                            │
+│ ❱ 19 │   │   │   return await coro                                           │
+│   20 │   │   finally:                                                        │
+│   21 │   │   │   _exit_stack.reset(token)                                    │
+│   22                                                                         │
+│                                                                              │
+│ /Users/link/.local/share/uv/tools/harbor/lib/python3.13/site-packages/harbor │
+│ /cli/jobs.py:2394 in _run_job                                                │
+│                                                                              │
+│   2391 │   │   │   )                                                         │
+│   2392 │   │   │   await hub_plugin.on_job_start(job)                        │
+│   2393 │   │                                                                 │
+│ ❱ 2394 │   │   job_result = await job.run()                                  │
+│   2395 │   │                                                                 │
+│   2396 │   │   # Print the run summary BEFORE plugin and Harbor Hub finalize │
+│        so users                                                              │
+│   2397 │   │   # see results even if downstream operations fail.             │
+│                                                                              │
+│ /Users/link/.local/share/uv/tools/harbor/lib/python3.13/site-packages/harbor │
+│ /job.py:1135 in run                                                          │
+│                                                                              │
+│   1132 │   │   │                                                             │
+│   1133 │   │   │                                                             │
+│        self._job_config_path.write_text(self.config.model_dump_json(indent=4 │
+│        ))                                                                    │
+│   1134 │   │   │   self._init_job_lock()                                     │
+│ ❱ 1135 │   │   │   self._write_job_lock()                                    │
+│   1136 │   │   │   self._write_job_result(exclude_trial_results=True)        │
+│   1137 │   │   │                                                             │
+│   1138 │   │   │   if not self.config.quiet and not self.config.is_regrade:  │
+│                                                                              │
+│ /Users/link/.local/share/uv/tools/harbor/lib/python3.13/site-packages/harbor │
+│ /job.py:1003 in _write_job_lock                                              │
+│                                                                              │
+│   1000 │   │   │   self._job_lock.created_at = existing_job_lock.created_at  │
+│   1001 │   │   │   self._job_lock.harbor = existing_job_lock.harbor          │
+│   1002 │   │   │   if existing_job_lock != self._job_lock:                   │
+│ ❱ 1003 │   │   │   │   raise FileExistsError(                                │
+│   1004 │   │   │   │   │   f"Job directory {self.job_dir} already has a      │
+│        lock.json that "                                                      │
+│   1005 │   │   │   │   │   "does not match the resolved job lock."           │
+│   1006 │   │   │   │   )                                                     │
+╰──────────────────────────────────────────────────────────────────────────────╯
+FileExistsError: Job directory /Users/link/Desktop/Finance 
+Bench/DCFEval/evaluation/oracle_jobs/A04 already has a lock.json that does not 
+match the resolved job lock.

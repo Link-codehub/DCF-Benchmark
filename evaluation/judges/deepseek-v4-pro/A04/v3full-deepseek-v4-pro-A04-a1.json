@@ -1,0 +1,51 @@
+{
+  "task": "A04",
+  "judge_model": "claude-opus-5-5",
+  "generated": "2026-11-22T18:29:08.588930+00:00",
+  "llm": {
+    "A-REASON": {
+      "status": "pass",
+      "rationale": "memo.md 把行业驱动到估值结果的因果链写得较明确。(1) 核心产品量：基期 165 × 单价 4.9 驱动收入。(2) 专利悬崖：P1-P2 按 8% 增长，P3 起按 28% 侵蚀，并给出销量路径 192.5→138.6→71.8；'主要价值驱动'一节把悬崖的时机与幅度列为最大不确定性，并说明侵蚀率升至 35% 时 EV 下降约 8-10%。(3) 研发后利润率：16.0% 升至 17.6%，说明利润率承压会压缩 NOPAT，并给出约 6% 的 EV 贡献。(4) 终值约占 EV 的 62.3%，并说明其对 g 与 WACC 的敏感性。整体上形成'行业驱动→销量/收入→利润率/NOPAT→EV/每股价值'的链条，逻辑方向一致。不足：(a) 未解释再投资（capex、D&A）和营运资本如何随收入传导到 FCFF；(b) 未讨论终值以悬崖后已大幅下降的 P5 基数按 2.5% 永续增长，这与销量持续侵蚀之间可能存在的矛盾；(c) 敏感性数字（8-10%、约 6%、约 6%）在 model_summary 为空的情况下无法核验。这些属于链条细节和量化支撑不足，不否定因果解释的存在，故给 1。",
+      "judge_model": "claude-opus-5-5",
+      "attempts": [
+        {
+          "attempt": 1,
+          "error": null,
+          "text_chars": 563
+        }
+      ]
+    },
+    "09-MEMO": {
+      "status": "pass",
+      "rationale": "候选提交了 memo.md 内容，满足本项要求。一是说明了主要价值驱动：'主要价值驱动'一节列出专利悬崖的时机与幅度，并称其为'最大的不确定性来源'；另列 EBIT 利润率提升路径，以及终值占 EV 62.3% 及其对 g/WACC 的敏感性。二是给出了明确局限：'模型局限'一节指出单一产品管线假设，未计入在研管线的期权价值，估值可能系统性偏低。论证与模型驱动基本一致：P2 销量 192.5 经 28% 侵蚀至 P3 的 138.6、P5 的 71.8，与 driver0=165、增长 8%、cliff_period=3 的输入相符。备注：P1 为残余期，按天数比例计入，memo 未展开说明，但这不影响本项判断。",
+      "judge_model": "claude-opus-5-5",
+      "attempts": [
+        {
+          "attempt": 1,
+          "error": null,
+          "text_chars": 368
+        }
+      ]
+    }
+  },
+  "agent": {
+    "status": "scored",
+    "scores": {
+      "01-UNIT": 1,
+      "09-READABLE": 1,
+      "X-TA-004": 1,
+      "X-TA-006": 0,
+      "X-TA-007": 1
+    },
+    "evidence": {
+      "01-UNIT": "output.xlsx Inputs!A2='金额百万元、股数百万股、比率小数…'；Results!C1='Units'，C列逐键标注单位，例如C3='百万元'、C52='百万股'、C47='小数'、C10='年'",
+      "09-READABLE": "output.xlsx Calc!A1:G1 表头为 Item/P1…P5/Scalar，A列为每行项目标签（fy_end、period_days、volume_residual、revenue_residual、EBIT、DA、CapEx、NWC、delta_NWC、NOPAT、FCFF、pv_factor、terminal_value 等）；三个工作表均可见，没有隐藏行或列，也没有定义名称",
+      "X-TA-004": "Calc!A11='discount_time'，B11:F11 为 =B9/365…=F9/365（年中惯例下的期中天数/365），G12 terminal_disc_time 为 =G10/365；折现系数行 B38:F38 为 =(1+$G$36)^(-B11)，直接引用这一行",
+      "X-TA-006": "EBIT（Calc!24行）、DA（26行）、CapEx（28行）、delta_NWC（32行）都是独立行；但税项没有单独的金额行，只有税率标量 G33，再通过 NOPAT 行 B34 =B24*(1-$G$33) 隐含计算，FCFF 为 B35 =B34+B26-B28-B32。税项金额不能作为独立行识别，因此不满足要求",
+      "X-TA-007": "Calc!G40 =F35*(1+G37)/(G36-G37)，直接引用可见的终期 FCFF 单元格 F35（FCFF 行 P5）、永续增长率 G37（g_term）和 WACC G36；G42 =G40*G41，G41 =(1+G36)^(-G12)"
+    },
+    "rationale": "模型使用活公式，期间和项目标签清楚，单位明确，折现时间行可见，Gordon 终值直接引用终期 FCFF 和假设单元格。唯一不满足的是税项：它只隐含在 NOPAT 中，没有作为独立的税额行展示，所以 X-TA-006 得 0 分。",
+    "seconds": 30.6,
+    "judge_model": "claude-opus-5-5"
+  }
+}

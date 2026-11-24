@@ -1,0 +1,115 @@
+{
+  "task": "E04",
+  "judge_model": "claude-opus-5-5",
+  "generated": "2026-11-23T01:47:00.605551+00:00",
+  "llm": {
+    "E-llm_business_chain": {
+      "status": "pass",
+      "rationale": "memo 与 assumptions 给出了 Netflix 特定的经营因果链，能解释收入和 EBIT 的方向，不只是数字外推。收入端：增速初值取 2022—2024 收入 CAGR 11.07%，并线性降至 3%。这一放缓用'净新增放缓'解释，前几年增长由'稳定留存和提价共同支持'，再叠加'ARM 提升及广告扩容'。利润端：EBIT 率由 FY2024 的 26.711% 升至 30%，理由是留存稳定、定价和广告带来每会员收入提升，以及内容、技术、营销费用的经营杠杆。这一点有历史证据：成本收入比由 2022 年 60.629% 降至 2024 年 53.943%。memo 还写明了反向约束：内容吸引力促进留存和定价，但内容摊销计入成本，热门内容回报不确定，且不用 da 代替内容摊销。会员、流失、价格、广告 ARPU 等不可观测量均被明确标为开放假设，符合题面要求。不足之处有两点：收入路径本身仍是 CAGR 线性递减的简化形式，因果链没有量化拆分到会员与 ARM；模拟中的增长与利润率在路径内恒定。但该链条足以定性解释收入放缓、利润率上升的方向，并非泛化外推。",
+      "judge_model": "claude-opus-5-5",
+      "attempts": [
+        {
+          "attempt": 1,
+          "error": null,
+          "text_chars": 557
+        }
+      ]
+    },
+    "E-llm_reinvestment_reasoning": {
+      "status": "fail",
+      "rationale": "已有证据：memo 写明 D&A/收入 0.9889% 和 CapEx/收入 1.1501% 取自 2022—2024 三年均值，NWC/收入固定为 −13.985%。memo 指出负 NWC 随收入增长会释放现金，但“递延收入杠杆不可无限外推”。reinvestment_basis 说明内容经济成本只放在 EBIT 中，不追加内容资产。不足一：D&A 与 CapEx 只是沿用历史比率，没有说明收入从 11.07% 增速逐步降到 3%、EBIT 率升至 30% 这一经营情景为何只需约 1% 收入的 CapEx，也没有给出资本效率或销售/资本比之类的论证。不足二：memo 承认内容现金投入与内容摊销未单列，“再投资仅是代理变量”，但没有论证提价、广告扩容和留存改善带来的增长与利润率扩张，为何不需要内容现金支出超过摊销。结果是模型中的再投资组件每年都为正，即释放现金（例如 FY1 为 533.85）。memo 只把这一点列为局限，没有解释它与增长、利润率情景的一致性。不足三：NWC 的说明只给出机制方向，没有说明固定 −13.985% 为何与放缓的增长路径匹配。综上，推理未充分说明增长与利润率情景为何需要所建模的 D&A、CapEx 和营运资本再投资。",
+      "judge_model": "claude-opus-5-5",
+      "attempts": [
+        {
+          "attempt": 1,
+          "error": null,
+          "text_chars": 611
+        }
+      ]
+    },
+    "07-ASSUME": {
+      "status": "fail",
+      "rationale": "多数经营假设能追溯到数据和日期。initial_growth 11.0676% 是 FY2022–FY2024 收入 CAGR；D&A/收入 0.9889% 与 CapEx/收入 1.1501% 是 2022–2024 均值；NWC/收入 −13.985% 由 2024-12-31 资产负债表行项计算；税率 14% 对照 FY2024 实际税率 12.583%；无风险利率 4.24% 来自 UST_DGS10 的 2025-02-28 观察；现金、债务和股数口径为 2024-12-31；估值日为 2025-03-01。模拟边界也对照了历史区间（增长 6.457%—18.810%、EBIT 率 17.817%—26.711%）。但若干关键开放假设只声明为开放假设，没有可追溯证据：beta 1.10、股权风险溢价 4.7%、资本权重 85%/15%、永续增长率 3%、股数每年 −1%、增长与利润率相关系数 0.35。steady_ebit_margin 30% 只有定性因果叙述（留存、定价、广告、经营杠杆），没有与历史数值的推导链。interest_rate 4.6123% 在 memo 中未说明来源（推测为 FY2024 利息/总债务，但未明示）。这些开放假设缺少证据，不能认定为完全满足。",
+      "judge_model": "claude-opus-5-5",
+      "attempts": [
+        {
+          "attempt": 1,
+          "error": null,
+          "text_chars": 612
+        }
+      ]
+    },
+    "E-llm_driver_derivation": {
+      "status": "fail",
+      "rationale": "部分驱动有可复现推导，但并非每个重要预测驱动都由引用的历史观测推导而来。可复现的部分：(1) 初始增长 11.0676% 明确为 2022—2024 收入 CAGR，按 (39,000.966/31,615.55)^(1/2)−1 可重算；(2) NWC/收入 −13.985% 给出了逐项计算式；(3) D&A/收入 0.9889%、CapEx/收入 1.1501% 说明为 2022—2024 三年均值，可由历史重算，但 memo 表格只列出 FY2024 的 da 和 capex。不足之处：(1) 稳态 EBIT 率 30% 只用'留存、定价/广告、经营杠杆'做定性解释，没有从 17.817%—26.711% 的历史区间或趋势推导出这一目标；(2) 税率 14% 仅称'较历史 12.583% 审慎'，没有可复现的推导；(3) WACC 中的 beta 1.1、风险溢价 4.7%、股权/债务权重 85/15 均为开放假设，利率 4.6123% 未在 memo 中说明来自利息费用除以总债务；(4) 模拟边界与众数只与历史区间并列，没有可复现的推导，例如增长 [−2%,20%] 众数 9%、EBIT 率 [12%,40%] 众数 30%、再投资 [−8%,10%] 众数 0.6%、WACC [6.5%,12%]，所谓'加入明确压力'也没有给出具体压力情景的计算。因此历史观测多为列示和定性对照，未能为每个重要驱动建立可复现的推导链。",
+      "judge_model": "claude-opus-5-5",
+      "attempts": [
+        {
+          "attempt": 1,
+          "error": null,
+          "text_chars": 697
+        }
+      ]
+    },
+    "X-TA-003": {
+      "status": "pass",
+      "rationale": "题面指定的会计事项，其书面说明与模型数值逐项核对一致。(1) 股份支付：memo 与 sbc_basis 都说明 SBC 留在 EBIT、不加回 FCFF。FY1 验算为 11,855.519×0.86 + (428.371 − 498.180 + 603.660) = 10,195.746 + 533.851 = 10,729.597，与 fcff_y1 一致，没有 SBC 加回项。(2) 经营 NWC：书面公式为流动资产−现金−短期投资−(流动负债−当期债务)。13,100.379 − 7,804.733 − 1,779.006 − (10,755.400 − 1,784.453) = −5,454.307，与 memo 一致。nwc_to_revenue −0.13985 = −5,454.307/39,000.966。nwc_y1 −6,057.967 减去基数 −5,454.307 得 ΔNWC −603.660，与 delta_nwc_y1 一致，首年确以 2024 实际 NWC 为基数。(3) 净债务与股权桥：净债务仅含两项债务，1,784.453 + 13,798.351 = 15,582.804；现金及短期投资 7,804.733 + 1,779.006 = 9,583.739；股权价值 222,931.036 + 9,583.739 − 15,582.804 = 216,931.971，与 equity_value 一致；书面说明的不含租赁调整与模型一致。(4) 其他说明：税率 14% 在 FCFF 与净利润中一致使用。利息为 15,582.804 × 4.6123% ≈ 718.73，与 memo 所述固定利息一致。净利润 (11,855.519 − 718.733) × 0.86 = 9,577.636，与 net_income_y1 一致。股数按每年 −1% 取期初期末平均为 4,370.645，与 diluted_shares_y1 一致。说明称 da 不冒充内容摊销，模型也未虚构内容资产。终值 14,244.668 × 1.03/(0.085935 − 0.03) ≈ 262,305，与 terminal_value_at_fy5 一致。未发现书面说明与实际处理不符之处。",
+      "judge_model": "claude-opus-5-5",
+      "attempts": [
+        {
+          "attempt": 1,
+          "error": null,
+          "text_chars": 1026
+        }
+      ]
+    },
+    "X-TA-009": {
+      "status": "fail",
+      "rationale": "部分开放假设有完整推导：initial_growth 由 FY2022 收入 31,615.550 和 FY2024 收入 39,000.966 算出 CAGR 11.0676%；D&A/收入 0.9889% 与 CapEx/收入 1.1501% 取 2022—2024 三年均值；NWC/收入 −13.985% 有 2024 年逐项计算。但不是每个开放假设都满足要求，至少以下几项缺少由历史观察值到假设值的计算或映射：(1) steady_ebit_margin=30%：只列出 FY2024 实际 26.711%，并以经营杠杆作定性解释，没有说明 26.711% 如何得到 30%。(2) tax_rate=14%：历史实际税率为 12.583%，只称“较历史审慎”，没有计算或映射规则。(3) terminal_revenue_growth 与 terminal_growth=3%、beta 1.1、ERP 4.7%、权重 85/15、股数每年 −1%：仅标为开放假设，没有引用任何历史观察值，也没有推导。(4) interest_rate=4.6123%：数值与 718.733/15,582.804 相符，但 memo 未写出该推导。(5) 模拟边界与众数（如 EBIT 率 [12%,40%]、众数 30%，增长 [−2%,20%]、众数 9%）：虽列出历史区间，但只称“加入明确压力”，没有给出由历史值到边界的计算。因此不满足“每个”开放假设均有书面推导的要求。",
+      "judge_model": "claude-opus-5-5",
+      "attempts": [
+        {
+          "attempt": 1,
+          "error": null,
+          "text_chars": 698
+        }
+      ]
+    }
+  },
+  "agent": {
+    "status": "scored",
+    "scores": {
+      "X-IF-001a": 1,
+      "E-agent_distribution_rationale": 1,
+      "E-agent_interval_interpretation": 1,
+      "X-IN-001": 1,
+      "X-IN-002": 1,
+      "X-IN-003": 1,
+      "X-IN-004": 1,
+      "X-IN-005": 1,
+      "X-IN-006": 1,
+      "X-IN-007": 1,
+      "X-TA-004": 1,
+      "X-TA-005": 1,
+      "X-TA-006": 1
+    },
+    "evidence": {
+      "X-IF-001a": "`ls` of the delivery directory shows all five required files with the exact names: model.json, simulate.py, recompute.py, simulation.json and memo.md. memo.md has 341 words by `wc -w`, under the 700-word limit.",
+      "E-agent_distribution_rationale": "memo.md, Monte Carlo section: it gives the historical revenue growth range of 6.457%–18.810% (sample standard deviation 6.293%), the historical EBIT margin range of 17.817%–26.711%, and the historical reinvestment intensity range of −2.865%–3.464%. It states that the simulation bounds add an explicit stress case. simulation.json dependence.explanation says the 0.35 growth/margin correlation is an open assumption that aggregate history cannot identify. The only inputs used are SEC_XBRL data for FY2024 and the UST rate dated 2025-02-28, both on or before the 2025-03-01 cutoff.",
+      "E-agent_interval_interpretation": "memo.md says the range is a DCF distribution conditional on the assumptions, not a stock-price forecast, and lists limitations: no membership, retention, advertising or content-amortization detail; terminal value is highly sensitive. simulation.json limitations[0] says it is 'not a stock-price forecast', and the list contains seven limitations in total.",
+      "X-IN-001": "Python comparison of model.json historical against every dated value in inputs.json historical: no missing keys and 0 mismatches. In valuation, net_debt 15582.804 equals 1784.453 + 13798.351; cash_and_investments 9583.739 equals 7804.733 + 1779.006; diluted_shares 4392.608 equals the FY2024 input value.",
+      "X-IN-002": "Recomputing every year confirms that tax 0.14, da_to_revenue, capex_to_revenue and nwc_to_revenue are held constant from Y1 to Y5. The largest difference between the recomputed and stored values for da, capex, delta_nwc, reinvestment_component, fcff and discount_factor is 0.",
+      "X-IN-003": "Independent recalculation matches each derived input: initial_growth is the 2022–2024 CAGR, 0.1106758; the D&A and CapEx ratios are 2022–2024 three-year means, 0.0098891 and 0.0115007; NWC/revenue is −0.1398506 using the formula the task specifies; interest_rate is 718.733/15582.804 = 0.0461235; WACC is 0.0859349.",
+      "X-IN-004": "assumptions.risk_free_date is 2025-02-28. The historical data is the FY2024 10-K (period end 2024-12-31, filed 2025-01-27). Both dates are on or before the 2025-03-01 cutoff.",
+      "X-IN-005": "All historical rows use the fiscal-year keys from 2020-12-31 to 2024-12-31 and match the input exactly. The memo keeps the share-count anomaly as reported and does not splice periods together.",
+      "X-IN-006": "The valuation bridge uses the 2024-12-31 balance sheet, the most recent available, and the Treasury observation dated 2025-02-28, the last one before the cutoff.",
+      "X-IN-007": "assumptions.forecast_years is [2025, 2026, 2027, 2028, 2029], so FY1 is 2025, the first full year after the 2025-03-01 valuation date. The forecast has Y1–Y5 keys and trajectory years run from 2025 to 2029.",
+      "X-TA-004": "model.json valuation.discount_years is [1, 2, 3, 4, 5]. forecast.discount_factor_y1..y5 equals 1/(1+WACC)^i, and the recomputed error is 0.",
+      "X-TA-005": "model.json historical includes hist_revenue_fy0, hist_ebit_fy0 and hist_eps_fy0, plus all historical rows for 2020–2024. The margin_schedule anchors on the actual FY0 EBIT margin, and the memo shows the anchor values.",
+      "X-TA-006": "forecast has a separate ebit_y*, da_y*, capex_y*, delta_nwc_y*, reinvestment_component_y* and fcff_y* for each year, and assumptions.tax_rate is 0.14. Recomputing the FCFF build gives zero error. Running recompute.py (output written to /tmp) gives value_per_share 49.385689, matching model.json."
+    },
+    "rationale": "All delivery files are present. The historical inputs match the input package exactly. The derived assumptions, the five-year forecast arithmetic and the valuation all recompute independently with zero error. Python reproduces every one of the 8,000 simulation paths (maximum error 7e-15), and the percentiles match. The memo bases the simulation bounds on historical ranges plus a stated stress case, presents the correlation as an open assumption, and says clearly that the range is not a stock-price forecast.",
+    "seconds": 54.2,
+    "judge_model": "claude-opus-5-5"
+  }
+}

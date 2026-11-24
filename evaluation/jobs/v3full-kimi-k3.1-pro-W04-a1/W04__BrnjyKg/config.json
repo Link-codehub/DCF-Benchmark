@@ -1,0 +1,91 @@
+{
+    "schema_version": 1,
+    "task": {
+        "path": "/Users/link/Desktop/Finance Bench/exp/dcf_factory_v3/tasks/W04",
+        "git_url": null,
+        "git_commit_id": null,
+        "name": null,
+        "ref": null,
+        "overwrite": false,
+        "download_dir": null,
+        "source": null
+    },
+    "trial_name": "W04__BrnjyKg",
+    "trials_dir": "/Users/link/Desktop/Finance Bench/exp/dcf_factory_v3/eval/jobs/v3full-kimi-k3.1-pro-W04-a1",
+    "install_only": false,
+    "timeout_multiplier": 1.0,
+    "agent_timeout_multiplier": null,
+    "verifier_timeout_multiplier": null,
+    "agent_setup_timeout_multiplier": null,
+    "environment_build_timeout_multiplier": null,
+    "agent": {
+        "name": "kimi-code",
+        "import_path": null,
+        "model_name": "kimi-k3.1-pro",
+        "base_url": "http://host.docker.internal:4311",
+        "model_api_key_name": null,
+        "model_api_format": "anthropic_messages",
+        "skip_model_parsing": true,
+        "n_concurrent": null,
+        "concurrency_group": null,
+        "skills": [],
+        "override_timeout_sec": 4800.0,
+        "override_setup_timeout_sec": null,
+        "max_timeout_sec": null,
+        "resume_trajectory": false,
+        "load_trajectory": null,
+        "extra_allowed_hosts": [],
+        "kwargs": {
+            "version": "2.3.3",
+            "skip_install": true,
+            "disable_web_search": true
+        },
+        "env": {
+            "KIMI_MODEL_API_KEY": "****",
+            "KIMI_MODEL_MAX_CONTEXT_SIZE": "1048576",
+            "KIMI_MODEL_THINKING_EFFORT": "high",
+            "KIMI_MODEL_CAPABILITIES": "thinking,tool_use",
+            "KIMI_MODEL_MAX_OUTPUT_SIZE": "64000",
+            "KIMI_MODEL_THINKING_KEEP": "off",
+            "KIMI_LOOP_MAX_ATTEMPTS_PER_STEP": "5",
+            "HTTP_PROXY": "",
+            "HTTPS_PROXY": "",
+            "ALL_PROXY": ""
+        },
+        "mcp_servers": []
+    },
+    "user_agent": null,
+    "environment": {
+        "type": null,
+        "import_path": "ipv4_docker_environment:IPv4DockerEnvironment",
+        "force_build": false,
+        "delete": true,
+        "stream": false,
+        "cpu_enforcement_policy": "auto",
+        "memory_enforcement_policy": "auto",
+        "override_cpus": null,
+        "override_memory_mb": null,
+        "override_storage_mb": null,
+        "override_gpus": null,
+        "override_tpu": null,
+        "mounts": null,
+        "extra_docker_compose": [],
+        "kwargs": {},
+        "extra_allowed_hosts": []
+    },
+    "verifier": {
+        "override_timeout_sec": null,
+        "max_timeout_sec": null,
+        "disable": false
+    },
+    "override_error_policy": {},
+    "artifacts": [
+        "/app/output.xlsx",
+        "/app/memo.md",
+        "/app/output"
+    ],
+    "extra_instruction_paths": [],
+    "extra_instructions": [],
+    "job_id": "ba70cd66-813e-4ccd-b295-4216581aa679",
+    "source_trial": null
+}

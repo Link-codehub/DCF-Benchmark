@@ -1,0 +1,73 @@
+{
+  "task_id": "A10",
+  "baseline": {
+    "passed": true,
+    "mismatches": [],
+    "nonformula_or_missing": [],
+    "duplicates": [],
+    "errors": [],
+    "links": [],
+    "checked": 661,
+    "max_relative_error": 6.661338147750939e-15,
+    "sensitivity": {
+      "grid_checked": 25,
+      "grid_passed": true,
+      "center_key": "sensitivity_r3_c3",
+      "center_passed": true,
+      "center_actual": 16079.2198059465,
+      "center_expected": 16079.219805946515
+    }
+  },
+  "perturbations": [
+    {
+      "id": 1,
+      "label": "launch_rd_pos_wacc_cash",
+      "passed": true,
+      "mismatches": [],
+      "checked": 661,
+      "max_relative_error": 4.25473296047649e-15
+    },
+    {
+      "id": 2,
+      "label": "next_launch_price_erosion_options_debt",
+      "passed": true,
+      "mismatches": [],
+      "checked": 661,
+      "max_relative_error": 6.661338147750939e-15
+    }
+  ],
+  "dependency_checks": {
+    "passed": true,
+    "checks": {
+      "pipeline_funnel_and_prelaunch_revenue": true,
+      "pos_only_pipeline_operating": true,
+      "pos_not_in_wacc": true,
+      "finite_pipeline_no_gordon": true,
+      "nol_80_percent_limit": true,
+      "sensitivity_25_full_recalculation": true,
+      "recalculated_business_invariants": true
+    },
+    "detail": {
+      "revenue_errors": [],
+      "pos_errors": [],
+      "wacc_errors": [],
+      "terminal_errors": [],
+      "nol_errors": [],
+      "sensitivity_errors": [],
+      "invariant_failures": []
+    }
+  },
+  "tolerance": {
+    "absolute": 1e-08,
+    "relative": 1e-06
+  },
+  "reward": 1.0,
+  "passed": true,
+  "llm_agent_review": {
+    "status": "pending",
+    "included_in_rule_reward": false,
+    "items": [
+      "memo 的管线因果链、可读性及局限披露"
+    ]
+  }
+}

@@ -1,0 +1,93 @@
+{
+  "task": "W03",
+  "judge_model": "claude-opus-5-5",
+  "generated": "2026-11-23T00:23:01.023940+00:00",
+  "llm": {
+    "09-MEMO": {
+      "status": "fail",
+      "rationale": "memo.md 已提交，局限这一半满足要求：它披露 cash 字段改用含受限现金的 CashCashEquivalentsRestrictedCashAndRestrictedCashEquivalents，可能高估现金和股权价值，还说明白名单是否生效未经验证。但 memo 没有明确指出最重要的价值驱动。它只用表格逐项列出 initial_growth、terminal_growth、wacc、steady_ebit_margin 等假设及理由。它没有说明哪个驱动最重要，也没有给出终值占比、WACC/g 或利润率敏感性等论证。'最重要的价值驱动'这一半要求缺少明确证据，因此不能判定完全满足。",
+      "judge_model": "claude-opus-5-5",
+      "attempts": [
+        {
+          "attempt": 1,
+          "error": null,
+          "text_chars": 357
+        }
+      ]
+    },
+    "W-FAILURE": {
+      "status": "pass",
+      "rationale": "memo 设有专门的“失败与冲突披露”一节，对取数异常作了如实说明，并写明了处理方法。（1）cash 字段：memo 说明首选标签 CashAndCashEquivalentsAtCarryingValue 在 end=2024-09-29、filed≤2024-11-27 条件下无匹配事实，于是按题面标签顺序改用 CashCashEquivalentsRestrictedCashAndRestrictedCashEquivalents，取值 3,286.2 百万美元，并披露该值含受限现金、可能高估现金和股权价值。这一处理符合题面“按顺序使用首个有合规事实的标签”的规则，没有静默替换或补零。（2）工具失败：memo 披露 FetchURL 对 SEC 和财政部均失败，后改用 curl 取数成功（HTTP 200）；也说明未尝试禁止域名，因此“配置存在”不等于白名单已验证生效。（3）交叉验证差异为 0.00，并给出了容差，属于正常披露。不足之处：前文称“共提取 16 项 SEC 字段，全部成功”，后文又称“全部 15 项 SEC 字段成功”，计数前后矛盾；memo 一方面称该值是资产负债表现金行，另一方面又称其含受限现金，但未量化受限现金的差异。另外，证据中没有 sources.json 内容，无法核实对应条目的 status/error 记录。这些问题属于表述瑕疵，不构成隐瞒失败或冲突，故判为满足。",
+      "judge_model": "claude-opus-5-5",
+      "attempts": [
+        {
+          "attempt": 1,
+          "error": null,
+          "text_chars": 669
+        }
+      ]
+    },
+    "X-TA-009": {
+      "status": "fail",
+      "rationale": "memo 的假设表中只有部分假设写出了历史观察值到假设值的推导，未做到每个开放假设都有。\n\n满足要求的：\n- tax_rate 给出了计算：1207.3/4969.6=24.29%。\n- steady_ebit_margin、da_to_revenue、capex_to_revenue 均直接映射为 FY2024 实际比率，映射关系明确。\n\n不满足要求的：\n- initial_growth=3.0%：引用了 FY2024 历史增速约 0.56%，但只写了“取略高于近期的温和恢复增速”。没有任何计算或映射说明为何从 0.56% 得到 3.0%。\n- terminal_growth=2.5%：仅称“接近名义 GDP 长期增速预期”，没有历史观察值，也没有推导。\n- wacc=8.5%：只说明高于 10 年期国债 4.25% 并“包含权益风险溢价”。未给出 ERP、beta、债务成本、资本结构权重等构建计算，看不出 4.25% 到 8.5% 的映射关系。\n\n因此不满足“每个开放性预测假设均有书面推导”的要求。",
+      "judge_model": "claude-opus-5-5",
+      "attempts": [
+        {
+          "attempt": 1,
+          "error": null,
+          "text_chars": 528
+        }
+      ]
+    }
+  },
+  "agent": {
+    "status": "scored",
+    "scores": {
+      "01-UNIT": 0,
+      "X-IF-001a": 1,
+      "X-IF-002": 1,
+      "X-FM-002": 1,
+      "X-FM-004": 1,
+      "X-FM-005": 1,
+      "09-READABLE": 1,
+      "X-IN-001": 1,
+      "X-IN-002": 1,
+      "X-IN-003": 1,
+      "X-IN-004": 1,
+      "X-IN-005": 1,
+      "X-IN-006": 1,
+      "X-IN-007": 1,
+      "X-TA-001": 1,
+      "X-TA-004": 0,
+      "X-TA-005": 1,
+      "X-TA-006": 0,
+      "X-TA-007": 1,
+      "W-NOFORBID": 1
+    },
+    "evidence": {
+      "01-UNIT": "model.xlsx 中只有部分单位写明：Sources!C2:C18 写了 USD_millions/shares_millions/decimal，DCF!B1 写了“金额 (USD_millions)”，DCF!A13 写了“稀释股数 (百万股)”。但 Forecast!A1:G1 只有 key 和 FY0–FY5，没有金额单位；Outputs!A1:C1 只有 output/value，没有单位；Assumptions!A1:B1 只有 assumption/value，没有说明比率按小数或百分比计。",
+      "X-IF-001a": "交付目录 ls 显示 model.xlsx、sources.json、cross_validation.json、retrieval_map.json、memo.md 五个文件齐全，文件名与题面一致。",
+      "X-IF-002": "openpyxl 读出的工作表为 ['Sources','Assumptions','Forecast','DCF','Outputs']，共 5 页，名称和数量与题面一致。",
+      "X-FM-002": "公式中没有写死业务假设：Forecast!C4:G4 引用 Assumptions!$B$6，C10:G10 引用 $B$5，C11:G11 引用 $B$4；DCF!B3 引用 Assumptions!B3/B4。公式里的常数只有结构性数字，即 D3 的“/4”（四步线性收敛）和折现指数 ^1 至 ^5。",
+      "X-FM-004": "下游都通过活引用取上游值：Forecast!B2=Sources!B2，B7=Sources!B18；Sources!B18=B13-B10-B11-(B14-B15)；DCF!B2=SUM(Forecast!C12:G12)，B7:B10、B13 引用 Sources；Outputs!C2:C4 引用 DCF!B5、B11、B14。未发现重新填写的历史值。",
+      "X-FM-005": "Forecast 第 2 至 12 行的 FY1–FY5 都在 C:G 列，逐列公式一致（如 C12=C10*C11，G12=G10*G11），DCF!B4 用 G11 折现 G 列终值，期间没有错位。",
+      "09-READABLE": "Forecast!A 列有语义键（revenue、growth、ebit、da、capex、nwc、delta_nwc、reinvestment_component、fcff、discount_factor、pv_fcff），第 1 行有 FY0–FY5 表头；DCF!A 列有中文项目标签。",
+      "X-IN-001": "我从 SEC companyfacts 重新取数，筛选 filed≤2024-11-27 的 10-K：Revenues=36176.2、OperatingIncomeLoss=5408.8、税前利润=4969.6、所得税=1207.3、ProfitLoss=3762.3、DDA=1592.4、CapEx=2777.5、稀释股数=1137.3、CashCashEquivalentsRestrictedCash…=3286.2、短期投资=257、应收=1213.8、流动资产=6847.4、流动负债=9070、当期债务=1248.9、非当期债务=14319.5，与 Sources!B2:B16 一致。财政部 CSV 中 11/27/2024 的 10 Yr 为 4.25，Sources!B17=0.0425。",
+      "X-IN-002": "恒定假设在各期原样使用：Forecast!C4:G4 均乘 Assumptions!$B$6，C5:G5 均乘 $B$7，C6:G6 均乘 $B$8，C10:G10 均用 $B$5，期间内没有变动。",
+      "X-IN-003": "Sources!B18 按题面公式计算 NWC=CA−cash−STI−(CL−current debt)，结果 -4516.9；Forecast!C8=B7*(C2/B2-1)，D8:G8 为本年减上年；LibreOffice 重算后增长率为 0.03、0.02875、0.0275、0.02625、0.025，线性收敛到 terminal_growth。",
+      "X-IN-004": "sources.json 中 SEC 各项 filed=2024-11-20，accession 0000829224-24-000057；treasury_10y 的 period_end=2024-11-27，均不晚于截止日。",
+      "X-IN-005": "sources.json 中流量项期间为 2023-10-02 至 2024-09-29，form 为 10-K；时点项 period_end 为 2024-09-29，都是 FY2024，没有混入其他期间口径。",
+      "X-IN-006": "股权桥 DCF!B7:B10 引用的现金、短期投资、当期债务、非当期债务均为 2024-09-29 的时点值；首选现金标签没有合规事实，因此按题面顺序改用次选标签，并已在 sources.json 的 cash.error 和 memo 中披露；10Y 利率取 2024-11-27 当日值。",
+      "X-IN-007": "Forecast!C1:G1 为 FY1–FY5，共五个显性预测期，B1 为 FY0 基期。",
+      "X-TA-001": "sources.json 的 items 覆盖 16 个字段，每项都有 source_url、source_file、field、period_start/period_end、form、filed、accession；retrieval_map.json 映射到 Sources!B2:B17。",
+      "X-TA-004": "Forecast!A11 只有 discount_factor 行，公式为 =1/(1+Assumptions!$B$4)^1 至 ^5，折现期数仅写在公式内部，工作簿中没有可见的折现期行或等效时间表。",
+      "X-TA-005": "FY0 基期值可见：Forecast!B2=36176.2（营收），B7=-4516.9（NWC）；Assumptions!B5:B8 由 Sources 中的历史值推导。",
+      "X-TA-006": "Forecast 中 EBIT（第 4 行）、D&A（第 5 行）、CapEx（第 6 行）、delta_nwc（第 8 行）都是独立行，但税项没有单独成行，而是写在 fcff 公式 C10=C4*(1-Assumptions!$B$5)-C9 里面。",
+      "X-TA-007": "DCF!B3 公式为 =Forecast!G10*(1+Assumptions!B3)/(Assumptions!B4-Assumptions!B3)，直接引用可见的 FY5 FCFF 和 g/WACC 假设单元格；B4=B3*Forecast!G11。",
+      "W-NOFORBID": "sources.json 只使用 data.sec.gov 和 home.treasury.gov 的允许 URL，申报日和观测日都不晚于 2024-11-27；memo 说明未使用股价或一致预期，模型中也没有股价输入。"
+    },
+    "rationale": "取数值与 SEC 和财政部原始数据核对一致，sources、retrieval_map、cross_validation 与五页工作簿结构完整。LibreOffice 重算成功，结果为 EV 52235.4、股权价值 40210.2、每股 35.36，与 memo 一致。扣分有三项：Forecast、Outputs 和 Assumptions 中的比率缺少单位标注；折现期数没有可见的单独一行；FCFF 的税项没有单独成行。",
+    "seconds": 153.9,
+    "judge_model": "claude-opus-5-5"
+  }
+}

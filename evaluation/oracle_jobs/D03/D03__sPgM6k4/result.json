@@ -1,0 +1,215 @@
+{
+    "schema_version": 1,
+    "id": "f5c04e0d-6631-4537-9e90-5adf335c7b7e",
+    "task_name": "dcf-v3/d03",
+    "trial_name": "D03__sPgM6k4",
+    "trial_uri": "file:///Users/link/Desktop/Finance%20Bench/DCFEval/evaluation/oracle_jobs/D03/D03__sPgM6k4",
+    "task_id": {
+        "path": "/Users/link/Desktop/Finance Bench/DCFEval/tasks/D03"
+    },
+    "source": null,
+    "task_checksum": "e94e8025bc3228dc4e66711891b054ca88d9a9708ae27064328556db5edee387",
+    "config": {
+        "schema_version": 1,
+        "task": {
+            "path": "/Users/link/Desktop/Finance Bench/DCFEval/tasks/D03",
+            "git_url": null,
+            "git_commit_id": null,
+            "name": null,
+            "ref": null,
+            "overwrite": false,
+            "download_dir": null,
+            "source": null
+        },
+        "trial_name": "D03__sPgM6k4",
+        "trials_dir": "/Users/link/Desktop/Finance Bench/DCFEval/evaluation/oracle_jobs/D03",
+        "install_only": false,
+        "timeout_multiplier": 1.0,
+        "agent_timeout_multiplier": null,
+        "verifier_timeout_multiplier": null,
+        "agent_setup_timeout_multiplier": null,
+        "environment_build_timeout_multiplier": null,
+        "agent": {
+            "name": "oracle",
+            "import_path": null,
+            "model_name": null,
+            "base_url": null,
+            "model_api_key_name": null,
+            "model_api_format": null,
+            "skip_model_parsing": false,
+            "n_concurrent": null,
+            "concurrency_group": null,
+            "skills": [],
+            "override_timeout_sec": null,
+            "override_setup_timeout_sec": null,
+            "max_timeout_sec": null,
+            "resume_trajectory": false,
+            "load_trajectory": null,
+            "extra_allowed_hosts": [],
+            "kwargs": {},
+            "mcp_servers": []
+        },
+        "user_agent": null,
+        "environment": {
+            "type": null,
+            "import_path": "ipv4_docker_environment:IPv4DockerEnvironment",
+            "force_build": false,
+            "delete": true,
+            "stream": false,
+            "cpu_enforcement_policy": "auto",
+            "memory_enforcement_policy": "auto",
+            "override_cpus": null,
+            "override_memory_mb": null,
+            "override_storage_mb": null,
+            "override_gpus": null,
+            "override_tpu": null,
+            "mounts": null,
+            "extra_docker_compose": [],
+            "kwargs": {},
+            "extra_allowed_hosts": []
+        },
+        "verifier": {
+            "override_timeout_sec": null,
+            "max_timeout_sec": null,
+            "disable": false
+        },
+        "override_error_policy": {},
+        "artifacts": [],
+        "extra_instruction_paths": [],
+        "extra_instructions": [],
+        "job_id": "99361627-8f2f-41bb-b064-9a32dd234e15",
+        "source_trial": null
+    },
+    "agent_info": {
+        "name": "oracle",
+        "version": "1.0.0",
+        "model_info": null
+    },
+    "agent_result": null,
+    "verifier_result": {
+        "rewards": {
+            "reward": 1.0
+        }
+    },
+    "verifier_environment_mode": null,
+    "exception_info": null,
+    "started_at": "2026-11-24T05:19:58.026490Z",
+    "finished_at": "2026-11-24T05:20:23.967544Z",
+    "environment_setup": {
+        "started_at": "2026-11-24T05:19:58.114034Z",
+        "finished_at": "2026-11-24T05:20:03.503359Z"
+    },
+    "agent_setup": {
+        "started_at": "2026-11-24T05:20:03.503545Z",
+        "finished_at": "2026-11-24T05:20:03.503668Z"
+    },
+    "agent_execution": null,
+    "verifier": null,
+    "step_results": [
+        {
+            "step_name": "step-1",
+            "agent_result": {
+                "n_input_tokens": null,
+                "n_cache_tokens": null,
+                "n_output_tokens": null,
+                "cost_usd": null,
+                "model_usage": null,
+                "rollout_details": null,
+                "metadata": null
+            },
+            "verifier_result": {
+                "rewards": {
+                    "reward": 1.0
+                }
+            },
+            "exception_info": null,
+            "agent_execution": {
+                "started_at": "2026-11-24T05:20:03.906433Z",
+                "finished_at": "2026-11-24T05:20:04.464163Z"
+            },
+            "verifier": {
+                "started_at": "2026-11-24T05:20:05.498069Z",
+                "finished_at": "2026-11-24T05:20:08.665157Z"
+            }
+        },
+        {
+            "step_name": "step-2",
+            "agent_result": {
+                "n_input_tokens": null,
+                "n_cache_tokens": null,
+                "n_output_tokens": null,
+                "cost_usd": null,
+                "model_usage": null,
+                "rollout_details": null,
+                "metadata": null
+            },
+            "verifier_result": {
+                "rewards": {
+                    "reward": 1.0
+                }
+            },
+            "exception_info": null,
+            "agent_execution": {
+                "started_at": "2026-11-24T05:20:09.126974Z",
+                "finished_at": "2026-11-24T05:20:09.518012Z"
+            },
+            "verifier": {
+                "started_at": "2026-11-24T05:20:10.281758Z",
+                "finished_at": "2026-11-24T05:20:12.922960Z"
+            }
+        },
+        {
+            "step_name": "step-3",
+            "agent_result": {
+                "n_input_tokens": null,
+                "n_cache_tokens": null,
+                "n_output_tokens": null,
+                "cost_usd": null,
+                "model_usage": null,
+                "rollout_details": null,
+                "metadata": null
+            },
+            "verifier_result": {
+                "rewards": {
+                    "reward": 1.0
+                }
+            },
+            "exception_info": null,
+            "agent_execution": {
+                "started_at": "2026-11-24T05:20:13.392745Z",
+                "finished_at": "2026-11-24T05:20:13.768104Z"
+            },
+            "verifier": {
+                "started_at": "2026-11-24T05:20:14.540339Z",
+                "finished_at": "2026-11-24T05:20:17.214164Z"
+            }
+        },
+        {
+            "step_name": "step-4",
+            "agent_result": {
+                "n_input_tokens": null,
+                "n_cache_tokens": null,
+                "n_output_tokens": null,
+                "cost_usd": null,
+                "model_usage": null,
+                "rollout_details": null,
+                "metadata": null
+            },
+            "verifier_result": {
+                "rewards": {
+                    "reward": 1.0
+                }
+            },
+            "exception_info": null,
+            "agent_execution": {
+                "started_at": "2026-11-24T05:20:17.759077Z",
+                "finished_at": "2026-11-24T05:20:18.176498Z"
+            },
+            "verifier": {
+                "started_at": "2026-11-24T05:20:18.957141Z",
+                "finished_at": "2026-11-24T05:20:22.050625Z"
+            }
+        }
+    ],
+    "reward_valid": true
+}

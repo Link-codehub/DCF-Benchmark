@@ -1,0 +1,1059 @@
+{
+  "task_id": "A01",
+  "baseline": {
+    "passed": false,
+    "mismatches": [
+      {
+        "key": "arr_close_p1",
+        "actual": 826.184109589041,
+        "expected": 857.2
+      },
+      {
+        "key": "revenue_p1",
+        "actual": 588.365498967911,
+        "expected": 600.0920547945205
+      },
+      {
+        "key": "ebit_p1",
+        "actual": 94.1384798348658,
+        "expected": 96.01472876712329
+      },
+      {
+        "key": "capex_p1",
+        "actual": 38.2437574329142,
+        "expected": 84.01288767123287
+      },
+      {
+        "key": "da_p1",
+        "actual": 30.5950059463314,
+        "expected": 31.204786849315067
+      },
+      {
+        "key": "nwc_p1",
+        "actual": 101.151967123288,
+        "expected": 103.168
+      },
+      {
+        "key": "delta_nwc_p1",
+        "actual": 38.1519671232877,
+        "expected": 40.168000000000006
+      },
+      {
+        "key": "fcff_p1",
+        "actual": -17.4415015596172,
+        "expected": -19.04475967123288
+      },
+      {
+        "key": "arr_close_p2",
+        "actual": 974.362394520548,
+        "expected": 1006.774
+      },
+      {
+        "key": "revenue_p2",
+        "actual": 900.273252054795,
+        "expected": 704.7353753424658
+      },
+      {
+        "key": "ebit_p2",
+        "actual": 147.644813336986,
+        "expected": 115.57660155616439
+      },
+      {
+        "key": "capex_p2",
+        "actual": 58.5177613835617,
+        "expected": 98.66295254794521
+      },
+      {
+        "key": "da_p2",
+        "actual": 46.8142091068493,
+        "expected": 36.64623951780822
+      },
+      {
+        "key": "nwc_p2",
+        "actual": 117.035522767123,
+        "expected": 121.15831
+      },
+      {
+        "key": "delta_nwc_p2",
+        "actual": 15.8835556438356,
+        "expected": 17.990309999999994
+      },
+      {
+        "key": "fcff_p2",
+        "actual": 18.5789044448219,
+        "expected": 8.986960168109604
+      },
+      {
+        "key": "arr_close_p3",
+        "actual": 1147.08051424658,
+        "expected": 1181.1127000000001
+      },
+      {
+        "key": "revenue_p3",
+        "actual": 1060.72145438356,
+        "expected": 827.2009989041096
+      },
+      {
+        "key": "ebit_p3",
+        "actual": 178.201204336438,
+        "expected": 138.96976781589044
+      },
+      {
+        "key": "capex_p3",
+        "actual": 68.9468945349315,
+        "expected": 115.80813984657534
+      }
+    ],
+    "mismatches_all": [
+      {
+        "key": "arr_close_p1",
+        "actual": 826.184109589041,
+        "expected": 857.2
+      },
+      {
+        "key": "revenue_p1",
+        "actual": 588.365498967911,
+        "expected": 600.0920547945205
+      },
+      {
+        "key": "ebit_p1",
+        "actual": 94.1384798348658,
+        "expected": 96.01472876712329
+      },
+      {
+        "key": "capex_p1",
+        "actual": 38.2437574329142,
+        "expected": 84.01288767123287
+      },
+      {
+        "key": "da_p1",
+        "actual": 30.5950059463314,
+        "expected": 31.204786849315067
+      },
+      {
+        "key": "nwc_p1",
+        "actual": 101.151967123288,
+        "expected": 103.168
+      },
+      {
+        "key": "delta_nwc_p1",
+        "actual": 38.1519671232877,
+        "expected": 40.168000000000006
+      },
+      {
+        "key": "fcff_p1",
+        "actual": -17.4415015596172,
+        "expected": -19.04475967123288
+      },
+      {
+        "key": "arr_close_p2",
+        "actual": 974.362394520548,
+        "expected": 1006.774
+      },
+      {
+        "key": "revenue_p2",
+        "actual": 900.273252054795,
+        "expected": 704.7353753424658
+      },
+      {
+        "key": "ebit_p2",
+        "actual": 147.644813336986,
+        "expected": 115.57660155616439
+      },
+      {
+        "key": "capex_p2",
+        "actual": 58.5177613835617,
+        "expected": 98.66295254794521
+      },
+      {
+        "key": "da_p2",
+        "actual": 46.8142091068493,
+        "expected": 36.64623951780822
+      },
+      {
+        "key": "nwc_p2",
+        "actual": 117.035522767123,
+        "expected": 121.15831
+      },
+      {
+        "key": "delta_nwc_p2",
+        "actual": 15.8835556438356,
+        "expected": 17.990309999999994
+      },
+      {
+        "key": "fcff_p2",
+        "actual": 18.5789044448219,
+        "expected": 8.986960168109604
+      },
+      {
+        "key": "arr_close_p3",
+        "actual": 1147.08051424658,
+        "expected": 1181.1127000000001
+      },
+      {
+        "key": "revenue_p3",
+        "actual": 1060.72145438356,
+        "expected": 827.2009989041096
+      },
+      {
+        "key": "ebit_p3",
+        "actual": 178.201204336438,
+        "expected": 138.96976781589044
+      },
+      {
+        "key": "capex_p3",
+        "actual": 68.9468945349315,
+        "expected": 115.80813984657534
+      },
+      {
+        "key": "da_p3",
+        "actual": 55.1575156279452,
+        "expected": 43.0144519430137
+      },
+      {
+        "key": "nwc_p3",
+        "actual": 137.893789069863,
+        "expected": 142.2126355
+      },
+      {
+        "key": "delta_nwc_p3",
+        "actual": 20.8582663027397,
+        "expected": 21.054325500000004
+      },
+      {
+        "key": "fcff_p3",
+        "actual": 23.0131730505644,
+        "expected": 13.158707814674003
+      },
+      {
+        "key": "discount_time_p3",
+        "actual": 2.75890410958904,
+        "expected": 2.756164383561644
+      },
+      {
+        "key": "arr_close_p4",
+        "actual": 1347.16994253014,
+        "expected": 1383.0738985
+      },
+      {
+        "key": "revenue_p4",
+        "actual": 1247.12522838836,
+        "expected": 969.4732892958906
+      },
+      {
+        "key": "ebit_p4",
+        "actual": 214.505539282797,
+        "expected": 166.7494057588932
+      },
+      {
+        "key": "capex_p4",
+        "actual": 81.0631398452432,
+        "expected": 135.7262605014247
+      },
+      {
+        "key": "da_p4",
+        "actual": 64.8505118761945,
+        "expected": 50.412611043386306
+      },
+      {
+        "key": "nwc_p4",
+        "actual": 162.126279690486,
+        "expected": 166.67212890250002
+      },
+      {
+        "key": "delta_nwc_p4",
+        "actual": 24.2324906206233,
+        "expected": 24.459493402500016
+      },
+      {
+        "key": "fcff_p4",
+        "actual": 31.1897545289553,
+        "expected": 18.623899573809382
+      },
+      {
+        "key": "discount_time_p4",
+        "actual": 3.75890410958904,
+        "expected": 3.756164383561644
+      },
+      {
+        "key": "arr_close_p5",
+        "actual": 1578.00013908195,
+        "expected": 1616.05833241
+      },
+      {
+        "key": "revenue_p5",
+        "actual": 1462.58504080604,
+        "expected": 1133.918487302959
+      },
+      {
+        "key": "ebit_p5",
+        "actual": 257.414967181863,
+        "expected": 199.56965376532077
+      },
+      {
+        "key": "capex_p5",
+        "actual": 95.0680276523927,
+        "expected": 158.74858822241424
+      },
+      {
+        "key": "da_p5",
+        "actual": 76.0544221219141,
+        "expected": 58.963761339753866
+      },
+      {
+        "key": "nwc_p5",
+        "actual": 190.136055304785,
+        "expected": 194.94359500915002
+      },
+      {
+        "key": "delta_nwc_p5",
+        "actual": 28.009775614299,
+        "expected": 28.271466106649996
+      },
+      {
+        "key": "fcff_p5",
+        "actual": 41.492265524804,
+        "expected": 25.612340409986615
+      },
+      {
+        "key": "discount_time_p5",
+        "actual": 4.75890410958904,
+        "expected": 4.756164383561644
+      },
+      {
+        "key": "terminal_value",
+        "actual": 567.060962172321,
+        "expected": 350.0353189364837
+      },
+      {
+        "key": "pv_terminal",
+        "actual": 360.284792380945,
+        "expected": 222.4546316376509
+      },
+      {
+        "key": "enterprise_value",
+        "actual": 425.624115471269,
+        "expected": 251.75141488529792
+      },
+      {
+        "key": "equity_value",
+        "actual": 367.624115471269,
+        "expected": 193.7514148852979
+      },
+      {
+        "key": "value_per_share",
+        "actual": 4.82446345762821,
+        "expected": 2.542669486683699
+      }
+    ],
+    "nonformula_or_missing": [],
+    "nonformula_or_missing_all": [],
+    "duplicates": [],
+    "errors": [],
+    "errors_all": [],
+    "links": [],
+    "links_all": [],
+    "checked": 52
+  },
+  "perturbations": [
+    {
+      "id": 1,
+      "passed": false,
+      "mismatches": [
+        {
+          "key": "arr_close_p1",
+          "actual": 829.148273972603,
+          "expected": 861.12
+        },
+        {
+          "key": "revenue_p1",
+          "actual": 589.486196734847,
+          "expected": 601.5741369863014
+        },
+        {
+          "key": "ebit_p1",
+          "actual": 94.3177914775755,
+          "expected": 96.25186191780823
+        },
+        {
+          "key": "capex_p1",
+          "actual": 38.3166027877651,
+          "expected": 84.2203791780822
+        },
+        {
+          "key": "da_p1",
+          "actual": 30.6532822302121,
+          "expected": 31.28185512328767
+        },
+        {
+          "key": "nwc_p1",
+          "actual": 101.344637808219,
+          "expected": 103.4228
+        },
+        {
+          "key": "delta_nwc_p1",
+          "actual": 38.3446378082192,
+          "expected": 40.422799999999995
+        },
+        {
+          "key": "fcff_p1",
+          "actual": -17.5947236831525,
+          "expected": -19.247390378082187
+        },
+        {
+          "key": "arr_close_p2",
+          "actual": 977.45994630137,
+          "expected": 1010.8703999999999
+        },
+        {
+          "key": "revenue_p2",
+          "actual": 903.304110136986,
+          "expected": 707.7662334246575
+        },
+        {
+          "key": "ebit_p2",
+          "actual": 150.851786392877,
+          "expected": 118.1969609819178
+        },
+        {
+          "key": "capex_p2",
+          "actual": 58.7147671589041,
+          "expected": 99.08727267945204
+        },
+        {
+          "key": "da_p2",
+          "actual": 46.9718137271233,
+          "expected": 36.803844138082184
+        },
+        {
+          "key": "nwc_p2",
+          "actual": 117.429534317808,
+          "expected": 121.67937599999998
+        },
+        {
+          "key": "delta_nwc_p2",
+          "actual": 16.084896509589,
+          "expected": 18.25657599999998
+        },
+        {
+          "key": "fcff_p2",
+          "actual": 20.5802173208712,
+          "expected": 10.471655414706873
+        },
+        {
+          "key": "arr_close_p3",
+          "actual": 1150.33294361644,
+          "expected": 1185.41392
+        },
+        {
+          "key": "revenue_p3",
+          "actual": 1063.8964449589,
+          "expected": 830.375989479452
+        },
+        {
+          "key": "ebit_p3",
+          "actual": 178.734602753096,
+          "expected": 139.50316623254793
+        },
+        {
+          "key": "capex_p3",
+          "actual": 69.1532689223288,
+          "expected": 116.25263852712328
+        }
+      ],
+      "mismatches_all": [
+        {
+          "key": "arr_close_p1",
+          "actual": 829.148273972603,
+          "expected": 861.12
+        },
+        {
+          "key": "revenue_p1",
+          "actual": 589.486196734847,
+          "expected": 601.5741369863014
+        },
+        {
+          "key": "ebit_p1",
+          "actual": 94.3177914775755,
+          "expected": 96.25186191780823
+        },
+        {
+          "key": "capex_p1",
+          "actual": 38.3166027877651,
+          "expected": 84.2203791780822
+        },
+        {
+          "key": "da_p1",
+          "actual": 30.6532822302121,
+          "expected": 31.28185512328767
+        },
+        {
+          "key": "nwc_p1",
+          "actual": 101.344637808219,
+          "expected": 103.4228
+        },
+        {
+          "key": "delta_nwc_p1",
+          "actual": 38.3446378082192,
+          "expected": 40.422799999999995
+        },
+        {
+          "key": "fcff_p1",
+          "actual": -17.5947236831525,
+          "expected": -19.247390378082187
+        },
+        {
+          "key": "arr_close_p2",
+          "actual": 977.45994630137,
+          "expected": 1010.8703999999999
+        },
+        {
+          "key": "revenue_p2",
+          "actual": 903.304110136986,
+          "expected": 707.7662334246575
+        },
+        {
+          "key": "ebit_p2",
+          "actual": 150.851786392877,
+          "expected": 118.1969609819178
+        },
+        {
+          "key": "capex_p2",
+          "actual": 58.7147671589041,
+          "expected": 99.08727267945204
+        },
+        {
+          "key": "da_p2",
+          "actual": 46.9718137271233,
+          "expected": 36.803844138082184
+        },
+        {
+          "key": "nwc_p2",
+          "actual": 117.429534317808,
+          "expected": 121.67937599999998
+        },
+        {
+          "key": "delta_nwc_p2",
+          "actual": 16.084896509589,
+          "expected": 18.25657599999998
+        },
+        {
+          "key": "fcff_p2",
+          "actual": 20.5802173208712,
+          "expected": 10.471655414706873
+        },
+        {
+          "key": "arr_close_p3",
+          "actual": 1150.33294361644,
+          "expected": 1185.41392
+        },
+        {
+          "key": "revenue_p3",
+          "actual": 1063.8964449589,
+          "expected": 830.375989479452
+        },
+        {
+          "key": "ebit_p3",
+          "actual": 178.734602753096,
+          "expected": 139.50316623254793
+        },
+        {
+          "key": "capex_p3",
+          "actual": 69.1532689223288,
+          "expected": 116.25263852712328
+        },
+        {
+          "key": "da_p3",
+          "actual": 55.322615137863,
+          "expected": 43.1795514529315
+        },
+        {
+          "key": "nwc_p3",
+          "actual": 138.306537844658,
+          "expected": 142.7584808
+        },
+        {
+          "key": "delta_nwc_p3",
+          "actual": 20.8770035268493,
+          "expected": 21.079104800000025
+        },
+        {
+          "key": "fcff_p3",
+          "actual": 23.125753436651,
+          "expected": 13.265246124870103
+        },
+        {
+          "key": "discount_time_p3",
+          "actual": 2.75890410958904,
+          "expected": 2.756164383561644
+        },
+        {
+          "key": "arr_close_p4",
+          "actual": 1350.60125551534,
+          "expected": 1387.6116855999999
+        },
+        {
+          "key": "revenue_p4",
+          "actual": 1250.46709956589,
+          "expected": 972.8151604734246
+        },
+        {
+          "key": "ebit_p4",
+          "actual": 215.080341125333,
+          "expected": 167.32420760142904
+        },
+        {
+          "key": "capex_p4",
+          "actual": 81.2803614717829,
+          "expected": 136.19412246627945
+        },
+        {
+          "key": "da_p4",
+          "actual": 65.0242891774263,
+          "expected": 50.58638834461808
+        },
+        {
+          "key": "nwc_p4",
+          "actual": 162.560722943566,
+          "expected": 167.246664364
+        },
+        {
+          "key": "delta_nwc_p4",
+          "actual": 24.2541850989082,
+          "expected": 24.488183563999996
+        },
+        {
+          "key": "fcff_p4",
+          "actual": 31.3165728058,
+          "expected": 18.74372216743899
+        },
+        {
+          "key": "discount_time_p4",
+          "actual": 3.75890410958904,
+          "expected": 3.756164383561644
+        },
+        {
+          "key": "arr_close_p5",
+          "actual": 1581.63733084626,
+          "expected": 1620.868386736
+        },
+        {
+          "key": "revenue_p5",
+          "actual": 1466.1192931808,
+          "expected": 1137.4527396777205
+        },
+        {
+          "key": "ebit_p5",
+          "actual": 258.036995599821,
+          "expected": 200.1916821832788
+        },
+        {
+          "key": "capex_p5",
+          "actual": 95.2977540567522,
+          "expected": 159.2433835548809
+        },
+        {
+          "key": "da_p5",
+          "actual": 76.2382032454017,
+          "expected": 59.147542463241464
+        },
+        {
+          "key": "nwc_p5",
+          "actual": 190.595508113504,
+          "expected": 195.55120470184
+        },
+        {
+          "key": "delta_nwc_p5",
+          "actual": 28.0347851699386,
+          "expected": 28.304540337839995
+        },
+        {
+          "key": "fcff_p5",
+          "actual": 41.6352036420131,
+          "expected": 25.747213851645228
+        },
+        {
+          "key": "discount_time_p5",
+          "actual": 4.75890410958904,
+          "expected": 4.756164383561644
+        },
+        {
+          "key": "terminal_value",
+          "actual": 540.203591557765,
+          "expected": 334.06195187261204
+        },
+        {
+          "key": "pv_terminal",
+          "actual": 337.343050116506,
+          "expected": 208.66952998822666
+        },
+        {
+          "key": "enterprise_value",
+          "actual": 403.506161580173,
+          "expected": 238.71881291116264
+        },
+        {
+          "key": "equity_value",
+          "actual": 358.506161580173,
+          "expected": 193.71881291116267
+        },
+        {
+          "key": "value_per_share",
+          "actual": 4.70480527008102,
+          "expected": 2.542241639254103
+        }
+      ],
+      "checked": 52
+    },
+    {
+      "id": 2,
+      "passed": false,
+      "mismatches": [
+        {
+          "key": "arr_close_p1",
+          "actual": 826.184109589041,
+          "expected": 857.2
+        },
+        {
+          "key": "revenue_p1",
+          "actual": 588.365498967911,
+          "expected": 600.0920547945205
+        },
+        {
+          "key": "ebit_p1",
+          "actual": 94.1384798348658,
+          "expected": 96.01472876712329
+        },
+        {
+          "key": "capex_p1",
+          "actual": 38.2437574329142,
+          "expected": 84.01288767123287
+        },
+        {
+          "key": "da_p1",
+          "actual": 30.5950059463314,
+          "expected": 31.204786849315067
+        },
+        {
+          "key": "nwc_p1",
+          "actual": 101.151967123288,
+          "expected": 103.168
+        },
+        {
+          "key": "delta_nwc_p1",
+          "actual": 38.1519671232877,
+          "expected": 40.168000000000006
+        },
+        {
+          "key": "fcff_p1",
+          "actual": -17.4415015596172,
+          "expected": -19.04475967123288
+        },
+        {
+          "key": "arr_close_p2",
+          "actual": 969.922394520548,
+          "expected": 1002.3340000000001
+        },
+        {
+          "key": "revenue_p2",
+          "actual": 898.053252054795,
+          "expected": 703.0566904109589
+        },
+        {
+          "key": "ebit_p2",
+          "actual": 147.280733336986,
+          "expected": 115.30129722739727
+        },
+        {
+          "key": "capex_p2",
+          "actual": 58.3734613835616,
+          "expected": 98.42793665753425
+        },
+        {
+          "key": "da_p2",
+          "actual": 46.6987691068493,
+          "expected": 36.55894790136986
+        },
+        {
+          "key": "nwc_p2",
+          "actual": 116.746922767123,
+          "expected": 120.86971000000001
+        },
+        {
+          "key": "delta_nwc_p2",
+          "actual": 15.5949556438356,
+          "expected": 17.701710000000006
+        },
+        {
+          "key": "fcff_p2",
+          "actual": 18.7825228448219,
+          "expected": 9.21130010893151
+        },
+        {
+          "key": "arr_close_p3",
+          "actual": 1142.41851424658,
+          "expected": 1176.4507
+        },
+        {
+          "key": "revenue_p3",
+          "actual": 1056.17045438356,
+          "expected": 823.7596947945206
+        },
+        {
+          "key": "ebit_p3",
+          "actual": 177.436636336438,
+          "expected": 138.39162872547945
+        },
+        {
+          "key": "capex_p3",
+          "actual": 78.2622306698219,
+          "expected": 122.82257049386301
+        }
+      ],
+      "mismatches_all": [
+        {
+          "key": "arr_close_p1",
+          "actual": 826.184109589041,
+          "expected": 857.2
+        },
+        {
+          "key": "revenue_p1",
+          "actual": 588.365498967911,
+          "expected": 600.0920547945205
+        },
+        {
+          "key": "ebit_p1",
+          "actual": 94.1384798348658,
+          "expected": 96.01472876712329
+        },
+        {
+          "key": "capex_p1",
+          "actual": 38.2437574329142,
+          "expected": 84.01288767123287
+        },
+        {
+          "key": "da_p1",
+          "actual": 30.5950059463314,
+          "expected": 31.204786849315067
+        },
+        {
+          "key": "nwc_p1",
+          "actual": 101.151967123288,
+          "expected": 103.168
+        },
+        {
+          "key": "delta_nwc_p1",
+          "actual": 38.1519671232877,
+          "expected": 40.168000000000006
+        },
+        {
+          "key": "fcff_p1",
+          "actual": -17.4415015596172,
+          "expected": -19.04475967123288
+        },
+        {
+          "key": "arr_close_p2",
+          "actual": 969.922394520548,
+          "expected": 1002.3340000000001
+        },
+        {
+          "key": "revenue_p2",
+          "actual": 898.053252054795,
+          "expected": 703.0566904109589
+        },
+        {
+          "key": "ebit_p2",
+          "actual": 147.280733336986,
+          "expected": 115.30129722739727
+        },
+        {
+          "key": "capex_p2",
+          "actual": 58.3734613835616,
+          "expected": 98.42793665753425
+        },
+        {
+          "key": "da_p2",
+          "actual": 46.6987691068493,
+          "expected": 36.55894790136986
+        },
+        {
+          "key": "nwc_p2",
+          "actual": 116.746922767123,
+          "expected": 120.86971000000001
+        },
+        {
+          "key": "delta_nwc_p2",
+          "actual": 15.5949556438356,
+          "expected": 17.701710000000006
+        },
+        {
+          "key": "fcff_p2",
+          "actual": 18.7825228448219,
+          "expected": 9.21130010893151
+        },
+        {
+          "key": "arr_close_p3",
+          "actual": 1142.41851424658,
+          "expected": 1176.4507
+        },
+        {
+          "key": "revenue_p3",
+          "actual": 1056.17045438356,
+          "expected": 823.7596947945206
+        },
+        {
+          "key": "ebit_p3",
+          "actual": 177.436636336438,
+          "expected": 138.39162872547945
+        },
+        {
+          "key": "capex_p3",
+          "actual": 78.2622306698219,
+          "expected": 122.82257049386301
+        },
+        {
+          "key": "da_p3",
+          "actual": 54.9208636279452,
+          "expected": 42.83550412931507
+        },
+        {
+          "key": "nwc_p3",
+          "actual": 137.302159069863,
+          "expected": 141.62100550000002
+        },
+        {
+          "key": "delta_nwc_p3",
+          "actual": 20.5552363027397,
+          "expected": 20.751295500000012
+        },
+        {
+          "key": "fcff_p3",
+          "actual": 13.516822555674,
+          "expected": 5.823192254071216
+        },
+        {
+          "key": "discount_time_p3",
+          "actual": 2.75890410958904,
+          "expected": 2.756164383561644
+        },
+        {
+          "key": "arr_close_p4",
+          "actual": 1342.25153253014,
+          "expected": 1378.1554885
+        },
+        {
+          "key": "revenue_p4",
+          "actual": 1242.33502338836,
+          "expected": 965.8511068849315
+        },
+        {
+          "key": "ebit_p4",
+          "actual": 213.681624022797,
+          "expected": 166.12639038420824
+        },
+        {
+          "key": "capex_p4",
+          "actual": 80.7517765202432,
+          "expected": 135.2191549638904
+        },
+        {
+          "key": "da_p4",
+          "actual": 64.6014212161945,
+          "expected": 50.22425755801643
+        },
+        {
+          "key": "nwc_p4",
+          "actual": 161.503553040486,
+          "expected": 166.0494022525
+        },
+        {
+          "key": "delta_nwc_p4",
+          "actual": 24.2013939706233,
+          "expected": 24.428396752499964
+        },
+        {
+          "key": "fcff_p4",
+          "actual": 31.0079744687553,
+          "expected": 18.49402643746643
+        },
+        {
+          "key": "discount_time_p4",
+          "actual": 3.75890410958904,
+          "expected": 3.756164383561644
+        },
+        {
+          "key": "arr_close_p5",
+          "actual": 1572.78662448195,
+          "expected": 1610.8448178100002
+        },
+        {
+          "key": "revenue_p5",
+          "actual": 1457.51907850604,
+          "expected": 1130.087787043233
+        },
+        {
+          "key": "ebit_p5",
+          "actual": 256.523357817063,
+          "expected": 198.895450519609
+        },
+        {
+          "key": "capex_p5",
+          "actual": 94.7387401028927,
+          "expected": 158.2122901860526
+        },
+        {
+          "key": "da_p5",
+          "actual": 75.7909920823141,
+          "expected": 58.76456492624811
+        },
+        {
+          "key": "nwc_p5",
+          "actual": 189.477480205785,
+          "expected": 194.28501991015003
+        },
+        {
+          "key": "delta_nwc_p5",
+          "actual": 27.973927165299,
+          "expected": 28.23561765765004
+        },
+        {
+          "key": "fcff_p5",
+          "actual": 41.287379445308,
+          "expected": 25.466153982644414
+        },
+        {
+          "key": "discount_time_p5",
+          "actual": 4.75890410958904,
+          "expected": 4.756164383561644
+        },
+        {
+          "key": "terminal_value",
+          "actual": 548.532326916235,
+          "expected": 338.33604576941855
+        },
+        {
+          "key": "pv_terminal",
+          "actual": 348.5125386875,
+          "expected": 215.01950334626844
+        },
+        {
+          "key": "enterprise_value",
+          "actual": 406.466282980042,
+          "expected": 238.68149195311423
+        },
+        {
+          "key": "equity_value",
+          "actual": 336.286282980042,
+          "expected": 168.50149195311423
+        },
+        {
+          "key": "value_per_share",
+          "actual": 4.41320581338638,
+          "expected": 2.2113056686760397
+        }
+      ],
+      "checked": 52
+    }
+  ],
+  "passed": false
+}

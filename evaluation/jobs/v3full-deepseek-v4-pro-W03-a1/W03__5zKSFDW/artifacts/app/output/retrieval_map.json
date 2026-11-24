@@ -1,0 +1,118 @@
+{
+  "schema_version": "dcf-v3-w-retrieval-v1",
+  "task_id": "W03",
+  "items": [
+    {
+      "field_id": "revenue",
+      "source_item_index": 1,
+      "sheet": "Sources",
+      "cell": "B2",
+      "used_by": ["Assumptions!B6", "Assumptions!B7", "Assumptions!B8", "Assumptions!B9", "Forecast!B2"]
+    },
+    {
+      "field_id": "operating_income",
+      "source_item_index": 2,
+      "sheet": "Sources",
+      "cell": "B3",
+      "used_by": ["Assumptions!B5", "Assumptions!B6"]
+    },
+    {
+      "field_id": "pretax_income",
+      "source_item_index": 3,
+      "sheet": "Sources",
+      "cell": "B4",
+      "used_by": ["Assumptions!B5"]
+    },
+    {
+      "field_id": "income_tax",
+      "source_item_index": 4,
+      "sheet": "Sources",
+      "cell": "B5",
+      "used_by": ["Assumptions!B5"]
+    },
+    {
+      "field_id": "net_income_consolidated",
+      "source_item_index": 5,
+      "sheet": "Sources",
+      "cell": "B6",
+      "used_by": ["cross_validation.pretax_to_net_income"]
+    },
+    {
+      "field_id": "da",
+      "source_item_index": 6,
+      "sheet": "Sources",
+      "cell": "B7",
+      "used_by": ["Assumptions!B7"]
+    },
+    {
+      "field_id": "capex",
+      "source_item_index": 7,
+      "sheet": "Sources",
+      "cell": "B8",
+      "used_by": ["Assumptions!B8"]
+    },
+    {
+      "field_id": "diluted_shares",
+      "source_item_index": 8,
+      "sheet": "Sources",
+      "cell": "B9",
+      "used_by": ["DCF!B13"]
+    },
+    {
+      "field_id": "cash",
+      "source_item_index": 9,
+      "sheet": "Sources",
+      "cell": "B10",
+      "used_by": ["Sources!B18", "DCF!B7"]
+    },
+    {
+      "field_id": "short_term_investments",
+      "source_item_index": 10,
+      "sheet": "Sources",
+      "cell": "B11",
+      "used_by": ["Sources!B18", "DCF!B8"]
+    },
+    {
+      "field_id": "receivables",
+      "source_item_index": 11,
+      "sheet": "Sources",
+      "cell": "B12",
+      "used_by": ["Assumptions!B9"]
+    },
+    {
+      "field_id": "current_assets",
+      "source_item_index": 12,
+      "sheet": "Sources",
+      "cell": "B13",
+      "used_by": ["Sources!B18"]
+    },
+    {
+      "field_id": "current_liabilities",
+      "source_item_index": 13,
+      "sheet": "Sources",
+      "cell": "B14",
+      "used_by": ["Sources!B18"]
+    },
+    {
+      "field_id": "current_debt",
+      "source_item_index": 14,
+      "sheet": "Sources",
+      "cell": "B15",
+      "used_by": ["Sources!B18", "DCF!B9"]
+    },
+    {
+      "field_id": "noncurrent_debt",
+      "source_item_index": 15,
+      "sheet": "Sources",
+      "cell": "B16",
+      "used_by": ["DCF!B10"]
+    },
+    {
+      "field_id": "treasury_10y",
+      "source_item_index": 16,
+      "sheet": "Sources",
+      "cell": "B17",
+      "used_by": ["Assumptions!B10"]
+    }
+  ]
+}

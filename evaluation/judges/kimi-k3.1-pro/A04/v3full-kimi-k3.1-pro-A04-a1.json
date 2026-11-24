@@ -1,0 +1,60 @@
+{
+  "task": "A04",
+  "judge_model": "claude-opus-5-5",
+  "generated": "2026-11-22T19:15:40.664850+00:00",
+  "llm": {
+    "A-REASON": {
+      "status": "unscored",
+      "judge_model": "claude-opus-5-5",
+      "attempts": [
+        {
+          "attempt": 1,
+          "error": null,
+          "text_chars": 0
+        },
+        {
+          "attempt": 2,
+          "error": null,
+          "text_chars": 0
+        },
+        {
+          "attempt": 3,
+          "error": null,
+          "text_chars": 0
+        }
+      ]
+    },
+    "09-MEMO": {
+      "status": "pass",
+      "rationale": "候选交付了 memo.md 内容。\n\n价值驱动：备忘录设有“主要价值驱动”一节，明确列出行业驱动：核心产品量 165、单价 4.9、悬崖前增速 8%、第 3 期起 28% 专利侵蚀，以及研发后利润率 16%→17.6%。同时说明了再投资与营运资本、WACC 10.3% 与 g 2.5%、终值占比约 65%，以及股权桥。\n\n局限：备忘录设有“局限”一节，给出至少两项具体局限。一是无历史数据可交叉验证 driver0，且未刻画研发成功概率、竞争或医保降价等风险。二是终值占比高，而第 5 期仍处于侵蚀阶段，却以永续增长推算终值，估值对 WACC 和 g 敏感。\n\n内部一致性抽查：残期 249 天与 residual_activity 0.682 一致；P2 销量 165×1.08²=192.456 正确；P5 销量 90.49 与 192.456×0.7776³ 一致；股权桥净扣减 73 计算正确。论证与输入一致，满足要求。",
+      "judge_model": "claude-opus-5-5",
+      "attempts": [
+        {
+          "attempt": 1,
+          "error": null,
+          "text_chars": 479
+        }
+      ]
+    }
+  },
+  "agent": {
+    "status": "scored",
+    "scores": {
+      "01-UNIT": 1,
+      "09-READABLE": 1,
+      "X-TA-004": 1,
+      "X-TA-006": 1,
+      "X-TA-007": 1
+    },
+    "evidence": {
+      "01-UNIT": "output.xlsx 中 Inputs!A2、Results!A2、Operating!A2、DCF!A2 都写明“金额百万元、股数百万股、比率小数”。Operating!B 列逐行标注单位（百万元、百万单位、%、天、年）；Results!C/F 列给出各键单位（百万元、百万股、年、小数、元/股）；DCF!J13 标注“百万股”，DCF!J17 标注“元/股”。",
+      "09-READABLE": "所有工作表均为可见状态，没有使用定义名称。Operating 第 3–4 行给出期间编号 1–5，并区分“残余期/完整财年”；第 5–12 行列出期初/期末日期、天数和折现时间；A 列有完整项目标签，分为“核心产品与收入”（第 14–23 行）、“研发后利润率与经营成本”（第 25–30 行）、“再投资与营运资本”（第 32–42 行）三块；I 列有口径说明。DCF 第 4 行标注 P1–P5；Results!B31 写明追溯路径 Inputs→Operating→DCF→Results。",
+      "X-TA-004": "Operating 第 11 行“折现时间（实际天数/365）”，C11 公式为 =(C10-Inputs!$C$4)/365，按年中日期计算，值依次为 0.3411、1.1822 … G11=4.1849。DCF 第 6 行 B6:F6 引用 Operating!C11:G11；DCF 第 7 行折现因子 B7 公式为 =1/(1+$B$11)^B6。终值折现时间在 Operating 第 12 行和 DCF!B15，值为 4.6849。",
+      "X-TA-006": "Operating!C27 为 EBIT（=C23*C26）；C29 为 EBIT 税负（=C27*C28）；C30 为 NOPAT；C34 为折旧与摊销；C36 为资本开支；C40 为营运资本增加（=C38-C39）。C41 的 FCFF 公式为 =C30+C34-C36-C40，D–G 列同样逐期计算。DCF!A9 写明 SBC 不加回。",
+      "X-TA-007": "DCF!B14 终值公式为 =F5*(1+B12)/(B11-B12)，其中 F5 是可见的 P5 FCFF（=Operating!G41，值 70.81），B11 是 WACC（=Inputs!C7），B12 是 g（=Inputs!C8）。终值为 930.54；DCF!B17=B14*B16，终值现值为 587.85。"
+    },
+    "rationale": "用 openpyxl 读取了 output.xlsx 的公式和计算值。5 个原子项都有具体证据：单位标注清楚，期间和项目标签可读，折现时间单独成行，FCFF 各组成部分各自成行，终值公式直接引用可见的终期 FCFF 和 WACC、g 假设单元格。各项均给 1 分。",
+    "seconds": 103.3,
+    "judge_model": "claude-opus-5-5"
+  }
+}

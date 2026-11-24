@@ -1,0 +1,7 @@
+Agent 'oracle' does not declare an options_model; leftover kwargs are ignored
+Skipping image OS validation for hb__55dd361baed35bd1e69107da1c9aa179: docker inspect returned 1
+Agent 'oracle' exposes no native web search or fetch tools for Harbor to disable; continuing. Sandbox network policy still applies.
+Collecting main service artifacts
+Skipping image OS validation for hb__f05ccd1c45dce16680cb214ec8822bfa: docker inspect returned 1
+Trial A09__hGv8GJg failed: No reward file found at /Users/link/Desktop/Finance Bench/DCFEval/evaluation/oracle_jobs/A0920261124T053612/A09__hGv8GJg/verifier/reward.txt or /Users/link/Desktop/Finance Bench/DCFEval/evaluation/oracle_jobs/A0920261124T053612/A09__hGv8GJg/verifier/reward.json
+Not retrying trial because an error is excluded by the retry policy

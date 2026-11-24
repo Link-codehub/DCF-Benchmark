@@ -1,0 +1,37 @@
+{
+  "task": "BC03",
+  "judge_model": "claude-opus-5-5",
+  "generated": "2026-11-23T01:34:29.639564+00:00",
+  "llm": {
+    "09-MEMO": {
+      "status": "pass",
+      "rationale": "证据中提供了 memo 内容，以“岚衡多业估值备忘录”为标题，满足 memo.md 交付要求。①价值驱动：设有“主要价值驱动”一节，明确把 Beta 的规模、利润率与 7.8 倍退出倍数列为最大价值来源，并给出定量依据：Beta EV 2,576.156 占 SOTP 3,730.588 约 69.1%，与表中数值一致；P4 终期 EBITDA 427.076，对应终值 3,331.190。该节还说明了客户净增长与定价、利润率与现金转化、折现率与终值敏感性。②局限：设有“局限”一节，列出至少四项具体局限：缺少 2024-02-28 至估值日的实际数据，导致 LTM 等于 FY2024；共同无形资产按 PPE 比例分摊的假设；终值集中度高且缺乏可比证据；合同负债与税务资料有限。两项要求均有明确证据满足。",
+      "judge_model": "claude-opus-5-5",
+      "attempts": [
+        {
+          "attempt": 1,
+          "error": null,
+          "text_chars": 401
+        }
+      ]
+    }
+  },
+  "agent": {
+    "status": "scored",
+    "scores": {
+      "09-READABLE": 1,
+      "X-TA-004": 1,
+      "X-TA-006": 0,
+      "X-TA-007": 1
+    },
+    "evidence": {
+      "09-READABLE": "output.xlsx 的工作表依次为 Read Me、Inputs、History、Historical Summary、Segment Alpha、Segment Beta、Corporate、Results。Segment Beta!A5:F5 的表头是“指标 / key | 单位 / 说明 | P1 残期 | P2 | P3 | P4”，第 6–43 行每行在 A 列写明项目名和 key（如 A10=driver_close｜期末客户数、A34=fcff｜FCFF），B 列写明计算口径（如 B31=期末余额-期初余额）。Historical Summary!B3/C3 标为 FY2024 / LTM。Corporate!A36:C57 的股权桥逐项带标签。全部为普通单元格公式，没有用到未披露的技巧。",
+      "X-TA-004": "Segment Beta 第 35–39 行依次是 start_date、end_date、end_time=(期末-估值日)/365、discount_time｜年中折现时间（C38==C37-(C36-C35)/365/2）、discount_factor（C39==1/(1+$C$48)^C38），第 40 行 pv_fcff=C34*C39。缓存值为 C37=0.80548、C38=0.40274、F37=3.80548、F38=3.30548。Segment Alpha 第 37–38 行结构相同。",
+      "X-TA-006": "Segment Beta 和 Segment Alpha 中：EBIT 在第 16 行，D&A 在第 22 行（=C20+C21），资本开支在第 18 行，ΔNWC 在第 31 行（=C29-C30），这些都有独立行。但没有单独的税项行：第 33 行 nopat 直接写成 =C16*(1-Inputs!$C$27)，税被并入 NOPAT。第 34 行 FCFF 为 =C33+C22-C18-C19-C31，同样不引用任何税项行。题面要求税项也是独立可识别的行项，所以不满足。",
+      "X-TA-007": "Segment Alpha 和 Segment Beta 的 C51 tv_gordon 为 =F34*(1+C49)/(C48-C49)，引用可见的终期 FCFF（F34）、增长率假设（C49）和分部 WACC（C48）。C52 tv_exit 为 =F32*C50，引用终期 EBITDA（F32）和退出倍数假设（C50）。C53 按 Inputs 中的方法选择终值。C55 为 =C53/(1+C48)^F37，用可见的期末时间行折现。Beta 的 C53 缓存值为 3331.19。"
+    },
+    "rationale": "工作簿各表的期间和项目标签都很清楚，折现时间表逐期可见，终值公式直接引用可见的终期指标单元格和假设单元格，这三项给 1 分。FCFF 构建中没有独立的税项行（税被并入 NOPAT），不满足 X-TA-006，给 0 分。",
+    "seconds": 60.9,
+    "judge_model": "claude-opus-5-5"
+  }
+}

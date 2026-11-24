@@ -1,0 +1,905 @@
+{
+  "task": "BC04",
+  "candidate": "/Users/link/Desktop/Finance Bench/exp/dcf_factory_v3/eval/deliveries/kimi-k3.1-pro/BC04/v3full-kimi-k3.1-pro-BC04-a1/output.xlsx",
+  "rule_passed": false,
+  "items": [
+    {
+      "id": "01-FILE",
+      "category": "交付与来源完整性",
+      "importance": "主需",
+      "weight": 3,
+      "method": "rule",
+      "rubric_method": "rule",
+      "status": "pass"
+    },
+    {
+      "id": "01-KEYS",
+      "category": "交付与来源完整性",
+      "importance": "主需",
+      "weight": 3,
+      "method": "rule",
+      "rubric_method": "rule",
+      "status": "pass",
+      "failed_keys": []
+    },
+    {
+      "id": "X-IF-001a",
+      "category": "交付与来源完整性",
+      "importance": "主需",
+      "weight": 3,
+      "method": "rule",
+      "rubric_method": "rule",
+      "status": "pass",
+      "missing": []
+    },
+    {
+      "id": "X-IF-002",
+      "category": "交付与来源完整性",
+      "importance": "主需",
+      "weight": 3,
+      "method": "rule",
+      "rubric_method": "rule",
+      "status": "pass",
+      "required": [
+        "Inputs",
+        "Results"
+      ],
+      "actual": [
+        "Inputs",
+        "History",
+        "Required Keys",
+        "History_Summary",
+        "Existing_Business",
+        "Projects",
+        "Valuation",
+        "Results"
+      ]
+    },
+    {
+      "id": "02-FY",
+      "category": "历史与会计口径",
+      "importance": "主需",
+      "weight": 3,
+      "method": "rule",
+      "rubric_method": "rule",
+      "status": "fail",
+      "evidence_keys": [
+        "fy_normalized_ebit",
+        "fy_revenue"
+      ],
+      "failed_keys": [
+        "fy_normalized_ebit"
+      ]
+    },
+    {
+      "id": "02-LTM",
+      "category": "历史与会计口径",
+      "importance": "主需",
+      "weight": 3,
+      "method": "rule",
+      "rubric_method": "rule",
+      "status": "fail",
+      "evidence_keys": [
+        "ltm_normalized_ebit",
+        "ltm_revenue"
+      ],
+      "failed_keys": [
+        "ltm_normalized_ebit",
+        "ltm_revenue"
+      ]
+    },
+    {
+      "id": "02-REPORTED",
+      "category": "历史与会计口径",
+      "importance": "主需",
+      "weight": 3,
+      "method": "rule",
+      "rubric_method": "rule",
+      "status": "fail",
+      "evidence_keys": [
+        "fy_reported_ebit",
+        "ltm_reported_ebit"
+      ],
+      "failed_keys": [
+        "fy_reported_ebit",
+        "ltm_reported_ebit"
+      ]
+    },
+    {
+      "id": "02-SBC",
+      "category": "历史与会计口径",
+      "importance": "主需",
+      "weight": 3,
+      "method": "rule",
+      "rubric_method": "rule",
+      "status": "fail",
+      "evidence_keys": [
+        "fy_normalized_ebit",
+        "ltm_normalized_ebit"
+      ],
+      "failed_keys": [
+        "fy_normalized_ebit",
+        "ltm_normalized_ebit"
+      ]
+    },
+    {
+      "id": "X-IN-001",
+      "category": "历史与会计口径",
+      "importance": "主需",
+      "weight": 3,
+      "method": "rule",
+      "rubric_method": "rule",
+      "status": "fail",
+      "mismatches": [
+        {
+          "key": "a.debt_repayment",
+          "index": 3,
+          "expected": 36.90000000000001,
+          "actual": 36.9
+        }
+      ]
+    },
+    {
+      "id": "X-IN-007",
+      "category": "历史与会计口径",
+      "importance": "主需",
+      "weight": 3,
+      "method": "rule",
+      "rubric_method": "rule",
+      "status": "not_executed",
+      "reason": "该条需要独立语义/结构评审，不能从数值结果推断"
+    },
+    {
+      "id": "X-IN-009",
+      "category": "历史与会计口径",
+      "importance": "主需",
+      "weight": 3,
+      "method": "rule",
+      "rubric_method": "rule",
+      "status": "not_executed",
+      "reason": "该条需要独立语义/结构评审，不能从数值结果推断"
+    },
+    {
+      "id": "03-DRIVER",
+      "category": "经营预测",
+      "importance": "主需",
+      "weight": 3,
+      "method": "rule",
+      "rubric_method": "rule",
+      "status": "not_executed",
+      "evidence_keys": []
+    },
+    {
+      "id": "03-AVERAGE",
+      "category": "经营预测",
+      "importance": "主需",
+      "weight": 3,
+      "method": "rule",
+      "rubric_method": "rule",
+      "status": "fail",
+      "evidence_keys": [
+        "existing_revenue_p1",
+        "existing_revenue_p2",
+        "existing_revenue_p3",
+        "existing_revenue_p4",
+        "existing_revenue_p5",
+        "project_atlas_revenue_p1",
+        "project_atlas_revenue_p2",
+        "project_atlas_revenue_p3",
+        "project_atlas_revenue_p4",
+        "project_atlas_revenue_p5",
+        "project_boreal_revenue_p1",
+        "project_boreal_revenue_p2",
+        "project_boreal_revenue_p3",
+        "project_boreal_revenue_p4",
+        "project_boreal_revenue_p5"
+      ],
+      "failed_keys": [
+        "existing_revenue_p1"
+      ]
+    },
+    {
+      "id": "03-MARGIN",
+      "category": "经营预测",
+      "importance": "主需",
+      "weight": 3,
+      "method": "rule",
+      "rubric_method": "rule",
+      "status": "pass",
+      "evidence_keys": [
+        "existing_ebit_p1",
+        "existing_ebit_p2",
+        "existing_ebit_p3",
+        "existing_ebit_p4",
+        "existing_ebit_p5"
+      ],
+      "failed_keys": []
+    },
+    {
+      "id": "03-NWC",
+      "category": "经营预测",
+      "importance": "主需",
+      "weight": 3,
+      "method": "rule",
+      "rubric_method": "rule",
+      "status": "pass",
+      "evidence_keys": [
+        "existing_delta_nwc_p1",
+        "existing_delta_nwc_p2",
+        "existing_delta_nwc_p3",
+        "existing_delta_nwc_p4",
+        "existing_delta_nwc_p5"
+      ],
+      "failed_keys": []
+    },
+    {
+      "id": "B-NWC-OPEN",
+      "category": "经营预测",
+      "importance": "主需",
+      "weight": 3,
+      "method": "rule",
+      "rubric_method": "rule",
+      "status": "pass",
+      "evidence_keys": [
+        "existing_delta_nwc_p1"
+      ],
+      "failed_keys": []
+    },
+    {
+      "id": "03-DAYS",
+      "category": "经营预测",
+      "importance": "次需",
+      "weight": 1,
+      "method": "rule",
+      "rubric_method": "rule",
+      "status": "pass",
+      "evidence_keys": [
+        "existing_delta_nwc_p1",
+        "existing_delta_nwc_p2",
+        "existing_delta_nwc_p3",
+        "existing_delta_nwc_p4",
+        "existing_delta_nwc_p5"
+      ],
+      "failed_keys": []
+    },
+    {
+      "id": "03-NOL",
+      "category": "经营预测",
+      "importance": "次需",
+      "weight": 1,
+      "method": "rule",
+      "rubric_method": "rule",
+      "status": "not_executed",
+      "evidence_keys": []
+    },
+    {
+      "id": "C-PIPE-TIMING",
+      "category": "经营预测",
+      "importance": "主需",
+      "weight": 3,
+      "method": "rule",
+      "rubric_method": "rule",
+      "status": "not_executed",
+      "evidence_keys": []
+    },
+    {
+      "id": "C-PIPE-CAPEX",
+      "category": "经营预测",
+      "importance": "主需",
+      "weight": 3,
+      "method": "rule",
+      "rubric_method": "rule",
+      "status": "not_executed",
+      "evidence_keys": []
+    },
+    {
+      "id": "C-PIPE-PROB",
+      "category": "经营预测",
+      "importance": "主需",
+      "weight": 3,
+      "method": "rule",
+      "rubric_method": "rule",
+      "status": "not_executed",
+      "evidence_keys": []
+    },
+    {
+      "id": "C-PIPE-SUM",
+      "category": "经营预测",
+      "importance": "主需",
+      "weight": 3,
+      "method": "rule",
+      "rubric_method": "rule",
+      "status": "fail",
+      "evidence_keys": [
+        "enterprise_value"
+      ],
+      "failed_keys": [
+        "enterprise_value"
+      ]
+    },
+    {
+      "id": "05-FCFF",
+      "category": "DCF与估值桥",
+      "importance": "主需",
+      "weight": 3,
+      "method": "rule",
+      "rubric_method": "rule",
+      "status": "pass",
+      "evidence_keys": [
+        "existing_fcff_p1",
+        "existing_fcff_p2",
+        "existing_fcff_p3",
+        "existing_fcff_p4",
+        "existing_fcff_p5",
+        "project_atlas_risk_adjusted_fcff_p1",
+        "project_atlas_risk_adjusted_fcff_p2",
+        "project_atlas_risk_adjusted_fcff_p3",
+        "project_atlas_risk_adjusted_fcff_p4",
+        "project_atlas_risk_adjusted_fcff_p5",
+        "project_atlas_unrisked_fcff_p1",
+        "project_atlas_unrisked_fcff_p2",
+        "project_atlas_unrisked_fcff_p3",
+        "project_atlas_unrisked_fcff_p4",
+        "project_atlas_unrisked_fcff_p5",
+        "project_boreal_risk_adjusted_fcff_p1",
+        "project_boreal_risk_adjusted_fcff_p2",
+        "project_boreal_risk_adjusted_fcff_p3",
+        "project_boreal_risk_adjusted_fcff_p4",
+        "project_boreal_risk_adjusted_fcff_p5",
+        "project_boreal_unrisked_fcff_p1",
+        "project_boreal_unrisked_fcff_p2",
+        "project_boreal_unrisked_fcff_p3",
+        "project_boreal_unrisked_fcff_p4",
+        "project_boreal_unrisked_fcff_p5"
+      ],
+      "failed_keys": []
+    },
+    {
+      "id": "05-WACC",
+      "category": "DCF与估值桥",
+      "importance": "主需",
+      "weight": 3,
+      "method": "rule",
+      "rubric_method": "rule",
+      "status": "pass",
+      "evidence_keys": [
+        "existing_wacc",
+        "wacc"
+      ],
+      "failed_keys": []
+    },
+    {
+      "id": "05-DF",
+      "category": "DCF与估值桥",
+      "importance": "主需",
+      "weight": 3,
+      "method": "rule",
+      "rubric_method": "rule",
+      "status": "pass",
+      "evidence_keys": [
+        "project_atlas_discount_time_p1",
+        "project_atlas_discount_time_p2",
+        "project_atlas_discount_time_p3",
+        "project_atlas_discount_time_p4",
+        "project_atlas_discount_time_p5",
+        "project_boreal_discount_time_p1",
+        "project_boreal_discount_time_p2",
+        "project_boreal_discount_time_p3",
+        "project_boreal_discount_time_p4",
+        "project_boreal_discount_time_p5"
+      ],
+      "failed_keys": []
+    },
+    {
+      "id": "05-TV",
+      "category": "DCF与估值桥",
+      "importance": "主需",
+      "weight": 3,
+      "method": "rule",
+      "rubric_method": "rule",
+      "status": "fail",
+      "evidence_keys": [
+        "existing_pv_terminal",
+        "existing_terminal_value",
+        "existing_tv_exit",
+        "existing_tv_gordon"
+      ],
+      "failed_keys": [
+        "existing_pv_terminal",
+        "existing_terminal_value",
+        "existing_tv_exit",
+        "existing_tv_gordon"
+      ]
+    },
+    {
+      "id": "05-BRIDGE",
+      "category": "DCF与估值桥",
+      "importance": "主需",
+      "weight": 3,
+      "method": "rule",
+      "rubric_method": "rule",
+      "status": "fail",
+      "evidence_keys": [
+        "equity_value",
+        "existing_equity_value"
+      ],
+      "failed_keys": [
+        "equity_value",
+        "existing_equity_value"
+      ]
+    },
+    {
+      "id": "05-DILUTION",
+      "category": "DCF与估值桥",
+      "importance": "次需",
+      "weight": 1,
+      "method": "rule",
+      "rubric_method": "rule",
+      "status": "pass",
+      "evidence_keys": [
+        "diluted_shares",
+        "existing_diluted_shares"
+      ],
+      "failed_keys": []
+    },
+    {
+      "id": "05-VPS",
+      "category": "DCF与估值桥",
+      "importance": "主需",
+      "weight": 3,
+      "method": "rule",
+      "rubric_method": "rule",
+      "status": "fail",
+      "evidence_keys": [
+        "existing_value_per_share",
+        "value_per_share"
+      ],
+      "failed_keys": [
+        "existing_value_per_share",
+        "value_per_share"
+      ]
+    },
+    {
+      "id": "B-RESIDUAL",
+      "category": "DCF与估值桥",
+      "importance": "主需",
+      "weight": 3,
+      "method": "rule",
+      "rubric_method": "rule",
+      "status": "fail",
+      "evidence_keys": [
+        "existing_fcff_p1",
+        "existing_revenue_p1",
+        "project_atlas_revenue_p1",
+        "project_atlas_risk_adjusted_fcff_p1",
+        "project_atlas_unrisked_fcff_p1",
+        "project_boreal_revenue_p1",
+        "project_boreal_risk_adjusted_fcff_p1",
+        "project_boreal_unrisked_fcff_p1"
+      ],
+      "failed_keys": [
+        "existing_revenue_p1"
+      ]
+    },
+    {
+      "id": "06-FORMULA",
+      "category": "公式与模型工程",
+      "importance": "主需",
+      "weight": 3,
+      "method": "rule",
+      "rubric_method": "rule",
+      "status": "pass",
+      "failed_keys": [],
+      "evidence_keys": []
+    },
+    {
+      "id": "06-RECALC",
+      "category": "公式与模型工程",
+      "importance": "主需",
+      "weight": 3,
+      "method": "rule",
+      "rubric_method": "rule",
+      "status": "fail",
+      "failed_keys": [
+        "enterprise_value",
+        "equity_value",
+        "existing_enterprise_value",
+        "existing_equity_value",
+        "existing_pv_explicit",
+        "existing_pv_terminal",
+        "existing_revenue_p1",
+        "existing_terminal_value",
+        "existing_tv_exit",
+        "existing_tv_gordon",
+        "existing_value_per_share",
+        "fy_normalized_ebit",
+        "fy_reported_ebit",
+        "ltm_normalized_ebit",
+        "ltm_reported_ebit",
+        "ltm_revenue",
+        "pipeline_risk_adjusted_pv",
+        "project_atlas_risk_adjusted_pv",
+        "project_boreal_risk_adjusted_pv",
+        "value_per_share"
+      ],
+      "evidence_keys": [
+        "enterprise_value",
+        "equity_value",
+        "existing_enterprise_value",
+        "existing_equity_value",
+        "existing_pv_explicit",
+        "existing_pv_terminal",
+        "existing_revenue_p1",
+        "existing_terminal_value",
+        "existing_tv_exit",
+        "existing_tv_gordon",
+        "existing_value_per_share",
+        "fy_normalized_ebit",
+        "fy_reported_ebit",
+        "ltm_normalized_ebit",
+        "ltm_reported_ebit",
+        "ltm_revenue",
+        "pipeline_risk_adjusted_pv",
+        "project_atlas_risk_adjusted_pv",
+        "project_boreal_risk_adjusted_pv",
+        "value_per_share"
+      ]
+    },
+    {
+      "id": "06-PERTURB1",
+      "category": "公式与模型工程",
+      "importance": "主需",
+      "weight": 3,
+      "method": "rule",
+      "rubric_method": "rule",
+      "status": "fail",
+      "evidence": {
+        "id": 1,
+        "checked": 108,
+        "mismatches": [
+          {
+            "key": "fy_normalized_ebit",
+            "actual": 140.565654,
+            "expected": 209.430235
+          },
+          {
+            "key": "fy_reported_ebit",
+            "actual": 147.586912,
+            "expected": 216.45149300000003
+          },
+          {
+            "key": "ltm_revenue",
+            "actual": 1178.071614,
+            "expected": 2299.739364
+          },
+          {
+            "key": "ltm_normalized_ebit",
+            "actual": 140.565654,
+            "expected": 399.9061150000001
+          },
+          {
+            "key": "ltm_reported_ebit",
+            "actual": 147.586912,
+            "expected": 406.9273730000001
+          },
+          {
+            "key": "existing_tv_gordon",
+            "actual": 4166.88356322245,
+            "expected": 3386.1495714882944
+          },
+          {
+            "key": "existing_tv_exit",
+            "actual": 4747.32757258187,
+            "expected": 3480.0557896862733
+          },
+          {
+            "key": "existing_terminal_value",
+            "actual": 4166.88356322245,
+            "expected": 3386.1495714882944
+          },
+          {
+            "key": "existing_pv_explicit",
+            "actual": 921.278340903298,
+            "expected": 814.9710409774292
+          },
+          {
+            "key": "existing_pv_terminal",
+            "actual": 2949.53497533934,
+            "expected": 2396.8912116927913
+          },
+          {
+            "key": "existing_enterprise_value",
+            "actual": 3870.81331624263,
+            "expected": 3211.8622526702206
+          },
+          {
+            "key": "existing_equity_value",
+            "actual": 3777.26331624263,
+            "expected": 3118.3122526702205
+          },
+          {
+            "key": "existing_value_per_share",
+            "actual": 27.73445438294,
+            "expected": 22.896123908426404
+          },
+          {
+            "key": "project_atlas_risk_adjusted_pv",
+            "actual": 11.55531117432,
+            "expected": 0.5387129828580959
+          },
+          {
+            "key": "project_boreal_risk_adjusted_pv",
+            "actual": -7.7325834,
+            "expected": -13.274173162743596
+          },
+          {
+            "key": "pipeline_risk_adjusted_pv",
+            "actual": 3.82272777432001,
+            "expected": -12.735460179885195
+          },
+          {
+            "key": "enterprise_value",
+            "actual": 3874.63604401695,
+            "expected": 3199.1267924903354
+          },
+          {
+            "key": "equity_value",
+            "actual": 3781.08604401695,
+            "expected": 3105.5767924903353
+          },
+          {
+            "key": "value_per_share",
+            "actual": 27.7625226588844,
+            "expected": 22.802614134329925
+          },
+          {
+            "key": "existing_revenue_p1",
+            "actual": 624.772599326334,
+            "expected": 565.0721065018179
+          }
+        ]
+      }
+    },
+    {
+      "id": "06-PERTURB2",
+      "category": "公式与模型工程",
+      "importance": "主需",
+      "weight": 3,
+      "method": "rule",
+      "rubric_method": "rule",
+      "status": "fail",
+      "evidence": {
+        "id": 2,
+        "checked": 108,
+        "mismatches": [
+          {
+            "key": "fy_normalized_ebit",
+            "actual": 140.565654,
+            "expected": 209.430235
+          },
+          {
+            "key": "fy_reported_ebit",
+            "actual": 147.586912,
+            "expected": 216.45149300000003
+          },
+          {
+            "key": "ltm_revenue",
+            "actual": 1178.071614,
+            "expected": 2299.739364
+          },
+          {
+            "key": "ltm_normalized_ebit",
+            "actual": 140.565654,
+            "expected": 399.9061150000001
+          },
+          {
+            "key": "ltm_reported_ebit",
+            "actual": 147.586912,
+            "expected": 406.9273730000001
+          },
+          {
+            "key": "existing_tv_gordon",
+            "actual": 4166.88356322245,
+            "expected": 3386.1495714882944
+          },
+          {
+            "key": "existing_tv_exit",
+            "actual": 4747.32757258187,
+            "expected": 3480.0557896862733
+          },
+          {
+            "key": "existing_terminal_value",
+            "actual": 4166.88356322245,
+            "expected": 3386.1495714882944
+          },
+          {
+            "key": "existing_pv_explicit",
+            "actual": 925.847063671195,
+            "expected": 818.8229760221725
+          },
+          {
+            "key": "existing_pv_terminal",
+            "actual": 2949.53497533934,
+            "expected": 2396.8912116927913
+          },
+          {
+            "key": "existing_enterprise_value",
+            "actual": 3875.38203901053,
+            "expected": 3215.714187714964
+          },
+          {
+            "key": "existing_equity_value",
+            "actual": 3756.07203901053,
+            "expected": 3096.404187714964
+          },
+          {
+            "key": "existing_value_per_share",
+            "actual": 27.5788579993935,
+            "expected": 22.735264530286877
+          },
+          {
+            "key": "project_atlas_risk_adjusted_pv",
+            "actual": 5.4210236,
+            "expected": -5.820159900363482
+          },
+          {
+            "key": "project_boreal_risk_adjusted_pv",
+            "actual": -7.7325834,
+            "expected": -13.274173162743596
+          },
+          {
+            "key": "pipeline_risk_adjusted_pv",
+            "actual": -2.3115598,
+            "expected": -19.094333063107115
+          },
+          {
+            "key": "enterprise_value",
+            "actual": 3873.07047921053,
+            "expected": 3196.6198546518567
+          },
+          {
+            "key": "equity_value",
+            "actual": 3753.76047921053,
+            "expected": 3077.3098546518568
+          },
+          {
+            "key": "value_per_share",
+            "actual": 27.5618854336868,
+            "expected": 22.595064902944458
+          },
+          {
+            "key": "existing_revenue_p1",
+            "actual": 624.772599326334,
+            "expected": 565.0721065018179
+          }
+        ]
+      }
+    },
+    {
+      "id": "06-LINKS",
+      "category": "公式与模型工程",
+      "importance": "主需",
+      "weight": 3,
+      "method": "rule",
+      "rubric_method": "rule",
+      "status": "pass",
+      "failed_keys": []
+    },
+    {
+      "id": "06-FREE",
+      "category": "公式与模型工程",
+      "importance": "次需",
+      "weight": 1,
+      "method": "rule",
+      "rubric_method": "rule",
+      "status": "pass",
+      "note": "语义键发现器实际读取成功；不依赖固定行号"
+    },
+    {
+      "id": "09-MEMO",
+      "category": "表达与专业可用性",
+      "importance": "次需",
+      "weight": 1,
+      "method": "llm",
+      "rubric_method": "llm",
+      "status": "not_executed",
+      "reason": "该条需要独立语义/结构评审，不能从数值结果推断"
+    },
+    {
+      "id": "09-READABLE",
+      "category": "表达与专业可用性",
+      "importance": "次需",
+      "weight": 1,
+      "method": "agent",
+      "rubric_method": "agent",
+      "status": "not_executed",
+      "reason": "该条需要独立语义/结构评审，不能从数值结果推断"
+    },
+    {
+      "id": "X-TA-002",
+      "category": "表达与专业可用性",
+      "importance": "主需",
+      "weight": 3,
+      "method": "rule",
+      "rubric_method": "rule",
+      "status": "not_executed",
+      "reason": "该条需要独立语义/结构评审，不能从数值结果推断"
+    },
+    {
+      "id": "X-TA-004",
+      "category": "表达与专业可用性",
+      "importance": "次需",
+      "weight": 1,
+      "method": "rule",
+      "rubric_method": "agent",
+      "status": "fail",
+      "evidence": {
+        "X-TA-004": false,
+        "X-TA-006": {
+          "fcff": true,
+          "ebit": false,
+          "da": false,
+          "capex": false,
+          "delta_nwc": false,
+          "tax": false
+        },
+        "X-TA-007": false
+      }
+    },
+    {
+      "id": "X-TA-006",
+      "category": "表达与专业可用性",
+      "importance": "次需",
+      "weight": 1,
+      "method": "rule",
+      "rubric_method": "agent",
+      "status": "fail",
+      "evidence": {
+        "fcff": true,
+        "ebit": false,
+        "da": false,
+        "capex": false,
+        "delta_nwc": false,
+        "tax": false
+      }
+    },
+    {
+      "id": "X-TA-007",
+      "category": "表达与专业可用性",
+      "importance": "次需",
+      "weight": 1,
+      "method": "rule",
+      "rubric_method": "agent",
+      "status": "fail",
+      "evidence": {
+        "X-TA-004": false,
+        "X-TA-006": {
+          "fcff": true,
+          "ebit": false,
+          "da": false,
+          "capex": false,
+          "delta_nwc": false,
+          "tax": false
+        },
+        "X-TA-007": false
+      }
+    }
+  ],
+  "semantic_pending": [
+    "09-MEMO",
+    "09-READABLE",
+    "X-TA-004",
+    "X-TA-006",
+    "X-TA-007"
+  ],
+  "unexecuted_rules": [
+    "X-IN-007",
+    "X-IN-009",
+    "03-DRIVER",
+    "03-NOL",
+    "C-PIPE-TIMING",
+    "C-PIPE-CAPEX",
+    "C-PIPE-PROB",
+    "X-TA-002"
+  ]
+}

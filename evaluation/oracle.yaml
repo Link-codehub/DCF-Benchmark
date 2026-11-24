@@ -1,0 +1,5 @@
+n_attempts: 1
+n_concurrent_trials: 1
+environment:
+  import_path: ipv4_docker_environment:IPv4DockerEnvironment
+agents: []

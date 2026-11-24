@@ -1,0 +1,62 @@
+{
+  "task": "W01",
+  "judge_model": "claude-opus-5-5",
+  "generated": "2026-11-22T19:59:05.302489+00:00",
+  "llm": {
+    "09-MEMO": {
+      "status": "pass",
+      "rationale": "已提交中文 memo.md，两项要求都有明确证据。价值驱动：第四节写明终值现值约占企业价值 76.15%，因此估值对 WACC 和 g 敏感；第六节用 WACC ±1 个百分点（每股 97.47/139.40 美元）和 g ±0.5 个百分点（125.49/105.81 美元）的扰动结果量化了这一点，指出 WACC 与永续增长率经终值主导估值。局限：至少有三处明确披露。一是 WACC 中 4 个百分点利差和初始增长率为开放情景，不是历史事实或外部预测。二是基期 NWC 为负，按题定口径减去负的 ΔNWC 会抬高 FCFF。三是白名单生效状态为“未验证”，未做非白名单拒绝测试。不足：memo 没有单设“局限”标题，也没有用“最重要价值驱动”的字样直接点名；但驱动与局限的实质内容清楚、可核验，满足本项要求。",
+      "judge_model": "claude-opus-5-5",
+      "attempts": [
+        {
+          "attempt": 1,
+          "error": null,
+          "text_chars": 414
+        }
+      ]
+    },
+    "W-FAILURE": {
+      "status": "pass",
+      "rationale": "memo 第五节写明“必需字段失败：无”，并说明 16 个必需字段均取数成功、未静默补零。memo 如实披露了一次补充请求失败：SEC 原始 10-K HTML 返回 HTTP 403，并给出了尝试过的允许 URL。处理方法也写清楚了：该事件记录在 sources.json 的 supplemental_fetch_events，未据此填数，未转向未允许来源，所需数据改用成功的 companyfacts 与财政部响应。冲突与回退方面，memo 第二节逐项说明：ProfitLoss 不存在，按允许顺序回退至 NetIncomeLoss，且未补造“含非控股权益”事实；ShortTermInvestments 无节点，改用 MarketableSecuritiesCurrent；da 与 noncurrent_debt 各在两个同时存在的标签中做了口径选择，并给出理由；同标签、同期间的合规事实未发现数值冲突；财政部当日有值，无需回退日期。memo 还披露了 LibreOffice 告警及其核验处理。不足在于：本次只提供了 memo，sources.json 未提供，失败记录是否完整写入无法直接核对。但 memo 中的披露与处理说明具体且一致，满足本原子要求。",
+      "judge_model": "claude-opus-5-5",
+      "attempts": [
+        {
+          "attempt": 1,
+          "error": null,
+          "text_chars": 63
+        },
+        {
+          "attempt": 2,
+          "error": null,
+          "text_chars": 342
+        },
+        {
+          "attempt": 3,
+          "error": null,
+          "text_chars": 594
+        }
+      ]
+    },
+    "X-TA-009": {
+      "status": "fail",
+      "rationale": "该项适用：题面规定 initial_growth、steady_ebit_margin、tax_rate、da_to_revenue、capex_to_revenue、wacc、terminal_growth 为需自行确定的开放假设。memo 第三节对其中四项给出了历史推导：steady_ebit_margin=FY2024 EBIT/收入（123,216/391,035≈31.51%），tax_rate=所得税/税前利润（29,749/123,485≈24.09%），da_to_revenue=D&A/收入（11,445/391,035），capex_to_revenue=CapEx/收入（9,447/391,035）。这四项可追溯到历史值和计算关系。但另外三项不满足：initial_growth=4.00% 只写了“开放情景，不声称来自外部预测”，没有任何历史收入增长观察值，也没有从历史值到 4% 的计算或映射；terminal_growth=2.50% 只写了“开放永续增长情景，低于 WACC”，同样没有历史观察值或推导；wacc=treasury_10y+4.00% 中，国债收益率 4.25% 是取数值，但 4 个百分点利差被明确称为“开放折现情景，不是历史事实”，没有给出历史依据或推导。要求是每个开放假设都要有推导，这三项缺失，因此判 0。",
+      "judge_model": "claude-opus-5-5",
+      "attempts": [
+        {
+          "attempt": 1,
+          "error": null,
+          "text_chars": 248
+        },
+        {
+          "attempt": 2,
+          "error": null,
+          "text_chars": 631
+        }
+      ]
+    }
+  },
+  "agent": {
+    "status": "unscored",
+    "error": "timeout"
+  }
+}

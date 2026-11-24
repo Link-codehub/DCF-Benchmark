@@ -1,0 +1,76 @@
+{
+  "task_id": "A09",
+  "baseline": {
+    "passed": true,
+    "mismatches": [],
+    "mismatches_all": [],
+    "nonformula_or_missing": [],
+    "nonformula_or_missing_all": [],
+    "duplicates": [],
+    "errors": [],
+    "errors_all": [],
+    "links": [],
+    "links_all": [],
+    "checked": 218,
+    "max_relative_error": 1.4039029826447501e-14,
+    "sensitivity": {
+      "grid_checked": 25,
+      "grid_passed": true,
+      "center_key": "sensitivity_r3_c3",
+      "center_passed": true,
+      "center_actual": 5684.28677399068,
+      "center_expected": 5684.286773990678
+    }
+  },
+  "perturbations": [
+    {
+      "id": 1,
+      "label": "bom_capacity_price_bridge",
+      "passed": true,
+      "mismatches": [],
+      "mismatches_all": [],
+      "checked": 218,
+      "max_relative_error": 1.1583650406256259e-14
+    },
+    {
+      "id": 2,
+      "label": "inventory_capex_payment_bridge",
+      "passed": true,
+      "mismatches": [],
+      "mismatches_all": [],
+      "checked": 218,
+      "max_relative_error": 2.4346471761066057e-14
+    }
+  ],
+  "dependency_checks": {
+    "passed": true,
+    "checks": {
+      "bom_not_revenue_ratio": true,
+      "cogs_excludes_purchases": true,
+      "yield_applied_once": true,
+      "three_inventory_pools_separate": true,
+      "sensitivity_25_independent_sheets": true,
+      "sensitivity_full_recalculation": true
+    },
+    "detail": {
+      "missing_bom": [],
+      "yield_errors": [],
+      "inventory_errors": [],
+      "missing_sensitivity_sheets": [],
+      "sensitivity_errors": []
+    }
+  },
+  "tolerance": {
+    "absolute": 1e-08,
+    "relative": 1e-06
+  },
+  "reward": 1.0,
+  "passed": true,
+  "llm_agent_review": {
+    "status": "pending",
+    "included_in_rule_reward": false,
+    "items": [
+      "memo 的行业因果链、可读性及局限披露"
+    ]
+  }
+}

@@ -1,0 +1,457 @@
+{
+  "schema_version": "dcf-v3-w-retrieval-v1",
+  "workbook": "model.xlsx",
+  "sources_file": "sources.json",
+  "index_convention": "source_item_index为sources.json的items数组零基索引；cell为A1地址。",
+  "description_cn": "Sources的A/B/C列依次为field_id、取数值、单位。每个取数字段至少在Assumptions、Forecast或DCF有活公式直接引用，其他页不另存历史取数。",
+  "items": [
+    {
+      "field_id": "revenue",
+      "source_item_index": 0,
+      "sheet": "Sources",
+      "cell": "B2",
+      "used_by": [
+        "Assumptions!B3",
+        "Assumptions!B5",
+        "Assumptions!B6",
+        "Forecast!B4"
+      ],
+      "used_by_details": [
+        {
+          "sheet": "Assumptions",
+          "cell": "B3",
+          "address": "Assumptions!B3",
+          "formula": "=Sources!$B$3/Sources!$B$2",
+          "purpose_cn": "直接使用revenue取数值；合并收入"
+        },
+        {
+          "sheet": "Assumptions",
+          "cell": "B5",
+          "address": "Assumptions!B5",
+          "formula": "=Sources!$B$7/Sources!$B$2",
+          "purpose_cn": "直接使用revenue取数值；合并收入"
+        },
+        {
+          "sheet": "Assumptions",
+          "cell": "B6",
+          "address": "Assumptions!B6",
+          "formula": "=Sources!$B$8/Sources!$B$2",
+          "purpose_cn": "直接使用revenue取数值；合并收入"
+        },
+        {
+          "sheet": "Forecast",
+          "cell": "B4",
+          "address": "Forecast!B4",
+          "formula": "=Sources!$B$2",
+          "purpose_cn": "直接使用revenue取数值；合并收入"
+        }
+      ],
+      "reference_type": "活公式直接引用；下游预测、DCF和Outputs再通过公式引用这些单元格",
+      "source_json_path": "$.items[0].value"
+    },
+    {
+      "field_id": "operating_income",
+      "source_item_index": 1,
+      "sheet": "Sources",
+      "cell": "B3",
+      "used_by": [
+        "Assumptions!B3",
+        "Forecast!B6"
+      ],
+      "used_by_details": [
+        {
+          "sheet": "Assumptions",
+          "cell": "B3",
+          "address": "Assumptions!B3",
+          "formula": "=Sources!$B$3/Sources!$B$2",
+          "purpose_cn": "直接使用operating_income取数值；经营利润（EBIT）"
+        },
+        {
+          "sheet": "Forecast",
+          "cell": "B6",
+          "address": "Forecast!B6",
+          "formula": "=Sources!$B$3",
+          "purpose_cn": "直接使用operating_income取数值；经营利润（EBIT）"
+        }
+      ],
+      "reference_type": "活公式直接引用；下游预测、DCF和Outputs再通过公式引用这些单元格",
+      "source_json_path": "$.items[1].value"
+    },
+    {
+      "field_id": "pretax_income",
+      "source_item_index": 2,
+      "sheet": "Sources",
+      "cell": "B4",
+      "used_by": [
+        "Assumptions!B4",
+        "Assumptions!B13",
+        "Forecast!B21"
+      ],
+      "used_by_details": [
+        {
+          "sheet": "Assumptions",
+          "cell": "B4",
+          "address": "Assumptions!B4",
+          "formula": "=Sources!$B$5/Sources!$B$4",
+          "purpose_cn": "直接使用pretax_income取数值；税前利润"
+        },
+        {
+          "sheet": "Assumptions",
+          "cell": "B13",
+          "address": "Assumptions!B13",
+          "formula": "=Sources!$B$4-Sources!$B$5-Sources!$B$6",
+          "purpose_cn": "直接使用pretax_income取数值；税前利润"
+        },
+        {
+          "sheet": "Forecast",
+          "cell": "B21",
+          "address": "Forecast!B21",
+          "formula": "=Sources!$B$4-Sources!$B$5-Sources!$B$6",
+          "purpose_cn": "直接使用pretax_income取数值；税前利润"
+        }
+      ],
+      "reference_type": "活公式直接引用；下游预测、DCF和Outputs再通过公式引用这些单元格",
+      "source_json_path": "$.items[2].value"
+    },
+    {
+      "field_id": "income_tax",
+      "source_item_index": 3,
+      "sheet": "Sources",
+      "cell": "B5",
+      "used_by": [
+        "Assumptions!B4",
+        "Assumptions!B13",
+        "Forecast!B21"
+      ],
+      "used_by_details": [
+        {
+          "sheet": "Assumptions",
+          "cell": "B4",
+          "address": "Assumptions!B4",
+          "formula": "=Sources!$B$5/Sources!$B$4",
+          "purpose_cn": "直接使用income_tax取数值；所得税费用"
+        },
+        {
+          "sheet": "Assumptions",
+          "cell": "B13",
+          "address": "Assumptions!B13",
+          "formula": "=Sources!$B$4-Sources!$B$5-Sources!$B$6",
+          "purpose_cn": "直接使用income_tax取数值；所得税费用"
+        },
+        {
+          "sheet": "Forecast",
+          "cell": "B21",
+          "address": "Forecast!B21",
+          "formula": "=Sources!$B$4-Sources!$B$5-Sources!$B$6",
+          "purpose_cn": "直接使用income_tax取数值；所得税费用"
+        }
+      ],
+      "reference_type": "活公式直接引用；下游预测、DCF和Outputs再通过公式引用这些单元格",
+      "source_json_path": "$.items[3].value"
+    },
+    {
+      "field_id": "net_income_consolidated",
+      "source_item_index": 4,
+      "sheet": "Sources",
+      "cell": "B6",
+      "used_by": [
+        "Assumptions!B13",
+        "Assumptions!B14",
+        "Forecast!B21"
+      ],
+      "used_by_details": [
+        {
+          "sheet": "Assumptions",
+          "cell": "B13",
+          "address": "Assumptions!B13",
+          "formula": "=Sources!$B$4-Sources!$B$5-Sources!$B$6",
+          "purpose_cn": "直接使用net_income_consolidated取数值；含非控股权益的合并净利润"
+        },
+        {
+          "sheet": "Assumptions",
+          "cell": "B14",
+          "address": "Assumptions!B14",
+          "formula": "=MAX(0.01,ABS(Sources!$B$6)*0.02)",
+          "purpose_cn": "直接使用net_income_consolidated取数值；含非控股权益的合并净利润"
+        },
+        {
+          "sheet": "Forecast",
+          "cell": "B21",
+          "address": "Forecast!B21",
+          "formula": "=Sources!$B$4-Sources!$B$5-Sources!$B$6",
+          "purpose_cn": "直接使用net_income_consolidated取数值；含非控股权益的合并净利润"
+        }
+      ],
+      "reference_type": "活公式直接引用；下游预测、DCF和Outputs再通过公式引用这些单元格",
+      "source_json_path": "$.items[4].value"
+    },
+    {
+      "field_id": "da",
+      "source_item_index": 5,
+      "sheet": "Sources",
+      "cell": "B7",
+      "used_by": [
+        "Assumptions!B5",
+        "Forecast!B10"
+      ],
+      "used_by_details": [
+        {
+          "sheet": "Assumptions",
+          "cell": "B5",
+          "address": "Assumptions!B5",
+          "formula": "=Sources!$B$7/Sources!$B$2",
+          "purpose_cn": "直接使用da取数值；折旧与摊销"
+        },
+        {
+          "sheet": "Forecast",
+          "cell": "B10",
+          "address": "Forecast!B10",
+          "formula": "=Sources!$B$7",
+          "purpose_cn": "直接使用da取数值；折旧与摊销"
+        }
+      ],
+      "reference_type": "活公式直接引用；下游预测、DCF和Outputs再通过公式引用这些单元格",
+      "source_json_path": "$.items[5].value"
+    },
+    {
+      "field_id": "capex",
+      "source_item_index": 6,
+      "sheet": "Sources",
+      "cell": "B8",
+      "used_by": [
+        "Assumptions!B6",
+        "Forecast!B12"
+      ],
+      "used_by_details": [
+        {
+          "sheet": "Assumptions",
+          "cell": "B6",
+          "address": "Assumptions!B6",
+          "formula": "=Sources!$B$8/Sources!$B$2",
+          "purpose_cn": "直接使用capex取数值；购置固定资产现金支出（正数）"
+        },
+        {
+          "sheet": "Forecast",
+          "cell": "B12",
+          "address": "Forecast!B12",
+          "formula": "=Sources!$B$8",
+          "purpose_cn": "直接使用capex取数值；购置固定资产现金支出（正数）"
+        }
+      ],
+      "reference_type": "活公式直接引用；下游预测、DCF和Outputs再通过公式引用这些单元格",
+      "source_json_path": "$.items[6].value"
+    },
+    {
+      "field_id": "diluted_shares",
+      "source_item_index": 7,
+      "sheet": "Sources",
+      "cell": "B9",
+      "used_by": [
+        "DCF!C14"
+      ],
+      "used_by_details": [
+        {
+          "sheet": "DCF",
+          "cell": "C14",
+          "address": "DCF!C14",
+          "formula": "=Sources!$B$9",
+          "purpose_cn": "直接使用diluted_shares取数值；加权平均稀释股数"
+        }
+      ],
+      "reference_type": "活公式直接引用；下游预测、DCF和Outputs再通过公式引用这些单元格",
+      "source_json_path": "$.items[7].value"
+    },
+    {
+      "field_id": "cash",
+      "source_item_index": 8,
+      "sheet": "Sources",
+      "cell": "B10",
+      "used_by": [
+        "Forecast!B13",
+        "DCF!C8"
+      ],
+      "used_by_details": [
+        {
+          "sheet": "Forecast",
+          "cell": "B13",
+          "address": "Forecast!B13",
+          "formula": "=Sources!$B$13-Sources!$B$10-Sources!$B$11-(Sources!$B$14-Sources!$B$15)",
+          "purpose_cn": "直接使用cash取数值；现金及现金等价物"
+        },
+        {
+          "sheet": "DCF",
+          "cell": "C8",
+          "address": "DCF!C8",
+          "formula": "=Sources!$B$10",
+          "purpose_cn": "直接使用cash取数值；现金及现金等价物"
+        }
+      ],
+      "reference_type": "活公式直接引用；下游预测、DCF和Outputs再通过公式引用这些单元格",
+      "source_json_path": "$.items[8].value"
+    },
+    {
+      "field_id": "short_term_investments",
+      "source_item_index": 9,
+      "sheet": "Sources",
+      "cell": "B11",
+      "used_by": [
+        "Forecast!B13",
+        "DCF!C9"
+      ],
+      "used_by_details": [
+        {
+          "sheet": "Forecast",
+          "cell": "B13",
+          "address": "Forecast!B13",
+          "formula": "=Sources!$B$13-Sources!$B$10-Sources!$B$11-(Sources!$B$14-Sources!$B$15)",
+          "purpose_cn": "直接使用short_term_investments取数值；短期投资"
+        },
+        {
+          "sheet": "DCF",
+          "cell": "C9",
+          "address": "DCF!C9",
+          "formula": "=Sources!$B$11",
+          "purpose_cn": "直接使用short_term_investments取数值；短期投资"
+        }
+      ],
+      "reference_type": "活公式直接引用；下游预测、DCF和Outputs再通过公式引用这些单元格",
+      "source_json_path": "$.items[9].value"
+    },
+    {
+      "field_id": "receivables",
+      "source_item_index": 10,
+      "sheet": "Sources",
+      "cell": "B12",
+      "used_by": [
+        "Forecast!B20"
+      ],
+      "used_by_details": [
+        {
+          "sheet": "Forecast",
+          "cell": "B20",
+          "address": "Forecast!B20",
+          "formula": "=Sources!$B$13-Sources!$B$12",
+          "purpose_cn": "直接使用receivables取数值；应收账款净额"
+        }
+      ],
+      "reference_type": "活公式直接引用；下游预测、DCF和Outputs再通过公式引用这些单元格",
+      "source_json_path": "$.items[10].value"
+    },
+    {
+      "field_id": "current_assets",
+      "source_item_index": 11,
+      "sheet": "Sources",
+      "cell": "B13",
+      "used_by": [
+        "Forecast!B13",
+        "Forecast!B20"
+      ],
+      "used_by_details": [
+        {
+          "sheet": "Forecast",
+          "cell": "B13",
+          "address": "Forecast!B13",
+          "formula": "=Sources!$B$13-Sources!$B$10-Sources!$B$11-(Sources!$B$14-Sources!$B$15)",
+          "purpose_cn": "直接使用current_assets取数值；流动资产合计"
+        },
+        {
+          "sheet": "Forecast",
+          "cell": "B20",
+          "address": "Forecast!B20",
+          "formula": "=Sources!$B$13-Sources!$B$12",
+          "purpose_cn": "直接使用current_assets取数值；流动资产合计"
+        }
+      ],
+      "reference_type": "活公式直接引用；下游预测、DCF和Outputs再通过公式引用这些单元格",
+      "source_json_path": "$.items[11].value"
+    },
+    {
+      "field_id": "current_liabilities",
+      "source_item_index": 12,
+      "sheet": "Sources",
+      "cell": "B14",
+      "used_by": [
+        "Forecast!B13"
+      ],
+      "used_by_details": [
+        {
+          "sheet": "Forecast",
+          "cell": "B13",
+          "address": "Forecast!B13",
+          "formula": "=Sources!$B$13-Sources!$B$10-Sources!$B$11-(Sources!$B$14-Sources!$B$15)",
+          "purpose_cn": "直接使用current_liabilities取数值；流动负债合计"
+        }
+      ],
+      "reference_type": "活公式直接引用；下游预测、DCF和Outputs再通过公式引用这些单元格",
+      "source_json_path": "$.items[12].value"
+    },
+    {
+      "field_id": "current_debt",
+      "source_item_index": 13,
+      "sheet": "Sources",
+      "cell": "B15",
+      "used_by": [
+        "Forecast!B13",
+        "DCF!C10"
+      ],
+      "used_by_details": [
+        {
+          "sheet": "Forecast",
+          "cell": "B13",
+          "address": "Forecast!B13",
+          "formula": "=Sources!$B$13-Sources!$B$10-Sources!$B$11-(Sources!$B$14-Sources!$B$15)",
+          "purpose_cn": "直接使用current_debt取数值；当期债务"
+        },
+        {
+          "sheet": "DCF",
+          "cell": "C10",
+          "address": "DCF!C10",
+          "formula": "=Sources!$B$15",
+          "purpose_cn": "直接使用current_debt取数值；当期债务"
+        }
+      ],
+      "reference_type": "活公式直接引用；下游预测、DCF和Outputs再通过公式引用这些单元格",
+      "source_json_path": "$.items[13].value"
+    },
+    {
+      "field_id": "noncurrent_debt",
+      "source_item_index": 14,
+      "sheet": "Sources",
+      "cell": "B16",
+      "used_by": [
+        "DCF!C11"
+      ],
+      "used_by_details": [
+        {
+          "sheet": "DCF",
+          "cell": "C11",
+          "address": "DCF!C11",
+          "formula": "=Sources!$B$16",
+          "purpose_cn": "直接使用noncurrent_debt取数值；非当期债务"
+        }
+      ],
+      "reference_type": "活公式直接引用；下游预测、DCF和Outputs再通过公式引用这些单元格",
+      "source_json_path": "$.items[14].value"
+    },
+    {
+      "field_id": "treasury_10y",
+      "source_item_index": 15,
+      "sheet": "Sources",
+      "cell": "B17",
+      "used_by": [
+        "Assumptions!B7"
+      ],
+      "used_by_details": [
+        {
+          "sheet": "Assumptions",
+          "cell": "B7",
+          "address": "Assumptions!B7",
+          "formula": "=Sources!$B$17",
+          "purpose_cn": "直接使用treasury_10y取数值；10 年期美国国债固定期限收益率"
+        }
+      ],
+      "reference_type": "活公式直接引用；下游预测、DCF和Outputs再通过公式引用这些单元格",
+      "source_json_path": "$.items[15].value"
+    }
+  ]
+}

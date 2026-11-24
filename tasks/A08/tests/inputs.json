@@ -1,0 +1,142 @@
+{
+  "schema_version": "v3.0",
+  "task_id": "A08",
+  "family": "A",
+  "company": "栖桐置业",
+  "base_structure": "E-事件终值",
+  "industry": "real_estate",
+  "industry_drivers": [
+    "可租面积与出租率",
+    "单位租金",
+    "NOI 资本化率与 NAV"
+  ],
+  "valuation_date": "2024-08-30",
+  "last_fy_end": "2024-03-31",
+  "horizon": 5,
+  "history": [],
+  "time_axis": {
+    "midyear": true,
+    "history_frequency": "annual",
+    "day_count": "actual/365"
+  },
+  "accounting": {
+    "sbc_expense": true,
+    "industry_valuation": true
+  },
+  "assumptions": {
+    "tax": 0.23,
+    "wacc": 0.10700000000000001,
+    "g": 0.025,
+    "driver0": 572,
+    "ebit_margin": [
+      0.16,
+      0.164,
+      0.168,
+      0.17200000000000001,
+      0.176
+    ],
+    "da_pct": [
+      0.052,
+      0.052,
+      0.052,
+      0.052,
+      0.052
+    ],
+    "capex_pct": [
+      0.065,
+      0.065,
+      0.065,
+      0.065,
+      0.065
+    ],
+    "nwc_pct": [
+      0.13,
+      0.13,
+      0.13,
+      0.13,
+      0.13
+    ],
+    "opening_nwc": 91,
+    "rentable_area": 98000,
+    "occupancy": [
+      0.91,
+      0.925,
+      0.93,
+      0.94,
+      0.94
+    ],
+    "rent_per_unit": [
+      0.0031,
+      0.00318,
+      0.00326,
+      0.00334,
+      0.00342
+    ],
+    "operating_cost_pct": [
+      0.29,
+      0.29,
+      0.29,
+      0.29,
+      0.29
+    ],
+    "cap_rate": [
+      0.061,
+      0.061,
+      0.061,
+      0.061,
+      0.061
+    ],
+    "capex_reserve": 28
+  },
+  "bridge": {
+    "cash": 202,
+    "debt": 294,
+    "investments": 32,
+    "lease_liability": 20,
+    "minority": 13,
+    "valuation_cash_adjustment": 0,
+    "shares": 96,
+    "rsus": 1.2,
+    "options": 0,
+    "strike": 0,
+    "share_price": 15
+  },
+  "residual_activity": 0.5835616438356165,
+  "enabled_modules": [
+    "industry_driver",
+    "residual_period"
+  ],
+  "public_output_keys": [
+    "occupied_area_p1",
+    "rental_revenue_p1",
+    "noi_p1",
+    "property_value_p1",
+    "occupied_area_p2",
+    "rental_revenue_p2",
+    "noi_p2",
+    "property_value_p2",
+    "occupied_area_p3",
+    "rental_revenue_p3",
+    "noi_p3",
+    "property_value_p3",
+    "occupied_area_p4",
+    "rental_revenue_p4",
+    "noi_p4",
+    "property_value_p4",
+    "occupied_area_p5",
+    "rental_revenue_p5",
+    "noi_p5",
+    "property_value_p5",
+    "property_value_at_valuation",
+    "nav",
+    "equity_value",
+    "cap_rate",
+    "diluted_shares",
+    "value_per_share"
+  ],
+  "units": {
+    "money": "百万元",
+    "shares": "百万股",
+    "rates": "小数"
+  }
+}

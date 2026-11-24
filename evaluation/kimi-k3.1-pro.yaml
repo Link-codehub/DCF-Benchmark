@@ -1,0 +1,27 @@
+n_attempts: 1
+n_concurrent_trials: 1
+environment:
+  import_path: ipv4_docker_environment:IPv4DockerEnvironment
+agents:
+  - name: kimi-code
+    skip_model_parsing: true
+    model_name: kimi-k3.1-pro
+    base_url: http://host.docker.internal:4311
+    model_api_format: anthropic_messages
+    resume_trajectory: false
+    override_timeout_sec: 4800
+    kwargs:
+      version: "2.3.3"
+      skip_install: true
+      disable_web_search: true
+    env:
+      KIMI_MODEL_API_KEY: dummy
+      KIMI_MODEL_MAX_CONTEXT_SIZE: "1048576"
+      KIMI_MODEL_THINKING_EFFORT: high
+      KIMI_MODEL_CAPABILITIES: thinking,tool_use
+      KIMI_MODEL_MAX_OUTPUT_SIZE: "64000"
+      KIMI_MODEL_THINKING_KEEP: "off"
+      KIMI_LOOP_MAX_ATTEMPTS_PER_STEP: "5"
+      HTTP_PROXY: ""
+      HTTPS_PROXY: ""
+      ALL_PROXY: ""

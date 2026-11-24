@@ -1,0 +1,18 @@
+HTTP/2 200 
+content-type: text/html
+x-amz-request-id: HW68NDQHWS0JHZZ3
+x-amz-id-2: JW6tjq5bIT3zKopkY8BNmlQuGb/bFXxVwaCpKkGjqVy6VGQncjEB7WN2JN3e1l+wLxpP1L/Hz24=
+last-modified: Wed, 20 Nov 2024 21:09:05 GMT
+x-amz-meta-mode: 33188
+x-amz-version-id: iTgJjhFWcS0LmQoMNttZ_ufUAGBNA_el
+x-amz-server-side-encryption: AES256
+x-amz-replication-status: COMPLETED
+x-frame-options: SAMEORIGIN
+x-xss-protection: 1; mode=block
+x-content-type-options: nosniff
+x-akamai-transformed: 0 - 0 -
+date: Mon, 23 Nov 2026 00:00:24 GMT
+strict-transport-security: max-age=31536000 ; includeSubDomains ; preload
+set-cookie: _abck=17A39328F842265BA726139A15D986F3~-1~YAAQ7VPdWFUCqgWiAQAAVS+0BRDZRBSvoe7CTnchYBVl0GRrrbVPV6IXZIarAILiJTnKLr5CV+nWM/Ug7Sj/sgRj/1EvMYRZRXmdZ69Z/MVjvVHF3QudnbrSBUe3RhwrI6KQMw+2LZ7A0HFRdGQp2cF+Q6zYuLdIJDuv5rjAnrPHTQDPXoo1f7BBFR6beKg0wtQTTGgY+r0ZMoXVQnZbeHyJME8xVtxDSF5qYWJXiAs09TnR+0JM8Y3XZCDSKkuF3KMhRVwzM5Ub9BVhxerHNTmdteGrx9HB0+otw3uJgXygPpbaAiI0qt/5knMWfZCPtpLJU0UY13s63++OKXZkwc2OrsVwVMd7tFFlANErKzfXlVoMYRIBs63Y5XOFpTg20XVEw2kd/kfiN6nfE7gC45/HRXTUlSlbEqg8Bj4Y2xWOOMwgiPTgdcQ665sGbrMi4E8ZedNcExNsHQ==~-1~-1~-1~-1~-1; Domain=.sec.gov; Path=/; Expires=Tue, 23 Nov 2027 00:00:24 GMT; Max-Age=31536000; SameSite=None; Secure
+set-cookie: bm_sz=7D5FA98215D13B631A9A4AA424B26364~YAAQ7VPdWFYCqgWiAQAAVS+0BQEV17G0d1DP5d/q6jr3P8awMSvi0OXK5HiBSEl31/vbkIZZTQCoRKDUsBEFcG7mGgAnZxIiel5cKaTkFrTfgwj1sU9EFBSuw0vIbxAl0dD8zrYwat4AHdURPyaKldGXaqE7BZ7X1ZHtUSyh1GeR3yW7pzMKx+jNUpjmz3N0O3BciJpEcFcoFOEEs5eMa4s8qxUFkcnKG8aox7edDvlL7oj69tNPHsvmCUVY/n1qEof/tRw/lbGOKJZHzrsIkrWGjJ+jrRwWP20YBg6FIL1Luhv6N0wMAhb74AlYgUxFIonJLUNgJyed62IpijjEfTZA8znvepxQavrY6LUBNRNvOpf6m7GV79MDuQ==~4599874~3224387; Domain=.sec.gov; Path=/; Expires=Mon, 23 Nov 2026 04:00:24 GMT; Max-Age=14400; SameSite=None; Secure
+

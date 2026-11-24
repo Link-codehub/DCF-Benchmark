@@ -1,0 +1,162 @@
+{
+  "schema_version": "v3.0",
+  "task_id": "A02",
+  "family": "A",
+  "company": "榉邻商业",
+  "base_structure": "P-自有基座",
+  "industry": "retail_chain",
+  "industry_drivers": [
+    "同店销售增长",
+    "开关店与新店月份",
+    "店均收入"
+  ],
+  "valuation_date": "2025-01-06",
+  "last_fy_end": "2024-09-30",
+  "horizon": 5,
+  "history": [],
+  "time_axis": {
+    "midyear": true,
+    "history_frequency": "annual",
+    "day_count": "actual/365"
+  },
+  "accounting": {
+    "sbc_expense": true,
+    "industry_valuation": true
+  },
+  "assumptions": {
+    "tax": 0.23,
+    "wacc": 0.101,
+    "g": 0.025,
+    "driver0": 428,
+    "ebit_margin": [
+      0.16,
+      0.164,
+      0.168,
+      0.17200000000000001,
+      0.176
+    ],
+    "da_pct": [
+      0.052,
+      0.052,
+      0.052,
+      0.052,
+      0.052
+    ],
+    "capex_pct": [
+      0.065,
+      0.065,
+      0.065,
+      0.065,
+      0.065
+    ],
+    "nwc_pct": [
+      0.13,
+      0.13,
+      0.13,
+      0.13,
+      0.13
+    ],
+    "opening_nwc": 67,
+    "opening_stores": 213,
+    "store_closure_rate": 0.018,
+    "new_stores": [
+      17,
+      19,
+      21,
+      23,
+      25
+    ],
+    "sales_per_store": 5.7,
+    "same_store_growth": [
+      0.036,
+      0.033999999999999996,
+      0.032,
+      0.03,
+      0.027999999999999997
+    ],
+    "new_store_months": [
+      5,
+      6,
+      7,
+      6,
+      5
+    ]
+  },
+  "bridge": {
+    "cash": 148,
+    "debt": 216,
+    "investments": 26,
+    "lease_liability": 14,
+    "minority": 7,
+    "valuation_cash_adjustment": 0,
+    "shares": 78,
+    "rsus": 1.2,
+    "options": 0,
+    "strike": 0,
+    "share_price": 15
+  },
+  "residual_activity": 0.7315068493150685,
+  "enabled_modules": [
+    "industry_driver",
+    "residual_period"
+  ],
+  "public_output_keys": [
+    "stores_close_p1",
+    "revenue_p1",
+    "ebit_p1",
+    "capex_p1",
+    "da_p1",
+    "nwc_p1",
+    "delta_nwc_p1",
+    "fcff_p1",
+    "discount_time_p1",
+    "stores_close_p2",
+    "revenue_p2",
+    "ebit_p2",
+    "capex_p2",
+    "da_p2",
+    "nwc_p2",
+    "delta_nwc_p2",
+    "fcff_p2",
+    "discount_time_p2",
+    "stores_close_p3",
+    "revenue_p3",
+    "ebit_p3",
+    "capex_p3",
+    "da_p3",
+    "nwc_p3",
+    "delta_nwc_p3",
+    "fcff_p3",
+    "discount_time_p3",
+    "stores_close_p4",
+    "revenue_p4",
+    "ebit_p4",
+    "capex_p4",
+    "da_p4",
+    "nwc_p4",
+    "delta_nwc_p4",
+    "fcff_p4",
+    "discount_time_p4",
+    "stores_close_p5",
+    "revenue_p5",
+    "ebit_p5",
+    "capex_p5",
+    "da_p5",
+    "nwc_p5",
+    "delta_nwc_p5",
+    "fcff_p5",
+    "discount_time_p5",
+    "wacc",
+    "terminal_value",
+    "pv_terminal",
+    "enterprise_value",
+    "equity_value",
+    "diluted_shares",
+    "value_per_share"
+  ],
+  "units": {
+    "money": "百万元",
+    "shares": "百万股",
+    "rates": "小数"
+  }
+}

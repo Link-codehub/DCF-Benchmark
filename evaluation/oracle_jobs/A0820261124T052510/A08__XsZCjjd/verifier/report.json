@@ -1,0 +1,27 @@
+{
+  "task_id": "tests",
+  "baseline": {
+    "passed": true,
+    "mismatches": [],
+    "nonformula_or_missing": [],
+    "duplicates": [],
+    "errors": [],
+    "links": [],
+    "checked": 26
+  },
+  "perturbations": [
+    {
+      "id": 1,
+      "passed": true,
+      "mismatches": [],
+      "checked": 26
+    },
+    {
+      "id": 2,
+      "passed": true,
+      "mismatches": [],
+      "checked": 26
+    }
+  ],
+  "passed": true
+}

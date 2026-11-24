@@ -1,0 +1,37 @@
+{
+  "task": "BC01",
+  "judge_model": "claude-opus-5-5",
+  "generated": "2026-11-22T20:19:53.481059+00:00",
+  "llm": {
+    "09-MEMO": {
+      "status": "pass",
+      "rationale": "证据中提供了完整的 memo 内容，标题为“栖岸云档 DCF 估值备忘录”，对应题面要求的 /app/memo.md 交付。价值驱动方面：设有“主要价值驱动”一节，列出产能、利用率与价格驱动收入，EBIT 利润率由 16.0% 升至 18.8%，再投资与营运资本，税项/NOL，终值与折现，以及股权桥，并给出具体数值（如 P1 收入约 829.87、P5 收入约 2,108.70、稀释股数 145.4）。局限方面：设有“局限”一节，列出至少三项，包括终值 100% Gordon 权重对 WACC 和 g 敏感、经营假设未经独立验证、残期与三表缺少估值日资产负债表、NOL 及退出倍数为近似处理。内容与模型结构一致，满足“说明最重要的价值驱动与至少一个局限”的要求。",
+      "judge_model": "claude-opus-5-5",
+      "attempts": [
+        {
+          "attempt": 1,
+          "error": null,
+          "text_chars": 380
+        }
+      ]
+    }
+  },
+  "agent": {
+    "status": "scored",
+    "scores": {
+      "09-READABLE": 1,
+      "X-TA-004": 1,
+      "X-TA-006": 1,
+      "X-TA-007": 1
+    },
+    "evidence": {
+      "09-READABLE": "output.xlsx 包含 Inputs、History、Historical、Model、Valuation、Results 和 Checks 页。Model!A4:G4 的表头为 key | 说明 | P1…P5；Model!C5:G5 是期末日期公式（=DATE(2025+1,8,31) 等，值为 2026-08-31 至 2030-08-31），C6 是期初日期，C7 是实际天数，C8 是残期活动比例（=C7/(C5-Inputs!$C$5)）。每行在 A 列有语义键、B 列有中文说明，并分为资产、营运资本、税项/FCFF/折现、债务/现金等小节。Valuation 页的每一行同样带有说明标签。没有发现未披露的技巧；唯一的小瑕疵是 Valuation!A10 和 A11 两行 wacc_calculated 重复。",
+      "X-TA-004": "Model 第 68 行 end_time 用公式 =(C5-Inputs!$C$4)/365 计算期末时间，值为 0.6932、1.6932、2.6959、3.6959、4.6959。第 69 行 discount_time 是年中折现时间 =C68-C7/365/2，值为 0.3466、1.1932、2.1945、3.1959、4.1959。Valuation!C21、C23、C25、C27、C29 的折现因子为 =1/(1+C12)^Model!C$69…G$69；Valuation!C18 的终值折现时间为 =Model!G$68。",
+      "X-TA-006": "FCFF 的各组成部分都单独成行：Model 第 20 行 ebit；第 65 行 tax（无杠杆现金税，=MAX(0,C20-C63)*Inputs!$C$27）；第 43 行 da（=C29+C35+C40）；第 26 行 capex；第 33 行 intangible_additions；第 57 行 delta_nwc（=C54-C56，期初为估值日 NWC Inputs!$C$6）。第 67 行 fcff 的公式为 =C20-C65+C43-C26-C33-C57，直接引用上述各行。",
+      "X-TA-007": "Valuation!C15 tv_gordon 的公式为 =Model!G$67*(1+C13)/C14，引用 P5 FCFF 行（Model!G67）、g（C13=Inputs!$C$29）和 WACC−g（C14=C12-C13，其中 C12=Inputs!$C$28）。C16 tv_exit 为 =(Model!G$20+Model!G$43)*Inputs!$C$31，即 P5 EBIT 加 D&A 后乘以 exit_multiple 7.8。C17 terminal_value 为 =Inputs!$C$30*C15+(1-Inputs!$C$30)*C16，按 gordon_weight 加权。"
+    },
+    "rationale": "我用 openpyxl 同时查看了公式和缓存值。工作簿的期间和项目标签清楚；折现时间表可见，并被逐期折现因子引用；FCFF 的五个组成部分（EBIT、税、折旧摊销、资本开支、营运资本变动）各自独立成行，并在 FCFF 公式中直接引用；终值公式直接引用 P5 指标行和 Inputs 页的假设单元格。四项全部满足，各给 1 分。",
+    "seconds": 57.4,
+    "judge_model": "claude-opus-5-5"
+  }
+}

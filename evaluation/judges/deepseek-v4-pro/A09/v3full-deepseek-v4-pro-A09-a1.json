@@ -1,0 +1,51 @@
+{
+  "task": "A09",
+  "judge_model": "claude-opus-5-5",
+  "generated": "2026-11-23T03:01:57.658582+00:00",
+  "llm": {
+    "A-REASON": {
+      "status": "pass",
+      "rationale": "memo.md 对主要行业驱动给出了通向估值结果的因果链，并附有量化证据。(1) 良率：良率→合格产量→销量→收入；敏感性网格显示贝塔良率从×0.94 调至×1.06 时，EV 从 4,549 升至 6,819 百万元。(2) 材料：BOM 单耗→耗用量→成本；单耗下降与采购价上升相互对冲；合金价从×0.9 调至×1.1 时，EV 从 6,896 降至 4,473 百万元。文中还说明采购只影响存货和应付，不进入 COGS。(3) 库存：三类存货→NWC（期初 470→首期 797 百万元）→ΔNWC 拖累首期 FCFF（-167 百万元）→价值。三条链路方向与模型结构一致，满足要求。不足：产能段称两产品“均为需求约束——实际投入等于有效产能”，表述自相矛盾，且与事实不符。阿尔法有效产能 296 低于需求 305，应为产能约束；贝塔需求 181 低于有效产能 189，投入为 181，不等于有效产能。合计 477 实际按后一口径计算。此外，产能本身对 EV 的影响未量化；“良率边际价值远超扩量”的结论缺少对比证据。这些属于局部瑕疵，未推翻整体因果链。",
+      "judge_model": "claude-opus-5-5",
+      "attempts": [
+        {
+          "attempt": 1,
+          "error": null,
+          "text_chars": 539
+        }
+      ]
+    },
+    "09-MEMO": {
+      "status": "pass",
+      "rationale": "memo.md 已提交，内容满足本项要求。价值驱动方面，备忘录分三节说明了产能/良率、材料采购与 BOM 耗用、存货与营运资本对价值的影响，并用敏感性网格结果支撑：贝塔良率 ×0.94 至 ×1.06 时 EV 约为 4,549 至 6,819；合金价 ×0.9 至 ×1.1 时 EV 约为 6,896 至 4,473。由此指出贝塔良率与合金价是最重要的驱动，与网格方向一致。局限方面，列出三项：良率/利用率外生且未与资本投入内生关联、材料价格外生、营运资本按均匀经营假设估算，超过至少一个的要求。不足之处是部分描述性文字存在错误或不一致：一是称两产品均为需求约束且投入等于有效产能，实际上阿尔法为产能约束（296<305），贝塔为需求约束（181<189），合计 477 也表明贝塔投入取的是 181；二是 NWC 从 470 升至 797，与首期 ΔNWC 为 -167 的表述口径不清。这些瑕疵不影响对核心驱动与局限的说明，因此判定满足。",
+      "judge_model": "claude-opus-5-5",
+      "attempts": [
+        {
+          "attempt": 1,
+          "error": null,
+          "text_chars": 481
+        }
+      ]
+    }
+  },
+  "agent": {
+    "status": "scored",
+    "scores": {
+      "01-UNIT": 1,
+      "09-READABLE": 1,
+      "X-TA-004": 1,
+      "X-TA-006": 1,
+      "X-TA-007": 0
+    },
+    "evidence": {
+      "01-UNIT": "output.xlsx 的 Calc!B1 是 'Unit' 列：金额行标为 百万元（如 B7、B13、B88），股数行标为 百万股（B98–B101），比率行标为 小数（B84 wacc、B85 g），每股价值标为 元/股（B102），数量行标为 千件 或 材料单位。Inputs!B 列和 Results!C 列也给出了单位（如 Inputs!B5 activity_proportion 标为 小数）。",
+      "09-READABLE": "Calc 表头 A1:G1 依次为 Item、Unit、P1–P5，并按分区标题分块：A2 PRODUCT OPERATIONS、A14 BOM MATERIAL CONSUMPTION、A42 RAW MATERIALS INVENTORY & PURCHASES、A53 WIP & FINISHED GOODS、A56 WORKING CAPITAL、A63 PPE, CAPEX & DEPRECIATION、A67 P&L、A76 CASH TAX & FCFF、A82 DCF VALUATION、A89 EQUITY BRIDGE。每行都有明确的项目标签（如 alpha_input、alloy_raw_close），没有隐藏技巧。",
+      "X-TA-004": "Calc 第 79 行 discount_time（单位 年）列出五期折现时间：C79=0.7068、D79=1.7068、E79=2.7096、F79=3.7096、G79=4.7096；第 80 行 discount_factor 和第 81 行 pv_fcff 逐期列示。全工作簿共 0 个公式，这些都是数值常量，但本项只要求“显示逐期折现期”，这一点已满足。",
+      "X-TA-006": "Calc 中各 FCFF 组成部分均为独立行：ebit_prorated 在第 75 行（C75=282.74），cash_tax 在第 77 行，depreciation 在第 65 行，capex 在第 64 行，delta_nwc 在第 62 行，fcff 在第 78 行（C78=-167.33）。这些行都能识别，但全是常量，没有公式引用。",
+      "X-TA-007": "Calc!G83 terminal_value=7446.22 是硬编码常量。用 openpyxl 统计，四张表（Inputs/Calc/Sensitivity/Results）中公式单元格数均为 0，因此终值不存在直接引用终期 FCFF 单元格 G78、WACC 单元格 G84、增长率单元格 G85 的公式。"
+    },
+    "rationale": "用 openpyxl 检查发现，output.xlsx 的四张表都没有任何公式，全部是数值常量。单位标注、期间与项目标签、可见的折现期行以及 FCFF 各组成部分的独立行在展示层面都满足，所以给 1 分。终值项要求公式直接引用终期指标和假设单元格，但 G83 是常量，所以给 0 分。",
+    "seconds": 65.0,
+    "judge_model": "claude-opus-5-5"
+  }
+}

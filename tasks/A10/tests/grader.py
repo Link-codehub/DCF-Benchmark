@@ -212,7 +212,7 @@ def max_relative_error(values, expected):
 
 def grade(task, candidate, work, soffice="soffice", variants=True):
     task, work = Path(task), Path(work)
-    tests_dir = task if (task / "expected.json").is_file() else task / "tests"
+    tests_dir = task if (task / "expected.json").is_file() else task / "tests" if (task / "tests" / "expected.json").is_file() else task.parent / "tests"
     expected = json.loads((tests_dir / "expected.json").read_text())
     spec = json.loads((tests_dir / "grader_spec.json").read_text())
     report = {"task_id": spec["task_id"], "baseline": {}, "perturbations": [], "dependency_checks": {},

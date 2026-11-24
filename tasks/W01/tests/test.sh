@@ -8,9 +8,9 @@ mkdir -p /logs/verifier
 python3 - <<'PY'
 import json
 from pathlib import Path
-p = Path('/logs/verifier/report.json')
+p = next((p for p in [Path('/logs/verifier/details.json'), Path('/logs/verifier/report.json')] if p.is_file()), None)
 try:
-    d = json.loads(p.read_text())
+    d = json.loads(p.read_text()) if p else {}
     value = d.get('reward', d.get('mechanism_score', float(bool(d.get('passed', d.get('rule_passed', False))))))
 except Exception:
     value = 0.0

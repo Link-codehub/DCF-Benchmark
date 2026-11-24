@@ -1,0 +1,108 @@
+{
+  "task": "W01",
+  "judge_model": "claude-opus-5-5",
+  "generated": "2026-11-22T19:38:36.574154+00:00",
+  "llm": {
+    "09-MEMO": {
+      "status": "fail",
+      "rationale": "memo.md 已提交，但没有明确说明“最重要的价值驱动”，也没有明确写出估值局限，证据不足以判定满足要求。价值驱动方面：memo 列出了 WACC、g、initial_growth 的扰动结果（WACC 9%→10%，每股 103.78→89.66；g 2.5%→3.0%，每股→112.21；initial_growth 5%→6%，每股→106.29）。模型结果表也显示终值现值 1,200,068 约占企业价值 1,630,528 的 74%。但 memo 只陈列了这些数字，没有据此明确指出哪一项是最重要的价值驱动，也没有作相应论证；该段结论仅为“方向性响应合理、无硬编码”。局限方面：memo 提到“配置存在不等于白名单已经验证生效”、FetchURL 失败后改用 curl 取数、treasury_10y 未直接进入 WACC、因无 ProfitLoss 而使用 NetIncomeLoss。这些属于合规披露或取数过程说明，并未作为模型或估值的局限提出。例如，memo 没有讨论终值依赖度过高、假设沿用单年历史比率、WACC 参数为主观设定等局限。",
+      "judge_model": "claude-opus-5-5",
+      "attempts": [
+        {
+          "attempt": 1,
+          "error": null,
+          "text_chars": 0
+        },
+        {
+          "attempt": 2,
+          "error": null,
+          "text_chars": 539
+        }
+      ]
+    },
+    "W-FAILURE": {
+      "status": "pass",
+      "rationale": "memo 设有专门的“失败与冲突”章节，结论是无取数失败、无来源冲突、交叉验证差异为 0。所列取数值与 Apple FY2024 10-K 的已知数值一致，没有证据表明隐瞒了失败项。取数过程中的工具失败也有如实披露：FetchURL 访问 data.sec.gov 和 home.treasury.gov 均返回网络错误，随后改用 curl 成功取回，并说明了可能原因与处理方式。标签层面的潜在冲突逐项说明了处理：LongTermDebt 含当期部分，为避免与 current_debt 重复口径，改取 LongTermDebtNoncurrent；Depreciation 不含摊销，按标签顺序取 DepreciationDepletionAndAmortization；ProfitLoss 不存在，改用 NetIncomeLoss，并注明 Apple 无非控股权益；不存在的标签也已列明。memo 同时披露了“配置存在不等于白名单已验证生效”。不足有两点：一是字段计数前后不一致，先称“16 个 SEC 字段和 1 个财政部字段”，后称“17 个字段”，而实际表中共 16 项（15 个 SEC 字段加 1 个财政部字段）；二是取数日期写作“2026-11-22（模拟运行日）”，表述可疑。另外，本次证据未提供 sources.json，无法核对其中的 status/error 字段。由于未声称存在失败项，这些不足不构成失败未披露，整体满足本项要求。",
+      "judge_model": "claude-opus-5-5",
+      "attempts": [
+        {
+          "attempt": 1,
+          "error": null,
+          "text_chars": 0
+        },
+        {
+          "attempt": 2,
+          "error": null,
+          "text_chars": 0
+        },
+        {
+          "attempt": 3,
+          "error": null,
+          "text_chars": 689
+        }
+      ]
+    },
+    "X-TA-009": {
+      "status": "fail",
+      "rationale": "本项适用：initial_growth、terminal_growth、wacc 等需自行确定。memo 中 steady_ebit_margin（约31.51%）、tax_rate（约24.09%）、da_to_revenue（约2.93%）、capex_to_revenue（约2.42%）均写明取自 FY2024 实际比率，并以公式引用 Sources，历史值到假设值的映射清楚。但以下关键假设不满足要求：①initial_growth=5%：只称 FY2024 收入增速约2%，该增速未见上年收入取数或计算过程；从2%到5%只有“服务收入增长和 AI 产品周期潜力”“略高于”等定性理由，没有计算或明确映射关系。②terminal_growth=2.5%：只称“与长期名义 GDP 增长率一致”，没有给出任何历史观察值（例如 GDP 增速的具体数值或来源），也没有推导过程。③wacc=9%：列出无风险利率4.25%（与 treasury_10y 对应）、股权风险溢价约5%、Beta 约1.0，但按 CAPM 计算为9.25%，memo 只以模糊的“加上债务成本调整”得到9.0%。债务成本、资本结构权重和计算式均未给出，ERP 与 Beta 也没有历史观察依据。因此并非每个开放假设都有包含历史观察值和计算或映射关系的书面推导，判0。",
+      "judge_model": "claude-opus-5-5",
+      "attempts": [
+        {
+          "attempt": 1,
+          "error": null,
+          "text_chars": 620
+        }
+      ]
+    }
+  },
+  "agent": {
+    "status": "scored",
+    "scores": {
+      "X-IF-001a": 1,
+      "X-IF-001b": 1,
+      "X-IF-002": 1,
+      "01-UNIT": 1,
+      "X-FM-002": 1,
+      "X-FM-004": 1,
+      "X-FM-005": 1,
+      "X-FM-007": 1,
+      "X-IN-002": 1,
+      "X-IN-003": 1,
+      "X-IN-004": 1,
+      "X-IN-005": 1,
+      "X-IN-006": 1,
+      "X-IN-007": 1,
+      "X-TA-001": 1,
+      "X-TA-004": 0,
+      "X-TA-005": 1,
+      "X-TA-006": 0,
+      "X-TA-007": 1,
+      "W-NOFORBID": 1
+    },
+    "evidence": {
+      "X-IF-001a": "The delivery directory contains all five required files: model.xlsx, sources.json, cross_validation.json, retrieval_map.json and memo.md.",
+      "X-IF-001b": "The `file` command reports model.xlsx as Microsoft Excel 2007+, all three .json files as JSON data, and memo.md as UTF-8 text, so no file type was substituted.",
+      "X-IF-002": "openpyxl lists the sheets as ['Sources','Assumptions','Forecast','DCF','Outputs'], exactly the five required names with no default sheet names.",
+      "01-UNIT": "Sources!C2:C16 label each value USD_millions or shares_millions (C9 for shares). Outputs!D2:D4 use USD_millions and USD_per_share. DCF!C16 notes shares are in millions. Assumptions!C2:C8 identify each item as a growth rate or ratio, and sources.json gives a unit for every item, with treasury_10y in decimal.",
+      "X-FM-002": "Business assumptions are stored only in Assumptions!B2:B4 (0.05, 0.025, 0.09). B5:B8 are formulas based on Sources. Forecast!D2:F2 contain only the linear-interpolation fractions 1/4, 2/4 and 3/4, and Forecast!C11:G11 contain only the discount exponents ^1 to ^5. No business constants are hard-coded in formulas.",
+      "X-FM-004": "Forecast!B3 is =Sources!B2. DCF!B2:B6 are =Forecast!C10*Forecast!C11 and the matching formulas for the other years. DCF!B11:B14 and B16 point to Sources. Outputs!C2:C4 are =DCF!B10, =DCF!B15 and =DCF!B17. There is no separate re-entry of these values.",
+      "X-FM-005": "In Forecast, rows 2 to 11 use columns C:G for FY1 to FY5 throughout. DCF!B2:B6 use Forecast columns C to G in matching order: C10*C11 through G10*G11. No period is shifted.",
+      "X-FM-007": "A LibreOffice recalculation of a temporary copy produced no errors. It returned DCF!B10 = 1,630,528.15, B15 = 1,599,037.15 and B17 = 103.78. The dependency chain runs one way: Sources to Assumptions to Forecast to DCF to Outputs.",
+      "X-IN-002": "Forecast!C4:G4 all use the same margin cell, Assumptions!B5. D&A and capex for every year use Assumptions!B7 and B8, and every year's FCFF uses tax rate Assumptions!B6.",
+      "X-IN-003": "Forecast!B7 is =Sources!B13-B10-B11-(B14-B15), which recalculates to -77,664 and matches an independent calculation of 152,987-29,943-35,228-(176,392-10,912). Forecast!C8 is =B7*(C3/B3-1), and D8:G8 take this year's NWC minus last year's. The growth formulas in C2:G2 converge linearly from initial_growth to terminal_growth.",
+      "X-IN-004": "In sources.json, all SEC items have filed 2024-11-01 under accession 0000320193-24-000123. treasury_10y has observation_date 2024-11-27. Neither date is after the 2024-11-27 cutoff.",
+      "X-IN-005": "In sources.json, every flow item has period_start 2023-10-01 and period_end 2024-09-28, form 10-K, which is the FY2024 annual period. Every balance-sheet (instant) item has period_end 2024-09-28.",
+      "X-IN-006": "The equity-bridge items in DCF!B11:B14 come from the 2024-09-28 balance sheet in the 10-K filed 2024-11-01, the latest available before the cutoff. The 10-year Treasury rate is the 2024-11-27 value, 0.0425.",
+      "X-IN-007": "Forecast!C1:G1 are FY1 to FY5, which is the five explicit forecast years. B1 is the FY0 (FY2024) base column.",
+      "X-TA-001": "Each of the 16 items in sources.json records source_id, source_url, source_file, field (the XBRL tag), period_start/period_end, filed and accession. treasury_10y also records its observation_date.",
+      "X-TA-004": "The workbook has no visible discount-period row or equivalent timing table. The periods 1 to 5 appear only as exponents inside the Forecast!C11:G11 formulas (=1/(1+Assumptions!B4)^1 and so on), and the only visible row is the discount factors.",
+      "X-TA-005": "Forecast!B3:B7 show the FY0 anchor values for revenue, EBIT, D&A, capex and NWC, each linked to Sources.",
+      "X-TA-006": "EBIT (row 4), D&A (row 5), capex (row 6) and delta_nwc (row 8) are separate rows. Tax is not shown as its own row; it is folded into the FCFF formula Forecast!C10 =C4*(1-Assumptions!B6)+C5-C6-C8.",
+      "X-TA-007": "DCF!B8 is =Forecast!G10*(1+Assumptions!B3)/(Assumptions!B4-Assumptions!B3). It refers directly to the visible FY5 FCFF cell and to the g and WACC assumption cells.",
+      "W-NOFORBID": "Every source_url in sources.json is on data.sec.gov or home.treasury.gov, and all dates are on or before the cutoff. memo.md states that no share price, target price or consensus forecast was used, and no third-party sources appear in the records."
+    },
+    "rationale": "The deliverables are complete, the workbook structure matches the spec, and the live formula chain recalculates in LibreOffice without errors or circular references. Inputs come from the FY2024 10-K filed before the cutoff and from the Treasury 10-year rate for 2024-11-27. Two items score 0. The workbook has no visible discount-period row; the periods appear only as exponents inside the discount-factor formulas. Tax in FCFF is not a separate line; it is embedded in the FCFF formula.",
+    "seconds": 118.7,
+    "judge_model": "claude-opus-5-5"
+  }
+}

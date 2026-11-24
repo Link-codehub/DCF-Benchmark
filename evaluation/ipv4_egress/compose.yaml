@@ -1,0 +1,24 @@
+services:
+  dcf-egress-firewall:
+    image: ${EGRESS_CONTROL_SIDECAR_IMAGE_NAME:-dcf-ipv4-gost-egress:v1}
+    build:
+      context: /Users/link/Desktop/Finance Bench/exp/dcf_factory/ipv4_egress/gost
+      dockerfile: Dockerfile
+    entrypoint: ["/opt/egress-sidecar/entrypoint.sh"]
+    environment:
+      EGRESS_CONTROL_INITIAL_NETWORK_MODE: ${EGRESS_CONTROL_INITIAL_NETWORK_MODE:-no-network}
+      EGRESS_CONTROL_INITIAL_ALLOWED_HOSTS: ${EGRESS_CONTROL_INITIAL_ALLOWED_HOSTS:-}
+    init: true
+    cap_add:
+      - NET_ADMIN
+      - NET_RAW
+    healthcheck:
+      test: ["CMD", "test", "-f", "/tmp/dcf-egress-ready"]
+      interval: 1s
+      timeout: 5s
+      retries: 30
+  main:
+    network_mode: service:dcf-egress-firewall
+    depends_on:
+      dcf-egress-firewall:
+        condition: service_healthy

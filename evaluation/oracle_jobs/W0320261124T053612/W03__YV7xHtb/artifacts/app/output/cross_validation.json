@@ -1,0 +1,187 @@
+{
+  "checks": [
+    {
+      "check_id": "pretax_to_net_income",
+      "method": "reconciliation",
+      "formula": "pretax_income - income_tax - net_income_consolidated",
+      "difference": 0.0,
+      "tolerance": 75.24600000000001,
+      "inputs": {
+        "pretax_income": 4969.6,
+        "income_tax": 1207.3,
+        "net_income_consolidated": 3762.3
+      },
+      "passed": true,
+      "source": "SEC 同一原始 10-K 的税前利润、所得税与含非控股权益合并净利润勾稽"
+    },
+    {
+      "check_id": "sec_tag_alias_revenue",
+      "field_id": "revenue",
+      "method": "tag_alias_reconciliation",
+      "values": [
+        36176200000
+      ],
+      "matches": true,
+      "source_url": "https://www.sec.gov/Archives/edgar/data/829224/829224-facts.json",
+      "explanation": "原始 companyfacts 内允许标签的事实一致性检查；不是独立审计意见。"
+    },
+    {
+      "check_id": "sec_tag_alias_operating_income",
+      "field_id": "operating_income",
+      "method": "tag_alias_reconciliation",
+      "values": [
+        5408800000
+      ],
+      "matches": true,
+      "source_url": "https://www.sec.gov/Archives/edgar/data/829224/829224-facts.json",
+      "explanation": "原始 companyfacts 内允许标签的事实一致性检查；不是独立审计意见。"
+    },
+    {
+      "check_id": "sec_tag_alias_pretax_income",
+      "field_id": "pretax_income",
+      "method": "tag_alias_reconciliation",
+      "values": [
+        4969600000
+      ],
+      "matches": true,
+      "source_url": "https://www.sec.gov/Archives/edgar/data/829224/829224-facts.json",
+      "explanation": "原始 companyfacts 内允许标签的事实一致性检查；不是独立审计意见。"
+    },
+    {
+      "check_id": "sec_tag_alias_income_tax",
+      "field_id": "income_tax",
+      "method": "tag_alias_reconciliation",
+      "values": [
+        1207300000
+      ],
+      "matches": true,
+      "source_url": "https://www.sec.gov/Archives/edgar/data/829224/829224-facts.json",
+      "explanation": "原始 companyfacts 内允许标签的事实一致性检查；不是独立审计意见。"
+    },
+    {
+      "check_id": "sec_tag_alias_net_income_consolidated",
+      "field_id": "net_income_consolidated",
+      "method": "tag_alias_reconciliation",
+      "values": [
+        3760900000,
+        3762300000
+      ],
+      "matches": false,
+      "source_url": "https://www.sec.gov/Archives/edgar/data/829224/829224-facts.json",
+      "explanation": "原始 companyfacts 内允许标签的事实一致性检查；不是独立审计意见。"
+    },
+    {
+      "check_id": "sec_tag_alias_da",
+      "field_id": "da",
+      "method": "tag_alias_reconciliation",
+      "values": [
+        1512600000,
+        1592400000
+      ],
+      "matches": false,
+      "source_url": "https://www.sec.gov/Archives/edgar/data/829224/829224-facts.json",
+      "explanation": "原始 companyfacts 内允许标签的事实一致性检查；不是独立审计意见。"
+    },
+    {
+      "check_id": "sec_tag_alias_capex",
+      "field_id": "capex",
+      "method": "tag_alias_reconciliation",
+      "values": [
+        2777500000
+      ],
+      "matches": true,
+      "source_url": "https://www.sec.gov/Archives/edgar/data/829224/829224-facts.json",
+      "explanation": "原始 companyfacts 内允许标签的事实一致性检查；不是独立审计意见。"
+    },
+    {
+      "check_id": "sec_tag_alias_diluted_shares",
+      "field_id": "diluted_shares",
+      "method": "tag_alias_reconciliation",
+      "values": [
+        1137300000
+      ],
+      "matches": true,
+      "source_url": "https://www.sec.gov/Archives/edgar/data/829224/829224-facts.json",
+      "explanation": "原始 companyfacts 内允许标签的事实一致性检查；不是独立审计意见。"
+    },
+    {
+      "check_id": "sec_tag_alias_cash",
+      "field_id": "cash",
+      "method": "tag_alias_reconciliation",
+      "values": [
+        3286200000
+      ],
+      "matches": true,
+      "source_url": "https://www.sec.gov/Archives/edgar/data/829224/829224-facts.json",
+      "explanation": "原始 companyfacts 内允许标签的事实一致性检查；不是独立审计意见。"
+    },
+    {
+      "check_id": "sec_tag_alias_short_term_investments",
+      "field_id": "short_term_investments",
+      "method": "tag_alias_reconciliation",
+      "values": [
+        257000000
+      ],
+      "matches": true,
+      "source_url": "https://www.sec.gov/Archives/edgar/data/829224/829224-facts.json",
+      "explanation": "原始 companyfacts 内允许标签的事实一致性检查；不是独立审计意见。"
+    },
+    {
+      "check_id": "sec_tag_alias_receivables",
+      "field_id": "receivables",
+      "method": "tag_alias_reconciliation",
+      "values": [
+        1213800000
+      ],
+      "matches": true,
+      "source_url": "https://www.sec.gov/Archives/edgar/data/829224/829224-facts.json",
+      "explanation": "原始 companyfacts 内允许标签的事实一致性检查；不是独立审计意见。"
+    },
+    {
+      "check_id": "sec_tag_alias_current_assets",
+      "field_id": "current_assets",
+      "method": "tag_alias_reconciliation",
+      "values": [
+        6847400000
+      ],
+      "matches": true,
+      "source_url": "https://www.sec.gov/Archives/edgar/data/829224/829224-facts.json",
+      "explanation": "原始 companyfacts 内允许标签的事实一致性检查；不是独立审计意见。"
+    },
+    {
+      "check_id": "sec_tag_alias_current_liabilities",
+      "field_id": "current_liabilities",
+      "method": "tag_alias_reconciliation",
+      "values": [
+        9070000000
+      ],
+      "matches": true,
+      "source_url": "https://www.sec.gov/Archives/edgar/data/829224/829224-facts.json",
+      "explanation": "原始 companyfacts 内允许标签的事实一致性检查；不是独立审计意见。"
+    },
+    {
+      "check_id": "sec_tag_alias_current_debt",
+      "field_id": "current_debt",
+      "method": "tag_alias_reconciliation",
+      "values": [
+        0,
+        1248900000
+      ],
+      "matches": false,
+      "source_url": "https://www.sec.gov/Archives/edgar/data/829224/829224-facts.json",
+      "explanation": "原始 companyfacts 内允许标签的事实一致性检查；不是独立审计意见。"
+    },
+    {
+      "check_id": "sec_tag_alias_noncurrent_debt",
+      "field_id": "noncurrent_debt",
+      "method": "tag_alias_reconciliation",
+      "values": [
+        14319500000,
+        15568400000
+      ],
+      "matches": false,
+      "source_url": "https://www.sec.gov/Archives/edgar/data/829224/829224-facts.json",
+      "explanation": "原始 companyfacts 内允许标签的事实一致性检查；不是独立审计意见。"
+    }
+  ]
+}

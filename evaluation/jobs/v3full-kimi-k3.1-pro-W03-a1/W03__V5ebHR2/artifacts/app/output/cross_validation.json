@@ -1,0 +1,37 @@
+{
+  "schema_version": "dcf-v3-w-retrieval-v1",
+  "checks": [
+    {
+      "check_id": "pretax_to_net_income",
+      "formula": "pretax_income - income_tax - net_income_consolidated",
+      "source_item_indices": [
+        2,
+        3,
+        4
+      ],
+      "inputs": {
+        "pretax_income": {
+          "source_item_index": 2,
+          "value": 4969.6,
+          "unit": "USD_millions"
+        },
+        "income_tax": {
+          "source_item_index": 3,
+          "value": 1207.3,
+          "unit": "USD_millions"
+        },
+        "net_income_consolidated": {
+          "source_item_index": 4,
+          "value": 3762.3,
+          "unit": "USD_millions"
+        }
+      },
+      "difference": 0.0,
+      "tolerance": 75.24600000000001,
+      "tolerance_formula": "max(0.01, abs(net_income_consolidated) * 0.02)",
+      "status": "passed",
+      "workbook_check": "Outputs!C10",
+      "note": "使用含非控股权益的ProfitLoss，不以归母NetIncomeLoss替代；差异未人为改成零"
+    }
+  ]
+}

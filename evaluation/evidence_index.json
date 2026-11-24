@@ -1,0 +1,200 @@
+[
+  {
+    "task": "A08",
+    "model": "deepseek-v4-pro",
+    "job": "v3full-deepseek-v4-pro-A08-a1",
+    "result": "jobs/v3full-deepseek-v4-pro-A08-a1/A08__BLpGiga/result.json"
+  },
+  {
+    "task": "A02",
+    "model": "kimi-k3.1-pro",
+    "job": "v3full-kimi-k3.1-pro-A02-a1",
+    "result": "jobs/v3full-kimi-k3.1-pro-A02-a1/A02__EMiZRWa/result.json"
+  },
+  {
+    "task": "A02",
+    "model": "kimi-k3.1-pro",
+    "job": "v3full-kimi-k3.1-pro-A02-a1",
+    "result": "jobs/v3full-kimi-k3.1-pro-A02-a1/A02__sRgiNyC/result.json"
+  },
+  {
+    "task": "A04",
+    "model": "deepseek-v4-pro",
+    "job": "v3full-deepseek-v4-pro-A04-a1",
+    "result": "jobs/v3full-deepseek-v4-pro-A04-a1/A04__RFysa4S/result.json"
+  },
+  {
+    "task": "W03",
+    "model": "deepseek-v4-pro",
+    "job": "v3full-deepseek-v4-pro-W03-a1",
+    "result": "jobs/v3full-deepseek-v4-pro-W03-a1/W03__5zKSFDW/result.json"
+  },
+  {
+    "task": "A03",
+    "model": "kimi-k3.1-pro",
+    "job": "v3full-kimi-k3.1-pro-A03-a1",
+    "result": "jobs/v3full-kimi-k3.1-pro-A03-a1/A03__DHJ4pCz/result.json"
+  },
+  {
+    "task": "A05",
+    "model": "deepseek-v4-pro",
+    "job": "v3full-deepseek-v4-pro-A05-a1",
+    "result": "jobs/v3full-deepseek-v4-pro-A05-a1/A05__teoCB8z/result.json"
+  },
+  {
+    "task": "W02",
+    "model": "deepseek-v4-pro",
+    "job": "v3full-deepseek-v4-pro-W02-a1",
+    "result": "jobs/v3full-deepseek-v4-pro-W02-a1/W02__bLwAAQN/result.json"
+  },
+  {
+    "task": "E03",
+    "model": "kimi-k3.1-pro",
+    "job": "v3full-kimi-k3.1-pro-E03-a1",
+    "result": "jobs/v3full-kimi-k3.1-pro-E03-a1/E03__WQmKUi2/result.json"
+  },
+  {
+    "task": "A01",
+    "model": "deepseek-v4-pro",
+    "job": "v3full-deepseek-v4-pro-A01-a1",
+    "result": "jobs/v3full-deepseek-v4-pro-A01-a1/A01__H7Pr6Nw/result.json"
+  },
+  {
+    "task": "A09",
+    "model": "deepseek-v4-pro",
+    "job": "v3full-deepseek-v4-pro-A09-a1",
+    "result": "jobs/v3full-deepseek-v4-pro-A09-a1/A09__fYaYKs9/result.json"
+  },
+  {
+    "task": "E02",
+    "model": "deepseek-v4-pro",
+    "job": "v3full-deepseek-v4-pro-E02-a1",
+    "result": "jobs/v3full-deepseek-v4-pro-E02-a1/E02__LqGKvoV/result.json"
+  },
+  {
+    "task": "W03",
+    "model": "kimi-k3.1-pro",
+    "job": "v3full-kimi-k3.1-pro-W03-a1",
+    "result": "jobs/v3full-kimi-k3.1-pro-W03-a1/W03__V5ebHR2/result.json"
+  },
+  {
+    "task": "BC04",
+    "model": "kimi-k3.1-pro",
+    "job": "v3full-kimi-k3.1-pro-BC04-a1",
+    "result": "jobs/v3full-kimi-k3.1-pro-BC04-a1/BC04__iu6RCkB/result.json"
+  },
+  {
+    "task": "A04",
+    "model": "kimi-k3.1-pro",
+    "job": "v3full-kimi-k3.1-pro-A04-a1",
+    "result": "jobs/v3full-kimi-k3.1-pro-A04-a1/A04__qn38gzS/result.json"
+  },
+  {
+    "task": "A02",
+    "model": "deepseek-v4-pro",
+    "job": "v3full-deepseek-v4-pro-A02-a1",
+    "result": "jobs/v3full-deepseek-v4-pro-A02-a1/A02__TrrqH37/result.json"
+  },
+  {
+    "task": "W02",
+    "model": "kimi-k3.1-pro",
+    "job": "v3full-kimi-k3.1-pro-W02-a1",
+    "result": "jobs/v3full-kimi-k3.1-pro-W02-a1/W02__jUdbDLQ/result.json"
+  },
+  {
+    "task": "A05",
+    "model": "kimi-k3.1-pro",
+    "job": "v3full-kimi-k3.1-pro-A05-a1",
+    "result": "jobs/v3full-kimi-k3.1-pro-A05-a1/A05__YGDT4S7/result.json"
+  },
+  {
+    "task": "BC01",
+    "model": "kimi-k3.1-pro",
+    "job": "v3full-kimi-k3.1-pro-BC01-a1",
+    "result": "jobs/v3full-kimi-k3.1-pro-BC01-a1/BC01__xxiYLEt/result.json"
+  },
+  {
+    "task": "A01",
+    "model": "kimi-k3.1-pro",
+    "job": "v3full-kimi-k3.1-pro-A01-a1",
+    "result": "jobs/v3full-kimi-k3.1-pro-A01-a1/A01__pz5NJdB/result.json"
+  },
+  {
+    "task": "W01",
+    "model": "kimi-k3.1-pro",
+    "job": "v3full-kimi-k3.1-pro-W01-a1",
+    "result": "jobs/v3full-kimi-k3.1-pro-W01-a1/W01__Hq2LLmZ/result.json"
+  },
+  {
+    "task": "E04",
+    "model": "deepseek-v4-pro",
+    "job": "v3full-deepseek-v4-pro-E04-a1",
+    "result": "jobs/v3full-deepseek-v4-pro-E04-a1/E04__muybvh4/result.json"
+  },
+  {
+    "task": "W04",
+    "model": "kimi-k3.1-pro",
+    "job": "v3full-kimi-k3.1-pro-W04-a1",
+    "result": "jobs/v3full-kimi-k3.1-pro-W04-a1/W04__BrnjyKg/result.json"
+  },
+  {
+    "task": "BC03",
+    "model": "kimi-k3.1-pro",
+    "job": "v3full-kimi-k3.1-pro-BC03-a1",
+    "result": "jobs/v3full-kimi-k3.1-pro-BC03-a1/BC03__paBKcR4/result.json"
+  },
+  {
+    "task": "E01",
+    "model": "deepseek-v4-pro",
+    "job": "v3full-deepseek-v4-pro-E01-a1",
+    "result": "jobs/v3full-deepseek-v4-pro-E01-a1/E01__TJh5gHe/result.json"
+  },
+  {
+    "task": "A07",
+    "model": "kimi-k3.1-pro",
+    "job": "v3full-kimi-k3.1-pro-A07-a1",
+    "result": "jobs/v3full-kimi-k3.1-pro-A07-a1/A07__aDdav5j/result.json"
+  },
+  {
+    "task": "E04",
+    "model": "kimi-k3.1-pro",
+    "job": "v3full-kimi-k3.1-pro-E04-a1",
+    "result": "jobs/v3full-kimi-k3.1-pro-E04-a1/E04__7UXXhGU/result.json"
+  },
+  {
+    "task": "R02",
+    "model": "kimi-k3.1-pro",
+    "job": "v3full-kimi-k3.1-pro-R02-a1",
+    "result": "jobs/v3full-kimi-k3.1-pro-R02-a1/R02__DbQnYsL/result.json"
+  },
+  {
+    "task": "A06",
+    "model": "deepseek-v4-pro",
+    "job": "v3full-deepseek-v4-pro-A06-a1",
+    "result": "jobs/v3full-deepseek-v4-pro-A06-a1/A06__6mJigCm/result.json"
+  },
+  {
+    "task": "W01",
+    "model": "deepseek-v4-pro",
+    "job": "v3full-deepseek-v4-pro-W01-a1",
+    "result": "jobs/v3full-deepseek-v4-pro-W01-a1/W01__EL4QUng/result.json"
+  },
+  {
+    "task": "A08",
+    "model": "kimi-k3.1-pro",
+    "job": "v3full-kimi-k3.1-pro-A08-a1",
+    "result": "jobs/v3full-kimi-k3.1-pro-A08-a1/A08__r4Jq8zh/result.json"
+  },
+  {
+    "task": "E01",
+    "model": "kimi-k3.1-pro",
+    "job": "v3full-kimi-k3.1-pro-E01-a1",
+    "result": "jobs/v3full-kimi-k3.1-pro-E01-a1/E01__GkSmo5y/result.json"
+  },
+  {
+    "task": "A07",
+    "model": "deepseek-v4-pro",
+    "job": "v3full-deepseek-v4-pro-A07-a1",
+    "result": "jobs/v3full-deepseek-v4-pro-A07-a1/A07__FtqTVMZ/result.json"
+  }
+]

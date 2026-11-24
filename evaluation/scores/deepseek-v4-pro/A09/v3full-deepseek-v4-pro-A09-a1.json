@@ -1,0 +1,1437 @@
+{
+  "task": "A09",
+  "candidate": "/Users/link/Desktop/Finance Bench/exp/dcf_factory_v3/eval/deliveries/deepseek-v4-pro/A09/v3full-deepseek-v4-pro-A09-a1/output.xlsx",
+  "rule_passed": false,
+  "items": [
+    {
+      "id": "01-FILE",
+      "category": "交付与来源完整性",
+      "importance": "主需",
+      "weight": 3,
+      "method": "rule",
+      "rubric_method": "rule",
+      "status": "pass"
+    },
+    {
+      "id": "01-KEYS",
+      "category": "交付与来源完整性",
+      "importance": "主需",
+      "weight": 3,
+      "method": "rule",
+      "rubric_method": "rule",
+      "status": "fail",
+      "failed_keys": [
+        "accounts_payable_p1",
+        "accounts_payable_p2",
+        "accounts_payable_p3",
+        "accounts_payable_p4",
+        "accounts_payable_p5",
+        "accounts_receivable_p1",
+        "accounts_receivable_p2",
+        "accounts_receivable_p3",
+        "accounts_receivable_p4",
+        "accounts_receivable_p5",
+        "alloy_consumption_p1",
+        "alloy_consumption_p2",
+        "alloy_consumption_p3",
+        "alloy_consumption_p4",
+        "alloy_consumption_p5",
+        "alloy_purchase_cost_p1",
+        "alloy_purchase_cost_p2",
+        "alloy_purchase_cost_p3",
+        "alloy_purchase_cost_p4",
+        "alloy_purchase_cost_p5",
+        "alloy_purchase_volume_p1",
+        "alloy_purchase_volume_p2",
+        "alloy_purchase_volume_p3",
+        "alloy_purchase_volume_p4",
+        "alloy_purchase_volume_p5",
+        "alpha_full_revenue_p1",
+        "alpha_full_revenue_p2",
+        "alpha_full_revenue_p3",
+        "alpha_full_revenue_p4",
+        "alpha_full_revenue_p5"
+      ]
+    },
+    {
+      "id": "01-UNIT",
+      "category": "交付与来源完整性",
+      "importance": "次需",
+      "weight": 1,
+      "method": "agent",
+      "rubric_method": "agent",
+      "status": "not_executed",
+      "reason": "该条需要独立语义/结构评审，不能从数值结果推断"
+    },
+    {
+      "id": "X-IF-001a",
+      "category": "交付与来源完整性",
+      "importance": "主需",
+      "weight": 3,
+      "method": "rule",
+      "rubric_method": "rule",
+      "status": "pass",
+      "missing": []
+    },
+    {
+      "id": "X-IF-002",
+      "category": "交付与来源完整性",
+      "importance": "主需",
+      "weight": 3,
+      "method": "rule",
+      "rubric_method": "rule",
+      "status": "pass",
+      "required": [
+        "Inputs",
+        "Results"
+      ],
+      "actual": [
+        "Inputs",
+        "Calc",
+        "Sensitivity",
+        "Results"
+      ]
+    },
+    {
+      "id": "02-SBC",
+      "category": "历史与会计口径",
+      "importance": "主需",
+      "weight": 3,
+      "method": "rule",
+      "rubric_method": "rule",
+      "status": "not_executed",
+      "evidence_keys": []
+    },
+    {
+      "id": "X-IN-001",
+      "category": "历史与会计口径",
+      "importance": "主需",
+      "weight": 3,
+      "method": "rule",
+      "rubric_method": "rule",
+      "status": "fail",
+      "mismatches": [
+        {
+          "key": "公开冻结事实、假设与输出键（无答案公式）",
+          "reason": "missing_semantic_input"
+        },
+        {
+          "key": "金额百万元，P1 起向量横向位于 C/D/E…；各语义键的唯一列 B 说明其量纲。",
+          "reason": "missing_semantic_input"
+        },
+        {
+          "key": "key",
+          "reason": "missing_semantic_input"
+        },
+        {
+          "key": "valuation_date",
+          "index": 0,
+          "expected": "公开事实或假设；日期",
+          "actual": "日期"
+        },
+        {
+          "key": "last_fy_end",
+          "index": 0,
+          "expected": "公开事实或假设；日期",
+          "actual": "日期"
+        },
+        {
+          "key": "opening.ppe",
+          "index": 0,
+          "expected": "公开事实或假设；百万元",
+          "actual": "百万元"
+        },
+        {
+          "key": "opening.accounts_receivable",
+          "index": 0,
+          "expected": "公开事实或假设；百万元",
+          "actual": "百万元"
+        },
+        {
+          "key": "opening.raw_alloy",
+          "index": 0,
+          "expected": "公开事实或假设；百万元",
+          "actual": "百万元"
+        },
+        {
+          "key": "opening.raw_resin",
+          "index": 0,
+          "expected": "公开事实或假设；百万元",
+          "actual": "百万元"
+        },
+        {
+          "key": "opening.raw_steel",
+          "index": 0,
+          "expected": "公开事实或假设；百万元",
+          "actual": "百万元"
+        },
+        {
+          "key": "opening.wip",
+          "index": 0,
+          "expected": "公开事实或假设；百万元",
+          "actual": "百万元"
+        },
+        {
+          "key": "opening.finished_goods",
+          "index": 0,
+          "expected": "公开事实或假设；百万元",
+          "actual": "百万元"
+        },
+        {
+          "key": "opening.accounts_payable",
+          "index": 0,
+          "expected": "公开事实或假设；百万元",
+          "actual": "百万元"
+        },
+        {
+          "key": "assumptions.tax",
+          "index": 0,
+          "expected": "公开事实或假设；小数",
+          "actual": "小数"
+        },
+        {
+          "key": "assumptions.wacc",
+          "index": 0,
+          "expected": "公开事实或假设；小数",
+          "actual": "小数"
+        },
+        {
+          "key": "assumptions.g",
+          "index": 0,
+          "expected": "公开事实或假设；小数",
+          "actual": "小数"
+        },
+        {
+          "key": "assumptions.ppe_depreciation_rate",
+          "index": 0,
+          "expected": "公开事实或假设；小数",
+          "actual": "小数"
+        },
+        {
+          "key": "assumptions.fixed_capex",
+          "index": 0,
+          "expected": "公开事实或假设；百万元/完整财年",
+          "actual": "百万元/完整财年"
+        },
+        {
+          "key": "assumptions.expansion_capex",
+          "index": 0,
+          "expected": "公开事实或假设；百万元/完整财年",
+          "actual": "百万元/完整财年"
+        },
+        {
+          "key": "assumptions.selling_expense_pct",
+          "index": 0,
+          "expected": "公开事实或假设；小数",
+          "actual": "小数"
+        },
+        {
+          "key": "assumptions.admin_expense",
+          "index": 0,
+          "expected": "公开事实或假设；百万元/完整财年",
+          "actual": "百万元/完整财年"
+        },
+        {
+          "key": "assumptions.sbc",
+          "index": 0,
+          "expected": "公开事实或假设；百万元/完整财年",
+          "actual": "百万元/完整财年"
+        },
+        {
+          "key": "assumptions.fixed_manufacturing_cost",
+          "index": 0,
+          "expected": "公开事实或假设；百万元/完整财年",
+          "actual": "百万元/完整财年"
+        },
+        {
+          "key": "assumptions.ar_days",
+          "index": 0,
+          "expected": "公开事实或假设；天",
+          "actual": "天"
+        },
+        {
+          "key": "assumptions.raw_days",
+          "index": 0,
+          "expected": "公开事实或假设；天",
+          "actual": "天"
+        },
+        {
+          "key": "assumptions.wip_days",
+          "index": 0,
+          "expected": "公开事实或假设；天",
+          "actual": "天"
+        },
+        {
+          "key": "assumptions.fg_days",
+          "index": 0,
+          "expected": "公开事实或假设；天",
+          "actual": "天"
+        },
+        {
+          "key": "assumptions.ap_days",
+          "index": 0,
+          "expected": "公开事实或假设；天",
+          "actual": "天"
+        },
+        {
+          "key": "assumptions.sensitivity_alloy_multiplier",
+          "index": 0,
+          "expected": "公开事实或假设；倍",
+          "actual": "倍"
+        },
+        {
+          "key": "assumptions.sensitivity_yield_multiplier",
+          "index": 0,
+          "expected": "公开事实或假设；倍",
+          "actual": "倍"
+        }
+      ]
+    },
+    {
+      "id": "X-IN-007",
+      "category": "历史与会计口径",
+      "importance": "主需",
+      "weight": 3,
+      "method": "rule",
+      "rubric_method": "rule",
+      "status": "not_executed",
+      "reason": "该条需要独立语义/结构评审，不能从数值结果推断"
+    },
+    {
+      "id": "A-DRIVER",
+      "category": "经营预测",
+      "importance": "主需",
+      "weight": 3,
+      "method": "rule",
+      "rubric_method": "rule",
+      "status": "fail",
+      "evidence_keys": [
+        "alpha_good_volume_p1",
+        "alpha_good_volume_p2",
+        "alpha_good_volume_p3",
+        "alpha_good_volume_p4",
+        "alpha_good_volume_p5",
+        "alpha_input_p1",
+        "alpha_input_p2",
+        "alpha_input_p3",
+        "alpha_input_p4",
+        "alpha_input_p5",
+        "alpha_sales_p1",
+        "alpha_sales_p2",
+        "alpha_sales_p3",
+        "alpha_sales_p4",
+        "alpha_sales_p5",
+        "beta_good_volume_p1",
+        "beta_good_volume_p2",
+        "beta_good_volume_p3",
+        "beta_good_volume_p4",
+        "beta_good_volume_p5",
+        "beta_input_p1",
+        "beta_input_p2",
+        "beta_input_p3",
+        "beta_input_p4",
+        "beta_input_p5",
+        "beta_sales_p1",
+        "beta_sales_p2",
+        "beta_sales_p3",
+        "beta_sales_p4",
+        "beta_sales_p5"
+      ],
+      "failed_keys": [
+        "alpha_good_volume_p1",
+        "alpha_good_volume_p2",
+        "alpha_good_volume_p3",
+        "alpha_good_volume_p4",
+        "alpha_good_volume_p5",
+        "alpha_input_p1",
+        "alpha_input_p2",
+        "alpha_input_p3",
+        "alpha_input_p4",
+        "alpha_input_p5",
+        "alpha_sales_p1",
+        "alpha_sales_p2",
+        "alpha_sales_p3",
+        "alpha_sales_p4",
+        "alpha_sales_p5",
+        "beta_good_volume_p1",
+        "beta_good_volume_p2",
+        "beta_good_volume_p3",
+        "beta_good_volume_p4",
+        "beta_good_volume_p5",
+        "beta_input_p1",
+        "beta_input_p2",
+        "beta_input_p3",
+        "beta_input_p4",
+        "beta_input_p5",
+        "beta_sales_p1",
+        "beta_sales_p2",
+        "beta_sales_p3",
+        "beta_sales_p4",
+        "beta_sales_p5"
+      ]
+    },
+    {
+      "id": "A-MFG-UTIL",
+      "category": "经营预测",
+      "importance": "主需",
+      "weight": 3,
+      "method": "rule",
+      "rubric_method": "rule",
+      "status": "fail",
+      "evidence_keys": [
+        "alpha_input_p1",
+        "alpha_input_p2",
+        "alpha_input_p3",
+        "alpha_input_p4",
+        "alpha_input_p5",
+        "beta_input_p1",
+        "beta_input_p2",
+        "beta_input_p3",
+        "beta_input_p4",
+        "beta_input_p5"
+      ],
+      "failed_keys": [
+        "alpha_input_p1",
+        "alpha_input_p2",
+        "alpha_input_p3",
+        "alpha_input_p4",
+        "alpha_input_p5",
+        "beta_input_p1",
+        "beta_input_p2",
+        "beta_input_p3",
+        "beta_input_p4",
+        "beta_input_p5"
+      ]
+    },
+    {
+      "id": "A-MFG-YIELD",
+      "category": "经营预测",
+      "importance": "主需",
+      "weight": 3,
+      "method": "rule",
+      "rubric_method": "rule",
+      "status": "fail",
+      "evidence": {
+        "dependency_check": "yield_applied_once"
+      }
+    },
+    {
+      "id": "A-MFG-BOM",
+      "category": "经营预测",
+      "importance": "主需",
+      "weight": 3,
+      "method": "rule",
+      "rubric_method": "rule",
+      "status": "fail",
+      "evidence": {
+        "dependency_check": "bom_not_revenue_ratio"
+      }
+    },
+    {
+      "id": "A-MFG-PURCHASE",
+      "category": "经营预测",
+      "importance": "主需",
+      "weight": 3,
+      "method": "rule",
+      "rubric_method": "rule",
+      "status": "fail",
+      "evidence": {
+        "dependency_check": "cogs_excludes_purchases"
+      }
+    },
+    {
+      "id": "A-MFG-INVENTORY",
+      "category": "经营预测",
+      "importance": "主需",
+      "weight": 3,
+      "method": "rule",
+      "rubric_method": "rule",
+      "status": "fail",
+      "evidence": {
+        "dependency_check": "three_inventory_pools_separate"
+      }
+    },
+    {
+      "id": "03-NWC",
+      "category": "经营预测",
+      "importance": "主需",
+      "weight": 3,
+      "method": "rule",
+      "rubric_method": "rule",
+      "status": "fail",
+      "evidence_keys": [
+        "delta_nwc_p1",
+        "delta_nwc_p2",
+        "delta_nwc_p3",
+        "delta_nwc_p4",
+        "delta_nwc_p5",
+        "nwc_p1",
+        "nwc_p2",
+        "nwc_p3",
+        "nwc_p4",
+        "nwc_p5"
+      ],
+      "failed_keys": [
+        "delta_nwc_p1",
+        "delta_nwc_p2",
+        "delta_nwc_p3",
+        "delta_nwc_p4",
+        "delta_nwc_p5",
+        "nwc_p1",
+        "nwc_p2",
+        "nwc_p3",
+        "nwc_p4",
+        "nwc_p5"
+      ]
+    },
+    {
+      "id": "B-NWC-OPEN",
+      "category": "经营预测",
+      "importance": "主需",
+      "weight": 3,
+      "method": "rule",
+      "rubric_method": "rule",
+      "status": "fail",
+      "evidence_keys": [
+        "delta_nwc_p1",
+        "nwc_p1"
+      ],
+      "failed_keys": [
+        "delta_nwc_p1",
+        "nwc_p1"
+      ]
+    },
+    {
+      "id": "03-DAYS",
+      "category": "经营预测",
+      "importance": "次需",
+      "weight": 1,
+      "method": "rule",
+      "rubric_method": "rule",
+      "status": "fail",
+      "evidence_keys": [
+        "accounts_payable_p1",
+        "accounts_payable_p2",
+        "accounts_payable_p3",
+        "accounts_payable_p4",
+        "accounts_payable_p5",
+        "accounts_receivable_p1",
+        "accounts_receivable_p2",
+        "accounts_receivable_p3",
+        "accounts_receivable_p4",
+        "accounts_receivable_p5",
+        "delta_nwc_p1",
+        "delta_nwc_p2",
+        "delta_nwc_p3",
+        "delta_nwc_p4",
+        "delta_nwc_p5",
+        "nwc_p1",
+        "nwc_p2",
+        "nwc_p3",
+        "nwc_p4",
+        "nwc_p5"
+      ],
+      "failed_keys": [
+        "accounts_payable_p1",
+        "accounts_payable_p2",
+        "accounts_payable_p3",
+        "accounts_payable_p4",
+        "accounts_payable_p5",
+        "accounts_receivable_p1",
+        "accounts_receivable_p2",
+        "accounts_receivable_p3",
+        "accounts_receivable_p4",
+        "accounts_receivable_p5",
+        "delta_nwc_p1",
+        "delta_nwc_p2",
+        "delta_nwc_p3",
+        "delta_nwc_p4",
+        "delta_nwc_p5",
+        "nwc_p1",
+        "nwc_p2",
+        "nwc_p3",
+        "nwc_p4",
+        "nwc_p5"
+      ]
+    },
+    {
+      "id": "A-REASON",
+      "category": "经营预测",
+      "importance": "次需",
+      "weight": 1,
+      "method": "llm",
+      "rubric_method": "llm",
+      "status": "not_executed",
+      "reason": "该条需要独立语义/结构评审，不能从数值结果推断"
+    },
+    {
+      "id": "05-FCFF",
+      "category": "DCF与估值桥",
+      "importance": "主需",
+      "weight": 3,
+      "method": "rule",
+      "rubric_method": "rule",
+      "status": "fail",
+      "evidence_keys": [
+        "cash_tax_p1",
+        "cash_tax_p2",
+        "cash_tax_p3",
+        "cash_tax_p4",
+        "cash_tax_p5",
+        "fcff_p1",
+        "fcff_p2",
+        "fcff_p3",
+        "fcff_p4",
+        "fcff_p5"
+      ],
+      "failed_keys": [
+        "cash_tax_p1",
+        "cash_tax_p2",
+        "cash_tax_p3",
+        "cash_tax_p4",
+        "cash_tax_p5",
+        "fcff_p1",
+        "fcff_p2",
+        "fcff_p3",
+        "fcff_p4",
+        "fcff_p5"
+      ]
+    },
+    {
+      "id": "05-DF",
+      "category": "DCF与估值桥",
+      "importance": "主需",
+      "weight": 3,
+      "method": "rule",
+      "rubric_method": "rule",
+      "status": "fail",
+      "evidence_keys": [
+        "discount_time_p1",
+        "discount_time_p2",
+        "discount_time_p3",
+        "discount_time_p4",
+        "discount_time_p5"
+      ],
+      "failed_keys": [
+        "discount_time_p1",
+        "discount_time_p2",
+        "discount_time_p3",
+        "discount_time_p4",
+        "discount_time_p5"
+      ]
+    },
+    {
+      "id": "05-TV",
+      "category": "DCF与估值桥",
+      "importance": "主需",
+      "weight": 3,
+      "method": "rule",
+      "rubric_method": "rule",
+      "status": "fail",
+      "evidence_keys": [
+        "pv_terminal",
+        "terminal_value"
+      ],
+      "failed_keys": [
+        "pv_terminal",
+        "terminal_value"
+      ]
+    },
+    {
+      "id": "05-BRIDGE",
+      "category": "DCF与估值桥",
+      "importance": "主需",
+      "weight": 3,
+      "method": "rule",
+      "rubric_method": "rule",
+      "status": "fail",
+      "evidence_keys": [
+        "equity_value"
+      ],
+      "failed_keys": [
+        "equity_value"
+      ]
+    },
+    {
+      "id": "05-DILUTION",
+      "category": "DCF与估值桥",
+      "importance": "次需",
+      "weight": 1,
+      "method": "rule",
+      "rubric_method": "rule",
+      "status": "fail",
+      "evidence_keys": [
+        "diluted_shares"
+      ],
+      "failed_keys": [
+        "diluted_shares"
+      ]
+    },
+    {
+      "id": "05-VPS",
+      "category": "DCF与估值桥",
+      "importance": "主需",
+      "weight": 3,
+      "method": "rule",
+      "rubric_method": "rule",
+      "status": "fail",
+      "evidence_keys": [
+        "value_per_share"
+      ],
+      "failed_keys": [
+        "value_per_share"
+      ]
+    },
+    {
+      "id": "B-RESIDUAL",
+      "category": "DCF与估值桥",
+      "importance": "主需",
+      "weight": 3,
+      "method": "rule",
+      "rubric_method": "rule",
+      "status": "fail",
+      "evidence_keys": [
+        "alpha_full_revenue_p1",
+        "beta_full_revenue_p1",
+        "fcff_p1",
+        "revenue_p1"
+      ],
+      "failed_keys": [
+        "alpha_full_revenue_p1",
+        "beta_full_revenue_p1",
+        "fcff_p1",
+        "revenue_p1"
+      ]
+    },
+    {
+      "id": "06-FORMULA",
+      "category": "公式与模型工程",
+      "importance": "主需",
+      "weight": 3,
+      "method": "rule",
+      "rubric_method": "rule",
+      "status": "fail",
+      "failed_keys": [
+        "accounts_payable_p1",
+        "accounts_payable_p2",
+        "accounts_payable_p3",
+        "accounts_payable_p4",
+        "accounts_payable_p5",
+        "accounts_receivable_p1",
+        "accounts_receivable_p2",
+        "accounts_receivable_p3",
+        "accounts_receivable_p4",
+        "accounts_receivable_p5",
+        "alloy_consumption_p1",
+        "alloy_consumption_p2",
+        "alloy_consumption_p3",
+        "alloy_consumption_p4",
+        "alloy_consumption_p5",
+        "alloy_purchase_cost_p1",
+        "alloy_purchase_cost_p2",
+        "alloy_purchase_cost_p3",
+        "alloy_purchase_cost_p4",
+        "alloy_purchase_cost_p5",
+        "alloy_purchase_volume_p1",
+        "alloy_purchase_volume_p2",
+        "alloy_purchase_volume_p3",
+        "alloy_purchase_volume_p4",
+        "alloy_purchase_volume_p5",
+        "alpha_full_revenue_p1",
+        "alpha_full_revenue_p2",
+        "alpha_full_revenue_p3",
+        "alpha_full_revenue_p4",
+        "alpha_full_revenue_p5"
+      ],
+      "evidence_keys": [
+        "accounts_payable_p1",
+        "accounts_payable_p2",
+        "accounts_payable_p3",
+        "accounts_payable_p4",
+        "accounts_payable_p5",
+        "accounts_receivable_p1",
+        "accounts_receivable_p2",
+        "accounts_receivable_p3",
+        "accounts_receivable_p4",
+        "accounts_receivable_p5",
+        "alloy_consumption_p1",
+        "alloy_consumption_p2",
+        "alloy_consumption_p3",
+        "alloy_consumption_p4",
+        "alloy_consumption_p5",
+        "alloy_purchase_cost_p1",
+        "alloy_purchase_cost_p2",
+        "alloy_purchase_cost_p3",
+        "alloy_purchase_cost_p4",
+        "alloy_purchase_cost_p5",
+        "alloy_purchase_volume_p1",
+        "alloy_purchase_volume_p2",
+        "alloy_purchase_volume_p3",
+        "alloy_purchase_volume_p4",
+        "alloy_purchase_volume_p5",
+        "alpha_full_revenue_p1",
+        "alpha_full_revenue_p2",
+        "alpha_full_revenue_p3",
+        "alpha_full_revenue_p4",
+        "alpha_full_revenue_p5",
+        "alpha_good_volume_p1",
+        "alpha_good_volume_p2",
+        "alpha_good_volume_p3",
+        "alpha_good_volume_p4",
+        "alpha_good_volume_p5",
+        "alpha_input_p1",
+        "alpha_input_p2",
+        "alpha_input_p3",
+        "alpha_input_p4",
+        "alpha_input_p5",
+        "alpha_sales_p1",
+        "alpha_sales_p2",
+        "alpha_sales_p3",
+        "alpha_sales_p4",
+        "alpha_sales_p5",
+        "beta_full_revenue_p1",
+        "beta_full_revenue_p2",
+        "beta_full_revenue_p3",
+        "beta_full_revenue_p4",
+        "beta_full_revenue_p5",
+        "beta_good_volume_p1",
+        "beta_good_volume_p2",
+        "beta_good_volume_p3",
+        "beta_good_volume_p4",
+        "beta_good_volume_p5",
+        "beta_input_p1",
+        "beta_input_p2",
+        "beta_input_p3",
+        "beta_input_p4",
+        "beta_input_p5",
+        "beta_sales_p1",
+        "beta_sales_p2",
+        "beta_sales_p3",
+        "beta_sales_p4",
+        "beta_sales_p5",
+        "capex_p1",
+        "capex_p2",
+        "capex_p3",
+        "capex_p4",
+        "capex_p5",
+        "cash_tax_p1",
+        "cash_tax_p2",
+        "cash_tax_p3",
+        "cash_tax_p4",
+        "cash_tax_p5",
+        "cogs_full_p1",
+        "cogs_full_p2",
+        "cogs_full_p3",
+        "cogs_full_p4",
+        "cogs_full_p5",
+        "conversion_cogs_full_p1",
+        "conversion_cogs_full_p2",
+        "conversion_cogs_full_p3",
+        "conversion_cogs_full_p4",
+        "conversion_cogs_full_p5",
+        "da_p1",
+        "da_p2",
+        "da_p3",
+        "da_p4",
+        "da_p5",
+        "delta_nwc_p1",
+        "delta_nwc_p2",
+        "delta_nwc_p3",
+        "delta_nwc_p4",
+        "delta_nwc_p5",
+        "diluted_shares",
+        "discount_time_p1",
+        "discount_time_p2",
+        "discount_time_p3",
+        "discount_time_p4",
+        "discount_time_p5",
+        "ebit_p1",
+        "ebit_p2",
+        "ebit_p3",
+        "ebit_p4",
+        "ebit_p5",
+        "enterprise_value",
+        "equity_value",
+        "fcff_p1",
+        "fcff_p2",
+        "fcff_p3",
+        "fcff_p4",
+        "fcff_p5",
+        "finished_goods_close_p1",
+        "finished_goods_close_p2",
+        "finished_goods_close_p3",
+        "finished_goods_close_p4",
+        "finished_goods_close_p5",
+        "material_cogs_full_p1",
+        "material_cogs_full_p2",
+        "material_cogs_full_p3",
+        "material_cogs_full_p4",
+        "material_cogs_full_p5",
+        "nwc_p1",
+        "nwc_p2",
+        "nwc_p3",
+        "nwc_p4",
+        "nwc_p5",
+        "ppe_close_p1",
+        "ppe_close_p2",
+        "ppe_close_p3",
+        "ppe_close_p4",
+        "ppe_close_p5",
+        "pv_explicit",
+        "pv_terminal",
+        "raw_alloy_close_p1",
+        "raw_alloy_close_p2",
+        "raw_alloy_close_p3",
+        "raw_alloy_close_p4",
+        "raw_alloy_close_p5",
+        "raw_resin_close_p1",
+        "raw_resin_close_p2",
+        "raw_resin_close_p3",
+        "raw_resin_close_p4",
+        "raw_resin_close_p5",
+        "raw_steel_close_p1",
+        "raw_steel_close_p2",
+        "raw_steel_close_p3",
+        "raw_steel_close_p4",
+        "raw_steel_close_p5",
+        "resin_consumption_p1",
+        "resin_consumption_p2",
+        "resin_consumption_p3",
+        "resin_consumption_p4",
+        "resin_consumption_p5",
+        "resin_purchase_cost_p1",
+        "resin_purchase_cost_p2",
+        "resin_purchase_cost_p3",
+        "resin_purchase_cost_p4",
+        "resin_purchase_cost_p5",
+        "resin_purchase_volume_p1",
+        "resin_purchase_volume_p2",
+        "resin_purchase_volume_p3",
+        "resin_purchase_volume_p4",
+        "resin_purchase_volume_p5",
+        "revenue_p1",
+        "revenue_p2",
+        "revenue_p3",
+        "revenue_p4",
+        "revenue_p5",
+        "sensitivity_r1_c1",
+        "sensitivity_r1_c2",
+        "sensitivity_r1_c3",
+        "sensitivity_r1_c4",
+        "sensitivity_r1_c5",
+        "sensitivity_r2_c1",
+        "sensitivity_r2_c2",
+        "sensitivity_r2_c3",
+        "sensitivity_r2_c4",
+        "sensitivity_r2_c5",
+        "sensitivity_r3_c1",
+        "sensitivity_r3_c2",
+        "sensitivity_r3_c3",
+        "sensitivity_r3_c4",
+        "sensitivity_r3_c5",
+        "sensitivity_r4_c1",
+        "sensitivity_r4_c2",
+        "sensitivity_r4_c3",
+        "sensitivity_r4_c4",
+        "sensitivity_r4_c5",
+        "sensitivity_r5_c1",
+        "sensitivity_r5_c2",
+        "sensitivity_r5_c3",
+        "sensitivity_r5_c4",
+        "sensitivity_r5_c5",
+        "steel_consumption_p1",
+        "steel_consumption_p2",
+        "steel_consumption_p3",
+        "steel_consumption_p4",
+        "steel_consumption_p5",
+        "steel_purchase_cost_p1",
+        "steel_purchase_cost_p2",
+        "steel_purchase_cost_p3",
+        "steel_purchase_cost_p4",
+        "steel_purchase_cost_p5",
+        "steel_purchase_volume_p1",
+        "steel_purchase_volume_p2",
+        "steel_purchase_volume_p3",
+        "steel_purchase_volume_p4",
+        "steel_purchase_volume_p5",
+        "terminal_value",
+        "value_per_share",
+        "wacc",
+        "wip_close_p1",
+        "wip_close_p2",
+        "wip_close_p3",
+        "wip_close_p4",
+        "wip_close_p5"
+      ]
+    },
+    {
+      "id": "06-RECALC",
+      "category": "公式与模型工程",
+      "importance": "主需",
+      "weight": 3,
+      "method": "rule",
+      "rubric_method": "rule",
+      "status": "pass",
+      "failed_keys": [],
+      "evidence_keys": []
+    },
+    {
+      "id": "06-PERTURB1",
+      "category": "公式与模型工程",
+      "importance": "主需",
+      "weight": 3,
+      "method": "rule",
+      "rubric_method": "rule",
+      "status": "fail",
+      "evidence": {
+        "id": 1,
+        "checked": 218,
+        "mismatches": [
+          {
+            "key": "alloy_consumption_p1",
+            "actual": 698.25,
+            "expected": 736.73
+          },
+          {
+            "key": "alloy_purchase_volume_p1",
+            "actual": 492.751643835616,
+            "expected": 522.5868219178083
+          },
+          {
+            "key": "alloy_purchase_cost_p1",
+            "actual": 615.939554794521,
+            "expected": 653.2335273972603
+          },
+          {
+            "key": "material_cogs_full_p1",
+            "actual": 2352.75196,
+            "expected": 2399.40896
+          },
+          {
+            "key": "cogs_full_p1",
+            "actual": 2435.18076,
+            "expected": 2481.8377600000003
+          },
+          {
+            "key": "raw_alloy_close_p1",
+            "actual": 59.7816780821918,
+            "expected": 63.076198630136986
+          },
+          {
+            "key": "wip_close_p1",
+            "actual": 129.585920547945,
+            "expected": 131.95797534246574
+          },
+          {
+            "key": "finished_goods_close_p1",
+            "actual": 200.151843287671,
+            "expected": 203.98666520547948
+          },
+          {
+            "key": "accounts_payable_p1",
+            "actual": 199.454837507975,
+            "expected": 203.74619873897538
+          },
+          {
+            "key": "ebit_p1",
+            "actual": 282.744666406488,
+            "expected": 249.76519791333672
+          },
+          {
+            "key": "cash_tax_p1",
+            "actual": 50.8370091639031,
+            "expected": 43.251731410478406
+          },
+          {
+            "key": "nwc_p1",
+            "actual": 797.141983171477,
+            "expected": 802.3520192007506
+          },
+          {
+            "key": "delta_nwc_p1",
+            "actual": 327.141983171477,
+            "expected": 332.35201920075065
+          },
+          {
+            "key": "fcff_p1",
+            "actual": -167.332956065879,
+            "expected": -197.93718283487863
+          },
+          {
+            "key": "alloy_purchase_volume_p2",
+            "actual": 747.019240824009,
+            "expected": 746.9467192773476
+          },
+          {
+            "key": "alloy_purchase_cost_p2",
+            "actual": 978.595205479452,
+            "expected": 1030.7864726027397
+          },
+          {
+            "key": "material_cogs_full_p2",
+            "actual": 2617.508735,
+            "expected": 2668.0515525
+          },
+          {
+            "key": "cogs_full_p2",
+            "actual": 2708.9945225,
+            "expected": 2759.53734
+          },
+          {
+            "key": "raw_alloy_close_p2",
+            "actual": 64.0643835616438,
+            "expected": 67.4876712328767
+          },
+          {
+            "key": "wip_close_p2",
+            "actual": 143.131931506849,
+            "expected": 145.69939726027397
+          }
+        ]
+      }
+    },
+    {
+      "id": "06-PERTURB2",
+      "category": "公式与模型工程",
+      "importance": "主需",
+      "weight": 3,
+      "method": "rule",
+      "rubric_method": "rule",
+      "status": "fail",
+      "evidence": {
+        "id": 2,
+        "checked": 218,
+        "mismatches": [
+          {
+            "key": "alloy_purchase_volume_p1",
+            "actual": 492.751643835616,
+            "expected": 504.2297260273973
+          },
+          {
+            "key": "alloy_purchase_cost_p1",
+            "actual": 615.939554794521,
+            "expected": 630.2871575342466
+          },
+          {
+            "key": "resin_purchase_volume_p1",
+            "actual": 627.350161892902,
+            "expected": 642.6263262764634
+          },
+          {
+            "key": "resin_purchase_cost_p1",
+            "actual": 276.034071232877,
+            "expected": 282.7555835616439
+          },
+          {
+            "key": "steel_purchase_volume_p1",
+            "actual": 1051.7298630137,
+            "expected": 1075.4142465753423
+          },
+          {
+            "key": "steel_purchase_cost_p1",
+            "actual": 841.383890410959,
+            "expected": 860.3313972602739
+          },
+          {
+            "key": "raw_alloy_close_p1",
+            "actual": 59.7816780821918,
+            "expected": 74.1292808219178
+          },
+          {
+            "key": "raw_resin_close_p1",
+            "actual": 28.006301369863,
+            "expected": 34.72781369863014
+          },
+          {
+            "key": "raw_steel_close_p1",
+            "actual": 78.9479452054794,
+            "expected": 97.89545205479452
+          },
+          {
+            "key": "accounts_payable_p1",
+            "actual": 199.454837507975,
+            "expected": 204.0594898930381
+          },
+          {
+            "key": "nwc_p1",
+            "actual": 797.141983171477,
+            "expected": 832.5539527042222
+          },
+          {
+            "key": "delta_nwc_p1",
+            "actual": 327.141983171477,
+            "expected": 362.5539527042222
+          },
+          {
+            "key": "fcff_p1",
+            "actual": -167.332956065879,
+            "expected": -202.74492559862404
+          },
+          {
+            "key": "alpha_input_p2",
+            "actual": 322.5,
+            "expected": 330.0
+          },
+          {
+            "key": "alpha_good_volume_p2",
+            "actual": 295.0875,
+            "expected": 301.95
+          },
+          {
+            "key": "alpha_sales_p2",
+            "actual": 287.7103125,
+            "expected": 294.40125
+          },
+          {
+            "key": "alpha_full_revenue_p2",
+            "actual": 2085.899765625,
+            "expected": 2134.4090625
+          },
+          {
+            "key": "alloy_consumption_p2",
+            "actual": 743.75,
+            "expected": 753.8
+          },
+          {
+            "key": "alloy_purchase_volume_p2",
+            "actual": 747.019240824009,
+            "expected": 746.7776942382098
+          },
+          {
+            "key": "alloy_purchase_cost_p2",
+            "actual": 978.595205479452,
+            "expected": 978.278779452055
+          }
+        ]
+      }
+    },
+    {
+      "id": "06-LINKS",
+      "category": "公式与模型工程",
+      "importance": "主需",
+      "weight": 3,
+      "method": "rule",
+      "rubric_method": "rule",
+      "status": "pass",
+      "failed_keys": []
+    },
+    {
+      "id": "06-FREE",
+      "category": "公式与模型工程",
+      "importance": "次需",
+      "weight": 1,
+      "method": "rule",
+      "rubric_method": "rule",
+      "status": "pass",
+      "note": "语义键发现器实际读取成功；不依赖固定行号"
+    },
+    {
+      "id": "X-FM-002",
+      "category": "公式与模型工程",
+      "importance": "主需",
+      "weight": 3,
+      "method": "rule",
+      "rubric_method": "rule",
+      "status": "not_executed",
+      "reason": "该条需要独立语义/结构评审，不能从数值结果推断"
+    },
+    {
+      "id": "X-FM-005",
+      "category": "公式与模型工程",
+      "importance": "主需",
+      "weight": 3,
+      "method": "rule",
+      "rubric_method": "rule",
+      "status": "not_executed",
+      "reason": "该条需要独立语义/结构评审，不能从数值结果推断"
+    },
+    {
+      "id": "X-IC-001",
+      "category": "公式与模型工程",
+      "importance": "主需",
+      "weight": 3,
+      "method": "rule",
+      "rubric_method": "rule",
+      "status": "fail",
+      "evidence_keys": [
+        "sensitivity_r3_c3"
+      ],
+      "failed_keys": [
+        "sensitivity_r3_c3"
+      ]
+    },
+    {
+      "id": "X-IC-002",
+      "category": "公式与模型工程",
+      "importance": "主需",
+      "weight": 3,
+      "method": "rule",
+      "rubric_method": "rule",
+      "status": "not_executed",
+      "reason": "该条需要独立语义/结构评审，不能从数值结果推断"
+    },
+    {
+      "id": "X-IF-003",
+      "category": "公式与模型工程",
+      "importance": "主需",
+      "weight": 3,
+      "method": "rule",
+      "rubric_method": "rule",
+      "status": "fail",
+      "evidence": {
+        "dependency_check": "sensitivity_full_recalculation"
+      }
+    },
+    {
+      "id": "09-MEMO",
+      "category": "表达与专业可用性",
+      "importance": "次需",
+      "weight": 1,
+      "method": "llm",
+      "rubric_method": "llm",
+      "status": "not_executed",
+      "reason": "该条需要独立语义/结构评审，不能从数值结果推断"
+    },
+    {
+      "id": "09-READABLE",
+      "category": "表达与专业可用性",
+      "importance": "次需",
+      "weight": 1,
+      "method": "agent",
+      "rubric_method": "agent",
+      "status": "not_executed",
+      "reason": "该条需要独立语义/结构评审，不能从数值结果推断"
+    },
+    {
+      "id": "X-TA-004",
+      "category": "表达与专业可用性",
+      "importance": "次需",
+      "weight": 1,
+      "method": "rule",
+      "rubric_method": "agent",
+      "status": "fail",
+      "evidence": {
+        "X-TA-004": false,
+        "X-TA-006": {
+          "fcff": false,
+          "ebit": false,
+          "da": false,
+          "capex": false,
+          "delta_nwc": false,
+          "tax": false
+        },
+        "X-TA-007": false
+      }
+    },
+    {
+      "id": "X-TA-006",
+      "category": "表达与专业可用性",
+      "importance": "次需",
+      "weight": 1,
+      "method": "rule",
+      "rubric_method": "agent",
+      "status": "fail",
+      "evidence": {
+        "fcff": false,
+        "ebit": false,
+        "da": false,
+        "capex": false,
+        "delta_nwc": false,
+        "tax": false
+      }
+    },
+    {
+      "id": "X-TA-007",
+      "category": "表达与专业可用性",
+      "importance": "次需",
+      "weight": 1,
+      "method": "rule",
+      "rubric_method": "agent",
+      "status": "fail",
+      "evidence": {
+        "X-TA-004": false,
+        "X-TA-006": {
+          "fcff": false,
+          "ebit": false,
+          "da": false,
+          "capex": false,
+          "delta_nwc": false,
+          "tax": false
+        },
+        "X-TA-007": false
+      }
+    },
+    {
+      "id": "A-METRIC",
+      "category": "经营预测",
+      "importance": "主需",
+      "weight": 3,
+      "method": "rule",
+      "rubric_method": "rule",
+      "status": "fail",
+      "evidence_keys": [
+        "alpha_good_volume_p1",
+        "alpha_good_volume_p2",
+        "alpha_good_volume_p3",
+        "alpha_good_volume_p4",
+        "alpha_good_volume_p5",
+        "beta_good_volume_p1",
+        "beta_good_volume_p2",
+        "beta_good_volume_p3",
+        "beta_good_volume_p4",
+        "beta_good_volume_p5"
+      ],
+      "failed_keys": [
+        "alpha_good_volume_p1",
+        "alpha_good_volume_p2",
+        "alpha_good_volume_p3",
+        "alpha_good_volume_p4",
+        "alpha_good_volume_p5",
+        "beta_good_volume_p1",
+        "beta_good_volume_p2",
+        "beta_good_volume_p3",
+        "beta_good_volume_p4",
+        "beta_good_volume_p5"
+      ]
+    },
+    {
+      "id": "03-MARGIN",
+      "category": "经营预测",
+      "importance": "主需",
+      "weight": 3,
+      "method": "rule",
+      "rubric_method": "rule",
+      "status": "fail",
+      "evidence_keys": [
+        "ebit_p1",
+        "ebit_p2",
+        "ebit_p3",
+        "ebit_p4",
+        "ebit_p5"
+      ],
+      "failed_keys": [
+        "ebit_p1",
+        "ebit_p2",
+        "ebit_p3",
+        "ebit_p4",
+        "ebit_p5"
+      ]
+    }
+  ],
+  "semantic_pending": [
+    "01-UNIT",
+    "A-REASON",
+    "09-MEMO",
+    "09-READABLE",
+    "X-TA-004",
+    "X-TA-006",
+    "X-TA-007"
+  ],
+  "unexecuted_rules": [
+    "02-SBC",
+    "X-IN-007",
+    "X-FM-002",
+    "X-FM-005",
+    "X-IC-002"
+  ]
+}

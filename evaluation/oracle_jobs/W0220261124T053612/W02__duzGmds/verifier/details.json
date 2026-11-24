@@ -1,0 +1,129 @@
+{
+  "schema_version": "dcf-v3-w-grade-v1",
+  "task_id": "W02",
+  "reward": 1.0,
+  "mechanism_score": 1.0,
+  "hard_gate_failures": [],
+  "checks": {
+    "W-VALUE": {
+      "passed": true,
+      "evidence": {
+        "missing": [],
+        "incorrect": [],
+        "duplicates": []
+      },
+      "weight": 3,
+      "method": "rule"
+    },
+    "W-SOURCE": {
+      "passed": true,
+      "evidence": [],
+      "weight": 3,
+      "method": "rule"
+    },
+    "W-CROSS": {
+      "passed": true,
+      "evidence": {
+        "expected_difference": 0.0,
+        "submitted": 0.0
+      },
+      "weight": 3,
+      "method": "rule"
+    },
+    "01-FILE": {
+      "passed": true,
+      "evidence": null,
+      "weight": 3,
+      "method": "rule"
+    },
+    "W-USED": {
+      "passed": true,
+      "evidence": [],
+      "weight": 3,
+      "method": "rule"
+    },
+    "W-OPERATING-RECALC": {
+      "passed": true,
+      "evidence": null,
+      "weight": 3,
+      "method": "rule"
+    },
+    "05-FCFF": {
+      "passed": true,
+      "evidence": null,
+      "weight": 3,
+      "method": "rule"
+    },
+    "05-TV": {
+      "passed": true,
+      "evidence": 76728.26399064623,
+      "weight": 3,
+      "method": "rule"
+    },
+    "05-BRIDGE": {
+      "passed": true,
+      "evidence": 81975.26399064623,
+      "weight": 3,
+      "method": "rule"
+    },
+    "05-VPS": {
+      "passed": true,
+      "evidence": null,
+      "weight": 3,
+      "method": "rule"
+    },
+    "06-FORMULA": {
+      "passed": true,
+      "evidence": null,
+      "weight": 3,
+      "method": "rule"
+    },
+    "06-RECALC": {
+      "passed": true,
+      "evidence": null,
+      "weight": 3,
+      "method": "rule"
+    },
+    "06-PERTURB1": {
+      "passed": true,
+      "evidence": 71833.2527644415,
+      "weight": 3,
+      "method": "rule"
+    },
+    "06-PERTURB2": {
+      "passed": true,
+      "evidence": 78985.8825805492,
+      "weight": 3,
+      "method": "rule"
+    },
+    "W-SOURCE-PERTURB": {
+      "passed": true,
+      "evidence": {
+        "enterprise_value": 82198.6426068794,
+        "revenue_y1": 285877.9455
+      },
+      "weight": 3,
+      "method": "rule"
+    },
+    "W-FAILURE-RECORD": {
+      "passed": true,
+      "evidence": {
+        "failed_items": 0,
+        "memo_present": true
+      },
+      "weight": 1,
+      "method": "rule"
+    }
+  },
+  "nonmechanical_judgments": {
+    "W-NOFORBID": {
+      "status": "not_run",
+      "reason": "禁止来源与截止日使用需独立代理检查全部取数行为；仅验证已声明来源不代表完整行为审计。"
+    },
+    "W-FAILURE": {
+      "status": "not_run",
+      "reason": "memo 语义说明需独立 llm 评审，未执行不记通过。"
+    }
+  },
+  "source_truth_scope": "仅核验截止日前原始 SEC 快照与 DGS10 本地序列，不把生成器本地验证视为候选联网成功。"
+}

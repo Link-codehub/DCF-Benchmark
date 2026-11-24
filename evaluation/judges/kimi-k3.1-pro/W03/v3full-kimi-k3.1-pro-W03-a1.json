@@ -1,0 +1,93 @@
+{
+  "task": "W03",
+  "judge_model": "claude-opus-5-5",
+  "generated": "2026-11-23T00:28:18.246025+00:00",
+  "llm": {
+    "09-MEMO": {
+      "status": "fail",
+      "rationale": "已提交 memo.md，局限披露充分：WACC 为国债收益率加 3 个百分点的简化开放口径；增长等假设为开放情景，不是公司指引；现金取用含受限现金的标签；网络部分写明“配置存在不等于白名单已经验证生效”，且未做阻断对照测试。不足在于价值驱动：memo 只列出 WACC±50bp 和 g±25bp 的扰动结果（WACC 上升 50bp 时每股 37.37 美元，下降 50bp 时 47.46 美元；g 上升 25bp 时 44.55 美元，下降 25bp 时 39.56 美元），没有明确指出哪项是最重要的价值驱动并说明原因。memo 未写明 WACC 或终值是主导因素，未给出终值占企业价值的比例，也未把这些敏感度与 EBIT 率、收入增长等经营假设比较。仅凭数字推断不能视为已说明最重要的价值驱动，证据不足，判 0。",
+      "judge_model": "claude-opus-5-5",
+      "attempts": [
+        {
+          "attempt": 1,
+          "error": null,
+          "text_chars": 419
+        }
+      ]
+    },
+    "W-FAILURE": {
+      "status": "pass",
+      "rationale": "memo 对取数失败与数据冲突均有逐项披露，并说明了处理方法：（1）取数失败：请求错误候选申报路径 000082922424000062 返回 HTTP 404，未从该路径取数，后按 companyfacts 给出的正确申报号 000082922424000057 成功取回，并说明不影响必需字段；（2）标签缺失：CashAndCashEquivalentsAtCarryingValue 无合规事实，按合同顺序改用 CashCashEquivalentsRestrictedCashAndRestrictedCashEquivalents=3,286.2，且未声称其等于不受限现金；（3）口径冲突：ProfitLoss 3,762.3 与归母 NetIncomeLoss 3,760.9 相差 1.4，按合同采用前者，未混用；（4）债务标签：LongTermDebtCurrent 与 ShortTermBorrowings=0 并存，按优先顺序采用前者，不叠加；当期与非当期债务合计与 LongTermDebt 一致，避免重复扣减；（5）交叉验证：差异 0.0，在容差 75.246 内，并注明未强行改成零；（6）国债收益率：2024-11-27 有官方值，无需回退日期；（7）网络：明确披露未做阻断对照测试，不能声称白名单已验证生效。memo 还声明 16 项均成功、无补零。不足：本证据未包含 sources.json 原文，无法直接核对 failed 记录格式；但本项原子要求是如实披露并说明处理方法，memo 证据已明确满足。",
+      "judge_model": "claude-opus-5-5",
+      "attempts": [
+        {
+          "attempt": 1,
+          "error": null,
+          "text_chars": 729
+        }
+      ]
+    },
+    "X-TA-009": {
+      "status": "fail",
+      "rationale": "适用条件成立：题面要求 initial_growth、steady_ebit_margin、tax_rate、da_to_revenue、capex_to_revenue、wacc、terminal_growth 为自行确定的开放假设。memo 中只有 WACC 给出了完整推导：2024-11-27 的 10 年期国债收益率观测值 4.25%，加 3 个百分点开放风险溢价，得到 7.25%。其余假设不满足要求。(1) initial_growth=3%：未引用任何历史收入增长观测值，也没有从观测值到 3% 的计算或映射，只说明是开放情景。(2) terminal_growth=2%：没有任何历史观察或推导依据。(3) EBIT 率、有效税率、D&A 率、CapEx 率：只写了『分别以FY2024实际值为锚』。memo 未列出这四个比率的具体数值，也未写出计算式（例如 operating_income/revenue、income_tax/pretax_income）。model_summary 为空，无法核实 Assumptions 页是否有对应公式。要求是『每个』开放假设均有书面推导，现有证据不足，判 0。",
+      "judge_model": "claude-opus-5-5",
+      "attempts": [
+        {
+          "attempt": 1,
+          "error": null,
+          "text_chars": 571
+        }
+      ]
+    }
+  },
+  "agent": {
+    "status": "scored",
+    "scores": {
+      "01-UNIT": 1,
+      "X-IF-001a": 1,
+      "X-IF-002": 1,
+      "X-FM-002": 1,
+      "X-FM-004": 1,
+      "X-FM-005": 1,
+      "09-READABLE": 1,
+      "X-IN-001": 1,
+      "X-IN-002": 1,
+      "X-IN-003": 1,
+      "X-IN-004": 1,
+      "X-IN-005": 1,
+      "X-IN-006": 1,
+      "X-IN-007": 1,
+      "X-TA-001": 1,
+      "X-TA-004": 1,
+      "X-TA-005": 1,
+      "X-TA-006": 1,
+      "X-TA-007": 1,
+      "W-NOFORBID": 1
+    },
+    "evidence": {
+      "01-UNIT": "Sources!C5:C20 列出 USD_millions、shares_millions 和 decimal；Assumptions!C 列为 decimal 或 USD_millions；DCF!B5:B17 与 Outputs!B5:B7 标出 USD_millions 和 USD_per_share。",
+      "X-IF-001a": "交付目录里有 model.xlsx、sources.json、cross_validation.json、retrieval_map.json、memo.md 五个文件。",
+      "X-IF-002": "openpyxl 读出的 sheetnames 为 ['Sources','Assumptions','Forecast','DCF','Outputs']，正好是要求的五页。",
+      "X-FM-002": "Forecast!C7:G7 用 =C5*Assumptions!$B$6；C18 用 =1/(1+Assumptions!$B$12)^C17；DCF!C7 用 =C6/(Assumptions!$B$12-Assumptions!$B$13)。公式里只有 1 和线性插值步数 (n-1)/4 这类数学常数，没有直接写入业务假设数值。",
+      "X-FM-004": "Forecast!B5 为 =Sources!$B$5；B13 为 =Sources!$B$16-$B$13-$B$14-($B$17-$B$18)；DCF!C5 为 =SUM(Forecast!C19:G19)；DCF!C11:C16 引用 Sources 的 B13、B14、B18、B19、B12；Outputs!C5:C7 为 =DCF!C10、C15、C17。retrieval_map.json 的 16 项都是 live_formula。",
+      "X-FM-005": "Forecast 的 C:G 列（第 4 行表头 FY1/FY2025E 至 FY5/FY2029E）在 revenue、delta_nwc、fcff、discount_years、discount_factor、fcff_present_value 各行中同列对应；例如 C19 为 =C16*C18，G 列对应 G 列。",
+      "09-READABLE": "Forecast!A 列为语义键，第 4 行为期间表头；DCF!D 列为中文口径说明；Assumptions!D 列为中文理由。",
+      "X-IN-001": "Sources!B5=36176.2、B9=3762.3、B13=3286.2、B18=1248.9、B19=14319.5，与 raw/CIK0000829224.json 中 accn 0000829224-24-000057 的事实除以 1e6 后一致；B20=0.0425，对应 raw/ust_daily_2024.csv 中 11/27/2024 的 10 Yr=4.25。",
+      "X-IN-002": "Forecast!C9:G9 都是 =Assumptions!$B$7；C7:G7 统一乘 $B$6，C11:G11 统一乘 $B$8，C12:G12 统一乘 $B$9。",
+      "X-IN-003": "Forecast!C6 为 =Assumptions!$B$5，D6:G6 为 B5+(B13−B5)*(n−1)/4，即线性收敛到 g。Assumptions!B6 为 =Sources!B6/B5，缓存值 0.14951，独立计算 5408.8/36176.2 一致。Forecast!C14 为 =$B$13*(C5/$B$5-1)，值 -135.507，等于 -4516.9×3%。",
+      "X-IN-004": "sources.json 中各项 filed=2024-11-20（不晚于 2024-11-27），国债观测日为 2024-11-27。",
+      "X-IN-005": "sources.json 和 Sources!E:F 中流量项期间均为 2023-10-02 至 2024-09-29，form 为 10-K（FY）；时点项期间均为 2024-09-29。",
+      "X-IN-006": "DCF 股权桥使用 2024-09-29 资产负债表上的现金和债务（Sources 第 13、14、18、19 行）；国债收益率取 2024-11-27 当日值。模型未使用股价。",
+      "X-IN-007": "Forecast!C4:G4 为 FY1/FY2025E 至 FY5/FY2029E，共五年。",
+      "X-TA-001": "Sources!G:O 列和 sources.json 每项都有 source_id、field、form、filed、accession、source_url、期间、observed_at 和 source_file。",
+      "X-TA-004": "Forecast 第 17 行 discount_years 在 C17:G17 显示 1 到 5，第 18 行折现因子引用这一行。",
+      "X-TA-005": "Forecast!B 列 FY2024A/FY0 显示 revenue、ebit、da、capex、nwc，公式为 =Sources!...；NWC 值为 -4516.9。",
+      "X-TA-006": "Forecast 中 ebit 在第 7 行，tax_rate 在第 9 行，nopat 在第 10 行，da 在第 11 行，capex 在第 12 行，delta_nwc 在第 14 行，fcff 在第 16 行，各自独立成行。",
+      "X-TA-007": "DCF!C6 为 =Forecast!G16*(1+Assumptions!$B$13)，C7 为 =C6/(Assumptions!$B$12-Assumptions!$B$13)，C9 为 =C7*C8（C8 =Forecast!G18）。",
+      "W-NOFORBID": "sources.json 的 source_url 只有 data.sec.gov 和 home.treasury.gov 两个域名；memo.md 写明未使用股价、目标价和一致预期，所有事实 filed≤截止日。"
+    },
+    "rationale": "五个交付文件和五张工作表都齐全。16 项取数值与 raw companyfacts 文件和财政部 CSV 一致，且都来自截止日前申报的 10-K。预测、终值、股权桥和输出都是从 Sources 经 Assumptions、Forecast、DCF 到 Outputs 的活公式链；期间列对齐，FCFF 各组成部分独立成行，折现期可见，没有直接写入的业务常数。各项均有证据支持，全部给 1。",
+    "seconds": 66.0,
+    "judge_model": "claude-opus-5-5"
+  }
+}

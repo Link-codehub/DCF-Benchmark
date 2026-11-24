@@ -1,0 +1,19 @@
+{
+  "checks": [
+    {
+      "check_id": "pretax_to_net_income",
+      "formula": "pretax_income − income_tax − net_income_consolidated",
+      "pretax_income": 9740,
+      "income_tax": 2373,
+      "net_income_consolidated": 7367,
+      "difference": 0,
+      "tolerance": 147.34,
+      "passed": true,
+      "source_indices": [
+        "pretax_income",
+        "income_tax",
+        "net_income_consolidated"
+      ]
+    }
+  ]
+}

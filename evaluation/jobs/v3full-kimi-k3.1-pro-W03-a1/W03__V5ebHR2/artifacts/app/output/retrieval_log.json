@@ -1,0 +1,90 @@
+{
+  "information_cutoff": "2024-11-27",
+  "fiscal_year": "FY2024",
+  "retrieval_policy": "只使用SEC原始申报与财政部；当前网站仅作事实载体，历史值严格限定filed<=2024-11-27",
+  "retrieval_attempts": [
+    {
+      "url": "https://data.sec.gov/api/xbrl/companyfacts/CIK0000829224.json",
+      "http_status": 200,
+      "observed_at": "2026-11-22T23:59:06Z",
+      "outcome": "成功"
+    },
+    {
+      "url": "https://www.sec.gov/Archives/edgar/data/829224/000082922424000062/sbux-20240929.htm",
+      "http_status": 404,
+      "observed_at": "2026-11-22T23:59:06Z",
+      "outcome": "候选申报号路径失败；未用其取数，随后由companyfacts确定正确申报号"
+    },
+    {
+      "url": "https://www.sec.gov/Archives/edgar/data/829224/000082922424000057/sbux-20240929.htm",
+      "http_status": 200,
+      "observed_at": "2026-11-23T00:03:51Z",
+      "outcome": "成功"
+    },
+    {
+      "url": "https://www.sec.gov/Archives/edgar/data/829224/000082922424000057/sbux-20240929_htm.xml",
+      "http_status": 200,
+      "observed_at": "2026-11-23T00:03:51Z",
+      "outcome": "成功"
+    },
+    {
+      "url": "https://home.treasury.gov/resource-center/data-chart-center/interest-rates/daily-treasury-rates.csv/2024/all?type=daily_treasury_yield_curve&field_tdr_date_value=2024&page=&_format=csv",
+      "http_status": 200,
+      "observed_at": "2026-11-22T23:59:24Z",
+      "outcome": "成功"
+    }
+  ],
+  "raw_files": [
+    {
+      "file": "raw/CIK0000829224.json",
+      "bytes": 4239414,
+      "sha256": "0deec882c9ad1727f308f0279acd19cbfa52669bb724fdcd1ce75d970d67015e",
+      "observed_at": "2026-11-22T23:59:06Z"
+    },
+    {
+      "file": "raw/sbux-20240929.htm",
+      "bytes": 3079987,
+      "sha256": "b31695773e025a021f0420ad12ccd3588317d352c66f73f86e47d3f224de42c5",
+      "observed_at": "2026-11-23T00:00:25Z"
+    },
+    {
+      "file": "raw/sbux-20240929_htm.xml",
+      "bytes": 2748196,
+      "sha256": "15bc652508bbc5531bf295cf2d46bb5976be77f184956b40a2d3ee5242f0ced6",
+      "observed_at": "2026-11-23T00:03:51Z"
+    },
+    {
+      "file": "raw/ust_daily_2024.csv",
+      "bytes": 19098,
+      "sha256": "6775840b76cd7fd41121f61d6f6c60184eca6b2ba49954ec7372c463cbeef34d",
+      "observed_at": "2026-11-22T23:59:24Z"
+    }
+  ],
+  "network": {
+    "declared_mode": "IPv4 sidecar allowlist",
+    "runtime_probes": "对data.sec.gov、www.sec.gov及home.treasury.gov使用curl -4，均成功取得目标资源；候选错误路径另有一次404",
+    "enforcement_status": "配置存在不等于白名单已经验证生效；本轮只验证允许域名的IPv4可达性，未做阻断对照测试，不能据此确认白名单已经验证生效",
+    "ir_used": false
+  },
+  "conflicts": [
+    {
+      "topic": "合并净利润与归母净利润",
+      "profit_loss": 3762.3,
+      "net_income_loss": 3760.9,
+      "difference": 1.4,
+      "resolution": "按合同优先采用含非控股权益的ProfitLoss；1.4百万美元为非控股权益"
+    },
+    {
+      "topic": "现金标签口径",
+      "cash_and_cash_equivalents": "CashAndCashEquivalentsAtCarryingValue无合规事实",
+      "selected": "CashCashEquivalentsRestrictedCashAndRestrictedCashEquivalents=3286.2",
+      "resolution": "严格遵循允许标签顺序；采用值为该标签原值，不声称其与不受限现金相等"
+    },
+    {
+      "topic": "债务标签",
+      "short_term_borrowings": 0.0,
+      "selected_current_debt": 1248.9,
+      "resolution": "LongTermDebtCurrent优先于ShortTermBorrowings；不将零值短期借款另行叠加"
+    }
+  ]
+}

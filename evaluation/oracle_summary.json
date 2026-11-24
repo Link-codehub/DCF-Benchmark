@@ -1,0 +1,1715 @@
+[
+  {
+    "task": "A01",
+    "runs": [
+      {
+        "job": "evaluation/oracle_jobs/A01",
+        "trials": [
+          {
+            "trial": "A01__iMB33F2",
+            "exception": {
+              "exception_type": "RewardFileNotFoundError",
+              "exception_message": "No reward file found at /Users/link/Desktop/Finance Bench/DCFEval/evaluation/oracle_jobs/A01/A01__iMB33F2/verifier/reward.txt or /Users/link/Desktop/Finance Bench/DCFEval/evaluation/oracle_jobs/A01/A01__iMB33F2/verifier/reward.json",
+              "exception_traceback": "Traceback (most recent call last):\n  File \"/Users/link/.local/share/uv/tools/harbor/lib/python3.13/site-packages/harbor/trial/trial.py\", line 616, in run\n    await self._run()\n  File \"/Users/link/.local/share/uv/tools/harbor/lib/python3.13/site-packages/harbor/trial/single_step.py\", line 52, in _run\n    await self._run_verifier()\n  File \"/Users/link/.local/share/uv/tools/harbor/lib/python3.13/site-packages/harbor/trial/single_step.py\", line 109, in _run_verifier\n    self.result.verifier_result = await self._run_shared_verifier(\n                                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n    ...<2 lines>...\n    )\n    ^\n  File \"/Users/link/.local/share/uv/tools/harbor/lib/python3.13/site-packages/harbor/trial/trial.py\", line 1031, in _run_shared_verifier\n    return await self._verify_with_timeout(verifier, timeout_sec)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/link/.local/share/uv/tools/harbor/lib/python3.13/site-packages/harbor/trial/trial.py\", line 994, in _verify_with_timeout\n    return await asyncio.wait_for(verifier.verify(), timeout=timeout_sec)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/link/.local/share/uv/python/cpython-3.13.14-macos-aarch64-none/lib/python3.13/asyncio/tasks.py\", line 507, in wait_for\n    return await fut\n           ^^^^^^^^^\n  File \"/Users/link/.local/share/uv/tools/harbor/lib/python3.13/site-packages/harbor/verifier/verifier.py\", line 304, in verify\n    raise RewardFileNotFoundError(\n    ...<3 lines>...\n    )\nharbor.verifier.verifier.RewardFileNotFoundError: No reward file found at /Users/link/Desktop/Finance Bench/DCFEval/evaluation/oracle_jobs/A01/A01__iMB33F2/verifier/reward.txt or /Users/link/Desktop/Finance Bench/DCFEval/evaluation/oracle_jobs/A01/A01__iMB33F2/verifier/reward.json\n",
+              "occurred_at": "2026-11-24T05:12:05.951417Z",
+              "policy": {
+                "should_retry": false,
+                "should_grade": true,
+                "has_valid_reward": false
+              }
+            },
+            "rewards": [],
+            "step_results": null
+          }
+        ]
+      },
+      {
+        "job": "evaluation/oracle_jobs/A0120261124T052510",
+        "trials": [
+          {
+            "trial": "A01__EMmeUDM",
+            "exception": null,
+            "rewards": [
+              {
+                "reward": 1.0
+              }
+            ],
+            "step_results": null
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "task": "A02",
+    "runs": [
+      {
+        "job": "evaluation/oracle_jobs/A02",
+        "trials": [
+          {
+            "trial": "A02__i27ALo4",
+            "exception": {
+              "exception_type": "RewardFileNotFoundError",
+              "exception_message": "No reward file found at /Users/link/Desktop/Finance Bench/DCFEval/evaluation/oracle_jobs/A02/A02__i27ALo4/verifier/reward.txt or /Users/link/Desktop/Finance Bench/DCFEval/evaluation/oracle_jobs/A02/A02__i27ALo4/verifier/reward.json",
+              "exception_traceback": "Traceback (most recent call last):\n  File \"/Users/link/.local/share/uv/tools/harbor/lib/python3.13/site-packages/harbor/trial/trial.py\", line 616, in run\n    await self._run()\n  File \"/Users/link/.local/share/uv/tools/harbor/lib/python3.13/site-packages/harbor/trial/single_step.py\", line 52, in _run\n    await self._run_verifier()\n  File \"/Users/link/.local/share/uv/tools/harbor/lib/python3.13/site-packages/harbor/trial/single_step.py\", line 109, in _run_verifier\n    self.result.verifier_result = await self._run_shared_verifier(\n                                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n    ...<2 lines>...\n    )\n    ^\n  File \"/Users/link/.local/share/uv/tools/harbor/lib/python3.13/site-packages/harbor/trial/trial.py\", line 1031, in _run_shared_verifier\n    return await self._verify_with_timeout(verifier, timeout_sec)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/link/.local/share/uv/tools/harbor/lib/python3.13/site-packages/harbor/trial/trial.py\", line 994, in _verify_with_timeout\n    return await asyncio.wait_for(verifier.verify(), timeout=timeout_sec)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/link/.local/share/uv/python/cpython-3.13.14-macos-aarch64-none/lib/python3.13/asyncio/tasks.py\", line 507, in wait_for\n    return await fut\n           ^^^^^^^^^\n  File \"/Users/link/.local/share/uv/tools/harbor/lib/python3.13/site-packages/harbor/verifier/verifier.py\", line 304, in verify\n    raise RewardFileNotFoundError(\n    ...<3 lines>...\n    )\nharbor.verifier.verifier.RewardFileNotFoundError: No reward file found at /Users/link/Desktop/Finance Bench/DCFEval/evaluation/oracle_jobs/A02/A02__i27ALo4/verifier/reward.txt or /Users/link/Desktop/Finance Bench/DCFEval/evaluation/oracle_jobs/A02/A02__i27ALo4/verifier/reward.json\n",
+              "occurred_at": "2026-11-24T05:12:18.910765Z",
+              "policy": {
+                "should_retry": false,
+                "should_grade": true,
+                "has_valid_reward": false
+              }
+            },
+            "rewards": [],
+            "step_results": null
+          }
+        ]
+      },
+      {
+        "job": "evaluation/oracle_jobs/A0220261124T052510",
+        "trials": [
+          {
+            "trial": "A02__nUEaSi5",
+            "exception": null,
+            "rewards": [
+              {
+                "reward": 1.0
+              }
+            ],
+            "step_results": null
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "task": "A03",
+    "runs": [
+      {
+        "job": "evaluation/oracle_jobs/A03",
+        "trials": [
+          {
+            "trial": "A03__3n6TXKU",
+            "exception": {
+              "exception_type": "RewardFileNotFoundError",
+              "exception_message": "No reward file found at /Users/link/Desktop/Finance Bench/DCFEval/evaluation/oracle_jobs/A03/A03__3n6TXKU/verifier/reward.txt or /Users/link/Desktop/Finance Bench/DCFEval/evaluation/oracle_jobs/A03/A03__3n6TXKU/verifier/reward.json",
+              "exception_traceback": "Traceback (most recent call last):\n  File \"/Users/link/.local/share/uv/tools/harbor/lib/python3.13/site-packages/harbor/trial/trial.py\", line 616, in run\n    await self._run()\n  File \"/Users/link/.local/share/uv/tools/harbor/lib/python3.13/site-packages/harbor/trial/single_step.py\", line 52, in _run\n    await self._run_verifier()\n  File \"/Users/link/.local/share/uv/tools/harbor/lib/python3.13/site-packages/harbor/trial/single_step.py\", line 109, in _run_verifier\n    self.result.verifier_result = await self._run_shared_verifier(\n                                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n    ...<2 lines>...\n    )\n    ^\n  File \"/Users/link/.local/share/uv/tools/harbor/lib/python3.13/site-packages/harbor/trial/trial.py\", line 1031, in _run_shared_verifier\n    return await self._verify_with_timeout(verifier, timeout_sec)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/link/.local/share/uv/tools/harbor/lib/python3.13/site-packages/harbor/trial/trial.py\", line 994, in _verify_with_timeout\n    return await asyncio.wait_for(verifier.verify(), timeout=timeout_sec)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/link/.local/share/uv/python/cpython-3.13.14-macos-aarch64-none/lib/python3.13/asyncio/tasks.py\", line 507, in wait_for\n    return await fut\n           ^^^^^^^^^\n  File \"/Users/link/.local/share/uv/tools/harbor/lib/python3.13/site-packages/harbor/verifier/verifier.py\", line 304, in verify\n    raise RewardFileNotFoundError(\n    ...<3 lines>...\n    )\nharbor.verifier.verifier.RewardFileNotFoundError: No reward file found at /Users/link/Desktop/Finance Bench/DCFEval/evaluation/oracle_jobs/A03/A03__3n6TXKU/verifier/reward.txt or /Users/link/Desktop/Finance Bench/DCFEval/evaluation/oracle_jobs/A03/A03__3n6TXKU/verifier/reward.json\n",
+              "occurred_at": "2026-11-24T05:12:31.229903Z",
+              "policy": {
+                "should_retry": false,
+                "should_grade": true,
+                "has_valid_reward": false
+              }
+            },
+            "rewards": [],
+            "step_results": null
+          }
+        ]
+      },
+      {
+        "job": "evaluation/oracle_jobs/A0320261124T052510",
+        "trials": [
+          {
+            "trial": "A03__SoApeqo",
+            "exception": {
+              "exception_type": "RewardFileNotFoundError",
+              "exception_message": "No reward file found at /Users/link/Desktop/Finance Bench/DCFEval/evaluation/oracle_jobs/A0320261124T052510/A03__SoApeqo/verifier/reward.txt or /Users/link/Desktop/Finance Bench/DCFEval/evaluation/oracle_jobs/A0320261124T052510/A03__SoApeqo/verifier/reward.json",
+              "exception_traceback": "Traceback (most recent call last):\n  File \"/Users/link/.local/share/uv/tools/harbor/lib/python3.13/site-packages/harbor/trial/trial.py\", line 616, in run\n    await self._run()\n  File \"/Users/link/.local/share/uv/tools/harbor/lib/python3.13/site-packages/harbor/trial/single_step.py\", line 52, in _run\n    await self._run_verifier()\n  File \"/Users/link/.local/share/uv/tools/harbor/lib/python3.13/site-packages/harbor/trial/single_step.py\", line 109, in _run_verifier\n    self.result.verifier_result = await self._run_shared_verifier(\n                                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n    ...<2 lines>...\n    )\n    ^\n  File \"/Users/link/.local/share/uv/tools/harbor/lib/python3.13/site-packages/harbor/trial/trial.py\", line 1031, in _run_shared_verifier\n    return await self._verify_with_timeout(verifier, timeout_sec)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/link/.local/share/uv/tools/harbor/lib/python3.13/site-packages/harbor/trial/trial.py\", line 994, in _verify_with_timeout\n    return await asyncio.wait_for(verifier.verify(), timeout=timeout_sec)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/link/.local/share/uv/python/cpython-3.13.14-macos-aarch64-none/lib/python3.13/asyncio/tasks.py\", line 507, in wait_for\n    return await fut\n           ^^^^^^^^^\n  File \"/Users/link/.local/share/uv/tools/harbor/lib/python3.13/site-packages/harbor/verifier/verifier.py\", line 304, in verify\n    raise RewardFileNotFoundError(\n    ...<3 lines>...\n    )\nharbor.verifier.verifier.RewardFileNotFoundError: No reward file found at /Users/link/Desktop/Finance Bench/DCFEval/evaluation/oracle_jobs/A0320261124T052510/A03__SoApeqo/verifier/reward.txt or /Users/link/Desktop/Finance Bench/DCFEval/evaluation/oracle_jobs/A0320261124T052510/A03__SoApeqo/verifier/reward.json\n",
+              "occurred_at": "2026-11-24T05:26:13.138392Z",
+              "policy": {
+                "should_retry": false,
+                "should_grade": true,
+                "has_valid_reward": false
+              }
+            },
+            "rewards": [],
+            "step_results": null
+          }
+        ]
+      },
+      {
+        "job": "evaluation/oracle_jobs/A0320261124T053612",
+        "trials": [
+          {
+            "trial": "A03__Af7aHXn",
+            "exception": {
+              "exception_type": "RewardFileNotFoundError",
+              "exception_message": "No reward file found at /Users/link/Desktop/Finance Bench/DCFEval/evaluation/oracle_jobs/A0320261124T053612/A03__Af7aHXn/verifier/reward.txt or /Users/link/Desktop/Finance Bench/DCFEval/evaluation/oracle_jobs/A0320261124T053612/A03__Af7aHXn/verifier/reward.json",
+              "exception_traceback": "Traceback (most recent call last):\n  File \"/Users/link/.local/share/uv/tools/harbor/lib/python3.13/site-packages/harbor/trial/trial.py\", line 616, in run\n    await self._run()\n  File \"/Users/link/.local/share/uv/tools/harbor/lib/python3.13/site-packages/harbor/trial/single_step.py\", line 52, in _run\n    await self._run_verifier()\n  File \"/Users/link/.local/share/uv/tools/harbor/lib/python3.13/site-packages/harbor/trial/single_step.py\", line 109, in _run_verifier\n    self.result.verifier_result = await self._run_shared_verifier(\n                                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n    ...<2 lines>...\n    )\n    ^\n  File \"/Users/link/.local/share/uv/tools/harbor/lib/python3.13/site-packages/harbor/trial/trial.py\", line 1031, in _run_shared_verifier\n    return await self._verify_with_timeout(verifier, timeout_sec)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/link/.local/share/uv/tools/harbor/lib/python3.13/site-packages/harbor/trial/trial.py\", line 994, in _verify_with_timeout\n    return await asyncio.wait_for(verifier.verify(), timeout=timeout_sec)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/link/.local/share/uv/python/cpython-3.13.14-macos-aarch64-none/lib/python3.13/asyncio/tasks.py\", line 507, in wait_for\n    return await fut\n           ^^^^^^^^^\n  File \"/Users/link/.local/share/uv/tools/harbor/lib/python3.13/site-packages/harbor/verifier/verifier.py\", line 304, in verify\n    raise RewardFileNotFoundError(\n    ...<3 lines>...\n    )\nharbor.verifier.verifier.RewardFileNotFoundError: No reward file found at /Users/link/Desktop/Finance Bench/DCFEval/evaluation/oracle_jobs/A0320261124T053612/A03__Af7aHXn/verifier/reward.txt or /Users/link/Desktop/Finance Bench/DCFEval/evaluation/oracle_jobs/A0320261124T053612/A03__Af7aHXn/verifier/reward.json\n",
+              "occurred_at": "2026-11-24T05:36:26.426670Z",
+              "policy": {
+                "should_retry": false,
+                "should_grade": true,
+                "has_valid_reward": false
+              }
+            },
+            "rewards": [],
+            "step_results": null
+          }
+        ]
+      },
+      {
+        "job": "evaluation/oracle_jobs/A0320261124T054335",
+        "trials": [
+          {
+            "trial": "A03__EsHke5p",
+            "exception": {
+              "exception_type": "RewardFileNotFoundError",
+              "exception_message": "No reward file found at /Users/link/Desktop/Finance Bench/DCFEval/evaluation/oracle_jobs/A0320261124T054335/A03__EsHke5p/verifier/reward.txt or /Users/link/Desktop/Finance Bench/DCFEval/evaluation/oracle_jobs/A0320261124T054335/A03__EsHke5p/verifier/reward.json",
+              "exception_traceback": "Traceback (most recent call last):\n  File \"/Users/link/.local/share/uv/tools/harbor/lib/python3.13/site-packages/harbor/trial/trial.py\", line 616, in run\n    await self._run()\n  File \"/Users/link/.local/share/uv/tools/harbor/lib/python3.13/site-packages/harbor/trial/single_step.py\", line 52, in _run\n    await self._run_verifier()\n  File \"/Users/link/.local/share/uv/tools/harbor/lib/python3.13/site-packages/harbor/trial/single_step.py\", line 109, in _run_verifier\n    self.result.verifier_result = await self._run_shared_verifier(\n                                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n    ...<2 lines>...\n    )\n    ^\n  File \"/Users/link/.local/share/uv/tools/harbor/lib/python3.13/site-packages/harbor/trial/trial.py\", line 1031, in _run_shared_verifier\n    return await self._verify_with_timeout(verifier, timeout_sec)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/link/.local/share/uv/tools/harbor/lib/python3.13/site-packages/harbor/trial/trial.py\", line 994, in _verify_with_timeout\n    return await asyncio.wait_for(verifier.verify(), timeout=timeout_sec)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/link/.local/share/uv/python/cpython-3.13.14-macos-aarch64-none/lib/python3.13/asyncio/tasks.py\", line 507, in wait_for\n    return await fut\n           ^^^^^^^^^\n  File \"/Users/link/.local/share/uv/tools/harbor/lib/python3.13/site-packages/harbor/verifier/verifier.py\", line 304, in verify\n    raise RewardFileNotFoundError(\n    ...<3 lines>...\n    )\nharbor.verifier.verifier.RewardFileNotFoundError: No reward file found at /Users/link/Desktop/Finance Bench/DCFEval/evaluation/oracle_jobs/A0320261124T054335/A03__EsHke5p/verifier/reward.txt or /Users/link/Desktop/Finance Bench/DCFEval/evaluation/oracle_jobs/A0320261124T054335/A03__EsHke5p/verifier/reward.json\n",
+              "occurred_at": "2026-11-24T05:43:48.013795Z",
+              "policy": {
+                "should_retry": false,
+                "should_grade": true,
+                "has_valid_reward": false
+              }
+            },
+            "rewards": [],
+            "step_results": null
+          }
+        ]
+      },
+      {
+        "job": "evaluation/oracle_jobs/A0320261124T054722",
+        "trials": [
+          {
+            "trial": "A03__fX2SMZi",
+            "exception": null,
+            "rewards": [
+              {
+                "reward": 1.0
+              }
+            ],
+            "step_results": null
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "task": "A04",
+    "runs": [
+      {
+        "job": "evaluation/oracle_jobs/A04",
+        "trials": [
+          {
+            "trial": "A04__FvM8xkX",
+            "exception": {
+              "exception_type": "RewardFileNotFoundError",
+              "exception_message": "No reward file found at /Users/link/Desktop/Finance Bench/DCFEval/evaluation/oracle_jobs/A04/A04__FvM8xkX/verifier/reward.txt or /Users/link/Desktop/Finance Bench/DCFEval/evaluation/oracle_jobs/A04/A04__FvM8xkX/verifier/reward.json",
+              "exception_traceback": "Traceback (most recent call last):\n  File \"/Users/link/.local/share/uv/tools/harbor/lib/python3.13/site-packages/harbor/trial/trial.py\", line 616, in run\n    await self._run()\n  File \"/Users/link/.local/share/uv/tools/harbor/lib/python3.13/site-packages/harbor/trial/single_step.py\", line 52, in _run\n    await self._run_verifier()\n  File \"/Users/link/.local/share/uv/tools/harbor/lib/python3.13/site-packages/harbor/trial/single_step.py\", line 109, in _run_verifier\n    self.result.verifier_result = await self._run_shared_verifier(\n                                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n    ...<2 lines>...\n    )\n    ^\n  File \"/Users/link/.local/share/uv/tools/harbor/lib/python3.13/site-packages/harbor/trial/trial.py\", line 1031, in _run_shared_verifier\n    return await self._verify_with_timeout(verifier, timeout_sec)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/link/.local/share/uv/tools/harbor/lib/python3.13/site-packages/harbor/trial/trial.py\", line 994, in _verify_with_timeout\n    return await asyncio.wait_for(verifier.verify(), timeout=timeout_sec)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/link/.local/share/uv/python/cpython-3.13.14-macos-aarch64-none/lib/python3.13/asyncio/tasks.py\", line 507, in wait_for\n    return await fut\n           ^^^^^^^^^\n  File \"/Users/link/.local/share/uv/tools/harbor/lib/python3.13/site-packages/harbor/verifier/verifier.py\", line 304, in verify\n    raise RewardFileNotFoundError(\n    ...<3 lines>...\n    )\nharbor.verifier.verifier.RewardFileNotFoundError: No reward file found at /Users/link/Desktop/Finance Bench/DCFEval/evaluation/oracle_jobs/A04/A04__FvM8xkX/verifier/reward.txt or /Users/link/Desktop/Finance Bench/DCFEval/evaluation/oracle_jobs/A04/A04__FvM8xkX/verifier/reward.json\n",
+              "occurred_at": "2026-11-24T05:12:45.175250Z",
+              "policy": {
+                "should_retry": false,
+                "should_grade": true,
+                "has_valid_reward": false
+              }
+            },
+            "rewards": [],
+            "step_results": null
+          }
+        ]
+      },
+      {
+        "job": "evaluation/oracle_jobs/A0420261124T052510",
+        "trials": [
+          {
+            "trial": "A04__YdBd3FC",
+            "exception": null,
+            "rewards": [
+              {
+                "reward": 1.0
+              }
+            ],
+            "step_results": null
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "task": "A05",
+    "runs": [
+      {
+        "job": "evaluation/oracle_jobs/A05",
+        "trials": [
+          {
+            "trial": "A05__w8TaeXe",
+            "exception": {
+              "exception_type": "RewardFileNotFoundError",
+              "exception_message": "No reward file found at /Users/link/Desktop/Finance Bench/DCFEval/evaluation/oracle_jobs/A05/A05__w8TaeXe/verifier/reward.txt or /Users/link/Desktop/Finance Bench/DCFEval/evaluation/oracle_jobs/A05/A05__w8TaeXe/verifier/reward.json",
+              "exception_traceback": "Traceback (most recent call last):\n  File \"/Users/link/.local/share/uv/tools/harbor/lib/python3.13/site-packages/harbor/trial/trial.py\", line 616, in run\n    await self._run()\n  File \"/Users/link/.local/share/uv/tools/harbor/lib/python3.13/site-packages/harbor/trial/single_step.py\", line 52, in _run\n    await self._run_verifier()\n  File \"/Users/link/.local/share/uv/tools/harbor/lib/python3.13/site-packages/harbor/trial/single_step.py\", line 109, in _run_verifier\n    self.result.verifier_result = await self._run_shared_verifier(\n                                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n    ...<2 lines>...\n    )\n    ^\n  File \"/Users/link/.local/share/uv/tools/harbor/lib/python3.13/site-packages/harbor/trial/trial.py\", line 1031, in _run_shared_verifier\n    return await self._verify_with_timeout(verifier, timeout_sec)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/link/.local/share/uv/tools/harbor/lib/python3.13/site-packages/harbor/trial/trial.py\", line 994, in _verify_with_timeout\n    return await asyncio.wait_for(verifier.verify(), timeout=timeout_sec)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/link/.local/share/uv/python/cpython-3.13.14-macos-aarch64-none/lib/python3.13/asyncio/tasks.py\", line 507, in wait_for\n    return await fut\n           ^^^^^^^^^\n  File \"/Users/link/.local/share/uv/tools/harbor/lib/python3.13/site-packages/harbor/verifier/verifier.py\", line 304, in verify\n    raise RewardFileNotFoundError(\n    ...<3 lines>...\n    )\nharbor.verifier.verifier.RewardFileNotFoundError: No reward file found at /Users/link/Desktop/Finance Bench/DCFEval/evaluation/oracle_jobs/A05/A05__w8TaeXe/verifier/reward.txt or /Users/link/Desktop/Finance Bench/DCFEval/evaluation/oracle_jobs/A05/A05__w8TaeXe/verifier/reward.json\n",
+              "occurred_at": "2026-11-24T05:12:57.969136Z",
+              "policy": {
+                "should_retry": false,
+                "should_grade": true,
+                "has_valid_reward": false
+              }
+            },
+            "rewards": [],
+            "step_results": null
+          }
+        ]
+      },
+      {
+        "job": "evaluation/oracle_jobs/A0520261124T052510",
+        "trials": [
+          {
+            "trial": "A05__yixr7LZ",
+            "exception": null,
+            "rewards": [
+              {
+                "reward": 1.0
+              }
+            ],
+            "step_results": null
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "task": "A06",
+    "runs": [
+      {
+        "job": "evaluation/oracle_jobs/A06",
+        "trials": [
+          {
+            "trial": "A06__bqLZPHK",
+            "exception": {
+              "exception_type": "RewardFileNotFoundError",
+              "exception_message": "No reward file found at /Users/link/Desktop/Finance Bench/DCFEval/evaluation/oracle_jobs/A06/A06__bqLZPHK/verifier/reward.txt or /Users/link/Desktop/Finance Bench/DCFEval/evaluation/oracle_jobs/A06/A06__bqLZPHK/verifier/reward.json",
+              "exception_traceback": "Traceback (most recent call last):\n  File \"/Users/link/.local/share/uv/tools/harbor/lib/python3.13/site-packages/harbor/trial/trial.py\", line 616, in run\n    await self._run()\n  File \"/Users/link/.local/share/uv/tools/harbor/lib/python3.13/site-packages/harbor/trial/single_step.py\", line 52, in _run\n    await self._run_verifier()\n  File \"/Users/link/.local/share/uv/tools/harbor/lib/python3.13/site-packages/harbor/trial/single_step.py\", line 109, in _run_verifier\n    self.result.verifier_result = await self._run_shared_verifier(\n                                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n    ...<2 lines>...\n    )\n    ^\n  File \"/Users/link/.local/share/uv/tools/harbor/lib/python3.13/site-packages/harbor/trial/trial.py\", line 1031, in _run_shared_verifier\n    return await self._verify_with_timeout(verifier, timeout_sec)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/link/.local/share/uv/tools/harbor/lib/python3.13/site-packages/harbor/trial/trial.py\", line 994, in _verify_with_timeout\n    return await asyncio.wait_for(verifier.verify(), timeout=timeout_sec)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/link/.local/share/uv/python/cpython-3.13.14-macos-aarch64-none/lib/python3.13/asyncio/tasks.py\", line 507, in wait_for\n    return await fut\n           ^^^^^^^^^\n  File \"/Users/link/.local/share/uv/tools/harbor/lib/python3.13/site-packages/harbor/verifier/verifier.py\", line 304, in verify\n    raise RewardFileNotFoundError(\n    ...<3 lines>...\n    )\nharbor.verifier.verifier.RewardFileNotFoundError: No reward file found at /Users/link/Desktop/Finance Bench/DCFEval/evaluation/oracle_jobs/A06/A06__bqLZPHK/verifier/reward.txt or /Users/link/Desktop/Finance Bench/DCFEval/evaluation/oracle_jobs/A06/A06__bqLZPHK/verifier/reward.json\n",
+              "occurred_at": "2026-11-24T05:13:10.938746Z",
+              "policy": {
+                "should_retry": false,
+                "should_grade": true,
+                "has_valid_reward": false
+              }
+            },
+            "rewards": [],
+            "step_results": null
+          }
+        ]
+      },
+      {
+        "job": "evaluation/oracle_jobs/A0620261124T052510",
+        "trials": [
+          {
+            "trial": "A06__tbrUG6Q",
+            "exception": null,
+            "rewards": [
+              {
+                "reward": 1.0
+              }
+            ],
+            "step_results": null
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "task": "A07",
+    "runs": [
+      {
+        "job": "evaluation/oracle_jobs/A07",
+        "trials": [
+          {
+            "trial": "A07__zx32DyD",
+            "exception": {
+              "exception_type": "RewardFileNotFoundError",
+              "exception_message": "No reward file found at /Users/link/Desktop/Finance Bench/DCFEval/evaluation/oracle_jobs/A07/A07__zx32DyD/verifier/reward.txt or /Users/link/Desktop/Finance Bench/DCFEval/evaluation/oracle_jobs/A07/A07__zx32DyD/verifier/reward.json",
+              "exception_traceback": "Traceback (most recent call last):\n  File \"/Users/link/.local/share/uv/tools/harbor/lib/python3.13/site-packages/harbor/trial/trial.py\", line 616, in run\n    await self._run()\n  File \"/Users/link/.local/share/uv/tools/harbor/lib/python3.13/site-packages/harbor/trial/single_step.py\", line 52, in _run\n    await self._run_verifier()\n  File \"/Users/link/.local/share/uv/tools/harbor/lib/python3.13/site-packages/harbor/trial/single_step.py\", line 109, in _run_verifier\n    self.result.verifier_result = await self._run_shared_verifier(\n                                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n    ...<2 lines>...\n    )\n    ^\n  File \"/Users/link/.local/share/uv/tools/harbor/lib/python3.13/site-packages/harbor/trial/trial.py\", line 1031, in _run_shared_verifier\n    return await self._verify_with_timeout(verifier, timeout_sec)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/link/.local/share/uv/tools/harbor/lib/python3.13/site-packages/harbor/trial/trial.py\", line 994, in _verify_with_timeout\n    return await asyncio.wait_for(verifier.verify(), timeout=timeout_sec)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/link/.local/share/uv/python/cpython-3.13.14-macos-aarch64-none/lib/python3.13/asyncio/tasks.py\", line 507, in wait_for\n    return await fut\n           ^^^^^^^^^\n  File \"/Users/link/.local/share/uv/tools/harbor/lib/python3.13/site-packages/harbor/verifier/verifier.py\", line 304, in verify\n    raise RewardFileNotFoundError(\n    ...<3 lines>...\n    )\nharbor.verifier.verifier.RewardFileNotFoundError: No reward file found at /Users/link/Desktop/Finance Bench/DCFEval/evaluation/oracle_jobs/A07/A07__zx32DyD/verifier/reward.txt or /Users/link/Desktop/Finance Bench/DCFEval/evaluation/oracle_jobs/A07/A07__zx32DyD/verifier/reward.json\n",
+              "occurred_at": "2026-11-24T05:13:24.338789Z",
+              "policy": {
+                "should_retry": false,
+                "should_grade": true,
+                "has_valid_reward": false
+              }
+            },
+            "rewards": [],
+            "step_results": null
+          }
+        ]
+      },
+      {
+        "job": "evaluation/oracle_jobs/A0720261124T052510",
+        "trials": [
+          {
+            "trial": "A07__2pKEmwB",
+            "exception": null,
+            "rewards": [
+              {
+                "reward": 1.0
+              }
+            ],
+            "step_results": null
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "task": "A08",
+    "runs": [
+      {
+        "job": "evaluation/oracle_jobs/A08",
+        "trials": [
+          {
+            "trial": "A08__ZAKBydx",
+            "exception": {
+              "exception_type": "RewardFileNotFoundError",
+              "exception_message": "No reward file found at /Users/link/Desktop/Finance Bench/DCFEval/evaluation/oracle_jobs/A08/A08__ZAKBydx/verifier/reward.txt or /Users/link/Desktop/Finance Bench/DCFEval/evaluation/oracle_jobs/A08/A08__ZAKBydx/verifier/reward.json",
+              "exception_traceback": "Traceback (most recent call last):\n  File \"/Users/link/.local/share/uv/tools/harbor/lib/python3.13/site-packages/harbor/trial/trial.py\", line 616, in run\n    await self._run()\n  File \"/Users/link/.local/share/uv/tools/harbor/lib/python3.13/site-packages/harbor/trial/single_step.py\", line 52, in _run\n    await self._run_verifier()\n  File \"/Users/link/.local/share/uv/tools/harbor/lib/python3.13/site-packages/harbor/trial/single_step.py\", line 109, in _run_verifier\n    self.result.verifier_result = await self._run_shared_verifier(\n                                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n    ...<2 lines>...\n    )\n    ^\n  File \"/Users/link/.local/share/uv/tools/harbor/lib/python3.13/site-packages/harbor/trial/trial.py\", line 1031, in _run_shared_verifier\n    return await self._verify_with_timeout(verifier, timeout_sec)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/link/.local/share/uv/tools/harbor/lib/python3.13/site-packages/harbor/trial/trial.py\", line 994, in _verify_with_timeout\n    return await asyncio.wait_for(verifier.verify(), timeout=timeout_sec)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/link/.local/share/uv/python/cpython-3.13.14-macos-aarch64-none/lib/python3.13/asyncio/tasks.py\", line 507, in wait_for\n    return await fut\n           ^^^^^^^^^\n  File \"/Users/link/.local/share/uv/tools/harbor/lib/python3.13/site-packages/harbor/verifier/verifier.py\", line 304, in verify\n    raise RewardFileNotFoundError(\n    ...<3 lines>...\n    )\nharbor.verifier.verifier.RewardFileNotFoundError: No reward file found at /Users/link/Desktop/Finance Bench/DCFEval/evaluation/oracle_jobs/A08/A08__ZAKBydx/verifier/reward.txt or /Users/link/Desktop/Finance Bench/DCFEval/evaluation/oracle_jobs/A08/A08__ZAKBydx/verifier/reward.json\n",
+              "occurred_at": "2026-11-24T05:13:36.520077Z",
+              "policy": {
+                "should_retry": false,
+                "should_grade": true,
+                "has_valid_reward": false
+              }
+            },
+            "rewards": [],
+            "step_results": null
+          }
+        ]
+      },
+      {
+        "job": "evaluation/oracle_jobs/A0820261124T052510",
+        "trials": [
+          {
+            "trial": "A08__XsZCjjd",
+            "exception": null,
+            "rewards": [
+              {
+                "reward": 1.0
+              }
+            ],
+            "step_results": null
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "task": "A09",
+    "runs": [
+      {
+        "job": "evaluation/oracle_jobs/A09",
+        "trials": [
+          {
+            "trial": "A09__bmLvBRt",
+            "exception": {
+              "exception_type": "RewardFileNotFoundError",
+              "exception_message": "No reward file found at /Users/link/Desktop/Finance Bench/DCFEval/evaluation/oracle_jobs/A09/A09__bmLvBRt/verifier/reward.txt or /Users/link/Desktop/Finance Bench/DCFEval/evaluation/oracle_jobs/A09/A09__bmLvBRt/verifier/reward.json",
+              "exception_traceback": "Traceback (most recent call last):\n  File \"/Users/link/.local/share/uv/tools/harbor/lib/python3.13/site-packages/harbor/trial/trial.py\", line 616, in run\n    await self._run()\n  File \"/Users/link/.local/share/uv/tools/harbor/lib/python3.13/site-packages/harbor/trial/single_step.py\", line 52, in _run\n    await self._run_verifier()\n  File \"/Users/link/.local/share/uv/tools/harbor/lib/python3.13/site-packages/harbor/trial/single_step.py\", line 102, in _run_verifier\n    self.result.verifier_result = await self._run_separate_verifier(\n                                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n    ...<4 lines>...\n    )\n    ^\n  File \"/Users/link/.local/share/uv/tools/harbor/lib/python3.13/site-packages/harbor/trial/trial.py\", line 1101, in _run_separate_verifier\n    return await self._verify_with_timeout(verifier, timeout_sec)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/link/.local/share/uv/tools/harbor/lib/python3.13/site-packages/harbor/trial/trial.py\", line 994, in _verify_with_timeout\n    return await asyncio.wait_for(verifier.verify(), timeout=timeout_sec)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/link/.local/share/uv/python/cpython-3.13.14-macos-aarch64-none/lib/python3.13/asyncio/tasks.py\", line 507, in wait_for\n    return await fut\n           ^^^^^^^^^\n  File \"/Users/link/.local/share/uv/tools/harbor/lib/python3.13/site-packages/harbor/verifier/verifier.py\", line 304, in verify\n    raise RewardFileNotFoundError(\n    ...<3 lines>...\n    )\nharbor.verifier.verifier.RewardFileNotFoundError: No reward file found at /Users/link/Desktop/Finance Bench/DCFEval/evaluation/oracle_jobs/A09/A09__bmLvBRt/verifier/reward.txt or /Users/link/Desktop/Finance Bench/DCFEval/evaluation/oracle_jobs/A09/A09__bmLvBRt/verifier/reward.json\n",
+              "occurred_at": "2026-11-24T05:14:02.378364Z",
+              "policy": {
+                "should_retry": false,
+                "should_grade": true,
+                "has_valid_reward": false
+              }
+            },
+            "rewards": [],
+            "step_results": null
+          }
+        ]
+      },
+      {
+        "job": "evaluation/oracle_jobs/A0920261124T052510",
+        "trials": [
+          {
+            "trial": "A09__5Jz58Ru",
+            "exception": {
+              "exception_type": "RewardFileNotFoundError",
+              "exception_message": "No reward file found at /Users/link/Desktop/Finance Bench/DCFEval/evaluation/oracle_jobs/A0920261124T052510/A09__5Jz58Ru/verifier/reward.txt or /Users/link/Desktop/Finance Bench/DCFEval/evaluation/oracle_jobs/A0920261124T052510/A09__5Jz58Ru/verifier/reward.json",
+              "exception_traceback": "Traceback (most recent call last):\n  File \"/Users/link/.local/share/uv/tools/harbor/lib/python3.13/site-packages/harbor/trial/trial.py\", line 616, in run\n    await self._run()\n  File \"/Users/link/.local/share/uv/tools/harbor/lib/python3.13/site-packages/harbor/trial/single_step.py\", line 52, in _run\n    await self._run_verifier()\n  File \"/Users/link/.local/share/uv/tools/harbor/lib/python3.13/site-packages/harbor/trial/single_step.py\", line 102, in _run_verifier\n    self.result.verifier_result = await self._run_separate_verifier(\n                                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n    ...<4 lines>...\n    )\n    ^\n  File \"/Users/link/.local/share/uv/tools/harbor/lib/python3.13/site-packages/harbor/trial/trial.py\", line 1101, in _run_separate_verifier\n    return await self._verify_with_timeout(verifier, timeout_sec)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/link/.local/share/uv/tools/harbor/lib/python3.13/site-packages/harbor/trial/trial.py\", line 994, in _verify_with_timeout\n    return await asyncio.wait_for(verifier.verify(), timeout=timeout_sec)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/link/.local/share/uv/python/cpython-3.13.14-macos-aarch64-none/lib/python3.13/asyncio/tasks.py\", line 507, in wait_for\n    return await fut\n           ^^^^^^^^^\n  File \"/Users/link/.local/share/uv/tools/harbor/lib/python3.13/site-packages/harbor/verifier/verifier.py\", line 304, in verify\n    raise RewardFileNotFoundError(\n    ...<3 lines>...\n    )\nharbor.verifier.verifier.RewardFileNotFoundError: No reward file found at /Users/link/Desktop/Finance Bench/DCFEval/evaluation/oracle_jobs/A0920261124T052510/A09__5Jz58Ru/verifier/reward.txt or /Users/link/Desktop/Finance Bench/DCFEval/evaluation/oracle_jobs/A0920261124T052510/A09__5Jz58Ru/verifier/reward.json\n",
+              "occurred_at": "2026-11-24T05:28:13.565989Z",
+              "policy": {
+                "should_retry": false,
+                "should_grade": true,
+                "has_valid_reward": false
+              }
+            },
+            "rewards": [],
+            "step_results": null
+          }
+        ]
+      },
+      {
+        "job": "evaluation/oracle_jobs/A0920261124T053612",
+        "trials": [
+          {
+            "trial": "A09__hGv8GJg",
+            "exception": {
+              "exception_type": "RewardFileNotFoundError",
+              "exception_message": "No reward file found at /Users/link/Desktop/Finance Bench/DCFEval/evaluation/oracle_jobs/A0920261124T053612/A09__hGv8GJg/verifier/reward.txt or /Users/link/Desktop/Finance Bench/DCFEval/evaluation/oracle_jobs/A0920261124T053612/A09__hGv8GJg/verifier/reward.json",
+              "exception_traceback": "Traceback (most recent call last):\n  File \"/Users/link/.local/share/uv/tools/harbor/lib/python3.13/site-packages/harbor/trial/trial.py\", line 616, in run\n    await self._run()\n  File \"/Users/link/.local/share/uv/tools/harbor/lib/python3.13/site-packages/harbor/trial/single_step.py\", line 52, in _run\n    await self._run_verifier()\n  File \"/Users/link/.local/share/uv/tools/harbor/lib/python3.13/site-packages/harbor/trial/single_step.py\", line 102, in _run_verifier\n    self.result.verifier_result = await self._run_separate_verifier(\n                                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n    ...<4 lines>...\n    )\n    ^\n  File \"/Users/link/.local/share/uv/tools/harbor/lib/python3.13/site-packages/harbor/trial/trial.py\", line 1101, in _run_separate_verifier\n    return await self._verify_with_timeout(verifier, timeout_sec)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/link/.local/share/uv/tools/harbor/lib/python3.13/site-packages/harbor/trial/trial.py\", line 994, in _verify_with_timeout\n    return await asyncio.wait_for(verifier.verify(), timeout=timeout_sec)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/link/.local/share/uv/python/cpython-3.13.14-macos-aarch64-none/lib/python3.13/asyncio/tasks.py\", line 507, in wait_for\n    return await fut\n           ^^^^^^^^^\n  File \"/Users/link/.local/share/uv/tools/harbor/lib/python3.13/site-packages/harbor/verifier/verifier.py\", line 304, in verify\n    raise RewardFileNotFoundError(\n    ...<3 lines>...\n    )\nharbor.verifier.verifier.RewardFileNotFoundError: No reward file found at /Users/link/Desktop/Finance Bench/DCFEval/evaluation/oracle_jobs/A0920261124T053612/A09__hGv8GJg/verifier/reward.txt or /Users/link/Desktop/Finance Bench/DCFEval/evaluation/oracle_jobs/A0920261124T053612/A09__hGv8GJg/verifier/reward.json\n",
+              "occurred_at": "2026-11-24T05:36:53.474024Z",
+              "policy": {
+                "should_retry": false,
+                "should_grade": true,
+                "has_valid_reward": false
+              }
+            },
+            "rewards": [],
+            "step_results": null
+          }
+        ]
+      },
+      {
+        "job": "evaluation/oracle_jobs/A0920261124T054335",
+        "trials": [
+          {
+            "trial": "A09__sxvoepc",
+            "exception": null,
+            "rewards": [
+              {
+                "reward": 1.0
+              }
+            ],
+            "step_results": null
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "task": "A10",
+    "runs": [
+      {
+        "job": "evaluation/oracle_jobs/A10",
+        "trials": [
+          {
+            "trial": "A10__SE4x2eA",
+            "exception": {
+              "exception_type": "RewardFileNotFoundError",
+              "exception_message": "No reward file found at /Users/link/Desktop/Finance Bench/DCFEval/evaluation/oracle_jobs/A10/A10__SE4x2eA/verifier/reward.txt or /Users/link/Desktop/Finance Bench/DCFEval/evaluation/oracle_jobs/A10/A10__SE4x2eA/verifier/reward.json",
+              "exception_traceback": "Traceback (most recent call last):\n  File \"/Users/link/.local/share/uv/tools/harbor/lib/python3.13/site-packages/harbor/trial/trial.py\", line 616, in run\n    await self._run()\n  File \"/Users/link/.local/share/uv/tools/harbor/lib/python3.13/site-packages/harbor/trial/single_step.py\", line 52, in _run\n    await self._run_verifier()\n  File \"/Users/link/.local/share/uv/tools/harbor/lib/python3.13/site-packages/harbor/trial/single_step.py\", line 102, in _run_verifier\n    self.result.verifier_result = await self._run_separate_verifier(\n                                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n    ...<4 lines>...\n    )\n    ^\n  File \"/Users/link/.local/share/uv/tools/harbor/lib/python3.13/site-packages/harbor/trial/trial.py\", line 1101, in _run_separate_verifier\n    return await self._verify_with_timeout(verifier, timeout_sec)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/link/.local/share/uv/tools/harbor/lib/python3.13/site-packages/harbor/trial/trial.py\", line 994, in _verify_with_timeout\n    return await asyncio.wait_for(verifier.verify(), timeout=timeout_sec)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/link/.local/share/uv/python/cpython-3.13.14-macos-aarch64-none/lib/python3.13/asyncio/tasks.py\", line 507, in wait_for\n    return await fut\n           ^^^^^^^^^\n  File \"/Users/link/.local/share/uv/tools/harbor/lib/python3.13/site-packages/harbor/verifier/verifier.py\", line 304, in verify\n    raise RewardFileNotFoundError(\n    ...<3 lines>...\n    )\nharbor.verifier.verifier.RewardFileNotFoundError: No reward file found at /Users/link/Desktop/Finance Bench/DCFEval/evaluation/oracle_jobs/A10/A10__SE4x2eA/verifier/reward.txt or /Users/link/Desktop/Finance Bench/DCFEval/evaluation/oracle_jobs/A10/A10__SE4x2eA/verifier/reward.json\n",
+              "occurred_at": "2026-11-24T05:14:25.322973Z",
+              "policy": {
+                "should_retry": false,
+                "should_grade": true,
+                "has_valid_reward": false
+              }
+            },
+            "rewards": [],
+            "step_results": null
+          }
+        ]
+      },
+      {
+        "job": "evaluation/oracle_jobs/A1020261124T052510",
+        "trials": [
+          {
+            "trial": "A10__NAFvTCv",
+            "exception": null,
+            "rewards": [
+              {
+                "reward": 1.0
+              }
+            ],
+            "step_results": null
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "task": "BC01",
+    "runs": [
+      {
+        "job": "evaluation/oracle_jobs/BC01",
+        "trials": [
+          {
+            "trial": "BC01__EEk38rJ",
+            "exception": null,
+            "rewards": [
+              {
+                "reward": 1.0
+              }
+            ],
+            "step_results": null
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "task": "BC02",
+    "runs": [
+      {
+        "job": "evaluation/oracle_jobs/BC02",
+        "trials": [
+          {
+            "trial": "BC02__bzMD2Lp",
+            "exception": null,
+            "rewards": [
+              {
+                "reward": 1.0
+              }
+            ],
+            "step_results": null
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "task": "BC03",
+    "runs": [
+      {
+        "job": "evaluation/oracle_jobs/BC03",
+        "trials": [
+          {
+            "trial": "BC03__hWzXi7L",
+            "exception": null,
+            "rewards": [
+              {
+                "reward": 1.0
+              }
+            ],
+            "step_results": null
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "task": "BC04",
+    "runs": [
+      {
+        "job": "evaluation/oracle_jobs/BC04",
+        "trials": [
+          {
+            "trial": "BC04__Ph8dVKs",
+            "exception": null,
+            "rewards": [
+              {
+                "reward": 1.0
+              }
+            ],
+            "step_results": null
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "task": "BC05",
+    "runs": [
+      {
+        "job": "evaluation/oracle_jobs/BC05",
+        "trials": [
+          {
+            "trial": "BC05__pz43JCB",
+            "exception": null,
+            "rewards": [
+              {
+                "reward": 1.0
+              }
+            ],
+            "step_results": null
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "task": "BC06",
+    "runs": [
+      {
+        "job": "evaluation/oracle_jobs/BC06",
+        "trials": [
+          {
+            "trial": "BC06__vzE9yKH",
+            "exception": null,
+            "rewards": [
+              {
+                "reward": 1.0
+              }
+            ],
+            "step_results": null
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "task": "BC07",
+    "runs": [
+      {
+        "job": "evaluation/oracle_jobs/BC07",
+        "trials": [
+          {
+            "trial": "BC07__n5zY3CG",
+            "exception": null,
+            "rewards": [
+              {
+                "reward": 1.0
+              }
+            ],
+            "step_results": null
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "task": "BC08",
+    "runs": [
+      {
+        "job": "evaluation/oracle_jobs/BC08",
+        "trials": [
+          {
+            "trial": "BC08__MtD9a9M",
+            "exception": null,
+            "rewards": [
+              {
+                "reward": 1.0
+              }
+            ],
+            "step_results": null
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "task": "BC09",
+    "runs": [
+      {
+        "job": "evaluation/oracle_jobs/BC09",
+        "trials": [
+          {
+            "trial": "BC09__DqbNrYL",
+            "exception": null,
+            "rewards": [
+              {
+                "reward": 1.0
+              }
+            ],
+            "step_results": null
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "task": "BC10",
+    "runs": [
+      {
+        "job": "evaluation/oracle_jobs/BC10",
+        "trials": [
+          {
+            "trial": "BC10__mixHfwU",
+            "exception": null,
+            "rewards": [
+              {
+                "reward": 1.0
+              }
+            ],
+            "step_results": null
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "task": "BC11",
+    "runs": [
+      {
+        "job": "evaluation/oracle_jobs/BC11",
+        "trials": [
+          {
+            "trial": "BC11__qqwPavD",
+            "exception": null,
+            "rewards": [
+              {
+                "reward": 1.0
+              }
+            ],
+            "step_results": null
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "task": "BC12",
+    "runs": [
+      {
+        "job": "evaluation/oracle_jobs/BC12",
+        "trials": [
+          {
+            "trial": "BC12__mLxdda7",
+            "exception": null,
+            "rewards": [
+              {
+                "reward": 1.0
+              }
+            ],
+            "step_results": null
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "task": "BC13",
+    "runs": [
+      {
+        "job": "evaluation/oracle_jobs/BC13",
+        "trials": [
+          {
+            "trial": "BC13__qyJ5p36",
+            "exception": null,
+            "rewards": [
+              {
+                "reward": 1.0
+              }
+            ],
+            "step_results": null
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "task": "BC14",
+    "runs": [
+      {
+        "job": "evaluation/oracle_jobs/BC14",
+        "trials": [
+          {
+            "trial": "BC14__8NTPVzQ",
+            "exception": null,
+            "rewards": [
+              {
+                "reward": 1.0
+              }
+            ],
+            "step_results": null
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "task": "BC15",
+    "runs": [
+      {
+        "job": "evaluation/oracle_jobs/BC15",
+        "trials": [
+          {
+            "trial": "BC15__S9kqayD",
+            "exception": null,
+            "rewards": [
+              {
+                "reward": 1.0
+              }
+            ],
+            "step_results": null
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "task": "BC16",
+    "runs": [
+      {
+        "job": "evaluation/oracle_jobs/BC16",
+        "trials": [
+          {
+            "trial": "BC16__7j6zMGf",
+            "exception": null,
+            "rewards": [
+              {
+                "reward": 1.0
+              }
+            ],
+            "step_results": null
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "task": "D01",
+    "runs": [
+      {
+        "job": "evaluation/oracle_jobs/D01",
+        "trials": [
+          {
+            "trial": "D01__zWoGCFU",
+            "exception": null,
+            "rewards": [
+              {
+                "reward": 1.0
+              },
+              {
+                "reward": 1.0
+              },
+              {
+                "reward": 1.0
+              },
+              {
+                "reward": 1.0
+              }
+            ],
+            "step_results": [
+              {
+                "step_name": "step-1",
+                "agent_result": {
+                  "n_input_tokens": null,
+                  "n_cache_tokens": null,
+                  "n_output_tokens": null,
+                  "cost_usd": null,
+                  "model_usage": null,
+                  "rollout_details": null,
+                  "metadata": null
+                },
+                "verifier_result": {
+                  "rewards": {
+                    "reward": 1.0
+                  }
+                },
+                "exception_info": null,
+                "agent_execution": {
+                  "started_at": "2026-11-24T05:19:01.705515Z",
+                  "finished_at": "2026-11-24T05:19:02.451742Z"
+                },
+                "verifier": {
+                  "started_at": "2026-11-24T05:19:03.665680Z",
+                  "finished_at": "2026-11-24T05:19:07.902817Z"
+                }
+              },
+              {
+                "step_name": "step-2",
+                "agent_result": {
+                  "n_input_tokens": null,
+                  "n_cache_tokens": null,
+                  "n_output_tokens": null,
+                  "cost_usd": null,
+                  "model_usage": null,
+                  "rollout_details": null,
+                  "metadata": null
+                },
+                "verifier_result": {
+                  "rewards": {
+                    "reward": 1.0
+                  }
+                },
+                "exception_info": null,
+                "agent_execution": {
+                  "started_at": "2026-11-24T05:19:08.423555Z",
+                  "finished_at": "2026-11-24T05:19:08.909614Z"
+                },
+                "verifier": {
+                  "started_at": "2026-11-24T05:19:09.802981Z",
+                  "finished_at": "2026-11-24T05:19:13.338480Z"
+                }
+              },
+              {
+                "step_name": "step-3",
+                "agent_result": {
+                  "n_input_tokens": null,
+                  "n_cache_tokens": null,
+                  "n_output_tokens": null,
+                  "cost_usd": null,
+                  "model_usage": null,
+                  "rollout_details": null,
+                  "metadata": null
+                },
+                "verifier_result": {
+                  "rewards": {
+                    "reward": 1.0
+                  }
+                },
+                "exception_info": null,
+                "agent_execution": {
+                  "started_at": "2026-11-24T05:19:13.828288Z",
+                  "finished_at": "2026-11-24T05:19:14.232211Z"
+                },
+                "verifier": {
+                  "started_at": "2026-11-24T05:19:15.029236Z",
+                  "finished_at": "2026-11-24T05:19:18.595537Z"
+                }
+              },
+              {
+                "step_name": "step-4",
+                "agent_result": {
+                  "n_input_tokens": null,
+                  "n_cache_tokens": null,
+                  "n_output_tokens": null,
+                  "cost_usd": null,
+                  "model_usage": null,
+                  "rollout_details": null,
+                  "metadata": null
+                },
+                "verifier_result": {
+                  "rewards": {
+                    "reward": 1.0
+                  }
+                },
+                "exception_info": null,
+                "agent_execution": {
+                  "started_at": "2026-11-24T05:19:19.128041Z",
+                  "finished_at": "2026-11-24T05:19:19.569562Z"
+                },
+                "verifier": {
+                  "started_at": "2026-11-24T05:19:20.361673Z",
+                  "finished_at": "2026-11-24T05:19:23.128515Z"
+                }
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "task": "D02",
+    "runs": [
+      {
+        "job": "evaluation/oracle_jobs/D02",
+        "trials": [
+          {
+            "trial": "D02__chePYkc",
+            "exception": null,
+            "rewards": [
+              {
+                "reward": 1.0
+              },
+              {
+                "reward": 1.0
+              },
+              {
+                "reward": 1.0
+              },
+              {
+                "reward": 1.0
+              }
+            ],
+            "step_results": [
+              {
+                "step_name": "step-1",
+                "agent_result": {
+                  "n_input_tokens": null,
+                  "n_cache_tokens": null,
+                  "n_output_tokens": null,
+                  "cost_usd": null,
+                  "model_usage": null,
+                  "rollout_details": null,
+                  "metadata": null
+                },
+                "verifier_result": {
+                  "rewards": {
+                    "reward": 1.0
+                  }
+                },
+                "exception_info": null,
+                "agent_execution": {
+                  "started_at": "2026-11-24T05:19:34.441606Z",
+                  "finished_at": "2026-11-24T05:19:34.965331Z"
+                },
+                "verifier": {
+                  "started_at": "2026-11-24T05:19:35.969128Z",
+                  "finished_at": "2026-11-24T05:19:39.021556Z"
+                }
+              },
+              {
+                "step_name": "step-2",
+                "agent_result": {
+                  "n_input_tokens": null,
+                  "n_cache_tokens": null,
+                  "n_output_tokens": null,
+                  "cost_usd": null,
+                  "model_usage": null,
+                  "rollout_details": null,
+                  "metadata": null
+                },
+                "verifier_result": {
+                  "rewards": {
+                    "reward": 1.0
+                  }
+                },
+                "exception_info": null,
+                "agent_execution": {
+                  "started_at": "2026-11-24T05:19:39.447110Z",
+                  "finished_at": "2026-11-24T05:19:39.857439Z"
+                },
+                "verifier": {
+                  "started_at": "2026-11-24T05:19:40.631512Z",
+                  "finished_at": "2026-11-24T05:19:43.575498Z"
+                }
+              },
+              {
+                "step_name": "step-3",
+                "agent_result": {
+                  "n_input_tokens": null,
+                  "n_cache_tokens": null,
+                  "n_output_tokens": null,
+                  "cost_usd": null,
+                  "model_usage": null,
+                  "rollout_details": null,
+                  "metadata": null
+                },
+                "verifier_result": {
+                  "rewards": {
+                    "reward": 1.0
+                  }
+                },
+                "exception_info": null,
+                "agent_execution": {
+                  "started_at": "2026-11-24T05:19:44.016274Z",
+                  "finished_at": "2026-11-24T05:19:44.416806Z"
+                },
+                "verifier": {
+                  "started_at": "2026-11-24T05:19:45.255356Z",
+                  "finished_at": "2026-11-24T05:19:48.079304Z"
+                }
+              },
+              {
+                "step_name": "step-4",
+                "agent_result": {
+                  "n_input_tokens": null,
+                  "n_cache_tokens": null,
+                  "n_output_tokens": null,
+                  "cost_usd": null,
+                  "model_usage": null,
+                  "rollout_details": null,
+                  "metadata": null
+                },
+                "verifier_result": {
+                  "rewards": {
+                    "reward": 1.0
+                  }
+                },
+                "exception_info": null,
+                "agent_execution": {
+                  "started_at": "2026-11-24T05:19:48.487063Z",
+                  "finished_at": "2026-11-24T05:19:48.885326Z"
+                },
+                "verifier": {
+                  "started_at": "2026-11-24T05:19:49.632620Z",
+                  "finished_at": "2026-11-24T05:19:52.333680Z"
+                }
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "task": "D03",
+    "runs": [
+      {
+        "job": "evaluation/oracle_jobs/D03",
+        "trials": [
+          {
+            "trial": "D03__sPgM6k4",
+            "exception": null,
+            "rewards": [
+              {
+                "reward": 1.0
+              },
+              {
+                "reward": 1.0
+              },
+              {
+                "reward": 1.0
+              },
+              {
+                "reward": 1.0
+              }
+            ],
+            "step_results": [
+              {
+                "step_name": "step-1",
+                "agent_result": {
+                  "n_input_tokens": null,
+                  "n_cache_tokens": null,
+                  "n_output_tokens": null,
+                  "cost_usd": null,
+                  "model_usage": null,
+                  "rollout_details": null,
+                  "metadata": null
+                },
+                "verifier_result": {
+                  "rewards": {
+                    "reward": 1.0
+                  }
+                },
+                "exception_info": null,
+                "agent_execution": {
+                  "started_at": "2026-11-24T05:20:03.906433Z",
+                  "finished_at": "2026-11-24T05:20:04.464163Z"
+                },
+                "verifier": {
+                  "started_at": "2026-11-24T05:20:05.498069Z",
+                  "finished_at": "2026-11-24T05:20:08.665157Z"
+                }
+              },
+              {
+                "step_name": "step-2",
+                "agent_result": {
+                  "n_input_tokens": null,
+                  "n_cache_tokens": null,
+                  "n_output_tokens": null,
+                  "cost_usd": null,
+                  "model_usage": null,
+                  "rollout_details": null,
+                  "metadata": null
+                },
+                "verifier_result": {
+                  "rewards": {
+                    "reward": 1.0
+                  }
+                },
+                "exception_info": null,
+                "agent_execution": {
+                  "started_at": "2026-11-24T05:20:09.126974Z",
+                  "finished_at": "2026-11-24T05:20:09.518012Z"
+                },
+                "verifier": {
+                  "started_at": "2026-11-24T05:20:10.281758Z",
+                  "finished_at": "2026-11-24T05:20:12.922960Z"
+                }
+              },
+              {
+                "step_name": "step-3",
+                "agent_result": {
+                  "n_input_tokens": null,
+                  "n_cache_tokens": null,
+                  "n_output_tokens": null,
+                  "cost_usd": null,
+                  "model_usage": null,
+                  "rollout_details": null,
+                  "metadata": null
+                },
+                "verifier_result": {
+                  "rewards": {
+                    "reward": 1.0
+                  }
+                },
+                "exception_info": null,
+                "agent_execution": {
+                  "started_at": "2026-11-24T05:20:13.392745Z",
+                  "finished_at": "2026-11-24T05:20:13.768104Z"
+                },
+                "verifier": {
+                  "started_at": "2026-11-24T05:20:14.540339Z",
+                  "finished_at": "2026-11-24T05:20:17.214164Z"
+                }
+              },
+              {
+                "step_name": "step-4",
+                "agent_result": {
+                  "n_input_tokens": null,
+                  "n_cache_tokens": null,
+                  "n_output_tokens": null,
+                  "cost_usd": null,
+                  "model_usage": null,
+                  "rollout_details": null,
+                  "metadata": null
+                },
+                "verifier_result": {
+                  "rewards": {
+                    "reward": 1.0
+                  }
+                },
+                "exception_info": null,
+                "agent_execution": {
+                  "started_at": "2026-11-24T05:20:17.759077Z",
+                  "finished_at": "2026-11-24T05:20:18.176498Z"
+                },
+                "verifier": {
+                  "started_at": "2026-11-24T05:20:18.957141Z",
+                  "finished_at": "2026-11-24T05:20:22.050625Z"
+                }
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "task": "D04",
+    "runs": [
+      {
+        "job": "evaluation/oracle_jobs/D04",
+        "trials": [
+          {
+            "trial": "D04__xLKHCBT",
+            "exception": null,
+            "rewards": [
+              {
+                "reward": 1.0
+              },
+              {
+                "reward": 1.0
+              },
+              {
+                "reward": 1.0
+              },
+              {
+                "reward": 1.0
+              }
+            ],
+            "step_results": [
+              {
+                "step_name": "step-1",
+                "agent_result": {
+                  "n_input_tokens": null,
+                  "n_cache_tokens": null,
+                  "n_output_tokens": null,
+                  "cost_usd": null,
+                  "model_usage": null,
+                  "rollout_details": null,
+                  "metadata": null
+                },
+                "verifier_result": {
+                  "rewards": {
+                    "reward": 1.0
+                  }
+                },
+                "exception_info": null,
+                "agent_execution": {
+                  "started_at": "2026-11-24T05:20:33.240577Z",
+                  "finished_at": "2026-11-24T05:20:33.693424Z"
+                },
+                "verifier": {
+                  "started_at": "2026-11-24T05:20:34.589588Z",
+                  "finished_at": "2026-11-24T05:20:37.524680Z"
+                }
+              },
+              {
+                "step_name": "step-2",
+                "agent_result": {
+                  "n_input_tokens": null,
+                  "n_cache_tokens": null,
+                  "n_output_tokens": null,
+                  "cost_usd": null,
+                  "model_usage": null,
+                  "rollout_details": null,
+                  "metadata": null
+                },
+                "verifier_result": {
+                  "rewards": {
+                    "reward": 1.0
+                  }
+                },
+                "exception_info": null,
+                "agent_execution": {
+                  "started_at": "2026-11-24T05:20:37.936423Z",
+                  "finished_at": "2026-11-24T05:20:38.349055Z"
+                },
+                "verifier": {
+                  "started_at": "2026-11-24T05:20:39.192482Z",
+                  "finished_at": "2026-11-24T05:20:42.325807Z"
+                }
+              },
+              {
+                "step_name": "step-3",
+                "agent_result": {
+                  "n_input_tokens": null,
+                  "n_cache_tokens": null,
+                  "n_output_tokens": null,
+                  "cost_usd": null,
+                  "model_usage": null,
+                  "rollout_details": null,
+                  "metadata": null
+                },
+                "verifier_result": {
+                  "rewards": {
+                    "reward": 1.0
+                  }
+                },
+                "exception_info": null,
+                "agent_execution": {
+                  "started_at": "2026-11-24T05:20:42.858160Z",
+                  "finished_at": "2026-11-24T05:20:43.319562Z"
+                },
+                "verifier": {
+                  "started_at": "2026-11-24T05:20:44.110603Z",
+                  "finished_at": "2026-11-24T05:20:46.715395Z"
+                }
+              },
+              {
+                "step_name": "step-4",
+                "agent_result": {
+                  "n_input_tokens": null,
+                  "n_cache_tokens": null,
+                  "n_output_tokens": null,
+                  "cost_usd": null,
+                  "model_usage": null,
+                  "rollout_details": null,
+                  "metadata": null
+                },
+                "verifier_result": {
+                  "rewards": {
+                    "reward": 1.0
+                  }
+                },
+                "exception_info": null,
+                "agent_execution": {
+                  "started_at": "2026-11-24T05:20:47.169659Z",
+                  "finished_at": "2026-11-24T05:20:47.578665Z"
+                },
+                "verifier": {
+                  "started_at": "2026-11-24T05:20:48.418551Z",
+                  "finished_at": "2026-11-24T05:20:51.075277Z"
+                }
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "task": "E01",
+    "runs": [
+      {
+        "job": "evaluation/oracle_jobs/E01",
+        "trials": [
+          {
+            "trial": "E01__oUivYr3",
+            "exception": null,
+            "rewards": [
+              {
+                "reward": 0.0
+              }
+            ],
+            "step_results": null
+          }
+        ]
+      },
+      {
+        "job": "evaluation/oracle_jobs/E0120261124T053612",
+        "trials": [
+          {
+            "trial": "E01__Jnrn3GZ",
+            "exception": null,
+            "rewards": [
+              {
+                "reward": 1.0
+              }
+            ],
+            "step_results": null
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "task": "E02",
+    "runs": [
+      {
+        "job": "evaluation/oracle_jobs/E02",
+        "trials": [
+          {
+            "trial": "E02__cJbsxEh",
+            "exception": null,
+            "rewards": [
+              {
+                "reward": 0.0
+              }
+            ],
+            "step_results": null
+          }
+        ]
+      },
+      {
+        "job": "evaluation/oracle_jobs/E0220261124T053612",
+        "trials": [
+          {
+            "trial": "E02__rHpkoHZ",
+            "exception": null,
+            "rewards": [
+              {
+                "reward": 1.0
+              }
+            ],
+            "step_results": null
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "task": "E03",
+    "runs": [
+      {
+        "job": "evaluation/oracle_jobs/E03",
+        "trials": [
+          {
+            "trial": "E03__XMD6SwK",
+            "exception": null,
+            "rewards": [
+              {
+                "reward": 0.0
+              }
+            ],
+            "step_results": null
+          }
+        ]
+      },
+      {
+        "job": "evaluation/oracle_jobs/E0320261124T053612",
+        "trials": [
+          {
+            "trial": "E03__Gh8KZEM",
+            "exception": null,
+            "rewards": [
+              {
+                "reward": 1.0
+              }
+            ],
+            "step_results": null
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "task": "E04",
+    "runs": [
+      {
+        "job": "evaluation/oracle_jobs/E04",
+        "trials": [
+          {
+            "trial": "E04__iww7Sp7",
+            "exception": null,
+            "rewards": [
+              {
+                "reward": 0.0
+              }
+            ],
+            "step_results": null
+          }
+        ]
+      },
+      {
+        "job": "evaluation/oracle_jobs/E0420261124T053612",
+        "trials": [
+          {
+            "trial": "E04__tJ3JFFy",
+            "exception": null,
+            "rewards": [
+              {
+                "reward": 1.0
+              }
+            ],
+            "step_results": null
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "task": "R01",
+    "runs": [
+      {
+        "job": "evaluation/oracle_jobs/R01",
+        "trials": [
+          {
+            "trial": "R01__k3zNQ8P",
+            "exception": null,
+            "rewards": [
+              1.0
+            ],
+            "step_results": null
+          }
+        ]
+      },
+      {
+        "job": "evaluation/oracle_jobs/R0120261124T053612",
+        "trials": [
+          {
+            "trial": "R01__qjAhmSZ",
+            "exception": null,
+            "rewards": [
+              1.0
+            ],
+            "step_results": null
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "task": "R02",
+    "runs": [
+      {
+        "job": "evaluation/oracle_jobs/R02",
+        "trials": [
+          {
+            "trial": "R02__R6vJVne",
+            "exception": null,
+            "rewards": [
+              1.0
+            ],
+            "step_results": null
+          }
+        ]
+      },
+      {
+        "job": "evaluation/oracle_jobs/R0220261124T053612",
+        "trials": [
+          {
+            "trial": "R02__8U9NjEj",
+            "exception": null,
+            "rewards": [
+              1.0
+            ],
+            "step_results": null
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "task": "W01",
+    "runs": [
+      {
+        "job": "evaluation/oracle_jobs/W01",
+        "trials": [
+          {
+            "trial": "W01__jThj59g",
+            "exception": null,
+            "rewards": [
+              {
+                "reward": 0.0
+              }
+            ],
+            "step_results": null
+          }
+        ]
+      },
+      {
+        "job": "evaluation/oracle_jobs/W0120261124T053612",
+        "trials": [
+          {
+            "trial": "W01__TW3dZvX",
+            "exception": null,
+            "rewards": [
+              {
+                "reward": 1.0
+              }
+            ],
+            "step_results": null
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "task": "W02",
+    "runs": [
+      {
+        "job": "evaluation/oracle_jobs/W02",
+        "trials": [
+          {
+            "trial": "W02__anCSC6N",
+            "exception": null,
+            "rewards": [
+              {
+                "reward": 0.0
+              }
+            ],
+            "step_results": null
+          }
+        ]
+      },
+      {
+        "job": "evaluation/oracle_jobs/W0220261124T053612",
+        "trials": [
+          {
+            "trial": "W02__duzGmds",
+            "exception": null,
+            "rewards": [
+              {
+                "reward": 1.0
+              }
+            ],
+            "step_results": null
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "task": "W03",
+    "runs": [
+      {
+        "job": "evaluation/oracle_jobs/W03",
+        "trials": [
+          {
+            "trial": "W03__9ZfQ5E5",
+            "exception": null,
+            "rewards": [
+              {
+                "reward": 0.0
+              }
+            ],
+            "step_results": null
+          }
+        ]
+      },
+      {
+        "job": "evaluation/oracle_jobs/W0320261124T053612",
+        "trials": [
+          {
+            "trial": "W03__YV7xHtb",
+            "exception": null,
+            "rewards": [
+              {
+                "reward": 1.0
+              }
+            ],
+            "step_results": null
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "task": "W04",
+    "runs": [
+      {
+        "job": "evaluation/oracle_jobs/W04",
+        "trials": [
+          {
+            "trial": "W04__FTjZdVE",
+            "exception": null,
+            "rewards": [
+              {
+                "reward": 0.0
+              }
+            ],
+            "step_results": null
+          }
+        ]
+      },
+      {
+        "job": "evaluation/oracle_jobs/W0420261124T053612",
+        "trials": [
+          {
+            "trial": "W04__fpmuuKz",
+            "exception": null,
+            "rewards": [
+              {
+                "reward": 1.0
+              }
+            ],
+            "step_results": null
+          }
+        ]
+      }
+    ]
+  }
+]

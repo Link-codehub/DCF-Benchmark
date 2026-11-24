@@ -1,0 +1,52 @@
+{
+  "task": "W02",
+  "judge_model": "claude-opus-5-5",
+  "generated": "2026-11-22T22:15:24.213980+00:00",
+  "llm": {
+    "09-MEMO": {
+      "status": "fail",
+      "rationale": "memo.md 已提交，并包含取数、交叉验证、假设理由和 WACC/g 扰动表（WACC 7%/8%/9% 对应每股 $310.62/$250.98/$211.22；g 2.5%/3%/3.5% 对应 $233.04/$250.98/$272.90）。但不满足本项要求，原因有两点。其一，memo 没有明确指出哪个是最重要的价值驱动。扰动表只陈述了方向（WACC 上升则估值下降，g 上升则估值上升），没有比较各驱动因素的影响大小，也没有点名任何一项为最重要驱动。其二，memo 没有明确的估值局限性讨论。它只提到“配置存在”不等于“白名单已经验证生效”，以及 FetchURL 失败、改用 curl 取数，这属于网络执行披露，不是对 DCF 结论的局限说明。memo 也未讨论终值占比过高、利润率外推、负营运资本可持续性或 WACC 主观设定等模型局限。明确证据不足，判 0。",
+      "judge_model": "claude-opus-5-5",
+      "attempts": [
+        {
+          "attempt": 1,
+          "error": null,
+          "text_chars": 0
+        },
+        {
+          "attempt": 2,
+          "error": null,
+          "text_chars": 447
+        }
+      ]
+    },
+    "W-FAILURE": {
+      "status": "fail",
+      "rationale": "memo 有部分如实披露：它写明 FetchURL 返回网络错误，改用 curl 访问 data.sec.gov 和 home.treasury.gov；也说明 pretax 第二备选标签、DebtCurrent、ShortTermBorrowings 在 companyfacts 中不存在；还指出 ProfitLoss 与 NetIncomeLoss 取值一致。但披露本身存在不一致，不足以认定完全满足要求：（1）memo 称“所有首个合规标签均在第一位置命中”，但 receivables 实际用的是第二顺位标签 ReceivablesNetCurrent，没有说明首选标签 AccountsReceivableNetCurrent 是缺失还是存在冲突，也没有说明处理依据；（2）memo 两处写“全部 17 项字段均成功取回”，题面要求只有 16 个字段，数量差异未作解释；（3）实际取数日写为 2026-11-22，与运行情境的合理性存疑，且未说明；（4）证据中没有 sources.json 内容，无法核验 status/error 字段是否如实记录。因此对“无失败/冲突”的结论及其处理说明证据不足，判 0。",
+      "judge_model": "claude-opus-5-5",
+      "attempts": [
+        {
+          "attempt": 1,
+          "error": null,
+          "text_chars": 559
+        }
+      ]
+    },
+    "X-TA-009": {
+      "status": "fail",
+      "rationale": "该项适用，因为题面把 initial_growth、steady_ebit_margin、tax_rate、da_to_revenue、capex_to_revenue、wacc、terminal_growth 列为开放假设。memo 中部分假设有历史值和计算：initial_growth 写明 254,453/242,290−1；steady_ebit_margin 写明 9,285/254,453；tax_rate 写明 2,373/9,740；da_to_revenue 写明 2,237/254,453；capex_to_revenue 写明 4,710/254,453。但并非每项都有推导。terminal_growth=3.0% 只写“接近长期名义 GDP 增速”，没有给出历史观察值，也没有从观察值到 3.0% 的计算或映射。wacc=8.0% 只写“模型假设”并说明高于 g，没有历史或市场观察值，也没有推导过程；已取回的 10 年期国债收益率 0.0428 未用于推导 WACC，未见无风险利率、风险溢价、beta 或资本结构的映射。至少两项开放假设缺少书面推导，因此不满足该项要求。",
+      "judge_model": "claude-opus-5-5",
+      "attempts": [
+        {
+          "attempt": 1,
+          "error": null,
+          "text_chars": 550
+        }
+      ]
+    }
+  },
+  "agent": {
+    "status": "unscored",
+    "error": "timeout"
+  }
+}

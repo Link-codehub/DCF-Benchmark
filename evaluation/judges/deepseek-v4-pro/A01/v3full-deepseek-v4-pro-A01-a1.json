@@ -1,0 +1,61 @@
+{
+  "task": "A01",
+  "judge_model": "claude-opus-5-5",
+  "generated": "2026-11-22T18:22:35.872550+00:00",
+  "llm": {
+    "A-REASON": {
+      "status": "pass",
+      "rationale": "备忘录把行业驱动到估值结果的因果链讲清楚了，各环节数字可以相互核对。(1) 驱动到收入：初始 ARR 730，叠加净留存 1.04→1.06 与新签 98→150，得到期末 ARR 826→1,578，再按平均 ARR 确认收入 588→1,463。按残期比例 0.756 复核，P1 的 ARR 826 与收入 588 都对得上。(2) 收入到利润：EBIT 利润率 16%→17.6% 带来经营杠杆，NOPAT 从 72.5 升至 198.2。(3) 再投资到 FCFF：明确指出资本化研发 7.5%、资本支出 6.5% 和营运资本 13% 这类 SaaS 再投资，是 FCFF 低于 NOPAT 的主要原因。(4) FCFF 到估值：P5 FCFF 41.5，在 g=2.5%、WACC=10% 下得到终值 567（41.5×1.025/0.075≈567），终值约占企业价值 426 的 85%，并解释了高终值占比是成长期 SaaS 的特征。不足：(a) 85% 实际应为终值现值（约 360）的占比，原文写成终值 567 占 426，表述不严谨；(b) 链条止于企业价值，没有延伸到股权桥和每股价值；(c) 没有说明 SBC 处理对结果的影响。这些不足不影响行业驱动→收入→利润/再投资→FCFF→终值/企业价值这条因果链的完整性和一致性。",
+      "judge_model": "claude-opus-5-5",
+      "attempts": [
+        {
+          "attempt": 1,
+          "error": null,
+          "text_chars": 634
+        }
+      ]
+    },
+    "09-MEMO": {
+      "status": "pass",
+      "rationale": "已提交 memo.md，满足两项要求。价值驱动：'主要价值驱动'一节列出四类驱动，分别是 ARR 增长轨迹（初始 ARR 730、净留存 1.04→1.06、新签 98→150）、EBIT 利润率扩张（16.0%→17.6%）、再投资强度（资本化研发 7.5%、capex 6.5%、NWC 13%）和终值。其中指出终值约占企业价值 85%，这一点说明了最重要的价值来源。局限：'关键局限'一节说明恒定 10% WACC 未反映资本结构随公司成熟而变化，至少满足一个局限的要求。表述瑕疵：'终值 567 占企业价值 426 的约 85%'措辞有歧义。按估值日到最后预测期末约 4.76 年估算，567 的现值约 360，与 426 的比例约 85%，因此实际应指终值现值，不影响本项判断。",
+      "judge_model": "claude-opus-5-5",
+      "attempts": [
+        {
+          "attempt": 1,
+          "error": null,
+          "text_chars": 0
+        },
+        {
+          "attempt": 2,
+          "error": null,
+          "text_chars": 0
+        },
+        {
+          "attempt": 3,
+          "error": null,
+          "text_chars": 402
+        }
+      ]
+    }
+  },
+  "agent": {
+    "status": "scored",
+    "scores": {
+      "01-UNIT": 1,
+      "09-READABLE": 1,
+      "X-TA-004": 1,
+      "X-TA-006": 0,
+      "X-TA-007": 1
+    },
+    "evidence": {
+      "01-UNIT": "output.xlsx 的 Inputs!A2 写明“金额百万元、股数百万股、比率小数”；Calc!A39–A42 的股数行标注“(millions)”。",
+      "09-READABLE": "Calc!A1:F1 的表头为 Item、P1 (Residual)、P2–P5；A 列逐行标注 Period Fraction、Period End Date、ARR Opening/Closing、Average ARR、Revenue、EBIT、D&A、Capex、Capitalized R&D、NWC、ΔNWC、FCFF、Discount Time、Discount Factor、PV，以及股权桥各项。公式都是普通单元格引用，例如 Calc!B8 '=B4*B6+B7'，没有隐藏技巧。",
+      "X-TA-004": "Calc 第 22 行“Discount Time (years)”可见：B22 '=(B3-Inputs!C4)/365' 至 F22 '=(F3-Inputs!C4)/365'。折现因子 B23 '=1/(1+Inputs!C7)^B22'，PV 行 B24 '=B21*B23'，逐期引用这一行。",
+      "X-TA-006": "Calc 中 EBIT（第 12 行）、D&A（第 13 行）、Capex（第 15 行）、ΔNWC（第 20 行）都是独立行，但没有单独的税项或 NOPAT 行。税项内嵌在 FCFF 公式里：Calc!B21 '=B12*(1-Inputs!C6)+B13-B15-B17-B20'，因此不满足“各自独立可识别行项”。",
+      "X-TA-007": "Calc!B27 '=F21*(1+Inputs!C8)/(Inputs!C7-Inputs!C8)'：直接引用可见的终期 FCFF 单元格 Calc!F21，以及 Inputs 页的 g（C8）和 WACC（C7）假设单元格。Calc!B28 '=B27*F23' 按最后一期折现因子折现终值。"
+    },
+    "rationale": "已用 openpyxl 逐格查看 Inputs、Calc、Results 三页的公式。单位说明、期间与项目标签、折现时间行、终值公式引用均满足要求。FCFF 的税项没有单独成行，只嵌在 FCFF 公式中，所以 X-TA-006 给 0。",
+    "seconds": 83.4,
+    "judge_model": "claude-opus-5-5"
+  }
+}

@@ -1,0 +1,125 @@
+{
+  "schema_version": "dcf-v3-w-retrieval-v1",
+  "information_cutoff": "2025-02-14",
+  "sources_file": "sources.json",
+  "checks": [
+    {
+      "check_id": "pretax_to_net_income",
+      "description_cn": "税前利润减所得税费用减含非控股权益的合并净利润",
+      "formula": "pretax_income-income_tax-net_income_consolidated",
+      "inputs": [
+        {
+          "field_id": "pretax_income",
+          "source_item_index": 2,
+          "source_json_path": "$.items[2].value",
+          "value": 6931,
+          "unit": "USD_millions",
+          "field": "IncomeLossFromContinuingOperationsBeforeIncomeTaxesExtraordinaryItemsNoncontrollingInterest"
+        },
+        {
+          "field_id": "income_tax",
+          "source_item_index": 3,
+          "source_json_path": "$.items[3].value",
+          "value": 1371,
+          "unit": "USD_millions",
+          "field": "IncomeTaxExpenseBenefit"
+        },
+        {
+          "field_id": "net_income_consolidated",
+          "source_item_index": 4,
+          "source_json_path": "$.items[4].value",
+          "value": 5560,
+          "unit": "USD_millions",
+          "field": "NetIncomeLoss"
+        }
+      ],
+      "difference": 0.0,
+      "unit": "USD_millions",
+      "tolerance": 111.2,
+      "tolerance_formula": "max(0.01,abs(net_income_consolidated)*0.02)",
+      "passed": true,
+      "disclosure_cn": "差额为 0 百万美元；未强制改零。"
+    },
+    {
+      "check_id": "operating_nwc_fy0",
+      "description_cn": "FY2024 经营净营运资本；现金、短期投资及当期债务按合同排除",
+      "formula": "current_assets-cash-short_term_investments-(current_liabilities-current_debt)",
+      "inputs": [
+        {
+          "field_id": "current_assets",
+          "source_item_index": 11,
+          "source_json_path": "$.items[11].value",
+          "value": 11232,
+          "unit": "USD_millions",
+          "field": "AssetsCurrent"
+        },
+        {
+          "field_id": "cash",
+          "source_item_index": 8,
+          "source_json_path": "$.items[8].value",
+          "value": 7613,
+          "unit": "USD_millions",
+          "field": "CashAndCashEquivalentsAtCarryingValue"
+        },
+        {
+          "field_id": "short_term_investments",
+          "source_item_index": 9,
+          "source_json_path": "$.items[9].value",
+          "value": 273,
+          "unit": "USD_millions",
+          "field": "ShortTermInvestments"
+        },
+        {
+          "field_id": "current_liabilities",
+          "source_item_index": 12,
+          "source_json_path": "$.items[12].value",
+          "value": 10521,
+          "unit": "USD_millions",
+          "field": "LiabilitiesCurrent"
+        },
+        {
+          "field_id": "current_debt",
+          "source_item_index": 13,
+          "source_json_path": "$.items[13].value",
+          "value": 1499,
+          "unit": "USD_millions",
+          "field": "DebtCurrent"
+        }
+      ],
+      "result": -5676.0,
+      "unit": "USD_millions",
+      "passed": true,
+      "disclosure_cn": "现金及短期投资只从流动资产剔除一次；流动负债加回当期债务，股权桥再单独扣除债务，不重复。"
+    },
+    {
+      "check_id": "receivables_within_current_assets",
+      "description_cn": "应收账款净额属于流动资产，不另加到经营 NWC，避免重复",
+      "formula": "current_assets-receivables",
+      "inputs": [
+        {
+          "field_id": "current_assets",
+          "source_item_index": 11,
+          "source_json_path": "$.items[11].value",
+          "value": 11232,
+          "unit": "USD_millions",
+          "field": "AssetsCurrent"
+        },
+        {
+          "field_id": "receivables",
+          "source_item_index": 10,
+          "source_json_path": "$.items[10].value",
+          "value": 2072,
+          "unit": "USD_millions",
+          "field": "AccountsReceivableNetCurrent"
+        }
+      ],
+      "difference": 9160.0,
+      "unit": "USD_millions",
+      "passed": true,
+      "disclosure_cn": "receivables 作为合规性核对使用；不重复计入 NWC 或股权桥。"
+    }
+  ],
+  "failed_checks": [],
+  "conflicts": [],
+  "note_cn": "所有差额按取数值计算并保留。原始 10-K 与 companyfacts 来自同一申报，不构成两个独立会计事实。"
+}

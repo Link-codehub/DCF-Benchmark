@@ -1,0 +1,560 @@
+{
+  "task_id": "F01",
+  "score": 80,
+  "max_score": 80,
+  "reward": 1.0,
+  "rule_score": 80,
+  "rule_max_score": 80,
+  "rule_reward": 1.0,
+  "judge_pending": [
+    "01-UNIT",
+    "09-MEMO",
+    "09-READABLE"
+  ],
+  "passed": false,
+  "rule_passed": true,
+  "categories": {
+    "交付与来源完整性": {
+      "weight": 8,
+      "passed": true,
+      "failed_items": [],
+      "score": 8
+    },
+    "历史与会计口径": {
+      "weight": 10,
+      "passed": true,
+      "failed_items": [],
+      "score": 10
+    },
+    "经营预测": {
+      "weight": 18,
+      "passed": true,
+      "failed_items": [],
+      "score": 18
+    },
+    "DCF与估值桥": {
+      "weight": 24,
+      "passed": true,
+      "failed_items": [],
+      "score": 24
+    },
+    "公式与模型工程": {
+      "weight": 20,
+      "passed": true,
+      "failed_items": [],
+      "score": 20
+    }
+  },
+  "criteria": [
+    {
+      "id": "01-FILE",
+      "category": "交付与来源完整性",
+      "method": "rule",
+      "score": 1,
+      "applicable": true,
+      "evidence": "/app/output.xlsx",
+      "detail": "/app/output.xlsx"
+    },
+    {
+      "id": "01-KEYS",
+      "category": "交付与来源完整性",
+      "method": "rule",
+      "score": 1,
+      "applicable": true,
+      "evidence": "Outputs 或语义键映射",
+      "detail": {
+        "missing": [],
+        "duplicate_output_keys": []
+      }
+    },
+    {
+      "id": "01-UNIT",
+      "category": "交付与来源完整性",
+      "method": "agent",
+      "score": 0,
+      "applicable": true,
+      "evidence": "工作簿表头与单位标签",
+      "detail": "not executed"
+    },
+    {
+      "id": "02-FY",
+      "category": "历史与会计口径",
+      "method": "rule",
+      "score": 1,
+      "applicable": true,
+      "evidence": "历史聚合与原始期间",
+      "detail": {
+        "checked": 3
+      }
+    },
+    {
+      "id": "02-LTM",
+      "category": "历史与会计口径",
+      "method": "rule",
+      "score": 1,
+      "applicable": true,
+      "evidence": "历史聚合与估值日",
+      "detail": {
+        "checked": 3
+      }
+    },
+    {
+      "id": "02-REPORTED",
+      "category": "历史与会计口径",
+      "method": "rule",
+      "score": 1,
+      "applicable": true,
+      "evidence": "历史披露与调整",
+      "detail": {
+        "checked": 2
+      }
+    },
+    {
+      "id": "02-COLLECT",
+      "category": "历史与会计口径",
+      "method": "rule",
+      "score": 1,
+      "applicable": true,
+      "evidence": "现金收款与递延收入",
+      "detail": {
+        "checked": 4
+      }
+    },
+    {
+      "id": "03-DRIVER",
+      "category": "经营预测",
+      "method": "rule",
+      "score": 1,
+      "applicable": true,
+      "evidence": "经营预测期",
+      "detail": {
+        "checked": 4
+      }
+    },
+    {
+      "id": "03-AVERAGE",
+      "category": "经营预测",
+      "method": "rule",
+      "score": 1,
+      "applicable": true,
+      "evidence": "收入预测",
+      "detail": {
+        "checked": 4
+      }
+    },
+    {
+      "id": "03-MARGIN",
+      "category": "经营预测",
+      "method": "rule",
+      "score": 1,
+      "applicable": true,
+      "evidence": "EBIT 预测",
+      "detail": {
+        "checked": 4
+      }
+    },
+    {
+      "id": "03-NWC",
+      "category": "经营预测",
+      "method": "rule",
+      "score": 1,
+      "applicable": true,
+      "evidence": "营运资本表",
+      "detail": {
+        "checked": 4
+      }
+    },
+    {
+      "id": "05-FCFF",
+      "category": "DCF与估值桥",
+      "method": "rule",
+      "score": 1,
+      "applicable": true,
+      "evidence": "FCFF 表",
+      "detail": {
+        "checked": 4
+      }
+    },
+    {
+      "id": "05-DF",
+      "category": "DCF与估值桥",
+      "method": "rule",
+      "score": 1,
+      "applicable": true,
+      "evidence": "折现时间表",
+      "detail": {
+        "checked": 4
+      }
+    },
+    {
+      "id": "05-DUAL",
+      "category": "DCF与估值桥",
+      "method": "rule",
+      "score": 1,
+      "applicable": true,
+      "evidence": "终值计算",
+      "detail": {
+        "checked": 3
+      }
+    },
+    {
+      "id": "05-TV",
+      "category": "DCF与估值桥",
+      "method": "rule",
+      "score": 1,
+      "applicable": true,
+      "evidence": "终值现值",
+      "detail": {
+        "checked": 2
+      }
+    },
+    {
+      "id": "05-BRIDGE",
+      "category": "DCF与估值桥",
+      "method": "rule",
+      "score": 1,
+      "applicable": true,
+      "evidence": "股权桥",
+      "detail": {
+        "checked": 1
+      }
+    },
+    {
+      "id": "05-DILUTION",
+      "category": "DCF与估值桥",
+      "method": "rule",
+      "score": 1,
+      "applicable": true,
+      "evidence": "股数桥",
+      "detail": {
+        "checked": 1
+      }
+    },
+    {
+      "id": "05-VPS",
+      "category": "DCF与估值桥",
+      "method": "rule",
+      "score": 1,
+      "applicable": true,
+      "evidence": "估值结果",
+      "detail": {
+        "checked": 1
+      }
+    },
+    {
+      "id": "06-FORMULA",
+      "category": "公式与模型工程",
+      "method": "rule",
+      "score": 1,
+      "applicable": true,
+      "evidence": "结果单元格 XML/openpyxl",
+      "detail": {
+        "nonformula_or_missing": []
+      }
+    },
+    {
+      "id": "06-RECALC",
+      "category": "公式与模型工程",
+      "method": "rule",
+      "score": 1,
+      "applicable": true,
+      "evidence": "重算后的候选与 expected",
+      "detail": {
+        "checked": 202
+      }
+    },
+    {
+      "id": "06-PERTURB1",
+      "category": "公式与模型工程",
+      "method": "rule",
+      "score": 1,
+      "applicable": true,
+      "evidence": "隐藏扰动一",
+      "detail": {
+        "input_changes": {
+          "a.driver_add.0": 6.566399999999999,
+          "a.ebit_margin.1": 0.17702,
+          "a.wacc": 0.10763499999999998,
+          "b.valuation_cash_adjustment": 13.104000000000001
+        },
+        "mismatch": [],
+        "checked": 202
+      }
+    },
+    {
+      "id": "06-PERTURB2",
+      "category": "公式与模型工程",
+      "method": "rule",
+      "score": 1,
+      "applicable": true,
+      "evidence": "隐藏扰动二",
+      "detail": {
+        "input_changes": {
+          "a.price_growth.1": 0.02898,
+          "a.capex_pct.2": 0.07935,
+          "a.g": 0.02046,
+          "b.debt": 212.55
+        },
+        "mismatch": [],
+        "checked": 202
+      }
+    },
+    {
+      "id": "06-LINKS",
+      "category": "公式与模型工程",
+      "method": "rule",
+      "score": 1,
+      "applicable": true,
+      "evidence": "重算工作簿",
+      "detail": {
+        "errors": [],
+        "links": []
+      }
+    },
+    {
+      "id": "09-MEMO",
+      "category": "表达与专业可用性",
+      "method": "llm",
+      "score": 0,
+      "applicable": true,
+      "evidence": "memo.md 说明文字",
+      "detail": "not executed"
+    },
+    {
+      "id": "09-READABLE",
+      "category": "表达与专业可用性",
+      "method": "agent",
+      "score": 0,
+      "applicable": true,
+      "evidence": "工作簿布局",
+      "detail": "not executed"
+    }
+  ],
+  "diagnostics": {
+    "candidate": "/app/output.xlsx",
+    "work_dir": "/tmp/dcf-v2-grade-remxoxgl",
+    "recalculations": [
+      "/tmp/dcf-v2-grade-remxoxgl/base/recalc/output.xlsx"
+    ],
+    "perturbations": [
+      {
+        "id": "06-PERTURB1",
+        "passed": true
+      },
+      {
+        "id": "06-PERTURB2",
+        "passed": true
+      }
+    ],
+    "mixed_fixed_keys": [
+      "accrual_adjustments_p1",
+      "accrual_adjustments_p2",
+      "accrual_adjustments_p3",
+      "accrual_adjustments_p4",
+      "activity_p1",
+      "activity_p2",
+      "activity_p3",
+      "activity_p4",
+      "assets_p1",
+      "assets_p2",
+      "assets_p3",
+      "assets_p4",
+      "average_driver_p1",
+      "average_driver_p2",
+      "average_driver_p3",
+      "average_driver_p4",
+      "balance_difference_p1",
+      "balance_difference_p2",
+      "balance_difference_p3",
+      "balance_difference_p4",
+      "capex_p1",
+      "capex_p2",
+      "capex_p3",
+      "capex_p4",
+      "cash_close_p1",
+      "cash_close_p2",
+      "cash_close_p3",
+      "cash_close_p4",
+      "cash_collections_p1",
+      "cash_collections_p2",
+      "cash_collections_p3",
+      "cash_collections_p4",
+      "cash_link_p1",
+      "cash_link_p2",
+      "cash_link_p3",
+      "cash_link_p4",
+      "cash_taxes_p1",
+      "cash_taxes_p2",
+      "cash_taxes_p3",
+      "cash_taxes_p4",
+      "cfo_p1",
+      "cfo_p2",
+      "cfo_p3",
+      "cfo_p4",
+      "cost_of_equity",
+      "da_p1",
+      "da_p2",
+      "da_p3",
+      "da_p4",
+      "debt_close_p1",
+      "debt_close_p2",
+      "debt_close_p3",
+      "debt_close_p4",
+      "deferred_close_p1",
+      "deferred_close_p2",
+      "deferred_close_p3",
+      "deferred_close_p4",
+      "deferred_tax_asset_p1",
+      "deferred_tax_asset_p2",
+      "deferred_tax_asset_p3",
+      "deferred_tax_asset_p4",
+      "delta_nwc_p1",
+      "delta_nwc_p2",
+      "delta_nwc_p3",
+      "delta_nwc_p4",
+      "diluted_shares",
+      "discount_factor_p1",
+      "discount_factor_p2",
+      "discount_factor_p3",
+      "discount_factor_p4",
+      "discount_time_p1",
+      "discount_time_p2",
+      "discount_time_p3",
+      "discount_time_p4",
+      "driver_close_p1",
+      "driver_close_p2",
+      "driver_close_p3",
+      "driver_close_p4",
+      "ebit_p1",
+      "ebit_p2",
+      "ebit_p3",
+      "ebit_p4",
+      "end_time_p1",
+      "end_time_p2",
+      "end_time_p3",
+      "end_time_p4",
+      "enterprise_value",
+      "equity_value",
+      "fcff_p1",
+      "fcff_p2",
+      "fcff_p3",
+      "fcff_p4",
+      "full_revenue_p1",
+      "full_revenue_p2",
+      "full_revenue_p3",
+      "full_revenue_p4",
+      "fy_normalized_ebit",
+      "fy_reported_ebit",
+      "fy_revenue",
+      "interest_p1",
+      "interest_p2",
+      "interest_p3",
+      "interest_p4",
+      "interest_tax_shield_p1",
+      "interest_tax_shield_p2",
+      "interest_tax_shield_p3",
+      "interest_tax_shield_p4",
+      "lease_liability_close_p1",
+      "lease_liability_close_p2",
+      "lease_liability_close_p3",
+      "lease_liability_close_p4",
+      "levered_beta",
+      "levered_tax_p1",
+      "levered_tax_p2",
+      "levered_tax_p3",
+      "levered_tax_p4",
+      "liabilities_equity_p1",
+      "liabilities_equity_p2",
+      "liabilities_equity_p3",
+      "liabilities_equity_p4",
+      "ltm_normalized_ebit",
+      "ltm_reported_ebit",
+      "ltm_revenue",
+      "net_income_p1",
+      "net_income_p2",
+      "net_income_p3",
+      "net_income_p4",
+      "nol_close_p1",
+      "nol_close_p2",
+      "nol_close_p3",
+      "nol_close_p4",
+      "nwc_p1",
+      "nwc_p2",
+      "nwc_p3",
+      "nwc_p4",
+      "operating_current_assets_p1",
+      "operating_current_assets_p2",
+      "operating_current_assets_p3",
+      "operating_current_assets_p4",
+      "ppe_close_p1",
+      "ppe_close_p2",
+      "ppe_close_p3",
+      "ppe_close_p4",
+      "ppe_depreciation_p1",
+      "ppe_depreciation_p2",
+      "ppe_depreciation_p3",
+      "ppe_depreciation_p4",
+      "pv_explicit",
+      "pv_fcff_p1",
+      "pv_fcff_p2",
+      "pv_fcff_p3",
+      "pv_fcff_p4",
+      "pv_terminal",
+      "retained_earnings_p1",
+      "retained_earnings_p2",
+      "retained_earnings_p3",
+      "retained_earnings_p4",
+      "revenue_p1",
+      "revenue_p2",
+      "revenue_p3",
+      "revenue_p4",
+      "rou_additions_p1",
+      "rou_additions_p2",
+      "rou_additions_p3",
+      "rou_additions_p4",
+      "rou_amortization_p1",
+      "rou_amortization_p2",
+      "rou_amortization_p3",
+      "rou_amortization_p4",
+      "rou_close_p1",
+      "rou_close_p2",
+      "rou_close_p3",
+      "rou_close_p4",
+      "sbc_p1",
+      "sbc_p2",
+      "sbc_p3",
+      "sbc_p4",
+      "sbc_reserve_p1",
+      "sbc_reserve_p2",
+      "sbc_reserve_p3",
+      "sbc_reserve_p4",
+      "segment_revenue_p1",
+      "segment_revenue_p2",
+      "segment_revenue_p3",
+      "segment_revenue_p4",
+      "tax_accrual_p1",
+      "tax_accrual_p2",
+      "tax_accrual_p3",
+      "tax_accrual_p4",
+      "tax_p1",
+      "tax_p2",
+      "tax_p3",
+      "tax_p4",
+      "terminal_value",
+      "tv_exit",
+      "tv_gordon",
+      "unit_price_p1",
+      "unit_price_p2",
+      "unit_price_p3",
+      "unit_price_p4",
+      "value_per_share",
+      "wacc"
+    ],
+    "duplicate_output_keys": [],
+    "semantic_cells": 202,
+    "formula_cells": 202,
+    "layout_routing": "fixed_outputs",
+    "formula_error_cells": [],
+    "external_links": []
+  }
+}

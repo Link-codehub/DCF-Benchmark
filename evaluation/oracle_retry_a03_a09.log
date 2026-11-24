@@ -1,0 +1,2 @@
+{"task": "A03", "returncode": 0, "seconds": 16.72, "job": "evaluation/oracle_jobs/A0320261124T054335", "log": "evaluation/oracle_jobs/A0320261124T054335.log", "trials": 1, "task_sha256": "c6a2cbd75aa2b93ced2913abdd943e257ca84b3934ed25d631a65477dc73629e"}
+{"task": "A09", "returncode": 0, "seconds": 28.41, "job": "evaluation/oracle_jobs/A0920261124T054335", "log": "evaluation/oracle_jobs/A0920261124T054335.log", "trials": 1, "task_sha256": "0eb2e69c4b50e0a6d329855bdae471bd6d9377cbaf74ccd96d04060a816559bb"}

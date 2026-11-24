@@ -1,0 +1,998 @@
+{
+  "task": "BC03",
+  "candidate": "/Users/link/Desktop/Finance Bench/exp/dcf_factory_v3/eval/deliveries/kimi-k3.1-pro/BC03/v3full-kimi-k3.1-pro-BC03-a1/output.xlsx",
+  "rule_passed": false,
+  "items": [
+    {
+      "id": "01-FILE",
+      "category": "交付与来源完整性",
+      "importance": "主需",
+      "weight": 3,
+      "method": "rule",
+      "rubric_method": "rule",
+      "status": "pass"
+    },
+    {
+      "id": "01-KEYS",
+      "category": "交付与来源完整性",
+      "importance": "主需",
+      "weight": 3,
+      "method": "rule",
+      "rubric_method": "rule",
+      "status": "pass",
+      "failed_keys": []
+    },
+    {
+      "id": "X-IF-001a",
+      "category": "交付与来源完整性",
+      "importance": "主需",
+      "weight": 3,
+      "method": "rule",
+      "rubric_method": "rule",
+      "status": "pass",
+      "missing": []
+    },
+    {
+      "id": "02-FY",
+      "category": "历史与会计口径",
+      "importance": "主需",
+      "weight": 3,
+      "method": "rule",
+      "rubric_method": "rule",
+      "status": "fail",
+      "evidence_keys": [
+        "fy_normalized_ebit",
+        "fy_revenue"
+      ],
+      "failed_keys": [
+        "fy_normalized_ebit"
+      ]
+    },
+    {
+      "id": "02-LTM",
+      "category": "历史与会计口径",
+      "importance": "主需",
+      "weight": 3,
+      "method": "rule",
+      "rubric_method": "rule",
+      "status": "fail",
+      "evidence_keys": [
+        "ltm_normalized_ebit",
+        "ltm_revenue"
+      ],
+      "failed_keys": [
+        "ltm_normalized_ebit",
+        "ltm_revenue"
+      ]
+    },
+    {
+      "id": "02-REPORTED",
+      "category": "历史与会计口径",
+      "importance": "主需",
+      "weight": 3,
+      "method": "rule",
+      "rubric_method": "rule",
+      "status": "fail",
+      "evidence_keys": [
+        "fy_reported_ebit",
+        "ltm_reported_ebit"
+      ],
+      "failed_keys": [
+        "fy_reported_ebit",
+        "ltm_reported_ebit"
+      ]
+    },
+    {
+      "id": "02-SBC",
+      "category": "历史与会计口径",
+      "importance": "主需",
+      "weight": 3,
+      "method": "rule",
+      "rubric_method": "rule",
+      "status": "fail",
+      "evidence_keys": [
+        "fy_normalized_ebit",
+        "ltm_normalized_ebit"
+      ],
+      "failed_keys": [
+        "fy_normalized_ebit",
+        "ltm_normalized_ebit"
+      ]
+    },
+    {
+      "id": "X-IN-001",
+      "category": "历史与会计口径",
+      "importance": "主需",
+      "weight": 3,
+      "method": "rule",
+      "rubric_method": "rule",
+      "status": "fail",
+      "mismatches": [
+        {
+          "key": "seg.segment_beta.wacc_delta",
+          "index": 1,
+          "expected": 0.005999999999999999,
+          "actual": 0.006
+        }
+      ]
+    },
+    {
+      "id": "X-IN-007",
+      "category": "历史与会计口径",
+      "importance": "主需",
+      "weight": 3,
+      "method": "rule",
+      "rubric_method": "rule",
+      "status": "not_executed",
+      "reason": "该条需要独立语义/结构评审，不能从数值结果推断"
+    },
+    {
+      "id": "X-IN-009",
+      "category": "历史与会计口径",
+      "importance": "主需",
+      "weight": 3,
+      "method": "rule",
+      "rubric_method": "rule",
+      "status": "not_executed",
+      "reason": "该条需要独立语义/结构评审，不能从数值结果推断"
+    },
+    {
+      "id": "03-DRIVER",
+      "category": "经营预测",
+      "importance": "主需",
+      "weight": 3,
+      "method": "rule",
+      "rubric_method": "rule",
+      "status": "pass",
+      "evidence_keys": [
+        "segment_alpha_driver_close_p1",
+        "segment_alpha_driver_close_p2",
+        "segment_alpha_driver_close_p3",
+        "segment_alpha_driver_close_p4",
+        "segment_beta_driver_close_p1",
+        "segment_beta_driver_close_p2",
+        "segment_beta_driver_close_p3",
+        "segment_beta_driver_close_p4"
+      ],
+      "failed_keys": []
+    },
+    {
+      "id": "03-AVERAGE",
+      "category": "经营预测",
+      "importance": "主需",
+      "weight": 3,
+      "method": "rule",
+      "rubric_method": "rule",
+      "status": "fail",
+      "evidence_keys": [
+        "segment_alpha_average_driver_p1",
+        "segment_alpha_average_driver_p2",
+        "segment_alpha_average_driver_p3",
+        "segment_alpha_average_driver_p4",
+        "segment_alpha_revenue_p1",
+        "segment_alpha_revenue_p2",
+        "segment_alpha_revenue_p3",
+        "segment_alpha_revenue_p4",
+        "segment_alpha_unit_price_p1",
+        "segment_alpha_unit_price_p2",
+        "segment_alpha_unit_price_p3",
+        "segment_alpha_unit_price_p4",
+        "segment_beta_average_driver_p1",
+        "segment_beta_average_driver_p2",
+        "segment_beta_average_driver_p3",
+        "segment_beta_average_driver_p4",
+        "segment_beta_revenue_p1",
+        "segment_beta_revenue_p2",
+        "segment_beta_revenue_p3",
+        "segment_beta_revenue_p4",
+        "segment_beta_unit_price_p1",
+        "segment_beta_unit_price_p2",
+        "segment_beta_unit_price_p3",
+        "segment_beta_unit_price_p4"
+      ],
+      "failed_keys": [
+        "segment_alpha_revenue_p1"
+      ]
+    },
+    {
+      "id": "03-MARGIN",
+      "category": "经营预测",
+      "importance": "主需",
+      "weight": 3,
+      "method": "rule",
+      "rubric_method": "rule",
+      "status": "fail",
+      "evidence_keys": [
+        "segment_alpha_ebit_p1",
+        "segment_alpha_ebit_p2",
+        "segment_alpha_ebit_p3",
+        "segment_alpha_ebit_p4",
+        "segment_beta_ebit_p1",
+        "segment_beta_ebit_p2",
+        "segment_beta_ebit_p3",
+        "segment_beta_ebit_p4"
+      ],
+      "failed_keys": [
+        "segment_alpha_ebit_p1"
+      ]
+    },
+    {
+      "id": "03-NWC",
+      "category": "经营预测",
+      "importance": "主需",
+      "weight": 3,
+      "method": "rule",
+      "rubric_method": "rule",
+      "status": "pass",
+      "evidence_keys": [
+        "segment_alpha_delta_nwc_p1",
+        "segment_alpha_delta_nwc_p2",
+        "segment_alpha_delta_nwc_p3",
+        "segment_alpha_delta_nwc_p4",
+        "segment_alpha_nwc_p1",
+        "segment_alpha_nwc_p2",
+        "segment_alpha_nwc_p3",
+        "segment_alpha_nwc_p4",
+        "segment_beta_delta_nwc_p1",
+        "segment_beta_delta_nwc_p2",
+        "segment_beta_delta_nwc_p3",
+        "segment_beta_delta_nwc_p4",
+        "segment_beta_nwc_p1",
+        "segment_beta_nwc_p2",
+        "segment_beta_nwc_p3",
+        "segment_beta_nwc_p4"
+      ],
+      "failed_keys": []
+    },
+    {
+      "id": "B-NWC-OPEN",
+      "category": "经营预测",
+      "importance": "主需",
+      "weight": 3,
+      "method": "rule",
+      "rubric_method": "rule",
+      "status": "pass",
+      "evidence_keys": [
+        "segment_alpha_delta_nwc_p1",
+        "segment_alpha_nwc_p1",
+        "segment_beta_delta_nwc_p1",
+        "segment_beta_nwc_p1"
+      ],
+      "failed_keys": []
+    },
+    {
+      "id": "03-DAYS",
+      "category": "经营预测",
+      "importance": "次需",
+      "weight": 1,
+      "method": "rule",
+      "rubric_method": "rule",
+      "status": "pass",
+      "evidence_keys": [
+        "segment_alpha_delta_nwc_p1",
+        "segment_alpha_delta_nwc_p2",
+        "segment_alpha_delta_nwc_p3",
+        "segment_alpha_delta_nwc_p4",
+        "segment_alpha_nwc_p1",
+        "segment_alpha_nwc_p2",
+        "segment_alpha_nwc_p3",
+        "segment_alpha_nwc_p4",
+        "segment_beta_delta_nwc_p1",
+        "segment_beta_delta_nwc_p2",
+        "segment_beta_delta_nwc_p3",
+        "segment_beta_delta_nwc_p4",
+        "segment_beta_nwc_p1",
+        "segment_beta_nwc_p2",
+        "segment_beta_nwc_p3",
+        "segment_beta_nwc_p4"
+      ],
+      "failed_keys": []
+    },
+    {
+      "id": "C-SOTP-SEG",
+      "category": "经营预测",
+      "importance": "主需",
+      "weight": 3,
+      "method": "rule",
+      "rubric_method": "rule",
+      "status": "fail",
+      "evidence_keys": [
+        "segment_alpha_capex_p1",
+        "segment_alpha_capex_p2",
+        "segment_alpha_capex_p3",
+        "segment_alpha_capex_p4",
+        "segment_alpha_ebit_p1",
+        "segment_alpha_ebit_p2",
+        "segment_alpha_ebit_p3",
+        "segment_alpha_ebit_p4",
+        "segment_alpha_fcff_p1",
+        "segment_alpha_fcff_p2",
+        "segment_alpha_fcff_p3",
+        "segment_alpha_fcff_p4",
+        "segment_alpha_nwc_p1",
+        "segment_alpha_nwc_p2",
+        "segment_alpha_nwc_p3",
+        "segment_alpha_nwc_p4",
+        "segment_alpha_revenue_p1",
+        "segment_alpha_revenue_p2",
+        "segment_alpha_revenue_p3",
+        "segment_alpha_revenue_p4",
+        "segment_beta_capex_p1",
+        "segment_beta_capex_p2",
+        "segment_beta_capex_p3",
+        "segment_beta_capex_p4",
+        "segment_beta_ebit_p1",
+        "segment_beta_ebit_p2",
+        "segment_beta_ebit_p3",
+        "segment_beta_ebit_p4",
+        "segment_beta_fcff_p1",
+        "segment_beta_fcff_p2",
+        "segment_beta_fcff_p3",
+        "segment_beta_fcff_p4",
+        "segment_beta_nwc_p1",
+        "segment_beta_nwc_p2",
+        "segment_beta_nwc_p3",
+        "segment_beta_nwc_p4",
+        "segment_beta_revenue_p1",
+        "segment_beta_revenue_p2",
+        "segment_beta_revenue_p3",
+        "segment_beta_revenue_p4"
+      ],
+      "failed_keys": [
+        "segment_alpha_capex_p1",
+        "segment_alpha_ebit_p1",
+        "segment_alpha_fcff_p1",
+        "segment_alpha_fcff_p2",
+        "segment_alpha_fcff_p3",
+        "segment_alpha_revenue_p1"
+      ]
+    },
+    {
+      "id": "C-SOTP-VAL",
+      "category": "经营预测",
+      "importance": "主需",
+      "weight": 3,
+      "method": "rule",
+      "rubric_method": "rule",
+      "status": "pass",
+      "evidence_keys": [
+        "segment_alpha_enterprise_value",
+        "segment_alpha_segment_enterprise_value",
+        "segment_alpha_terminal_value",
+        "segment_beta_enterprise_value",
+        "segment_beta_segment_enterprise_value",
+        "segment_beta_terminal_value"
+      ],
+      "failed_keys": []
+    },
+    {
+      "id": "C-SOTP-SUM",
+      "category": "经营预测",
+      "importance": "主需",
+      "weight": 3,
+      "method": "rule",
+      "rubric_method": "rule",
+      "status": "pass",
+      "evidence_keys": [
+        "enterprise_value",
+        "sotp_enterprise_value"
+      ],
+      "failed_keys": []
+    },
+    {
+      "id": "C-SOTP-BRIDGE",
+      "category": "经营预测",
+      "importance": "主需",
+      "weight": 3,
+      "method": "rule",
+      "rubric_method": "rule",
+      "status": "pass",
+      "evidence_keys": [
+        "diluted_shares",
+        "equity_value",
+        "value_per_share"
+      ],
+      "failed_keys": []
+    },
+    {
+      "id": "04-PPE",
+      "category": "三表勾稽",
+      "importance": "主需",
+      "weight": 3,
+      "method": "rule",
+      "rubric_method": "rule",
+      "status": "fail",
+      "evidence_keys": [
+        "segment_alpha_capex_p1",
+        "segment_alpha_capex_p2",
+        "segment_alpha_capex_p3",
+        "segment_alpha_capex_p4",
+        "segment_alpha_da_p1",
+        "segment_alpha_da_p2",
+        "segment_alpha_da_p3",
+        "segment_alpha_da_p4",
+        "segment_alpha_depreciation_p1",
+        "segment_alpha_depreciation_p2",
+        "segment_alpha_depreciation_p3",
+        "segment_alpha_depreciation_p4",
+        "segment_alpha_ppe_close_p1",
+        "segment_alpha_ppe_close_p2",
+        "segment_alpha_ppe_close_p3",
+        "segment_alpha_ppe_close_p4",
+        "segment_beta_capex_p1",
+        "segment_beta_capex_p2",
+        "segment_beta_capex_p3",
+        "segment_beta_capex_p4",
+        "segment_beta_da_p1",
+        "segment_beta_da_p2",
+        "segment_beta_da_p3",
+        "segment_beta_da_p4",
+        "segment_beta_depreciation_p1",
+        "segment_beta_depreciation_p2",
+        "segment_beta_depreciation_p3",
+        "segment_beta_depreciation_p4",
+        "segment_beta_ppe_close_p1",
+        "segment_beta_ppe_close_p2",
+        "segment_beta_ppe_close_p3",
+        "segment_beta_ppe_close_p4"
+      ],
+      "failed_keys": [
+        "segment_alpha_capex_p1",
+        "segment_alpha_da_p1",
+        "segment_alpha_da_p2",
+        "segment_alpha_da_p3",
+        "segment_alpha_depreciation_p1",
+        "segment_alpha_depreciation_p2",
+        "segment_alpha_depreciation_p3",
+        "segment_alpha_ppe_close_p1",
+        "segment_alpha_ppe_close_p2",
+        "segment_alpha_ppe_close_p3"
+      ]
+    },
+    {
+      "id": "05-FCFF",
+      "category": "DCF与估值桥",
+      "importance": "主需",
+      "weight": 3,
+      "method": "rule",
+      "rubric_method": "rule",
+      "status": "fail",
+      "evidence_keys": [
+        "segment_alpha_fcff_p1",
+        "segment_alpha_fcff_p2",
+        "segment_alpha_fcff_p3",
+        "segment_alpha_fcff_p4",
+        "segment_beta_fcff_p1",
+        "segment_beta_fcff_p2",
+        "segment_beta_fcff_p3",
+        "segment_beta_fcff_p4"
+      ],
+      "failed_keys": [
+        "segment_alpha_fcff_p1",
+        "segment_alpha_fcff_p2",
+        "segment_alpha_fcff_p3"
+      ]
+    },
+    {
+      "id": "05-DF",
+      "category": "DCF与估值桥",
+      "importance": "主需",
+      "weight": 3,
+      "method": "rule",
+      "rubric_method": "rule",
+      "status": "pass",
+      "evidence_keys": [
+        "segment_alpha_discount_time_p1",
+        "segment_alpha_discount_time_p2",
+        "segment_alpha_discount_time_p3",
+        "segment_alpha_discount_time_p4",
+        "segment_alpha_end_time_p1",
+        "segment_alpha_end_time_p2",
+        "segment_alpha_end_time_p3",
+        "segment_alpha_end_time_p4",
+        "segment_beta_discount_time_p1",
+        "segment_beta_discount_time_p2",
+        "segment_beta_discount_time_p3",
+        "segment_beta_discount_time_p4",
+        "segment_beta_end_time_p1",
+        "segment_beta_end_time_p2",
+        "segment_beta_end_time_p3",
+        "segment_beta_end_time_p4"
+      ],
+      "failed_keys": []
+    },
+    {
+      "id": "05-TV",
+      "category": "DCF与估值桥",
+      "importance": "主需",
+      "weight": 3,
+      "method": "rule",
+      "rubric_method": "rule",
+      "status": "pass",
+      "evidence_keys": [
+        "segment_alpha_pv_terminal",
+        "segment_alpha_terminal_value",
+        "segment_alpha_tv_exit",
+        "segment_alpha_tv_gordon",
+        "segment_beta_pv_terminal",
+        "segment_beta_terminal_value",
+        "segment_beta_tv_exit",
+        "segment_beta_tv_gordon"
+      ],
+      "failed_keys": []
+    },
+    {
+      "id": "05-BRIDGE",
+      "category": "DCF与估值桥",
+      "importance": "主需",
+      "weight": 3,
+      "method": "rule",
+      "rubric_method": "rule",
+      "status": "pass",
+      "evidence_keys": [
+        "equity_value"
+      ],
+      "failed_keys": []
+    },
+    {
+      "id": "05-DILUTION",
+      "category": "DCF与估值桥",
+      "importance": "次需",
+      "weight": 1,
+      "method": "rule",
+      "rubric_method": "rule",
+      "status": "pass",
+      "evidence_keys": [
+        "diluted_shares"
+      ],
+      "failed_keys": []
+    },
+    {
+      "id": "05-VPS",
+      "category": "DCF与估值桥",
+      "importance": "主需",
+      "weight": 3,
+      "method": "rule",
+      "rubric_method": "rule",
+      "status": "pass",
+      "evidence_keys": [
+        "value_per_share"
+      ],
+      "failed_keys": []
+    },
+    {
+      "id": "B-RESIDUAL",
+      "category": "DCF与估值桥",
+      "importance": "主需",
+      "weight": 3,
+      "method": "rule",
+      "rubric_method": "rule",
+      "status": "fail",
+      "evidence_keys": [
+        "segment_alpha_fcff_p1",
+        "segment_alpha_revenue_p1",
+        "segment_beta_fcff_p1",
+        "segment_beta_revenue_p1"
+      ],
+      "failed_keys": [
+        "segment_alpha_fcff_p1",
+        "segment_alpha_revenue_p1"
+      ]
+    },
+    {
+      "id": "06-FORMULA",
+      "category": "公式与模型工程",
+      "importance": "主需",
+      "weight": 3,
+      "method": "rule",
+      "rubric_method": "rule",
+      "status": "pass",
+      "failed_keys": [],
+      "evidence_keys": []
+    },
+    {
+      "id": "06-RECALC",
+      "category": "公式与模型工程",
+      "importance": "主需",
+      "weight": 3,
+      "method": "rule",
+      "rubric_method": "rule",
+      "status": "fail",
+      "failed_keys": [
+        "fy_normalized_ebit",
+        "fy_reported_ebit",
+        "ltm_normalized_ebit",
+        "ltm_reported_ebit",
+        "ltm_revenue",
+        "segment_alpha_capex_p1",
+        "segment_alpha_da_p1",
+        "segment_alpha_da_p2",
+        "segment_alpha_da_p3",
+        "segment_alpha_depreciation_p1",
+        "segment_alpha_depreciation_p2",
+        "segment_alpha_depreciation_p3",
+        "segment_alpha_ebit_p1",
+        "segment_alpha_fcff_p1",
+        "segment_alpha_fcff_p2",
+        "segment_alpha_fcff_p3",
+        "segment_alpha_ppe_close_p1",
+        "segment_alpha_ppe_close_p2",
+        "segment_alpha_ppe_close_p3",
+        "segment_alpha_revenue_p1"
+      ],
+      "evidence_keys": [
+        "fy_normalized_ebit",
+        "fy_reported_ebit",
+        "ltm_normalized_ebit",
+        "ltm_reported_ebit",
+        "ltm_revenue",
+        "segment_alpha_capex_p1",
+        "segment_alpha_da_p1",
+        "segment_alpha_da_p2",
+        "segment_alpha_da_p3",
+        "segment_alpha_depreciation_p1",
+        "segment_alpha_depreciation_p2",
+        "segment_alpha_depreciation_p3",
+        "segment_alpha_ebit_p1",
+        "segment_alpha_fcff_p1",
+        "segment_alpha_fcff_p2",
+        "segment_alpha_fcff_p3",
+        "segment_alpha_ppe_close_p1",
+        "segment_alpha_ppe_close_p2",
+        "segment_alpha_ppe_close_p3",
+        "segment_alpha_revenue_p1"
+      ]
+    },
+    {
+      "id": "06-PERTURB1",
+      "category": "公式与模型工程",
+      "importance": "主需",
+      "weight": 3,
+      "method": "rule",
+      "rubric_method": "rule",
+      "status": "fail",
+      "evidence": {
+        "id": 1,
+        "checked": 144,
+        "mismatches": [
+          {
+            "key": "fy_normalized_ebit",
+            "actual": 175.354771,
+            "expected": 241.37324399999997
+          },
+          {
+            "key": "fy_reported_ebit",
+            "actual": 179.250701,
+            "expected": 245.26917399999996
+          },
+          {
+            "key": "ltm_revenue",
+            "actual": 1278.532265,
+            "expected": 653.5441579999999
+          },
+          {
+            "key": "ltm_normalized_ebit",
+            "actual": 175.354771,
+            "expected": 125.92805699999997
+          },
+          {
+            "key": "ltm_reported_ebit",
+            "actual": 179.250701,
+            "expected": 129.82398699999996
+          },
+          {
+            "key": "segment_alpha_revenue_p1",
+            "actual": 585.778846464,
+            "expected": 584.1783578124591
+          },
+          {
+            "key": "segment_alpha_ebit_p1",
+            "actual": 111.29798082816,
+            "expected": 110.99388798436723
+          },
+          {
+            "key": "segment_alpha_capex_p1",
+            "actual": 38.07562502016,
+            "expected": 37.97159325780984
+          },
+          {
+            "key": "segment_alpha_depreciation_p1",
+            "actual": 13.9267397260274,
+            "expected": 19.8122854893241
+          },
+          {
+            "key": "segment_alpha_da_p1",
+            "actual": 20.1640146118721,
+            "expected": 19.8122854893241
+          },
+          {
+            "key": "segment_alpha_ppe_close_p1",
+            "actual": 157.148885294133,
+            "expected": 151.15930776848575
+          },
+          {
+            "key": "segment_alpha_fcff_p1",
+            "actual": 13.7795182409757,
+            "expected": 20.937074177955168
+          },
+          {
+            "key": "segment_alpha_depreciation_p2",
+            "actual": 20.4293550882372,
+            "expected": 23.086090823551757
+          },
+          {
+            "key": "segment_alpha_da_p2",
+            "actual": 28.3970081536863,
+            "expected": 23.086090823551757
+          },
+          {
+            "key": "segment_alpha_ppe_close_p2",
+            "actual": 189.571542723566,
+            "expected": 180.9252294626049
+          },
+          {
+            "key": "segment_alpha_fcff_p2",
+            "actual": 74.9388751892839,
+            "expected": 80.75234057519883
+          },
+          {
+            "key": "segment_alpha_depreciation_p3",
+            "actual": 24.6443005540636,
+            "expected": 27.326246403733602
+          },
+          {
+            "key": "segment_alpha_da_p3",
+            "actual": 33.1170303636087,
+            "expected": 27.326246403733602
+          },
+          {
+            "key": "segment_alpha_ppe_close_p3",
+            "actual": 223.480574070964,
+            "expected": 212.1523149603323
+          },
+          {
+            "key": "segment_alpha_fcff_p3",
+            "actual": 84.5866000001402,
+            "expected": 91.56217406495648
+          }
+        ]
+      }
+    },
+    {
+      "id": "06-PERTURB2",
+      "category": "公式与模型工程",
+      "importance": "主需",
+      "weight": 3,
+      "method": "rule",
+      "rubric_method": "rule",
+      "status": "fail",
+      "evidence": {
+        "id": 2,
+        "checked": 144,
+        "mismatches": [
+          {
+            "key": "fy_normalized_ebit",
+            "actual": 175.354771,
+            "expected": 241.37324399999997
+          },
+          {
+            "key": "fy_reported_ebit",
+            "actual": 179.250701,
+            "expected": 245.26917399999996
+          },
+          {
+            "key": "ltm_revenue",
+            "actual": 1278.532265,
+            "expected": 653.5441579999999
+          },
+          {
+            "key": "ltm_normalized_ebit",
+            "actual": 175.354771,
+            "expected": 125.92805699999997
+          },
+          {
+            "key": "ltm_reported_ebit",
+            "actual": 179.250701,
+            "expected": 129.82398699999996
+          },
+          {
+            "key": "segment_alpha_revenue_p1",
+            "actual": 581.516712,
+            "expected": 579.9278685245903
+          },
+          {
+            "key": "segment_alpha_ebit_p1",
+            "actual": 110.48817528,
+            "expected": 110.18629501967216
+          },
+          {
+            "key": "segment_alpha_capex_p1",
+            "actual": 37.79858628,
+            "expected": 37.695311454098366
+          },
+          {
+            "key": "segment_alpha_depreciation_p1",
+            "actual": 13.9267397260274,
+            "expected": 19.794277971213702
+          },
+          {
+            "key": "segment_alpha_da_p1",
+            "actual": 20.1640146118721,
+            "expected": 19.794277971213702
+          },
+          {
+            "key": "segment_alpha_ppe_close_p1",
+            "actual": 156.871846553973,
+            "expected": 150.90103348288466
+          },
+          {
+            "key": "segment_alpha_fcff_p1",
+            "actual": 14.1778552983933,
+            "expected": 21.3183394071645
+          },
+          {
+            "key": "segment_alpha_depreciation_p2",
+            "actual": 20.3933400520164,
+            "expected": 23.019679864639688
+          },
+          {
+            "key": "segment_alpha_da_p2",
+            "actual": 28.3609931174654,
+            "expected": 23.019679864639688
+          },
+          {
+            "key": "segment_alpha_ppe_close_p2",
+            "actual": 188.825360530644,
+            "expected": 180.22820764693236
+          },
+          {
+            "key": "segment_alpha_fcff_p2",
+            "actual": 72.1196945427182,
+            "expected": 77.90276400594178
+          },
+          {
+            "key": "segment_alpha_depreciation_p3",
+            "actual": 24.5472968689837,
+            "expected": 27.205119547571964
+          },
+          {
+            "key": "segment_alpha_da_p3",
+            "actual": 33.0200266785287,
+            "expected": 27.205119547571964
+          },
+          {
+            "key": "segment_alpha_ppe_close_p3",
+            "actual": 222.361949099672,
+            "expected": 211.106973537372
+          },
+          {
+            "key": "segment_alpha_fcff_p3",
+            "actual": 83.7992199122884,
+            "expected": 90.75067080602301
+          }
+        ]
+      }
+    },
+    {
+      "id": "06-LINKS",
+      "category": "公式与模型工程",
+      "importance": "主需",
+      "weight": 3,
+      "method": "rule",
+      "rubric_method": "rule",
+      "status": "pass",
+      "failed_keys": []
+    },
+    {
+      "id": "06-FREE",
+      "category": "公式与模型工程",
+      "importance": "次需",
+      "weight": 1,
+      "method": "rule",
+      "rubric_method": "rule",
+      "status": "pass",
+      "note": "语义键发现器实际读取成功；不依赖固定行号"
+    },
+    {
+      "id": "09-MEMO",
+      "category": "表达与专业可用性",
+      "importance": "次需",
+      "weight": 1,
+      "method": "llm",
+      "rubric_method": "llm",
+      "status": "not_executed",
+      "reason": "该条需要独立语义/结构评审，不能从数值结果推断"
+    },
+    {
+      "id": "09-READABLE",
+      "category": "表达与专业可用性",
+      "importance": "次需",
+      "weight": 1,
+      "method": "agent",
+      "rubric_method": "agent",
+      "status": "not_executed",
+      "reason": "该条需要独立语义/结构评审，不能从数值结果推断"
+    },
+    {
+      "id": "X-TA-002",
+      "category": "表达与专业可用性",
+      "importance": "主需",
+      "weight": 3,
+      "method": "rule",
+      "rubric_method": "rule",
+      "status": "not_executed",
+      "reason": "该条需要独立语义/结构评审，不能从数值结果推断"
+    },
+    {
+      "id": "X-TA-004",
+      "category": "表达与专业可用性",
+      "importance": "次需",
+      "weight": 1,
+      "method": "rule",
+      "rubric_method": "agent",
+      "status": "fail",
+      "evidence": {
+        "X-TA-004": false,
+        "X-TA-006": {
+          "fcff": false,
+          "ebit": false,
+          "da": false,
+          "capex": false,
+          "delta_nwc": false,
+          "tax": false
+        },
+        "X-TA-007": true
+      }
+    },
+    {
+      "id": "X-TA-006",
+      "category": "表达与专业可用性",
+      "importance": "次需",
+      "weight": 1,
+      "method": "rule",
+      "rubric_method": "agent",
+      "status": "fail",
+      "evidence": {
+        "fcff": false,
+        "ebit": false,
+        "da": false,
+        "capex": false,
+        "delta_nwc": false,
+        "tax": false
+      }
+    },
+    {
+      "id": "X-TA-007",
+      "category": "表达与专业可用性",
+      "importance": "次需",
+      "weight": 1,
+      "method": "rule",
+      "rubric_method": "agent",
+      "status": "pass",
+      "evidence": {
+        "X-TA-004": false,
+        "X-TA-006": {
+          "fcff": false,
+          "ebit": false,
+          "da": false,
+          "capex": false,
+          "delta_nwc": false,
+          "tax": false
+        },
+        "X-TA-007": true
+      }
+    }
+  ],
+  "semantic_pending": [
+    "09-MEMO",
+    "09-READABLE",
+    "X-TA-004",
+    "X-TA-006",
+    "X-TA-007"
+  ],
+  "unexecuted_rules": [
+    "X-IN-007",
+    "X-IN-009",
+    "X-TA-002"
+  ]
+}

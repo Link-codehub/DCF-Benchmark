@@ -1,0 +1,145 @@
+{
+  "schema_version": "v3.0",
+  "task_id": "A06",
+  "family": "A",
+  "company": "岫原能源",
+  "base_structure": "P-自有基座",
+  "industry": "energy_resources",
+  "industry_drivers": [
+    "现有储量递减",
+    "开发资本开支新增产量",
+    "商品价格"
+  ],
+  "valuation_date": "2025-02-11",
+  "last_fy_end": "2024-09-30",
+  "horizon": 4,
+  "history": [],
+  "time_axis": {
+    "midyear": true,
+    "history_frequency": "annual",
+    "day_count": "actual/365"
+  },
+  "accounting": {
+    "sbc_expense": true,
+    "industry_valuation": true
+  },
+  "assumptions": {
+    "tax": 0.23,
+    "wacc": 0.10500000000000001,
+    "g": 0.025,
+    "driver0": 524,
+    "ebit_margin": [
+      0.16,
+      0.164,
+      0.168,
+      0.17200000000000001
+    ],
+    "da_pct": [
+      0.052,
+      0.052,
+      0.052,
+      0.052
+    ],
+    "capex_pct": [
+      0.065,
+      0.065,
+      0.065,
+      0.065
+    ],
+    "nwc_pct": [
+      0.13,
+      0.13,
+      0.13,
+      0.13
+    ],
+    "opening_nwc": 83,
+    "opening_base_production": 380,
+    "decline_rate": [
+      0.08,
+      0.077,
+      0.074,
+      0.07100000000000001
+    ],
+    "development_capex": [
+      165,
+      185,
+      205,
+      225
+    ],
+    "capex_per_unit": 4.3,
+    "commodity_price": [
+      1.94,
+      1.99,
+      2.04,
+      2.09
+    ]
+  },
+  "bridge": {
+    "cash": 184,
+    "debt": 268,
+    "investments": 30,
+    "lease_liability": 18,
+    "minority": 11,
+    "valuation_cash_adjustment": 0,
+    "shares": 90,
+    "rsus": 1.2,
+    "options": 0,
+    "strike": 0,
+    "share_price": 15
+  },
+  "residual_activity": 0.6328767123287671,
+  "enabled_modules": [
+    "industry_driver",
+    "residual_period"
+  ],
+  "public_output_keys": [
+    "total_production_p1",
+    "revenue_p1",
+    "ebit_p1",
+    "capex_p1",
+    "da_p1",
+    "nwc_p1",
+    "delta_nwc_p1",
+    "fcff_p1",
+    "discount_time_p1",
+    "total_production_p2",
+    "revenue_p2",
+    "ebit_p2",
+    "capex_p2",
+    "da_p2",
+    "nwc_p2",
+    "delta_nwc_p2",
+    "fcff_p2",
+    "discount_time_p2",
+    "total_production_p3",
+    "revenue_p3",
+    "ebit_p3",
+    "capex_p3",
+    "da_p3",
+    "nwc_p3",
+    "delta_nwc_p3",
+    "fcff_p3",
+    "discount_time_p3",
+    "total_production_p4",
+    "revenue_p4",
+    "ebit_p4",
+    "capex_p4",
+    "da_p4",
+    "nwc_p4",
+    "delta_nwc_p4",
+    "fcff_p4",
+    "discount_time_p4",
+    "wacc",
+    "terminal_value",
+    "pv_terminal",
+    "enterprise_value",
+    "equity_value",
+    "diluted_shares",
+    "value_per_share"
+  ],
+  "units": {
+    "money": "百万元",
+    "shares": "百万股",
+    "rates": "小数"
+  }
+}

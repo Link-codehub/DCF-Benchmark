@@ -1,0 +1,364 @@
+{
+  "schema_version": "dcf-v3-w-retrieval-v1",
+  "task_id": "W01",
+  "source_item_index_base": 0,
+  "sources_layout": {
+    "field_id": "A",
+    "value": "B",
+    "unit": "C"
+  },
+  "items": [
+    {
+      "field_id": "revenue",
+      "source_item_index": 0,
+      "sheet": "Sources",
+      "cell": "B2",
+      "used_by": [
+        "Forecast!B2",
+        "Assumptions!B3",
+        "Assumptions!B5",
+        "Assumptions!B6"
+      ],
+      "usage_details": [
+        {
+          "sheet": "Forecast",
+          "cell": "B2",
+          "formula": "=Sources!B2"
+        },
+        {
+          "sheet": "Assumptions",
+          "cell": "B3",
+          "formula": "=Sources!B3/Sources!B2"
+        },
+        {
+          "sheet": "Assumptions",
+          "cell": "B5",
+          "formula": "=Sources!B7/Sources!B2"
+        },
+        {
+          "sheet": "Assumptions",
+          "cell": "B6",
+          "formula": "=Sources!B8/Sources!B2"
+        }
+      ]
+    },
+    {
+      "field_id": "operating_income",
+      "source_item_index": 1,
+      "sheet": "Sources",
+      "cell": "B3",
+      "used_by": [
+        "Forecast!B4",
+        "Assumptions!B3"
+      ],
+      "usage_details": [
+        {
+          "sheet": "Forecast",
+          "cell": "B4",
+          "formula": "=Sources!B3"
+        },
+        {
+          "sheet": "Assumptions",
+          "cell": "B3",
+          "formula": "=Sources!B3/Sources!B2"
+        }
+      ]
+    },
+    {
+      "field_id": "pretax_income",
+      "source_item_index": 2,
+      "sheet": "Sources",
+      "cell": "B4",
+      "used_by": [
+        "Forecast!B6",
+        "Assumptions!B4",
+        "DCF!B19"
+      ],
+      "usage_details": [
+        {
+          "sheet": "Forecast",
+          "cell": "B6",
+          "formula": "=Sources!B5/Sources!B4"
+        },
+        {
+          "sheet": "Assumptions",
+          "cell": "B4",
+          "formula": "=Sources!B5/Sources!B4"
+        },
+        {
+          "sheet": "DCF",
+          "cell": "B19",
+          "formula": "=Sources!B4-Sources!B5-Sources!B6"
+        }
+      ]
+    },
+    {
+      "field_id": "income_tax",
+      "source_item_index": 3,
+      "sheet": "Sources",
+      "cell": "B5",
+      "used_by": [
+        "Forecast!B6",
+        "Assumptions!B4",
+        "DCF!B19"
+      ],
+      "usage_details": [
+        {
+          "sheet": "Forecast",
+          "cell": "B6",
+          "formula": "=Sources!B5/Sources!B4"
+        },
+        {
+          "sheet": "Assumptions",
+          "cell": "B4",
+          "formula": "=Sources!B5/Sources!B4"
+        },
+        {
+          "sheet": "DCF",
+          "cell": "B19",
+          "formula": "=Sources!B4-Sources!B5-Sources!B6"
+        }
+      ]
+    },
+    {
+      "field_id": "net_income_consolidated",
+      "source_item_index": 4,
+      "sheet": "Sources",
+      "cell": "B6",
+      "used_by": [
+        "DCF!B19",
+        "DCF!B20"
+      ],
+      "usage_details": [
+        {
+          "sheet": "DCF",
+          "cell": "B19",
+          "formula": "=Sources!B4-Sources!B5-Sources!B6"
+        },
+        {
+          "sheet": "DCF",
+          "cell": "B20",
+          "formula": "=MAX(0.01,ABS(Sources!B6)*0.02)"
+        }
+      ]
+    },
+    {
+      "field_id": "da",
+      "source_item_index": 5,
+      "sheet": "Sources",
+      "cell": "B7",
+      "used_by": [
+        "Forecast!B8",
+        "Assumptions!B5"
+      ],
+      "usage_details": [
+        {
+          "sheet": "Forecast",
+          "cell": "B8",
+          "formula": "=Sources!B7"
+        },
+        {
+          "sheet": "Assumptions",
+          "cell": "B5",
+          "formula": "=Sources!B7/Sources!B2"
+        }
+      ]
+    },
+    {
+      "field_id": "capex",
+      "source_item_index": 6,
+      "sheet": "Sources",
+      "cell": "B8",
+      "used_by": [
+        "Forecast!B9",
+        "Assumptions!B6"
+      ],
+      "usage_details": [
+        {
+          "sheet": "Forecast",
+          "cell": "B9",
+          "formula": "=Sources!B8"
+        },
+        {
+          "sheet": "Assumptions",
+          "cell": "B6",
+          "formula": "=Sources!B8/Sources!B2"
+        }
+      ]
+    },
+    {
+      "field_id": "diluted_shares",
+      "source_item_index": 7,
+      "sheet": "Sources",
+      "cell": "B9",
+      "used_by": [
+        "DCF!B17"
+      ],
+      "usage_details": [
+        {
+          "sheet": "DCF",
+          "cell": "B17",
+          "formula": "=Sources!B9"
+        }
+      ]
+    },
+    {
+      "field_id": "cash",
+      "source_item_index": 8,
+      "sheet": "Sources",
+      "cell": "B10",
+      "used_by": [
+        "Forecast!B10",
+        "DCF!B12"
+      ],
+      "usage_details": [
+        {
+          "sheet": "Forecast",
+          "cell": "B10",
+          "formula": "=B20+B19-Sources!B10-Sources!B11-(Sources!B14-Sources!B15)"
+        },
+        {
+          "sheet": "DCF",
+          "cell": "B12",
+          "formula": "=Sources!B10"
+        }
+      ]
+    },
+    {
+      "field_id": "short_term_investments",
+      "source_item_index": 9,
+      "sheet": "Sources",
+      "cell": "B11",
+      "used_by": [
+        "Forecast!B10",
+        "DCF!B13"
+      ],
+      "usage_details": [
+        {
+          "sheet": "Forecast",
+          "cell": "B10",
+          "formula": "=B20+B19-Sources!B10-Sources!B11-(Sources!B14-Sources!B15)"
+        },
+        {
+          "sheet": "DCF",
+          "cell": "B13",
+          "formula": "=Sources!B11"
+        }
+      ]
+    },
+    {
+      "field_id": "receivables",
+      "source_item_index": 10,
+      "sheet": "Sources",
+      "cell": "B12",
+      "used_by": [
+        "Forecast!B19",
+        "Forecast!B20"
+      ],
+      "usage_details": [
+        {
+          "sheet": "Forecast",
+          "cell": "B19",
+          "formula": "=Sources!B12"
+        },
+        {
+          "sheet": "Forecast",
+          "cell": "B20",
+          "formula": "=Sources!B13-Sources!B12"
+        }
+      ]
+    },
+    {
+      "field_id": "current_assets",
+      "source_item_index": 11,
+      "sheet": "Sources",
+      "cell": "B13",
+      "used_by": [
+        "Forecast!B20"
+      ],
+      "usage_details": [
+        {
+          "sheet": "Forecast",
+          "cell": "B20",
+          "formula": "=Sources!B13-Sources!B12"
+        }
+      ]
+    },
+    {
+      "field_id": "current_liabilities",
+      "source_item_index": 12,
+      "sheet": "Sources",
+      "cell": "B14",
+      "used_by": [
+        "Forecast!B10"
+      ],
+      "usage_details": [
+        {
+          "sheet": "Forecast",
+          "cell": "B10",
+          "formula": "=B20+B19-Sources!B10-Sources!B11-(Sources!B14-Sources!B15)"
+        }
+      ]
+    },
+    {
+      "field_id": "current_debt",
+      "source_item_index": 13,
+      "sheet": "Sources",
+      "cell": "B15",
+      "used_by": [
+        "Forecast!B10",
+        "DCF!B14"
+      ],
+      "usage_details": [
+        {
+          "sheet": "Forecast",
+          "cell": "B10",
+          "formula": "=B20+B19-Sources!B10-Sources!B11-(Sources!B14-Sources!B15)"
+        },
+        {
+          "sheet": "DCF",
+          "cell": "B14",
+          "formula": "=Sources!B15"
+        }
+      ]
+    },
+    {
+      "field_id": "noncurrent_debt",
+      "source_item_index": 14,
+      "sheet": "Sources",
+      "cell": "B16",
+      "used_by": [
+        "DCF!B15"
+      ],
+      "usage_details": [
+        {
+          "sheet": "DCF",
+          "cell": "B15",
+          "formula": "=Sources!B16"
+        }
+      ]
+    },
+    {
+      "field_id": "treasury_10y",
+      "source_item_index": 15,
+      "sheet": "Sources",
+      "cell": "B17",
+      "used_by": [
+        "Assumptions!B7",
+        "DCF!B22"
+      ],
+      "usage_details": [
+        {
+          "sheet": "Assumptions",
+          "cell": "B7",
+          "formula": "=Sources!B17+B8"
+        },
+        {
+          "sheet": "DCF",
+          "cell": "B22",
+          "formula": "=Sources!B17"
+        }
+      ]
+    }
+  ]
+}

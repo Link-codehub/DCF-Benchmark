@@ -1,0 +1,805 @@
+{
+  "task": "A07",
+  "candidate": "/Users/link/Desktop/Finance Bench/exp/dcf_factory_v3/eval/deliveries/deepseek-v4-pro/A07/v3full-deepseek-v4-pro-A07-a1/output.xlsx",
+  "rule_passed": false,
+  "items": [
+    {
+      "id": "01-FILE",
+      "category": "交付与来源完整性",
+      "importance": "主需",
+      "weight": 3,
+      "method": "rule",
+      "rubric_method": "rule",
+      "status": "pass"
+    },
+    {
+      "id": "01-KEYS",
+      "category": "交付与来源完整性",
+      "importance": "主需",
+      "weight": 3,
+      "method": "rule",
+      "rubric_method": "rule",
+      "status": "pass",
+      "failed_keys": []
+    },
+    {
+      "id": "01-UNIT",
+      "category": "交付与来源完整性",
+      "importance": "次需",
+      "weight": 1,
+      "method": "agent",
+      "rubric_method": "agent",
+      "status": "not_executed",
+      "reason": "该条需要独立语义/结构评审，不能从数值结果推断"
+    },
+    {
+      "id": "X-IF-001a",
+      "category": "交付与来源完整性",
+      "importance": "主需",
+      "weight": 3,
+      "method": "rule",
+      "rubric_method": "rule",
+      "status": "pass",
+      "missing": []
+    },
+    {
+      "id": "X-IF-002",
+      "category": "交付与来源完整性",
+      "importance": "主需",
+      "weight": 3,
+      "method": "rule",
+      "rubric_method": "rule",
+      "status": "pass",
+      "required": [
+        "Inputs",
+        "Results"
+      ],
+      "actual": [
+        "Inputs",
+        "History",
+        "Required Keys",
+        "Calc",
+        "Results"
+      ]
+    },
+    {
+      "id": "02-SBC",
+      "category": "历史与会计口径",
+      "importance": "主需",
+      "weight": 3,
+      "method": "rule",
+      "rubric_method": "rule",
+      "status": "not_executed",
+      "evidence_keys": []
+    },
+    {
+      "id": "X-IN-001",
+      "category": "历史与会计口径",
+      "importance": "主需",
+      "weight": 3,
+      "method": "rule",
+      "rubric_method": "rule",
+      "status": "pass",
+      "mismatches": []
+    },
+    {
+      "id": "X-IN-007",
+      "category": "历史与会计口径",
+      "importance": "主需",
+      "weight": 3,
+      "method": "rule",
+      "rubric_method": "rule",
+      "status": "not_executed",
+      "reason": "该条需要独立语义/结构评审，不能从数值结果推断"
+    },
+    {
+      "id": "A-UTIL-RAB",
+      "category": "经营预测",
+      "importance": "主需",
+      "weight": 3,
+      "method": "rule",
+      "rubric_method": "rule",
+      "status": "fail",
+      "evidence_keys": [
+        "da_p1",
+        "da_p2",
+        "da_p3",
+        "da_p4",
+        "da_p5",
+        "rate_base_close_p1",
+        "rate_base_close_p2",
+        "rate_base_close_p3",
+        "rate_base_close_p4",
+        "rate_base_close_p5",
+        "revenue_p1",
+        "revenue_p2",
+        "revenue_p3",
+        "revenue_p4",
+        "revenue_p5"
+      ],
+      "failed_keys": [
+        "da_p1",
+        "da_p2",
+        "rate_base_close_p1",
+        "rate_base_close_p2",
+        "rate_base_close_p3",
+        "revenue_p1",
+        "revenue_p2",
+        "revenue_p3"
+      ]
+    },
+    {
+      "id": "03-DRIVER",
+      "category": "经营预测",
+      "importance": "主需",
+      "weight": 3,
+      "method": "rule",
+      "rubric_method": "rule",
+      "status": "not_executed",
+      "evidence_keys": []
+    },
+    {
+      "id": "A-DRIVER",
+      "category": "经营预测",
+      "importance": "主需",
+      "weight": 3,
+      "method": "rule",
+      "rubric_method": "rule",
+      "status": "fail",
+      "evidence_keys": [
+        "rate_base_close_p1",
+        "rate_base_close_p2",
+        "rate_base_close_p3",
+        "rate_base_close_p4",
+        "rate_base_close_p5"
+      ],
+      "failed_keys": [
+        "rate_base_close_p1",
+        "rate_base_close_p2",
+        "rate_base_close_p3"
+      ]
+    },
+    {
+      "id": "03-MARGIN",
+      "category": "经营预测",
+      "importance": "主需",
+      "weight": 3,
+      "method": "rule",
+      "rubric_method": "rule",
+      "status": "fail",
+      "evidence_keys": [
+        "ebit_p1",
+        "ebit_p2",
+        "ebit_p3",
+        "ebit_p4",
+        "ebit_p5"
+      ],
+      "failed_keys": [
+        "ebit_p1",
+        "ebit_p2",
+        "ebit_p3"
+      ]
+    },
+    {
+      "id": "03-NWC",
+      "category": "经营预测",
+      "importance": "主需",
+      "weight": 3,
+      "method": "rule",
+      "rubric_method": "rule",
+      "status": "fail",
+      "evidence_keys": [
+        "delta_nwc_p1",
+        "delta_nwc_p2",
+        "delta_nwc_p3",
+        "delta_nwc_p4",
+        "delta_nwc_p5",
+        "nwc_p1",
+        "nwc_p2",
+        "nwc_p3",
+        "nwc_p4",
+        "nwc_p5"
+      ],
+      "failed_keys": [
+        "delta_nwc_p1",
+        "delta_nwc_p2",
+        "nwc_p1",
+        "nwc_p2"
+      ]
+    },
+    {
+      "id": "B-NWC-OPEN",
+      "category": "经营预测",
+      "importance": "主需",
+      "weight": 3,
+      "method": "rule",
+      "rubric_method": "rule",
+      "status": "fail",
+      "evidence_keys": [
+        "delta_nwc_p1",
+        "nwc_p1"
+      ],
+      "failed_keys": [
+        "delta_nwc_p1",
+        "nwc_p1"
+      ]
+    },
+    {
+      "id": "A-REASON",
+      "category": "经营预测",
+      "importance": "次需",
+      "weight": 1,
+      "method": "llm",
+      "rubric_method": "llm",
+      "status": "not_executed",
+      "reason": "该条需要独立语义/结构评审，不能从数值结果推断"
+    },
+    {
+      "id": "05-FCFF",
+      "category": "DCF与估值桥",
+      "importance": "主需",
+      "weight": 3,
+      "method": "rule",
+      "rubric_method": "rule",
+      "status": "fail",
+      "evidence_keys": [
+        "fcff_p1",
+        "fcff_p2",
+        "fcff_p3",
+        "fcff_p4",
+        "fcff_p5"
+      ],
+      "failed_keys": [
+        "fcff_p1",
+        "fcff_p2"
+      ]
+    },
+    {
+      "id": "05-DF",
+      "category": "DCF与估值桥",
+      "importance": "主需",
+      "weight": 3,
+      "method": "rule",
+      "rubric_method": "rule",
+      "status": "pass",
+      "evidence_keys": [
+        "discount_time_p1",
+        "discount_time_p2",
+        "discount_time_p3",
+        "discount_time_p4",
+        "discount_time_p5"
+      ],
+      "failed_keys": []
+    },
+    {
+      "id": "05-TV",
+      "category": "DCF与估值桥",
+      "importance": "主需",
+      "weight": 3,
+      "method": "rule",
+      "rubric_method": "rule",
+      "status": "pass",
+      "evidence_keys": [
+        "pv_terminal",
+        "terminal_value"
+      ],
+      "failed_keys": []
+    },
+    {
+      "id": "05-BRIDGE",
+      "category": "DCF与估值桥",
+      "importance": "主需",
+      "weight": 3,
+      "method": "rule",
+      "rubric_method": "rule",
+      "status": "pass",
+      "evidence_keys": [
+        "equity_value"
+      ],
+      "failed_keys": []
+    },
+    {
+      "id": "05-DILUTION",
+      "category": "DCF与估值桥",
+      "importance": "次需",
+      "weight": 1,
+      "method": "rule",
+      "rubric_method": "rule",
+      "status": "pass",
+      "evidence_keys": [
+        "diluted_shares"
+      ],
+      "failed_keys": []
+    },
+    {
+      "id": "05-VPS",
+      "category": "DCF与估值桥",
+      "importance": "主需",
+      "weight": 3,
+      "method": "rule",
+      "rubric_method": "rule",
+      "status": "pass",
+      "evidence_keys": [
+        "value_per_share"
+      ],
+      "failed_keys": []
+    },
+    {
+      "id": "B-RESIDUAL",
+      "category": "DCF与估值桥",
+      "importance": "主需",
+      "weight": 3,
+      "method": "rule",
+      "rubric_method": "rule",
+      "status": "fail",
+      "evidence_keys": [
+        "fcff_p1",
+        "revenue_p1"
+      ],
+      "failed_keys": [
+        "fcff_p1",
+        "revenue_p1"
+      ]
+    },
+    {
+      "id": "06-FORMULA",
+      "category": "公式与模型工程",
+      "importance": "主需",
+      "weight": 3,
+      "method": "rule",
+      "rubric_method": "rule",
+      "status": "pass",
+      "failed_keys": [],
+      "evidence_keys": []
+    },
+    {
+      "id": "06-RECALC",
+      "category": "公式与模型工程",
+      "importance": "主需",
+      "weight": 3,
+      "method": "rule",
+      "rubric_method": "rule",
+      "status": "fail",
+      "failed_keys": [
+        "capex_p1",
+        "capex_p2",
+        "capex_p3",
+        "da_p1",
+        "da_p2",
+        "delta_nwc_p1",
+        "delta_nwc_p2",
+        "ebit_p1",
+        "ebit_p2",
+        "ebit_p3",
+        "fcff_p1",
+        "fcff_p2",
+        "nwc_p1",
+        "nwc_p2",
+        "rate_base_close_p1",
+        "rate_base_close_p2",
+        "rate_base_close_p3",
+        "revenue_p1",
+        "revenue_p2",
+        "revenue_p3"
+      ],
+      "evidence_keys": [
+        "capex_p1",
+        "capex_p2",
+        "capex_p3",
+        "da_p1",
+        "da_p2",
+        "delta_nwc_p1",
+        "delta_nwc_p2",
+        "ebit_p1",
+        "ebit_p2",
+        "ebit_p3",
+        "fcff_p1",
+        "fcff_p2",
+        "nwc_p1",
+        "nwc_p2",
+        "rate_base_close_p1",
+        "rate_base_close_p2",
+        "rate_base_close_p3",
+        "revenue_p1",
+        "revenue_p2",
+        "revenue_p3"
+      ]
+    },
+    {
+      "id": "06-PERTURB1",
+      "category": "公式与模型工程",
+      "importance": "主需",
+      "weight": 3,
+      "method": "rule",
+      "rubric_method": "rule",
+      "status": "fail",
+      "evidence": {
+        "id": 1,
+        "checked": 52,
+        "mismatches": [
+          {
+            "key": "rate_base_close_p1",
+            "actual": 1540.53347945205,
+            "expected": 1610.0
+          },
+          {
+            "key": "revenue_p1",
+            "actual": 408.62597260274,
+            "expected": 105.48296547945208
+          },
+          {
+            "key": "ebit_p1",
+            "actual": 65.3801556164384,
+            "expected": 16.877274476712333
+          },
+          {
+            "key": "capex_p1",
+            "actual": 26.5606882191781,
+            "expected": 61.59611878356165
+          },
+          {
+            "key": "da_p1",
+            "actual": 21.2485505753425,
+            "expected": 36.23161643835617
+          },
+          {
+            "key": "nwc_p1",
+            "actual": 87.3392,
+            "expected": 22.545796000000003
+          },
+          {
+            "key": "delta_nwc_p1",
+            "actual": 0.339200000000005,
+            "expected": -64.454204
+          },
+          {
+            "key": "fcff_p1",
+            "actual": 44.6913821808219,
+            "expected": 52.08520300186302
+          },
+          {
+            "key": "rate_base_close_p2",
+            "actual": 1581.53374071233,
+            "expected": 1708.0
+          },
+          {
+            "key": "revenue_p2",
+            "actual": 627.283093429579,
+            "expected": 109.07802739726029
+          },
+          {
+            "key": "ebit_p2",
+            "actual": 104.75627660274,
+            "expected": 18.21603057534247
+          },
+          {
+            "key": "capex_p2",
+            "actual": 40.7734010729226,
+            "expected": 66.69555123287672
+          },
+          {
+            "key": "da_p2",
+            "actual": 32.6187208583381,
+            "expected": 38.437019178082195
+          },
+          {
+            "key": "nwc_p2",
+            "actual": 81.5468021458453,
+            "expected": 23.3142
+          },
+          {
+            "key": "delta_nwc_p2",
+            "actual": -5.79239785415471,
+            "expected": 0.7684039999999968
+          },
+          {
+            "key": "fcff_p2",
+            "actual": 78.3000506236798,
+            "expected": -15.000592511780823
+          },
+          {
+            "key": "rate_base_close_p3",
+            "actual": 1629.01699230597,
+            "expected": 1814.0
+          },
+          {
+            "key": "revenue_p3",
+            "actual": 640.144609335943,
+            "expected": 115.84750684931508
+          },
+          {
+            "key": "ebit_p3",
+            "actual": 107.544294368438,
+            "expected": 19.462381150684934
+          },
+          {
+            "key": "capex_p3",
+            "actual": 41.6093996068363,
+            "expected": 72.00132082191782
+          }
+        ]
+      }
+    },
+    {
+      "id": "06-PERTURB2",
+      "category": "公式与模型工程",
+      "importance": "主需",
+      "weight": 3,
+      "method": "rule",
+      "rubric_method": "rule",
+      "status": "fail",
+      "evidence": {
+        "id": 2,
+        "checked": 52,
+        "mismatches": [
+          {
+            "key": "rate_base_close_p1",
+            "actual": 1540.53347945205,
+            "expected": 1610.0
+          },
+          {
+            "key": "revenue_p1",
+            "actual": 392.909589041096,
+            "expected": 102.81945205479454
+          },
+          {
+            "key": "ebit_p1",
+            "actual": 62.8655342465754,
+            "expected": 16.451112328767127
+          },
+          {
+            "key": "capex_p1",
+            "actual": 25.5391232876712,
+            "expected": 61.42299041095891
+          },
+          {
+            "key": "da_p1",
+            "actual": 20.431298630137,
+            "expected": 36.23161643835617
+          },
+          {
+            "key": "nwc_p1",
+            "actual": 83.98,
+            "expected": 21.9765
+          },
+          {
+            "key": "delta_nwc_p1",
+            "actual": -3.01999999999998,
+            "expected": -65.0235
+          },
+          {
+            "key": "fcff_p1",
+            "actual": 46.3186367123288,
+            "expected": 52.49948252054795
+          },
+          {
+            "key": "rate_base_close_p2",
+            "actual": 1581.53374071233,
+            "expected": 1708.0
+          },
+          {
+            "key": "revenue_p2",
+            "actual": 613.207472796525,
+            "expected": 106.25238706849316
+          },
+          {
+            "key": "ebit_p2",
+            "actual": 100.56602553863,
+            "expected": 17.42539147923288
+          },
+          {
+            "key": "capex_p2",
+            "actual": 39.8584857317741,
+            "expected": 66.51188461150686
+          },
+          {
+            "key": "da_p2",
+            "actual": 31.8867885854193,
+            "expected": 38.437019178082195
+          },
+          {
+            "key": "nwc_p2",
+            "actual": 79.7169714635483,
+            "expected": 22.710251200000002
+          },
+          {
+            "key": "delta_nwc_p2",
+            "actual": -4.26302853645173,
+            "expected": 0.7337512000000004
+          },
+          {
+            "key": "fcff_p2",
+            "actual": 73.7271710548421,
+            "expected": -15.391065194415347
+          },
+          {
+            "key": "rate_base_close_p3",
+            "actual": 1629.01699230597,
+            "expected": 1814.0
+          },
+          {
+            "key": "revenue_p3",
+            "actual": 640.144609335943,
+            "expected": 115.84750684931508
+          },
+          {
+            "key": "ebit_p3",
+            "actual": 107.544294368438,
+            "expected": 19.462381150684934
+          },
+          {
+            "key": "capex_p3",
+            "actual": 47.4347155517933,
+            "expected": 73.05553313424659
+          }
+        ]
+      }
+    },
+    {
+      "id": "06-LINKS",
+      "category": "公式与模型工程",
+      "importance": "主需",
+      "weight": 3,
+      "method": "rule",
+      "rubric_method": "rule",
+      "status": "pass",
+      "failed_keys": []
+    },
+    {
+      "id": "06-FREE",
+      "category": "公式与模型工程",
+      "importance": "次需",
+      "weight": 1,
+      "method": "rule",
+      "rubric_method": "rule",
+      "status": "pass",
+      "note": "语义键发现器实际读取成功；不依赖固定行号"
+    },
+    {
+      "id": "X-FM-002",
+      "category": "公式与模型工程",
+      "importance": "主需",
+      "weight": 3,
+      "method": "rule",
+      "rubric_method": "rule",
+      "status": "not_executed",
+      "reason": "该条需要独立语义/结构评审，不能从数值结果推断"
+    },
+    {
+      "id": "X-FM-005",
+      "category": "公式与模型工程",
+      "importance": "主需",
+      "weight": 3,
+      "method": "rule",
+      "rubric_method": "rule",
+      "status": "not_executed",
+      "reason": "该条需要独立语义/结构评审，不能从数值结果推断"
+    },
+    {
+      "id": "X-FM-007",
+      "category": "公式与模型工程",
+      "importance": "主需",
+      "weight": 3,
+      "method": "rule",
+      "rubric_method": "rule",
+      "status": "pass",
+      "iterative_calculation_enabled": false
+    },
+    {
+      "id": "09-MEMO",
+      "category": "表达与专业可用性",
+      "importance": "次需",
+      "weight": 1,
+      "method": "llm",
+      "rubric_method": "llm",
+      "status": "not_executed",
+      "reason": "该条需要独立语义/结构评审，不能从数值结果推断"
+    },
+    {
+      "id": "09-READABLE",
+      "category": "表达与专业可用性",
+      "importance": "次需",
+      "weight": 1,
+      "method": "agent",
+      "rubric_method": "agent",
+      "status": "not_executed",
+      "reason": "该条需要独立语义/结构评审，不能从数值结果推断"
+    },
+    {
+      "id": "X-TA-004",
+      "category": "表达与专业可用性",
+      "importance": "次需",
+      "weight": 1,
+      "method": "rule",
+      "rubric_method": "agent",
+      "status": "pass",
+      "evidence": {
+        "X-TA-004": true,
+        "X-TA-006": {
+          "fcff": true,
+          "ebit": true,
+          "da": true,
+          "capex": true,
+          "delta_nwc": true,
+          "tax": false
+        },
+        "X-TA-007": true
+      }
+    },
+    {
+      "id": "X-TA-006",
+      "category": "表达与专业可用性",
+      "importance": "次需",
+      "weight": 1,
+      "method": "rule",
+      "rubric_method": "agent",
+      "status": "pass",
+      "evidence": {
+        "fcff": true,
+        "ebit": true,
+        "da": true,
+        "capex": true,
+        "delta_nwc": true,
+        "tax": false
+      }
+    },
+    {
+      "id": "X-TA-007",
+      "category": "表达与专业可用性",
+      "importance": "次需",
+      "weight": 1,
+      "method": "rule",
+      "rubric_method": "agent",
+      "status": "pass",
+      "evidence": {
+        "X-TA-004": true,
+        "X-TA-006": {
+          "fcff": true,
+          "ebit": true,
+          "da": true,
+          "capex": true,
+          "delta_nwc": true,
+          "tax": false
+        },
+        "X-TA-007": true
+      }
+    },
+    {
+      "id": "A-METRIC",
+      "category": "经营预测",
+      "importance": "主需",
+      "weight": 3,
+      "method": "rule",
+      "rubric_method": "rule",
+      "status": "fail",
+      "evidence_keys": [
+        "rate_base_close_p1",
+        "rate_base_close_p2",
+        "rate_base_close_p3",
+        "rate_base_close_p4",
+        "rate_base_close_p5"
+      ],
+      "failed_keys": [
+        "rate_base_close_p1",
+        "rate_base_close_p2",
+        "rate_base_close_p3"
+      ]
+    }
+  ],
+  "semantic_pending": [
+    "01-UNIT",
+    "A-REASON",
+    "09-MEMO",
+    "09-READABLE",
+    "X-TA-004",
+    "X-TA-006",
+    "X-TA-007"
+  ],
+  "unexecuted_rules": [
+    "02-SBC",
+    "X-IN-007",
+    "03-DRIVER",
+    "X-FM-002",
+    "X-FM-005"
+  ]
+}

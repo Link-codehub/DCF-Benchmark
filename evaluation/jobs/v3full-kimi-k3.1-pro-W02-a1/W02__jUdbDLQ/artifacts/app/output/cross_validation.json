@@ -1,0 +1,42 @@
+{
+  "checks": [
+    {
+      "check_id": "pretax_to_net_income",
+      "description": "税前利润−所得税费用−含非控股权益的合并净利润",
+      "formula": "pretax_income−income_tax−net_income_consolidated",
+      "pretax_income": 9740.0,
+      "income_tax": 2373.0,
+      "net_income_consolidated": 7367.0,
+      "difference": 0.0,
+      "unit": "USD_millions",
+      "tolerance": 147.34,
+      "tolerance_rule": "abs(difference)<=max(0.01,abs(net_income_consolidated)*0.02)",
+      "status": "pass",
+      "source_item_indices": {
+        "pretax_income": 2,
+        "income_tax": 3,
+        "net_income_consolidated": 4
+      },
+      "source_fields": [
+        {
+          "field_id": "pretax_income",
+          "source_item_index": 2,
+          "value": 9740.0,
+          "field": "IncomeLossFromContinuingOperationsBeforeIncomeTaxesExtraordinaryItemsNoncontrollingInterest"
+        },
+        {
+          "field_id": "income_tax",
+          "source_item_index": 3,
+          "value": 2373.0,
+          "field": "IncomeTaxExpenseBenefit"
+        },
+        {
+          "field_id": "net_income_consolidated",
+          "source_item_index": 4,
+          "value": 7367.0,
+          "field": "ProfitLoss"
+        }
+      ]
+    }
+  ]
+}

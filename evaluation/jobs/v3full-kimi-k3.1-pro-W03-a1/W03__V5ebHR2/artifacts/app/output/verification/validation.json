@@ -1,0 +1,2704 @@
+{
+  "observed_at": "2026-11-23T00:25:34Z",
+  "libreoffice_version": "LibreOffice 7.4.7.2 40(Build:2)",
+  "status": "passed",
+  "workbook": "model.xlsx",
+  "workbook_sha256": "81ca81c3ff79f8388da7a03e4568a278c312f03de66427446e00e03cc44f6426",
+  "sheet_structure": [
+    "Sources",
+    "Assumptions",
+    "Forecast",
+    "DCF",
+    "Outputs"
+  ],
+  "sources_schema_and_raw_fact_checks": [
+    {
+      "field_id": "revenue",
+      "tag": "Revenues",
+      "raw_value": 36176200000,
+      "converted_value": 36176.2,
+      "accession": "0000829224-24-000057",
+      "filed": "2024-11-20",
+      "match": true
+    },
+    {
+      "field_id": "operating_income",
+      "tag": "OperatingIncomeLoss",
+      "raw_value": 5408800000,
+      "converted_value": 5408.8,
+      "accession": "0000829224-24-000057",
+      "filed": "2024-11-20",
+      "match": true
+    },
+    {
+      "field_id": "pretax_income",
+      "tag": "IncomeLossFromContinuingOperationsBeforeIncomeTaxesExtraordinaryItemsNoncontrollingInterest",
+      "raw_value": 4969600000,
+      "converted_value": 4969.6,
+      "accession": "0000829224-24-000057",
+      "filed": "2024-11-20",
+      "match": true
+    },
+    {
+      "field_id": "income_tax",
+      "tag": "IncomeTaxExpenseBenefit",
+      "raw_value": 1207300000,
+      "converted_value": 1207.3,
+      "accession": "0000829224-24-000057",
+      "filed": "2024-11-20",
+      "match": true
+    },
+    {
+      "field_id": "net_income_consolidated",
+      "tag": "ProfitLoss",
+      "raw_value": 3762300000,
+      "converted_value": 3762.3,
+      "accession": "0000829224-24-000057",
+      "filed": "2024-11-20",
+      "match": true
+    },
+    {
+      "field_id": "da",
+      "tag": "DepreciationDepletionAndAmortization",
+      "raw_value": 1592400000,
+      "converted_value": 1592.4,
+      "accession": "0000829224-24-000057",
+      "filed": "2024-11-20",
+      "match": true
+    },
+    {
+      "field_id": "capex",
+      "tag": "PaymentsToAcquirePropertyPlantAndEquipment",
+      "raw_value": 2777500000,
+      "converted_value": 2777.5,
+      "accession": "0000829224-24-000057",
+      "filed": "2024-11-20",
+      "match": true
+    },
+    {
+      "field_id": "diluted_shares",
+      "tag": "WeightedAverageNumberOfDilutedSharesOutstanding",
+      "raw_value": 1137300000,
+      "converted_value": 1137.3,
+      "accession": "0000829224-24-000057",
+      "filed": "2024-11-20",
+      "match": true
+    },
+    {
+      "field_id": "cash",
+      "tag": "CashCashEquivalentsRestrictedCashAndRestrictedCashEquivalents",
+      "raw_value": 3286200000,
+      "converted_value": 3286.2,
+      "accession": "0000829224-24-000057",
+      "filed": "2024-11-20",
+      "match": true
+    },
+    {
+      "field_id": "short_term_investments",
+      "tag": "ShortTermInvestments",
+      "raw_value": 257000000,
+      "converted_value": 257.0,
+      "accession": "0000829224-24-000057",
+      "filed": "2024-11-20",
+      "match": true
+    },
+    {
+      "field_id": "receivables",
+      "tag": "AccountsReceivableNetCurrent",
+      "raw_value": 1213800000,
+      "converted_value": 1213.8,
+      "accession": "0000829224-24-000057",
+      "filed": "2024-11-20",
+      "match": true
+    },
+    {
+      "field_id": "current_assets",
+      "tag": "AssetsCurrent",
+      "raw_value": 6847400000,
+      "converted_value": 6847.4,
+      "accession": "0000829224-24-000057",
+      "filed": "2024-11-20",
+      "match": true
+    },
+    {
+      "field_id": "current_liabilities",
+      "tag": "LiabilitiesCurrent",
+      "raw_value": 9070000000,
+      "converted_value": 9070.0,
+      "accession": "0000829224-24-000057",
+      "filed": "2024-11-20",
+      "match": true
+    },
+    {
+      "field_id": "current_debt",
+      "tag": "LongTermDebtCurrent",
+      "raw_value": 1248900000,
+      "converted_value": 1248.9,
+      "accession": "0000829224-24-000057",
+      "filed": "2024-11-20",
+      "match": true
+    },
+    {
+      "field_id": "noncurrent_debt",
+      "tag": "LongTermDebtNoncurrent",
+      "raw_value": 14319500000,
+      "converted_value": 14319.5,
+      "accession": "0000829224-24-000057",
+      "filed": "2024-11-20",
+      "match": true
+    }
+  ],
+  "retrieval_map_items": 16,
+  "cross_validation": {
+    "check_id": "pretax_to_net_income",
+    "formula": "pretax_income - income_tax - net_income_consolidated",
+    "source_item_indices": [
+      2,
+      3,
+      4
+    ],
+    "inputs": {
+      "pretax_income": {
+        "source_item_index": 2,
+        "value": 4969.6,
+        "unit": "USD_millions"
+      },
+      "income_tax": {
+        "source_item_index": 3,
+        "value": 1207.3,
+        "unit": "USD_millions"
+      },
+      "net_income_consolidated": {
+        "source_item_index": 4,
+        "value": 3762.3,
+        "unit": "USD_millions"
+      }
+    },
+    "difference": 0.0,
+    "tolerance": 75.24600000000001,
+    "tolerance_formula": "max(0.01, abs(net_income_consolidated) * 0.02)",
+    "status": "passed",
+    "workbook_check": "Outputs!C10",
+    "note": "使用含非控股权益的ProfitLoss，不以归母NetIncomeLoss替代；差异未人为改成零"
+  },
+  "baseline_recalculation": {
+    "wacc": 0.0725,
+    "terminal_growth": 0.02,
+    "formula_errors": [],
+    "value_checks": [
+      {
+        "check": "NWC0",
+        "actual": -4516.9,
+        "expected": -4516.900000000001,
+        "passed": true
+      },
+      {
+        "check": "revenue_FY1",
+        "actual": 37261.486,
+        "expected": 37261.486,
+        "passed": true
+      },
+      {
+        "check": "revenue_FY2",
+        "actual": 38286.176865,
+        "expected": 38286.176865,
+        "passed": true
+      },
+      {
+        "check": "revenue_FY3",
+        "actual": 39243.331286625,
+        "expected": 39243.331286625,
+        "passed": true
+      },
+      {
+        "check": "revenue_FY4",
+        "actual": 40126.3062405741,
+        "expected": 40126.30624057406,
+        "passed": true
+      },
+      {
+        "check": "revenue_FY5",
+        "actual": 40928.8323653855,
+        "expected": 40928.83236538554,
+        "passed": true
+      },
+      {
+        "check": "ebit_FY1",
+        "actual": 5571.064,
+        "expected": 5571.064,
+        "passed": true
+      },
+      {
+        "check": "ebit_FY2",
+        "actual": 5724.26826,
+        "expected": 5724.268260000001,
+        "passed": true
+      },
+      {
+        "check": "ebit_FY3",
+        "actual": 5867.3749665,
+        "expected": 5867.3749665000005,
+        "passed": true
+      },
+      {
+        "check": "ebit_FY4",
+        "actual": 5999.39090324625,
+        "expected": 5999.39090324625,
+        "passed": true
+      },
+      {
+        "check": "ebit_FY5",
+        "actual": 6119.37872131118,
+        "expected": 6119.378721311175,
+        "passed": true
+      },
+      {
+        "check": "da_FY1",
+        "actual": 1640.172,
+        "expected": 1640.1720000000003,
+        "passed": true
+      },
+      {
+        "check": "da_FY2",
+        "actual": 1685.27673,
+        "expected": 1685.2767300000003,
+        "passed": true
+      },
+      {
+        "check": "da_FY3",
+        "actual": 1727.40864825,
+        "expected": 1727.4086482500002,
+        "passed": true
+      },
+      {
+        "check": "da_FY4",
+        "actual": 1766.27534283563,
+        "expected": 1766.275342835625,
+        "passed": true
+      },
+      {
+        "check": "da_FY5",
+        "actual": 1801.60084969234,
+        "expected": 1801.6008496923378,
+        "passed": true
+      },
+      {
+        "check": "capex_FY1",
+        "actual": 2860.825,
+        "expected": 2860.825,
+        "passed": true
+      },
+      {
+        "check": "capex_FY2",
+        "actual": 2939.4976875,
+        "expected": 2939.4976875,
+        "passed": true
+      },
+      {
+        "check": "capex_FY3",
+        "actual": 3012.9851296875,
+        "expected": 3012.9851296875,
+        "passed": true
+      },
+      {
+        "check": "capex_FY4",
+        "actual": 3080.77729510547,
+        "expected": 3080.7772951054685,
+        "passed": true
+      },
+      {
+        "check": "capex_FY5",
+        "actual": 3142.39284100758,
+        "expected": 3142.3928410075778,
+        "passed": true
+      },
+      {
+        "check": "nwc_FY1",
+        "actual": -4652.407,
+        "expected": -4652.407000000001,
+        "passed": true
+      },
+      {
+        "check": "nwc_FY2",
+        "actual": -4780.3481925,
+        "expected": -4780.3481925000015,
+        "passed": true
+      },
+      {
+        "check": "nwc_FY3",
+        "actual": -4899.8568973125,
+        "expected": -4899.856897312501,
+        "passed": true
+      },
+      {
+        "check": "nwc_FY4",
+        "actual": -5010.10367750203,
+        "expected": -5010.103677502032,
+        "passed": true
+      },
+      {
+        "check": "nwc_FY5",
+        "actual": -5110.30575105207,
+        "expected": -5110.305751052073,
+        "passed": true
+      },
+      {
+        "check": "delta_nwc_FY1",
+        "actual": -135.507,
+        "expected": -135.50700000000015,
+        "passed": true
+      },
+      {
+        "check": "delta_nwc_FY2",
+        "actual": -127.9411925,
+        "expected": -127.9411925000004,
+        "passed": true
+      },
+      {
+        "check": "delta_nwc_FY3",
+        "actual": -119.5087048125,
+        "expected": -119.50870481249967,
+        "passed": true
+      },
+      {
+        "check": "delta_nwc_FY4",
+        "actual": -110.246780189531,
+        "expected": -110.24678018953091,
+        "passed": true
+      },
+      {
+        "check": "delta_nwc_FY5",
+        "actual": -100.202073550041,
+        "expected": -100.20207355004095,
+        "passed": true
+      },
+      {
+        "check": "reinvestment_component_FY1",
+        "actual": -1085.146,
+        "expected": -1085.1459999999995,
+        "passed": true
+      },
+      {
+        "check": "reinvestment_component_FY2",
+        "actual": -1126.279765,
+        "expected": -1126.2797649999995,
+        "passed": true
+      },
+      {
+        "check": "reinvestment_component_FY3",
+        "actual": -1166.067776625,
+        "expected": -1166.067776625,
+        "passed": true
+      },
+      {
+        "check": "reinvestment_component_FY4",
+        "actual": -1204.25517208031,
+        "expected": -1204.2551720803126,
+        "passed": true
+      },
+      {
+        "check": "reinvestment_component_FY5",
+        "actual": -1240.5899177652,
+        "expected": -1240.589917765199,
+        "passed": true
+      },
+      {
+        "check": "fcff_FY1",
+        "actual": 3132.50010576304,
+        "expected": 3132.5001057630398,
+        "passed": true
+      },
+      {
+        "check": "fcff_FY2",
+        "actual": 3207.35160867152,
+        "expected": 3207.3516086715244,
+        "passed": true
+      },
+      {
+        "check": "fcff_FY3",
+        "actual": 3275.90438138831,
+        "expected": 3275.904381388311,
+        "passed": true
+      },
+      {
+        "check": "fcff_FY4",
+        "actual": 3337.6613594883,
+        "expected": 3337.661359488298,
+        "passed": true
+      },
+      {
+        "check": "fcff_FY5",
+        "actual": 3392.16494443478,
+        "expected": 3392.164944434783,
+        "passed": true
+      },
+      {
+        "check": "discount_factor_FY1",
+        "actual": 0.932400932400932,
+        "expected": 0.9324009324009324,
+        "passed": true
+      },
+      {
+        "check": "discount_factor_FY2",
+        "actual": 0.869371498742128,
+        "expected": 0.8693714987421282,
+        "passed": true
+      },
+      {
+        "check": "discount_factor_FY3",
+        "actual": 0.810602796029956,
+        "expected": 0.8106027960299562,
+        "passed": true
+      },
+      {
+        "check": "discount_factor_FY4",
+        "actual": 0.755806802825134,
+        "expected": 0.755806802825134,
+        "passed": true
+      },
+      {
+        "check": "discount_factor_FY5",
+        "actual": 0.704714967669123,
+        "expected": 0.7047149676691227,
+        "passed": true
+      },
+      {
+        "check": "fcff_present_value_FY1",
+        "actual": 2920.74601935948,
+        "expected": 2920.7460193594775,
+        "passed": true
+      },
+      {
+        "check": "fcff_present_value_FY2",
+        "actual": 2788.38007502374,
+        "expected": 2788.3800750237388,
+        "passed": true
+      },
+      {
+        "check": "fcff_present_value_FY3",
+        "actual": 2655.45725108015,
+        "expected": 2655.457251080149,
+        "passed": true
+      },
+      {
+        "check": "fcff_present_value_FY4",
+        "actual": 2522.62716102784,
+        "expected": 2522.627161027841,
+        "passed": true
+      },
+      {
+        "check": "fcff_present_value_FY5",
+        "actual": 2390.50940914569,
+        "expected": 2390.5094091456895,
+        "passed": true
+      },
+      {
+        "check": "growth_FY1",
+        "actual": 0.03,
+        "expected": 0.03,
+        "passed": true
+      },
+      {
+        "check": "growth_FY2",
+        "actual": 0.0275,
+        "expected": 0.0275,
+        "passed": true
+      },
+      {
+        "check": "growth_FY3",
+        "actual": 0.025,
+        "expected": 0.025,
+        "passed": true
+      },
+      {
+        "check": "growth_FY4",
+        "actual": 0.0225,
+        "expected": 0.0225,
+        "passed": true
+      },
+      {
+        "check": "growth_FY5",
+        "actual": 0.02,
+        "expected": 0.02,
+        "passed": true
+      },
+      {
+        "check": "explicit_pv",
+        "actual": 13277.7199156369,
+        "expected": 13277.719915636895,
+        "passed": true
+      },
+      {
+        "check": "terminal_value",
+        "actual": 65904.9189204472,
+        "expected": 65904.91892044722,
+        "passed": true
+      },
+      {
+        "check": "terminal_present_value",
+        "actual": 46444.1828062591,
+        "expected": 46444.182806259116,
+        "passed": true
+      },
+      {
+        "check": "enterprise_value",
+        "actual": 59721.902721896,
+        "expected": 59721.90272189601,
+        "passed": true
+      },
+      {
+        "check": "equity_value",
+        "actual": 47696.702721896,
+        "expected": 47696.70272189601,
+        "passed": true
+      },
+      {
+        "check": "value_per_share",
+        "actual": 41.9385410374536,
+        "expected": 41.938541037453625,
+        "passed": true
+      },
+      {
+        "check": "Outputs_EV",
+        "actual": 59721.902721896,
+        "expected": 59721.90272189601,
+        "passed": true
+      },
+      {
+        "check": "Outputs_equity",
+        "actual": 47696.702721896,
+        "expected": 47696.70272189601,
+        "passed": true
+      },
+      {
+        "check": "Outputs_per_share",
+        "actual": 41.9385410374536,
+        "expected": 41.938541037453625,
+        "passed": true
+      },
+      {
+        "check": "pretax_to_net_income",
+        "actual": 0,
+        "expected": 0.0,
+        "passed": true
+      }
+    ],
+    "outputs": {
+      "enterprise_value": 59721.90272189601,
+      "equity_value": 47696.70272189601,
+      "value_per_share": 41.938541037453625
+    },
+    "fcff": [
+      3132.5001057630398,
+      3207.3516086715244,
+      3275.904381388311,
+      3337.661359488298,
+      3392.164944434783
+    ]
+  },
+  "scenarios": [
+    {
+      "wacc": 0.0775,
+      "terminal_growth": 0.02,
+      "formula_errors": [],
+      "value_checks": [
+        {
+          "check": "NWC0",
+          "actual": -4516.9,
+          "expected": -4516.900000000001,
+          "passed": true
+        },
+        {
+          "check": "revenue_FY1",
+          "actual": 37261.486,
+          "expected": 37261.486,
+          "passed": true
+        },
+        {
+          "check": "revenue_FY2",
+          "actual": 38286.176865,
+          "expected": 38286.176865,
+          "passed": true
+        },
+        {
+          "check": "revenue_FY3",
+          "actual": 39243.331286625,
+          "expected": 39243.331286625,
+          "passed": true
+        },
+        {
+          "check": "revenue_FY4",
+          "actual": 40126.3062405741,
+          "expected": 40126.30624057406,
+          "passed": true
+        },
+        {
+          "check": "revenue_FY5",
+          "actual": 40928.8323653855,
+          "expected": 40928.83236538554,
+          "passed": true
+        },
+        {
+          "check": "ebit_FY1",
+          "actual": 5571.064,
+          "expected": 5571.064,
+          "passed": true
+        },
+        {
+          "check": "ebit_FY2",
+          "actual": 5724.26826,
+          "expected": 5724.268260000001,
+          "passed": true
+        },
+        {
+          "check": "ebit_FY3",
+          "actual": 5867.3749665,
+          "expected": 5867.3749665000005,
+          "passed": true
+        },
+        {
+          "check": "ebit_FY4",
+          "actual": 5999.39090324625,
+          "expected": 5999.39090324625,
+          "passed": true
+        },
+        {
+          "check": "ebit_FY5",
+          "actual": 6119.37872131118,
+          "expected": 6119.378721311175,
+          "passed": true
+        },
+        {
+          "check": "da_FY1",
+          "actual": 1640.172,
+          "expected": 1640.1720000000003,
+          "passed": true
+        },
+        {
+          "check": "da_FY2",
+          "actual": 1685.27673,
+          "expected": 1685.2767300000003,
+          "passed": true
+        },
+        {
+          "check": "da_FY3",
+          "actual": 1727.40864825,
+          "expected": 1727.4086482500002,
+          "passed": true
+        },
+        {
+          "check": "da_FY4",
+          "actual": 1766.27534283563,
+          "expected": 1766.275342835625,
+          "passed": true
+        },
+        {
+          "check": "da_FY5",
+          "actual": 1801.60084969234,
+          "expected": 1801.6008496923378,
+          "passed": true
+        },
+        {
+          "check": "capex_FY1",
+          "actual": 2860.825,
+          "expected": 2860.825,
+          "passed": true
+        },
+        {
+          "check": "capex_FY2",
+          "actual": 2939.4976875,
+          "expected": 2939.4976875,
+          "passed": true
+        },
+        {
+          "check": "capex_FY3",
+          "actual": 3012.9851296875,
+          "expected": 3012.9851296875,
+          "passed": true
+        },
+        {
+          "check": "capex_FY4",
+          "actual": 3080.77729510547,
+          "expected": 3080.7772951054685,
+          "passed": true
+        },
+        {
+          "check": "capex_FY5",
+          "actual": 3142.39284100758,
+          "expected": 3142.3928410075778,
+          "passed": true
+        },
+        {
+          "check": "nwc_FY1",
+          "actual": -4652.407,
+          "expected": -4652.407000000001,
+          "passed": true
+        },
+        {
+          "check": "nwc_FY2",
+          "actual": -4780.3481925,
+          "expected": -4780.3481925000015,
+          "passed": true
+        },
+        {
+          "check": "nwc_FY3",
+          "actual": -4899.8568973125,
+          "expected": -4899.856897312501,
+          "passed": true
+        },
+        {
+          "check": "nwc_FY4",
+          "actual": -5010.10367750203,
+          "expected": -5010.103677502032,
+          "passed": true
+        },
+        {
+          "check": "nwc_FY5",
+          "actual": -5110.30575105207,
+          "expected": -5110.305751052073,
+          "passed": true
+        },
+        {
+          "check": "delta_nwc_FY1",
+          "actual": -135.507,
+          "expected": -135.50700000000015,
+          "passed": true
+        },
+        {
+          "check": "delta_nwc_FY2",
+          "actual": -127.9411925,
+          "expected": -127.9411925000004,
+          "passed": true
+        },
+        {
+          "check": "delta_nwc_FY3",
+          "actual": -119.5087048125,
+          "expected": -119.50870481249967,
+          "passed": true
+        },
+        {
+          "check": "delta_nwc_FY4",
+          "actual": -110.246780189531,
+          "expected": -110.24678018953091,
+          "passed": true
+        },
+        {
+          "check": "delta_nwc_FY5",
+          "actual": -100.202073550041,
+          "expected": -100.20207355004095,
+          "passed": true
+        },
+        {
+          "check": "reinvestment_component_FY1",
+          "actual": -1085.146,
+          "expected": -1085.1459999999995,
+          "passed": true
+        },
+        {
+          "check": "reinvestment_component_FY2",
+          "actual": -1126.279765,
+          "expected": -1126.2797649999995,
+          "passed": true
+        },
+        {
+          "check": "reinvestment_component_FY3",
+          "actual": -1166.067776625,
+          "expected": -1166.067776625,
+          "passed": true
+        },
+        {
+          "check": "reinvestment_component_FY4",
+          "actual": -1204.25517208031,
+          "expected": -1204.2551720803126,
+          "passed": true
+        },
+        {
+          "check": "reinvestment_component_FY5",
+          "actual": -1240.5899177652,
+          "expected": -1240.589917765199,
+          "passed": true
+        },
+        {
+          "check": "fcff_FY1",
+          "actual": 3132.50010576304,
+          "expected": 3132.5001057630398,
+          "passed": true
+        },
+        {
+          "check": "fcff_FY2",
+          "actual": 3207.35160867152,
+          "expected": 3207.3516086715244,
+          "passed": true
+        },
+        {
+          "check": "fcff_FY3",
+          "actual": 3275.90438138831,
+          "expected": 3275.904381388311,
+          "passed": true
+        },
+        {
+          "check": "fcff_FY4",
+          "actual": 3337.6613594883,
+          "expected": 3337.661359488298,
+          "passed": true
+        },
+        {
+          "check": "fcff_FY5",
+          "actual": 3392.16494443478,
+          "expected": 3392.164944434783,
+          "passed": true
+        },
+        {
+          "check": "discount_factor_FY1",
+          "actual": 0.928074245939675,
+          "expected": 0.9280742459396752,
+          "passed": true
+        },
+        {
+          "check": "discount_factor_FY2",
+          "actual": 0.861321805976497,
+          "expected": 0.8613218059764969,
+          "passed": true
+        },
+        {
+          "check": "discount_factor_FY3",
+          "actual": 0.799370585593036,
+          "expected": 0.7993705855930365,
+          "passed": true
+        },
+        {
+          "check": "discount_factor_FY4",
+          "actual": 0.741875253450613,
+          "expected": 0.7418752534506141,
+          "passed": true
+        },
+        {
+          "check": "discount_factor_FY5",
+          "actual": 0.688515316427483,
+          "expected": 0.6885153164274841,
+          "passed": true
+        },
+        {
+          "check": "fcff_present_value_FY1",
+          "actual": 2907.19267356199,
+          "expected": 2907.192673561986,
+          "passed": true
+        },
+        {
+          "check": "fcff_present_value_FY2",
+          "actual": 2762.56187998258,
+          "expected": 2762.5618799825797,
+          "passed": true
+        },
+        {
+          "check": "fcff_present_value_FY3",
+          "actual": 2618.66160369717,
+          "expected": 2618.661603697168,
+          "passed": true
+        },
+        {
+          "check": "fcff_present_value_FY4",
+          "actual": 2476.1283670027,
+          "expected": 2476.1283670027024,
+          "passed": true
+        },
+        {
+          "check": "fcff_present_value_FY5",
+          "actual": 2335.55752009173,
+          "expected": 2335.5575200917337,
+          "passed": true
+        },
+        {
+          "check": "growth_FY1",
+          "actual": 0.03,
+          "expected": 0.03,
+          "passed": true
+        },
+        {
+          "check": "growth_FY2",
+          "actual": 0.0275,
+          "expected": 0.0275,
+          "passed": true
+        },
+        {
+          "check": "growth_FY3",
+          "actual": 0.025,
+          "expected": 0.025,
+          "passed": true
+        },
+        {
+          "check": "growth_FY4",
+          "actual": 0.0225,
+          "expected": 0.0225,
+          "passed": true
+        },
+        {
+          "check": "growth_FY5",
+          "actual": 0.02,
+          "expected": 0.02,
+          "passed": true
+        },
+        {
+          "check": "explicit_pv",
+          "actual": 13100.1020443362,
+          "expected": 13100.10204433617,
+          "passed": true
+        },
+        {
+          "check": "terminal_value",
+          "actual": 60174.0564056257,
+          "expected": 60174.05640562572,
+          "passed": true
+        },
+        {
+          "check": "terminal_present_value",
+          "actual": 41430.7594868446,
+          "expected": 41430.75948684467,
+          "passed": true
+        },
+        {
+          "check": "enterprise_value",
+          "actual": 54530.8615311808,
+          "expected": 54530.86153118084,
+          "passed": true
+        },
+        {
+          "check": "equity_value",
+          "actual": 42505.6615311808,
+          "expected": 42505.661531180835,
+          "passed": true
+        },
+        {
+          "check": "value_per_share",
+          "actual": 37.3741858183248,
+          "expected": 37.37418581832484,
+          "passed": true
+        },
+        {
+          "check": "Outputs_EV",
+          "actual": 54530.8615311808,
+          "expected": 54530.86153118084,
+          "passed": true
+        },
+        {
+          "check": "Outputs_equity",
+          "actual": 42505.6615311808,
+          "expected": 42505.661531180835,
+          "passed": true
+        },
+        {
+          "check": "Outputs_per_share",
+          "actual": 37.3741858183248,
+          "expected": 37.37418581832484,
+          "passed": true
+        },
+        {
+          "check": "pretax_to_net_income",
+          "actual": 0,
+          "expected": 0.0,
+          "passed": true
+        }
+      ],
+      "outputs": {
+        "enterprise_value": 54530.86153118084,
+        "equity_value": 42505.661531180835,
+        "value_per_share": 37.37418581832484
+      },
+      "fcff": [
+        3132.5001057630398,
+        3207.3516086715244,
+        3275.904381388311,
+        3337.661359488298,
+        3392.164944434783
+      ],
+      "scenario": "wacc_up_50bp",
+      "libreoffice_stdout": "convert /app/output/verification/wacc_up_50bp_input.xlsx -> /app/output/verification/wacc_up_50bp/wacc_up_50bp_input.xlsx using filter : Calc MS Excel 2007 XML\nOverwriting: /app/output/verification/wacc_up_50bp/wacc_up_50bp_input.xlsx",
+      "libreoffice_stderr": "Warning: failed to launch javaldx - java may not function correctly\nerror : Unknown IO error"
+    },
+    {
+      "wacc": 0.0675,
+      "terminal_growth": 0.02,
+      "formula_errors": [],
+      "value_checks": [
+        {
+          "check": "NWC0",
+          "actual": -4516.9,
+          "expected": -4516.900000000001,
+          "passed": true
+        },
+        {
+          "check": "revenue_FY1",
+          "actual": 37261.486,
+          "expected": 37261.486,
+          "passed": true
+        },
+        {
+          "check": "revenue_FY2",
+          "actual": 38286.176865,
+          "expected": 38286.176865,
+          "passed": true
+        },
+        {
+          "check": "revenue_FY3",
+          "actual": 39243.331286625,
+          "expected": 39243.331286625,
+          "passed": true
+        },
+        {
+          "check": "revenue_FY4",
+          "actual": 40126.3062405741,
+          "expected": 40126.30624057406,
+          "passed": true
+        },
+        {
+          "check": "revenue_FY5",
+          "actual": 40928.8323653855,
+          "expected": 40928.83236538554,
+          "passed": true
+        },
+        {
+          "check": "ebit_FY1",
+          "actual": 5571.064,
+          "expected": 5571.064,
+          "passed": true
+        },
+        {
+          "check": "ebit_FY2",
+          "actual": 5724.26826,
+          "expected": 5724.268260000001,
+          "passed": true
+        },
+        {
+          "check": "ebit_FY3",
+          "actual": 5867.3749665,
+          "expected": 5867.3749665000005,
+          "passed": true
+        },
+        {
+          "check": "ebit_FY4",
+          "actual": 5999.39090324625,
+          "expected": 5999.39090324625,
+          "passed": true
+        },
+        {
+          "check": "ebit_FY5",
+          "actual": 6119.37872131118,
+          "expected": 6119.378721311175,
+          "passed": true
+        },
+        {
+          "check": "da_FY1",
+          "actual": 1640.172,
+          "expected": 1640.1720000000003,
+          "passed": true
+        },
+        {
+          "check": "da_FY2",
+          "actual": 1685.27673,
+          "expected": 1685.2767300000003,
+          "passed": true
+        },
+        {
+          "check": "da_FY3",
+          "actual": 1727.40864825,
+          "expected": 1727.4086482500002,
+          "passed": true
+        },
+        {
+          "check": "da_FY4",
+          "actual": 1766.27534283563,
+          "expected": 1766.275342835625,
+          "passed": true
+        },
+        {
+          "check": "da_FY5",
+          "actual": 1801.60084969234,
+          "expected": 1801.6008496923378,
+          "passed": true
+        },
+        {
+          "check": "capex_FY1",
+          "actual": 2860.825,
+          "expected": 2860.825,
+          "passed": true
+        },
+        {
+          "check": "capex_FY2",
+          "actual": 2939.4976875,
+          "expected": 2939.4976875,
+          "passed": true
+        },
+        {
+          "check": "capex_FY3",
+          "actual": 3012.9851296875,
+          "expected": 3012.9851296875,
+          "passed": true
+        },
+        {
+          "check": "capex_FY4",
+          "actual": 3080.77729510547,
+          "expected": 3080.7772951054685,
+          "passed": true
+        },
+        {
+          "check": "capex_FY5",
+          "actual": 3142.39284100758,
+          "expected": 3142.3928410075778,
+          "passed": true
+        },
+        {
+          "check": "nwc_FY1",
+          "actual": -4652.407,
+          "expected": -4652.407000000001,
+          "passed": true
+        },
+        {
+          "check": "nwc_FY2",
+          "actual": -4780.3481925,
+          "expected": -4780.3481925000015,
+          "passed": true
+        },
+        {
+          "check": "nwc_FY3",
+          "actual": -4899.8568973125,
+          "expected": -4899.856897312501,
+          "passed": true
+        },
+        {
+          "check": "nwc_FY4",
+          "actual": -5010.10367750203,
+          "expected": -5010.103677502032,
+          "passed": true
+        },
+        {
+          "check": "nwc_FY5",
+          "actual": -5110.30575105207,
+          "expected": -5110.305751052073,
+          "passed": true
+        },
+        {
+          "check": "delta_nwc_FY1",
+          "actual": -135.507,
+          "expected": -135.50700000000015,
+          "passed": true
+        },
+        {
+          "check": "delta_nwc_FY2",
+          "actual": -127.9411925,
+          "expected": -127.9411925000004,
+          "passed": true
+        },
+        {
+          "check": "delta_nwc_FY3",
+          "actual": -119.5087048125,
+          "expected": -119.50870481249967,
+          "passed": true
+        },
+        {
+          "check": "delta_nwc_FY4",
+          "actual": -110.246780189531,
+          "expected": -110.24678018953091,
+          "passed": true
+        },
+        {
+          "check": "delta_nwc_FY5",
+          "actual": -100.202073550041,
+          "expected": -100.20207355004095,
+          "passed": true
+        },
+        {
+          "check": "reinvestment_component_FY1",
+          "actual": -1085.146,
+          "expected": -1085.1459999999995,
+          "passed": true
+        },
+        {
+          "check": "reinvestment_component_FY2",
+          "actual": -1126.279765,
+          "expected": -1126.2797649999995,
+          "passed": true
+        },
+        {
+          "check": "reinvestment_component_FY3",
+          "actual": -1166.067776625,
+          "expected": -1166.067776625,
+          "passed": true
+        },
+        {
+          "check": "reinvestment_component_FY4",
+          "actual": -1204.25517208031,
+          "expected": -1204.2551720803126,
+          "passed": true
+        },
+        {
+          "check": "reinvestment_component_FY5",
+          "actual": -1240.5899177652,
+          "expected": -1240.589917765199,
+          "passed": true
+        },
+        {
+          "check": "fcff_FY1",
+          "actual": 3132.50010576304,
+          "expected": 3132.5001057630398,
+          "passed": true
+        },
+        {
+          "check": "fcff_FY2",
+          "actual": 3207.35160867152,
+          "expected": 3207.3516086715244,
+          "passed": true
+        },
+        {
+          "check": "fcff_FY3",
+          "actual": 3275.90438138831,
+          "expected": 3275.904381388311,
+          "passed": true
+        },
+        {
+          "check": "fcff_FY4",
+          "actual": 3337.6613594883,
+          "expected": 3337.661359488298,
+          "passed": true
+        },
+        {
+          "check": "fcff_FY5",
+          "actual": 3392.16494443478,
+          "expected": 3392.164944434783,
+          "passed": true
+        },
+        {
+          "check": "discount_factor_FY1",
+          "actual": 0.936768149882904,
+          "expected": 0.936768149882904,
+          "passed": true
+        },
+        {
+          "check": "discount_factor_FY2",
+          "actual": 0.877534566635039,
+          "expected": 0.877534566635039,
+          "passed": true
+        },
+        {
+          "check": "discount_factor_FY3",
+          "actual": 0.822046432445002,
+          "expected": 0.8220464324450015,
+          "passed": true
+        },
+        {
+          "check": "discount_factor_FY4",
+          "actual": 0.770066915639346,
+          "expected": 0.7700669156393457,
+          "passed": true
+        },
+        {
+          "check": "discount_factor_FY5",
+          "actual": 0.721374159849504,
+          "expected": 0.7213741598495043,
+          "passed": true
+        },
+        {
+          "check": "fcff_present_value_FY1",
+          "actual": 2934.42632858364,
+          "expected": 2934.426328583644,
+          "passed": true
+        },
+        {
+          "check": "fcff_present_value_FY2",
+          "actual": 2814.56190396176,
+          "expected": 2814.5619039617613,
+          "passed": true
+        },
+        {
+          "check": "fcff_present_value_FY3",
+          "actual": 2692.94550975121,
+          "expected": 2692.9455097512105,
+          "passed": true
+        },
+        {
+          "check": "fcff_present_value_FY4",
+          "actual": 2570.22258854978,
+          "expected": 2570.222588549779,
+          "passed": true
+        },
+        {
+          "check": "fcff_present_value_FY5",
+          "actual": 2447.02013686258,
+          "expected": 2447.020136862582,
+          "passed": true
+        },
+        {
+          "check": "growth_FY1",
+          "actual": 0.03,
+          "expected": 0.03,
+          "passed": true
+        },
+        {
+          "check": "growth_FY2",
+          "actual": 0.0275,
+          "expected": 0.0275,
+          "passed": true
+        },
+        {
+          "check": "growth_FY3",
+          "actual": 0.025,
+          "expected": 0.025,
+          "passed": true
+        },
+        {
+          "check": "growth_FY4",
+          "actual": 0.0225,
+          "expected": 0.0225,
+          "passed": true
+        },
+        {
+          "check": "growth_FY5",
+          "actual": 0.02,
+          "expected": 0.02,
+          "passed": true
+        },
+        {
+          "check": "explicit_pv",
+          "actual": 13459.176467709,
+          "expected": 13459.176467708978,
+          "passed": true
+        },
+        {
+          "check": "terminal_value",
+          "actual": 72842.2788068101,
+          "expected": 72842.27880681008,
+          "passed": true
+        },
+        {
+          "check": "terminal_present_value",
+          "actual": 52546.537675786,
+          "expected": 52546.53767578597,
+          "passed": true
+        },
+        {
+          "check": "enterprise_value",
+          "actual": 66005.7141434949,
+          "expected": 66005.71414349494,
+          "passed": true
+        },
+        {
+          "check": "equity_value",
+          "actual": 53980.514143495,
+          "expected": 53980.51414349495,
+          "passed": true
+        },
+        {
+          "check": "value_per_share",
+          "actual": 47.4637423226017,
+          "expected": 47.46374232260173,
+          "passed": true
+        },
+        {
+          "check": "Outputs_EV",
+          "actual": 66005.7141434949,
+          "expected": 66005.71414349494,
+          "passed": true
+        },
+        {
+          "check": "Outputs_equity",
+          "actual": 53980.514143495,
+          "expected": 53980.51414349495,
+          "passed": true
+        },
+        {
+          "check": "Outputs_per_share",
+          "actual": 47.4637423226017,
+          "expected": 47.46374232260173,
+          "passed": true
+        },
+        {
+          "check": "pretax_to_net_income",
+          "actual": 0,
+          "expected": 0.0,
+          "passed": true
+        }
+      ],
+      "outputs": {
+        "enterprise_value": 66005.71414349494,
+        "equity_value": 53980.51414349495,
+        "value_per_share": 47.46374232260173
+      },
+      "fcff": [
+        3132.5001057630398,
+        3207.3516086715244,
+        3275.904381388311,
+        3337.661359488298,
+        3392.164944434783
+      ],
+      "scenario": "wacc_down_50bp",
+      "libreoffice_stdout": "convert /app/output/verification/wacc_down_50bp_input.xlsx -> /app/output/verification/wacc_down_50bp/wacc_down_50bp_input.xlsx using filter : Calc MS Excel 2007 XML\nOverwriting: /app/output/verification/wacc_down_50bp/wacc_down_50bp_input.xlsx",
+      "libreoffice_stderr": "Warning: failed to launch javaldx - java may not function correctly\nerror : Unknown IO error"
+    },
+    {
+      "wacc": 0.0725,
+      "terminal_growth": 0.0225,
+      "formula_errors": [],
+      "value_checks": [
+        {
+          "check": "NWC0",
+          "actual": -4516.9,
+          "expected": -4516.900000000001,
+          "passed": true
+        },
+        {
+          "check": "revenue_FY1",
+          "actual": 37261.486,
+          "expected": 37261.486,
+          "passed": true
+        },
+        {
+          "check": "revenue_FY2",
+          "actual": 38309.46529375,
+          "expected": 38309.46529374999,
+          "passed": true
+        },
+        {
+          "check": "revenue_FY3",
+          "actual": 39315.0887577109,
+          "expected": 39315.08875771093,
+          "passed": true
+        },
+        {
+          "check": "revenue_FY4",
+          "actual": 40273.3940461801,
+          "expected": 40273.39404618014,
+          "passed": true
+        },
+        {
+          "check": "revenue_FY5",
+          "actual": 41179.5454122192,
+          "expected": 41179.54541221919,
+          "passed": true
+        },
+        {
+          "check": "ebit_FY1",
+          "actual": 5571.064,
+          "expected": 5571.064,
+          "passed": true
+        },
+        {
+          "check": "ebit_FY2",
+          "actual": 5727.750175,
+          "expected": 5727.750174999999,
+          "passed": true
+        },
+        {
+          "check": "ebit_FY3",
+          "actual": 5878.10361709375,
+          "expected": 5878.10361709375,
+          "passed": true
+        },
+        {
+          "check": "ebit_FY4",
+          "actual": 6021.38239276041,
+          "expected": 6021.38239276041,
+          "passed": true
+        },
+        {
+          "check": "ebit_FY5",
+          "actual": 6156.86349659752,
+          "expected": 6156.863496597519,
+          "passed": true
+        },
+        {
+          "check": "da_FY1",
+          "actual": 1640.172,
+          "expected": 1640.1720000000003,
+          "passed": true
+        },
+        {
+          "check": "da_FY2",
+          "actual": 1686.3018375,
+          "expected": 1686.3018375,
+          "passed": true
+        },
+        {
+          "check": "da_FY3",
+          "actual": 1730.56726073438,
+          "expected": 1730.5672607343752,
+          "passed": true
+        },
+        {
+          "check": "da_FY4",
+          "actual": 1772.74983771478,
+          "expected": 1772.7498377147756,
+          "passed": true
+        },
+        {
+          "check": "da_FY5",
+          "actual": 1812.63670906336,
+          "expected": 1812.6367090633578,
+          "passed": true
+        },
+        {
+          "check": "capex_FY1",
+          "actual": 2860.825,
+          "expected": 2860.825,
+          "passed": true
+        },
+        {
+          "check": "capex_FY2",
+          "actual": 2941.285703125,
+          "expected": 2941.2857031249996,
+          "passed": true
+        },
+        {
+          "check": "capex_FY3",
+          "actual": 3018.49445283203,
+          "expected": 3018.4944528320307,
+          "passed": true
+        },
+        {
+          "check": "capex_FY4",
+          "actual": 3092.07025511981,
+          "expected": 3092.070255119812,
+          "passed": true
+        },
+        {
+          "check": "capex_FY5",
+          "actual": 3161.64183586001,
+          "expected": 3161.641835860007,
+          "passed": true
+        },
+        {
+          "check": "nwc_FY1",
+          "actual": -4652.407,
+          "expected": -4652.407000000001,
+          "passed": true
+        },
+        {
+          "check": "nwc_FY2",
+          "actual": -4783.255946875,
+          "expected": -4783.2559468750005,
+          "passed": true
+        },
+        {
+          "check": "nwc_FY3",
+          "actual": -4908.81641548047,
+          "expected": -4908.81641548047,
+          "passed": true
+        },
+        {
+          "check": "nwc_FY4",
+          "actual": -5028.46881560781,
+          "expected": -5028.468815607806,
+          "passed": true
+        },
+        {
+          "check": "nwc_FY5",
+          "actual": -5141.60936395898,
+          "expected": -5141.609363958982,
+          "passed": true
+        },
+        {
+          "check": "delta_nwc_FY1",
+          "actual": -135.507,
+          "expected": -135.50700000000015,
+          "passed": true
+        },
+        {
+          "check": "delta_nwc_FY2",
+          "actual": -130.848946874999,
+          "expected": -130.84894687499946,
+          "passed": true
+        },
+        {
+          "check": "delta_nwc_FY3",
+          "actual": -125.560468605469,
+          "expected": -125.5604686054694,
+          "passed": true
+        },
+        {
+          "check": "delta_nwc_FY4",
+          "actual": -119.652400127336,
+          "expected": -119.65240012733648,
+          "passed": true
+        },
+        {
+          "check": "delta_nwc_FY5",
+          "actual": -113.140548351175,
+          "expected": -113.14054835117531,
+          "passed": true
+        },
+        {
+          "check": "reinvestment_component_FY1",
+          "actual": -1085.146,
+          "expected": -1085.1459999999995,
+          "passed": true
+        },
+        {
+          "check": "reinvestment_component_FY2",
+          "actual": -1124.13491875,
+          "expected": -1124.1349187500002,
+          "passed": true
+        },
+        {
+          "check": "reinvestment_component_FY3",
+          "actual": -1162.36672349219,
+          "expected": -1162.366723492186,
+          "passed": true
+        },
+        {
+          "check": "reinvestment_component_FY4",
+          "actual": -1199.6680172777,
+          "expected": -1199.6680172776998,
+          "passed": true
+        },
+        {
+          "check": "reinvestment_component_FY5",
+          "actual": -1235.86457844547,
+          "expected": -1235.864578445474,
+          "passed": true
+        },
+        {
+          "check": "fcff_FY1",
+          "actual": 3132.50010576304,
+          "expected": 3132.5001057630398,
+          "passed": true
+        },
+        {
+          "check": "fcff_FY2",
+          "actual": 3212.13248373762,
+          "expected": 3212.132483737624,
+          "passed": true
+        },
+        {
+          "check": "fcff_FY3",
+          "actual": 3287.72769831074,
+          "expected": 3287.7276983107386,
+          "passed": true
+        },
+        {
+          "check": "fcff_FY4",
+          "actual": 3358.89745605667,
+          "expected": 3358.897456056671,
+          "passed": true
+        },
+        {
+          "check": "fcff_FY5",
+          "actual": 3425.26861803892,
+          "expected": 3425.26861803892,
+          "passed": true
+        },
+        {
+          "check": "discount_factor_FY1",
+          "actual": 0.932400932400932,
+          "expected": 0.9324009324009324,
+          "passed": true
+        },
+        {
+          "check": "discount_factor_FY2",
+          "actual": 0.869371498742128,
+          "expected": 0.8693714987421282,
+          "passed": true
+        },
+        {
+          "check": "discount_factor_FY3",
+          "actual": 0.810602796029956,
+          "expected": 0.8106027960299562,
+          "passed": true
+        },
+        {
+          "check": "discount_factor_FY4",
+          "actual": 0.755806802825134,
+          "expected": 0.755806802825134,
+          "passed": true
+        },
+        {
+          "check": "discount_factor_FY5",
+          "actual": 0.704714967669123,
+          "expected": 0.7047149676691227,
+          "passed": true
+        },
+        {
+          "check": "fcff_present_value_FY1",
+          "actual": 2920.74601935948,
+          "expected": 2920.7460193594775,
+          "passed": true
+        },
+        {
+          "check": "fcff_present_value_FY2",
+          "actual": 2792.53643154525,
+          "expected": 2792.536431545253,
+          "passed": true
+        },
+        {
+          "check": "fcff_present_value_FY3",
+          "actual": 2665.04126483582,
+          "expected": 2665.041264835817,
+          "passed": true
+        },
+        {
+          "check": "fcff_present_value_FY4",
+          "actual": 2538.67754727967,
+          "expected": 2538.677547279669,
+          "passed": true
+        },
+        {
+          "check": "fcff_present_value_FY5",
+          "actual": 2413.83806341936,
+          "expected": 2413.838063419358,
+          "passed": true
+        },
+        {
+          "check": "growth_FY1",
+          "actual": 0.03,
+          "expected": 0.03,
+          "passed": true
+        },
+        {
+          "check": "growth_FY2",
+          "actual": 0.028125,
+          "expected": 0.028124999999999997,
+          "passed": true
+        },
+        {
+          "check": "growth_FY3",
+          "actual": 0.02625,
+          "expected": 0.02625,
+          "passed": true
+        },
+        {
+          "check": "growth_FY4",
+          "actual": 0.024375,
+          "expected": 0.024375,
+          "passed": true
+        },
+        {
+          "check": "growth_FY5",
+          "actual": 0.0225,
+          "expected": 0.0225,
+          "passed": true
+        },
+        {
+          "check": "explicit_pv",
+          "actual": 13330.8393264396,
+          "expected": 13330.839326439575,
+          "passed": true
+        },
+        {
+          "check": "terminal_value",
+          "actual": 70046.7432388959,
+          "expected": 70046.74323889593,
+          "passed": true
+        },
+        {
+          "check": "terminal_present_value",
+          "actual": 49362.9883969259,
+          "expected": 49362.98839692588,
+          "passed": true
+        },
+        {
+          "check": "enterprise_value",
+          "actual": 62693.8277233655,
+          "expected": 62693.82772336545,
+          "passed": true
+        },
+        {
+          "check": "equity_value",
+          "actual": 50668.6277233655,
+          "expected": 50668.62772336545,
+          "passed": true
+        },
+        {
+          "check": "value_per_share",
+          "actual": 44.5516818107495,
+          "expected": 44.551681810749535,
+          "passed": true
+        },
+        {
+          "check": "Outputs_EV",
+          "actual": 62693.8277233655,
+          "expected": 62693.82772336545,
+          "passed": true
+        },
+        {
+          "check": "Outputs_equity",
+          "actual": 50668.6277233655,
+          "expected": 50668.62772336545,
+          "passed": true
+        },
+        {
+          "check": "Outputs_per_share",
+          "actual": 44.5516818107495,
+          "expected": 44.551681810749535,
+          "passed": true
+        },
+        {
+          "check": "pretax_to_net_income",
+          "actual": 0,
+          "expected": 0.0,
+          "passed": true
+        }
+      ],
+      "outputs": {
+        "enterprise_value": 62693.82772336545,
+        "equity_value": 50668.62772336545,
+        "value_per_share": 44.551681810749535
+      },
+      "fcff": [
+        3132.5001057630398,
+        3212.132483737624,
+        3287.7276983107386,
+        3358.897456056671,
+        3425.26861803892
+      ],
+      "scenario": "g_up_25bp",
+      "libreoffice_stdout": "convert /app/output/verification/g_up_25bp_input.xlsx -> /app/output/verification/g_up_25bp/g_up_25bp_input.xlsx using filter : Calc MS Excel 2007 XML\nOverwriting: /app/output/verification/g_up_25bp/g_up_25bp_input.xlsx",
+      "libreoffice_stderr": "Warning: failed to launch javaldx - java may not function correctly\nerror : Unknown IO error"
+    },
+    {
+      "wacc": 0.0725,
+      "terminal_growth": 0.0175,
+      "formula_errors": [],
+      "value_checks": [
+        {
+          "check": "NWC0",
+          "actual": -4516.9,
+          "expected": -4516.900000000001,
+          "passed": true
+        },
+        {
+          "check": "revenue_FY1",
+          "actual": 37261.486,
+          "expected": 37261.486,
+          "passed": true
+        },
+        {
+          "check": "revenue_FY2",
+          "actual": 38262.88843625,
+          "expected": 38262.888436249996,
+          "passed": true
+        },
+        {
+          "check": "revenue_FY3",
+          "actual": 39171.6320366109,
+          "expected": 39171.63203661093,
+          "passed": true
+        },
+        {
+          "check": "revenue_FY4",
+          "actual": 39979.546947366,
+          "expected": 39979.54694736603,
+          "passed": true
+        },
+        {
+          "check": "revenue_FY5",
+          "actual": 40679.1890189449,
+          "expected": 40679.18901894493,
+          "passed": true
+        },
+        {
+          "check": "ebit_FY1",
+          "actual": 5571.064,
+          "expected": 5571.064,
+          "passed": true
+        },
+        {
+          "check": "ebit_FY2",
+          "actual": 5720.786345,
+          "expected": 5720.7863449999995,
+          "passed": true
+        },
+        {
+          "check": "ebit_FY3",
+          "actual": 5856.65502069375,
+          "expected": 5856.655020693749,
+          "passed": true
+        },
+        {
+          "check": "ebit_FY4",
+          "actual": 5977.44853049556,
+          "expected": 5977.448530495557,
+          "passed": true
+        },
+        {
+          "check": "ebit_FY5",
+          "actual": 6082.05387977923,
+          "expected": 6082.05387977923,
+          "passed": true
+        },
+        {
+          "check": "da_FY1",
+          "actual": 1640.172,
+          "expected": 1640.1720000000003,
+          "passed": true
+        },
+        {
+          "check": "da_FY2",
+          "actual": 1684.2516225,
+          "expected": 1684.2516225000002,
+          "passed": true
+        },
+        {
+          "check": "da_FY3",
+          "actual": 1724.25259853438,
+          "expected": 1724.252598534375,
+          "passed": true
+        },
+        {
+          "check": "da_FY4",
+          "actual": 1759.81530837915,
+          "expected": 1759.8153083791462,
+          "passed": true
+        },
+        {
+          "check": "da_FY5",
+          "actual": 1790.61207627578,
+          "expected": 1790.6120762757814,
+          "passed": true
+        },
+        {
+          "check": "capex_FY1",
+          "actual": 2860.825,
+          "expected": 2860.825,
+          "passed": true
+        },
+        {
+          "check": "capex_FY2",
+          "actual": 2937.709671875,
+          "expected": 2937.709671875,
+          "passed": true
+        },
+        {
+          "check": "capex_FY3",
+          "actual": 3007.48027658203,
+          "expected": 3007.4802765820305,
+          "passed": true
+        },
+        {
+          "check": "capex_FY4",
+          "actual": 3069.50955728654,
+          "expected": 3069.509557286535,
+          "passed": true
+        },
+        {
+          "check": "capex_FY5",
+          "actual": 3123.22597453905,
+          "expected": 3123.2259745390493,
+          "passed": true
+        },
+        {
+          "check": "nwc_FY1",
+          "actual": -4652.407,
+          "expected": -4652.407000000001,
+          "passed": true
+        },
+        {
+          "check": "nwc_FY2",
+          "actual": -4777.440438125,
+          "expected": -4777.440438125001,
+          "passed": true
+        },
+        {
+          "check": "nwc_FY3",
+          "actual": -4890.90464853047,
+          "expected": -4890.904648530469,
+          "passed": true
+        },
+        {
+          "check": "nwc_FY4",
+          "actual": -4991.77955690641,
+          "expected": -4991.779556906409,
+          "passed": true
+        },
+        {
+          "check": "nwc_FY5",
+          "actual": -5079.13569915227,
+          "expected": -5079.135699152272,
+          "passed": true
+        },
+        {
+          "check": "delta_nwc_FY1",
+          "actual": -135.507,
+          "expected": -135.50700000000015,
+          "passed": true
+        },
+        {
+          "check": "delta_nwc_FY2",
+          "actual": -125.033438125,
+          "expected": -125.03343812499952,
+          "passed": true
+        },
+        {
+          "check": "delta_nwc_FY3",
+          "actual": -113.464210405468,
+          "expected": -113.4642104054683,
+          "passed": true
+        },
+        {
+          "check": "delta_nwc_FY4",
+          "actual": -100.87490837594,
+          "expected": -100.87490837594032,
+          "passed": true
+        },
+        {
+          "check": "delta_nwc_FY5",
+          "actual": -87.3561422458624,
+          "expected": -87.35614224586243,
+          "passed": true
+        },
+        {
+          "check": "reinvestment_component_FY1",
+          "actual": -1085.146,
+          "expected": -1085.1459999999995,
+          "passed": true
+        },
+        {
+          "check": "reinvestment_component_FY2",
+          "actual": -1128.42461125,
+          "expected": -1128.4246112500002,
+          "passed": true
+        },
+        {
+          "check": "reinvestment_component_FY3",
+          "actual": -1169.76346764219,
+          "expected": -1169.7634676421872,
+          "passed": true
+        },
+        {
+          "check": "reinvestment_component_FY4",
+          "actual": -1208.81934053145,
+          "expected": -1208.8193405314482,
+          "passed": true
+        },
+        {
+          "check": "reinvestment_component_FY5",
+          "actual": -1245.25775601741,
+          "expected": -1245.2577560174054,
+          "passed": true
+        },
+        {
+          "check": "fcff_FY1",
+          "actual": 3132.50010576304,
+          "expected": 3132.5001057630398,
+          "passed": true
+        },
+        {
+          "check": "fcff_FY2",
+          "actual": 3202.57073360542,
+          "expected": 3202.57073360542,
+          "passed": true
+        },
+        {
+          "check": "fcff_FY3",
+          "actual": 3264.09301665355,
+          "expected": 3264.0930166535495,
+          "passed": true
+        },
+        {
+          "check": "fcff_FY4",
+          "actual": 3316.48543375289,
+          "expected": 3316.4854337528873,
+          "passed": true
+        },
+        {
+          "check": "fcff_FY5",
+          "actual": 3359.23985181691,
+          "expected": 3359.239851816906,
+          "passed": true
+        },
+        {
+          "check": "discount_factor_FY1",
+          "actual": 0.932400932400932,
+          "expected": 0.9324009324009324,
+          "passed": true
+        },
+        {
+          "check": "discount_factor_FY2",
+          "actual": 0.869371498742128,
+          "expected": 0.8693714987421282,
+          "passed": true
+        },
+        {
+          "check": "discount_factor_FY3",
+          "actual": 0.810602796029956,
+          "expected": 0.8106027960299562,
+          "passed": true
+        },
+        {
+          "check": "discount_factor_FY4",
+          "actual": 0.755806802825134,
+          "expected": 0.755806802825134,
+          "passed": true
+        },
+        {
+          "check": "discount_factor_FY5",
+          "actual": 0.704714967669123,
+          "expected": 0.7047149676691227,
+          "passed": true
+        },
+        {
+          "check": "fcff_present_value_FY1",
+          "actual": 2920.74601935948,
+          "expected": 2920.7460193594775,
+          "passed": true
+        },
+        {
+          "check": "fcff_present_value_FY2",
+          "actual": 2784.22371850222,
+          "expected": 2784.223718502221,
+          "passed": true
+        },
+        {
+          "check": "fcff_present_value_FY3",
+          "actual": 2645.88292580122,
+          "expected": 2645.8829258012215,
+          "passed": true
+        },
+        {
+          "check": "fcff_present_value_FY4",
+          "actual": 2506.6222523009,
+          "expected": 2506.6222523008973,
+          "passed": true
+        },
+        {
+          "check": "fcff_present_value_FY5",
+          "actual": 2367.30660356598,
+          "expected": 2367.3066035659795,
+          "passed": true
+        },
+        {
+          "check": "growth_FY1",
+          "actual": 0.03,
+          "expected": 0.03,
+          "passed": true
+        },
+        {
+          "check": "growth_FY2",
+          "actual": 0.026875,
+          "expected": 0.026875,
+          "passed": true
+        },
+        {
+          "check": "growth_FY3",
+          "actual": 0.02375,
+          "expected": 0.02375,
+          "passed": true
+        },
+        {
+          "check": "growth_FY4",
+          "actual": 0.020625,
+          "expected": 0.020625,
+          "passed": true
+        },
+        {
+          "check": "growth_FY5",
+          "actual": 0.0175,
+          "expected": 0.0175,
+          "passed": true
+        },
+        {
+          "check": "explicit_pv",
+          "actual": 13224.7815195298,
+          "expected": 13224.781519529797,
+          "passed": true
+        },
+        {
+          "check": "terminal_value",
+          "actual": 62145.9372586128,
+          "expected": 62145.93725861277,
+          "passed": true
+        },
+        {
+          "check": "terminal_present_value",
+          "actual": 43795.1721659706,
+          "expected": 43795.17216597062,
+          "passed": true
+        },
+        {
+          "check": "enterprise_value",
+          "actual": 57019.9536855004,
+          "expected": 57019.95368550042,
+          "passed": true
+        },
+        {
+          "check": "equity_value",
+          "actual": 44994.7536855004,
+          "expected": 44994.753685500415,
+          "passed": true
+        },
+        {
+          "check": "value_per_share",
+          "actual": 39.5627835096284,
+          "expected": 39.56278350962843,
+          "passed": true
+        },
+        {
+          "check": "Outputs_EV",
+          "actual": 57019.9536855004,
+          "expected": 57019.95368550042,
+          "passed": true
+        },
+        {
+          "check": "Outputs_equity",
+          "actual": 44994.7536855004,
+          "expected": 44994.753685500415,
+          "passed": true
+        },
+        {
+          "check": "Outputs_per_share",
+          "actual": 39.5627835096284,
+          "expected": 39.56278350962843,
+          "passed": true
+        },
+        {
+          "check": "pretax_to_net_income",
+          "actual": 0,
+          "expected": 0.0,
+          "passed": true
+        }
+      ],
+      "outputs": {
+        "enterprise_value": 57019.95368550042,
+        "equity_value": 44994.753685500415,
+        "value_per_share": 39.56278350962843
+      },
+      "fcff": [
+        3132.5001057630398,
+        3202.57073360542,
+        3264.0930166535495,
+        3316.4854337528873,
+        3359.239851816906
+      ],
+      "scenario": "g_down_25bp",
+      "libreoffice_stdout": "convert /app/output/verification/g_down_25bp_input.xlsx -> /app/output/verification/g_down_25bp/g_down_25bp_input.xlsx using filter : Calc MS Excel 2007 XML\nOverwriting: /app/output/verification/g_down_25bp/g_down_25bp_input.xlsx",
+      "libreoffice_stderr": "Warning: failed to launch javaldx - java may not function correctly\nerror : Unknown IO error"
+    },
+    {
+      "wacc": 0.0775,
+      "terminal_growth": 0.0225,
+      "formula_errors": [],
+      "value_checks": [
+        {
+          "check": "NWC0",
+          "actual": -4516.9,
+          "expected": -4516.900000000001,
+          "passed": true
+        },
+        {
+          "check": "revenue_FY1",
+          "actual": 37261.486,
+          "expected": 37261.486,
+          "passed": true
+        },
+        {
+          "check": "revenue_FY2",
+          "actual": 38309.46529375,
+          "expected": 38309.46529374999,
+          "passed": true
+        },
+        {
+          "check": "revenue_FY3",
+          "actual": 39315.0887577109,
+          "expected": 39315.08875771093,
+          "passed": true
+        },
+        {
+          "check": "revenue_FY4",
+          "actual": 40273.3940461801,
+          "expected": 40273.39404618014,
+          "passed": true
+        },
+        {
+          "check": "revenue_FY5",
+          "actual": 41179.5454122192,
+          "expected": 41179.54541221919,
+          "passed": true
+        },
+        {
+          "check": "ebit_FY1",
+          "actual": 5571.064,
+          "expected": 5571.064,
+          "passed": true
+        },
+        {
+          "check": "ebit_FY2",
+          "actual": 5727.750175,
+          "expected": 5727.750174999999,
+          "passed": true
+        },
+        {
+          "check": "ebit_FY3",
+          "actual": 5878.10361709375,
+          "expected": 5878.10361709375,
+          "passed": true
+        },
+        {
+          "check": "ebit_FY4",
+          "actual": 6021.38239276041,
+          "expected": 6021.38239276041,
+          "passed": true
+        },
+        {
+          "check": "ebit_FY5",
+          "actual": 6156.86349659752,
+          "expected": 6156.863496597519,
+          "passed": true
+        },
+        {
+          "check": "da_FY1",
+          "actual": 1640.172,
+          "expected": 1640.1720000000003,
+          "passed": true
+        },
+        {
+          "check": "da_FY2",
+          "actual": 1686.3018375,
+          "expected": 1686.3018375,
+          "passed": true
+        },
+        {
+          "check": "da_FY3",
+          "actual": 1730.56726073438,
+          "expected": 1730.5672607343752,
+          "passed": true
+        },
+        {
+          "check": "da_FY4",
+          "actual": 1772.74983771478,
+          "expected": 1772.7498377147756,
+          "passed": true
+        },
+        {
+          "check": "da_FY5",
+          "actual": 1812.63670906336,
+          "expected": 1812.6367090633578,
+          "passed": true
+        },
+        {
+          "check": "capex_FY1",
+          "actual": 2860.825,
+          "expected": 2860.825,
+          "passed": true
+        },
+        {
+          "check": "capex_FY2",
+          "actual": 2941.285703125,
+          "expected": 2941.2857031249996,
+          "passed": true
+        },
+        {
+          "check": "capex_FY3",
+          "actual": 3018.49445283203,
+          "expected": 3018.4944528320307,
+          "passed": true
+        },
+        {
+          "check": "capex_FY4",
+          "actual": 3092.07025511981,
+          "expected": 3092.070255119812,
+          "passed": true
+        },
+        {
+          "check": "capex_FY5",
+          "actual": 3161.64183586001,
+          "expected": 3161.641835860007,
+          "passed": true
+        },
+        {
+          "check": "nwc_FY1",
+          "actual": -4652.407,
+          "expected": -4652.407000000001,
+          "passed": true
+        },
+        {
+          "check": "nwc_FY2",
+          "actual": -4783.255946875,
+          "expected": -4783.2559468750005,
+          "passed": true
+        },
+        {
+          "check": "nwc_FY3",
+          "actual": -4908.81641548047,
+          "expected": -4908.81641548047,
+          "passed": true
+        },
+        {
+          "check": "nwc_FY4",
+          "actual": -5028.46881560781,
+          "expected": -5028.468815607806,
+          "passed": true
+        },
+        {
+          "check": "nwc_FY5",
+          "actual": -5141.60936395898,
+          "expected": -5141.609363958982,
+          "passed": true
+        },
+        {
+          "check": "delta_nwc_FY1",
+          "actual": -135.507,
+          "expected": -135.50700000000015,
+          "passed": true
+        },
+        {
+          "check": "delta_nwc_FY2",
+          "actual": -130.848946874999,
+          "expected": -130.84894687499946,
+          "passed": true
+        },
+        {
+          "check": "delta_nwc_FY3",
+          "actual": -125.560468605469,
+          "expected": -125.5604686054694,
+          "passed": true
+        },
+        {
+          "check": "delta_nwc_FY4",
+          "actual": -119.652400127336,
+          "expected": -119.65240012733648,
+          "passed": true
+        },
+        {
+          "check": "delta_nwc_FY5",
+          "actual": -113.140548351175,
+          "expected": -113.14054835117531,
+          "passed": true
+        },
+        {
+          "check": "reinvestment_component_FY1",
+          "actual": -1085.146,
+          "expected": -1085.1459999999995,
+          "passed": true
+        },
+        {
+          "check": "reinvestment_component_FY2",
+          "actual": -1124.13491875,
+          "expected": -1124.1349187500002,
+          "passed": true
+        },
+        {
+          "check": "reinvestment_component_FY3",
+          "actual": -1162.36672349219,
+          "expected": -1162.366723492186,
+          "passed": true
+        },
+        {
+          "check": "reinvestment_component_FY4",
+          "actual": -1199.6680172777,
+          "expected": -1199.6680172776998,
+          "passed": true
+        },
+        {
+          "check": "reinvestment_component_FY5",
+          "actual": -1235.86457844547,
+          "expected": -1235.864578445474,
+          "passed": true
+        },
+        {
+          "check": "fcff_FY1",
+          "actual": 3132.50010576304,
+          "expected": 3132.5001057630398,
+          "passed": true
+        },
+        {
+          "check": "fcff_FY2",
+          "actual": 3212.13248373762,
+          "expected": 3212.132483737624,
+          "passed": true
+        },
+        {
+          "check": "fcff_FY3",
+          "actual": 3287.72769831074,
+          "expected": 3287.7276983107386,
+          "passed": true
+        },
+        {
+          "check": "fcff_FY4",
+          "actual": 3358.89745605667,
+          "expected": 3358.897456056671,
+          "passed": true
+        },
+        {
+          "check": "fcff_FY5",
+          "actual": 3425.26861803892,
+          "expected": 3425.26861803892,
+          "passed": true
+        },
+        {
+          "check": "discount_factor_FY1",
+          "actual": 0.928074245939675,
+          "expected": 0.9280742459396752,
+          "passed": true
+        },
+        {
+          "check": "discount_factor_FY2",
+          "actual": 0.861321805976497,
+          "expected": 0.8613218059764969,
+          "passed": true
+        },
+        {
+          "check": "discount_factor_FY3",
+          "actual": 0.799370585593036,
+          "expected": 0.7993705855930365,
+          "passed": true
+        },
+        {
+          "check": "discount_factor_FY4",
+          "actual": 0.741875253450613,
+          "expected": 0.7418752534506141,
+          "passed": true
+        },
+        {
+          "check": "discount_factor_FY5",
+          "actual": 0.688515316427483,
+          "expected": 0.6885153164274841,
+          "passed": true
+        },
+        {
+          "check": "fcff_present_value_FY1",
+          "actual": 2907.19267356199,
+          "expected": 2907.192673561986,
+          "passed": true
+        },
+        {
+          "check": "fcff_present_value_FY2",
+          "actual": 2766.67975192866,
+          "expected": 2766.679751928661,
+          "passed": true
+        },
+        {
+          "check": "fcff_present_value_FY3",
+          "actual": 2628.1128154691,
+          "expected": 2628.1128154691014,
+          "passed": true
+        },
+        {
+          "check": "fcff_present_value_FY4",
+          "actual": 2491.88290152666,
+          "expected": 2491.882901526666,
+          "passed": true
+        },
+        {
+          "check": "fcff_present_value_FY5",
+          "actual": 2358.3499063982,
+          "expected": 2358.349906398198,
+          "passed": true
+        },
+        {
+          "check": "growth_FY1",
+          "actual": 0.03,
+          "expected": 0.03,
+          "passed": true
+        },
+        {
+          "check": "growth_FY2",
+          "actual": 0.028125,
+          "expected": 0.028124999999999997,
+          "passed": true
+        },
+        {
+          "check": "growth_FY3",
+          "actual": 0.02625,
+          "expected": 0.02625,
+          "passed": true
+        },
+        {
+          "check": "growth_FY4",
+          "actual": 0.024375,
+          "expected": 0.024375,
+          "passed": true
+        },
+        {
+          "check": "growth_FY5",
+          "actual": 0.0225,
+          "expected": 0.0225,
+          "passed": true
+        },
+        {
+          "check": "explicit_pv",
+          "actual": 13152.2180488846,
+          "expected": 13152.218048884613,
+          "passed": true
+        },
+        {
+          "check": "terminal_value",
+          "actual": 63678.8574899054,
+          "expected": 63678.85748990538,
+          "passed": true
+        },
+        {
+          "check": "terminal_present_value",
+          "actual": 43843.8687144028,
+          "expected": 43843.868714402866,
+          "passed": true
+        },
+        {
+          "check": "enterprise_value",
+          "actual": 56996.0867632874,
+          "expected": 56996.08676328748,
+          "passed": true
+        },
+        {
+          "check": "equity_value",
+          "actual": 44970.8867632874,
+          "expected": 44970.886763287475,
+          "passed": true
+        },
+        {
+          "check": "value_per_share",
+          "actual": 39.5417979102149,
+          "expected": 39.54179791021496,
+          "passed": true
+        },
+        {
+          "check": "Outputs_EV",
+          "actual": 56996.0867632874,
+          "expected": 56996.08676328748,
+          "passed": true
+        },
+        {
+          "check": "Outputs_equity",
+          "actual": 44970.8867632874,
+          "expected": 44970.886763287475,
+          "passed": true
+        },
+        {
+          "check": "Outputs_per_share",
+          "actual": 39.5417979102149,
+          "expected": 39.54179791021496,
+          "passed": true
+        },
+        {
+          "check": "pretax_to_net_income",
+          "actual": 0,
+          "expected": 0.0,
+          "passed": true
+        }
+      ],
+      "outputs": {
+        "enterprise_value": 56996.08676328748,
+        "equity_value": 44970.886763287475,
+        "value_per_share": 39.54179791021496
+      },
+      "fcff": [
+        3132.5001057630398,
+        3212.132483737624,
+        3287.7276983107386,
+        3358.897456056671,
+        3425.26861803892
+      ],
+      "scenario": "combined_up",
+      "libreoffice_stdout": "convert /app/output/verification/combined_up_input.xlsx -> /app/output/verification/combined_up/combined_up_input.xlsx using filter : Calc MS Excel 2007 XML\nOverwriting: /app/output/verification/combined_up/combined_up_input.xlsx",
+      "libreoffice_stderr": "Warning: failed to launch javaldx - java may not function correctly\nerror : Unknown IO error"
+    }
+  ],
+  "sensitivity_directions": {
+    "wacc_up_50bp": "EV下降，符合预期",
+    "wacc_down_50bp": "EV上升，符合预期",
+    "g_up_25bp": "EV上升，符合预期",
+    "g_down_25bp": "EV下降，符合预期",
+    "combined_up": "WACC上升且g上升时，EV高于仅WACC上升情形，符合预期"
+  },
+  "final_model_unchanged_after_sensitivity": true,
+  "source_domains_observed": [
+    "data.sec.gov",
+    "home.treasury.gov"
+  ],
+  "network_claim": "仅验证允许域名的IPv4可达性，不声称白名单已经验证生效"
+}

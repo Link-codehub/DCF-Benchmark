@@ -1,0 +1,4 @@
+Skipping image OS validation for hb__d6c05184b904fb454629caba0bd93496: docker inspect returned 1
+Agent 'oracle' exposes no native web search or fetch tools for Harbor to disable; continuing. Sandbox network policy still applies.
+Collecting main service artifacts
+Trial A07__zx32DyD failed: No reward file found at /Users/link/Desktop/Finance Bench/DCFEval/evaluation/oracle_jobs/A07/A07__zx32DyD/verifier/reward.txt or /Users/link/Desktop/Finance Bench/DCFEval/evaluation/oracle_jobs/A07/A07__zx32DyD/verifier/reward.json

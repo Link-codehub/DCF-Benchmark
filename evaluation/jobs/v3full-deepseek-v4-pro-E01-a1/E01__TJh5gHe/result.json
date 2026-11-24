@@ -1,0 +1,154 @@
+{
+    "schema_version": 1,
+    "id": "0bc4daf0-7583-4884-a6d7-f6f51c1a09d8",
+    "task_name": "E01",
+    "trial_name": "E01__TJh5gHe",
+    "trial_uri": "file:///Users/link/Desktop/Finance%20Bench/exp/dcf_factory_v3/eval/jobs/v3full-deepseek-v4-pro-E01-a1/E01__TJh5gHe",
+    "task_id": {
+        "path": "/Users/link/Desktop/Finance Bench/exp/dcf_factory_v3/tasks/E01"
+    },
+    "source": null,
+    "task_checksum": "d7aa1f09c7c1dbe44a7746563a03eea90872cd8b9adfdfcaf31315e65c79631d",
+    "config": {
+        "schema_version": 1,
+        "task": {
+            "path": "/Users/link/Desktop/Finance Bench/exp/dcf_factory_v3/tasks/E01",
+            "git_url": null,
+            "git_commit_id": null,
+            "name": null,
+            "ref": null,
+            "overwrite": false,
+            "download_dir": null,
+            "source": null
+        },
+        "trial_name": "E01__TJh5gHe",
+        "trials_dir": "/Users/link/Desktop/Finance Bench/exp/dcf_factory_v3/eval/jobs/v3full-deepseek-v4-pro-E01-a1",
+        "install_only": false,
+        "timeout_multiplier": 1.0,
+        "agent_timeout_multiplier": null,
+        "verifier_timeout_multiplier": null,
+        "agent_setup_timeout_multiplier": null,
+        "environment_build_timeout_multiplier": null,
+        "agent": {
+            "name": "kimi-code",
+            "import_path": null,
+            "model_name": "deepseek-v4-pro",
+            "base_url": "http://host.docker.internal:4311",
+            "model_api_key_name": null,
+            "model_api_format": "anthropic_messages",
+            "skip_model_parsing": true,
+            "n_concurrent": null,
+            "concurrency_group": null,
+            "skills": [],
+            "override_timeout_sec": 4800.0,
+            "override_setup_timeout_sec": null,
+            "max_timeout_sec": null,
+            "resume_trajectory": false,
+            "load_trajectory": null,
+            "extra_allowed_hosts": [],
+            "kwargs": {
+                "version": "2.3.3",
+                "skip_install": true,
+                "disable_web_search": true
+            },
+            "env": {
+                "KIMI_MODEL_API_KEY": "****",
+                "KIMI_MODEL_MAX_CONTEXT_SIZE": "1048576",
+                "KIMI_MODEL_THINKING_EFFORT": "high",
+                "KIMI_MODEL_CAPABILITIES": "thinking,tool_use",
+                "KIMI_MODEL_MAX_OUTPUT_SIZE": "64000",
+                "KIMI_MODEL_THINKING_KEEP": "off",
+                "KIMI_LOOP_MAX_ATTEMPTS_PER_STEP": "5",
+                "HTTP_PROXY": "",
+                "HTTPS_PROXY": "",
+                "ALL_PROXY": ""
+            },
+            "mcp_servers": []
+        },
+        "user_agent": null,
+        "environment": {
+            "type": null,
+            "import_path": "ipv4_docker_environment:IPv4DockerEnvironment",
+            "force_build": false,
+            "delete": true,
+            "stream": false,
+            "cpu_enforcement_policy": "auto",
+            "memory_enforcement_policy": "auto",
+            "override_cpus": null,
+            "override_memory_mb": null,
+            "override_storage_mb": null,
+            "override_gpus": null,
+            "override_tpu": null,
+            "mounts": null,
+            "extra_docker_compose": [],
+            "kwargs": {},
+            "extra_allowed_hosts": []
+        },
+        "verifier": {
+            "override_timeout_sec": null,
+            "max_timeout_sec": null,
+            "disable": false
+        },
+        "override_error_policy": {},
+        "artifacts": [
+            "/app/output.xlsx",
+            "/app/memo.md",
+            "/app/output"
+        ],
+        "extra_instruction_paths": [],
+        "extra_instructions": [],
+        "job_id": "89e4bc8b-ca61-43d7-b452-46526613a414",
+        "source_trial": null
+    },
+    "agent_info": {
+        "name": "kimi-code",
+        "version": "2.3.3",
+        "model_info": {
+            "name": "deepseek-v4-pro",
+            "provider": "harbor-skip-parsing"
+        }
+    },
+    "agent_result": {
+        "n_input_tokens": 1010021,
+        "n_cache_tokens": 0,
+        "n_output_tokens": 42395,
+        "cost_usd": null,
+        "model_usage": {
+            "deepseek-v4-pro": {
+                "n_input_tokens": 1010021,
+                "n_cache_tokens": 0,
+                "n_output_tokens": 42395,
+                "cost_usd": null
+            }
+        },
+        "rollout_details": null,
+        "metadata": null
+    },
+    "verifier_result": {
+        "rewards": {
+            "reward": 0.0
+        }
+    },
+    "verifier_environment_mode": "separate",
+    "exception_info": null,
+    "started_at": "2026-11-22T21:04:03.380004Z",
+    "finished_at": "2026-11-22T21:21:01.929106Z",
+    "environment_setup": {
+        "started_at": "2026-11-22T21:04:03.450182Z",
+        "finished_at": "2026-11-22T21:04:08.958004Z"
+    },
+    "agent_setup": {
+        "started_at": "2026-11-22T21:04:08.958945Z",
+        "finished_at": "2026-11-22T21:04:10.058062Z"
+    },
+    "agent_execution": {
+        "started_at": "2026-11-22T21:04:10.058356Z",
+        "finished_at": "2026-11-22T21:20:44.222138Z"
+    },
+    "verifier": {
+        "started_at": "2026-11-22T21:20:49.536600Z",
+        "finished_at": "2026-11-22T21:21:01.929038Z"
+    },
+    "step_results": null,
+    "reward_valid": true
+}

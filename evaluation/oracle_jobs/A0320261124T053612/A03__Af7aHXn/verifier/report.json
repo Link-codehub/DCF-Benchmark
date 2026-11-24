@@ -1,0 +1,55 @@
+{
+  "task_id": "A03",
+  "baseline": {
+    "passed": false,
+    "mismatches": [],
+    "nonformula_or_missing": [],
+    "duplicates": [],
+    "errors": [],
+    "links": [],
+    "checked": 43,
+    "sensitivity": {
+      "grid_checked": 0,
+      "grid_passed": true,
+      "center_key": "sensitivity_r3_c3",
+      "center_passed": false,
+      "center_actual": null,
+      "center_expected": null
+    }
+  },
+  "perturbations": [],
+  "dependency_checks": {
+    "passed": false,
+    "checks": {
+      "bom_unit_drivers": false,
+      "yield_once_in_good_volume": false,
+      "cogs_is_not_purchases": false,
+      "no_revenue_cost_ratio_substitute": true,
+      "sensitivity_full_grid": false,
+      "sensitivity_formula_drivers": false
+    },
+    "detail": {
+      "missing_bom": [
+        "products.alpha.bom_alloy",
+        "products.alpha.bom_resin",
+        "products.alpha.bom_steel",
+        "products.beta.bom_alloy",
+        "products.beta.bom_resin",
+        "products.beta.bom_steel"
+      ],
+      "bad_yield": [
+        "alpha",
+        "beta"
+      ],
+      "purchase_cogs": true
+    }
+  },
+  "tolerance": {
+    "absolute": 1e-06,
+    "relative": 2e-07
+  },
+  "reward": 0.0,
+  "passed": false,
+  "error": "IndexError('list index out of range')",
+  "traceback": "Traceback (most recent call last):\n  File \"/tests/grader.py\", line 157, in grade\n    perturb(candidate, source, variant[\"input_changes\"])\n  File \"/tests/grader.py\", line 69, in perturb\n    leaf = rest[-1]\n           ~~~~^^^^\nIndexError: list index out of range\n"
+}

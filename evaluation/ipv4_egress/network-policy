@@ -1,0 +1,27 @@
+#!/bin/sh
+set -eu
+mode=${1:-show}
+if [ "$mode" = show ]; then
+  nft list table ip dcf_egress
+  exit 0
+fi
+nft delete table ip dcf_egress 2>/dev/null || true
+if [ "$mode" = deny-all ] || [ "$mode" = allow ]; then
+  nft -f - <<'EOF'
+add table ip dcf_egress
+table ip dcf_egress {
+  chain output {
+    type filter hook output priority filter; policy drop;
+    oif "lo" accept
+    fib daddr type local accept
+    ip daddr 192.168.65.254 tcp dport 4311 accept
+    ct state established,related accept
+  }
+}
+EOF
+elif [ "$mode" = allow-all ]; then
+  :
+else
+  echo "unsupported policy: $mode" >&2
+  exit 2
+fi

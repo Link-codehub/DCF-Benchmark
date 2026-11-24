@@ -1,0 +1,382 @@
+{
+  "generated_utc": "2026-11-24T05:49:03.127818+00:00",
+  "tasks_total": 40,
+  "tasks_passed": 40,
+  "passed_tasks": [
+    "A01",
+    "A02",
+    "A03",
+    "A04",
+    "A05",
+    "A06",
+    "A07",
+    "A08",
+    "A09",
+    "A10",
+    "BC01",
+    "BC02",
+    "BC03",
+    "BC04",
+    "BC05",
+    "BC06",
+    "BC07",
+    "BC08",
+    "BC09",
+    "BC10",
+    "BC11",
+    "BC12",
+    "BC13",
+    "BC14",
+    "BC15",
+    "BC16",
+    "D01",
+    "D02",
+    "D03",
+    "D04",
+    "E01",
+    "E02",
+    "E03",
+    "E04",
+    "R01",
+    "R02",
+    "W01",
+    "W02",
+    "W03",
+    "W04"
+  ],
+  "latest_runs": [
+    {
+      "task": "A01",
+      "job": "evaluation/oracle_jobs/A0120261124T052510",
+      "rewards": [
+        1.0
+      ],
+      "passed": true
+    },
+    {
+      "task": "A02",
+      "job": "evaluation/oracle_jobs/A0220261124T052510",
+      "rewards": [
+        1.0
+      ],
+      "passed": true
+    },
+    {
+      "task": "A03",
+      "job": "evaluation/oracle_jobs/A0320261124T054722",
+      "rewards": [
+        1.0
+      ],
+      "passed": true
+    },
+    {
+      "task": "A04",
+      "job": "evaluation/oracle_jobs/A0420261124T052510",
+      "rewards": [
+        1.0
+      ],
+      "passed": true
+    },
+    {
+      "task": "A05",
+      "job": "evaluation/oracle_jobs/A0520261124T052510",
+      "rewards": [
+        1.0
+      ],
+      "passed": true
+    },
+    {
+      "task": "A06",
+      "job": "evaluation/oracle_jobs/A0620261124T052510",
+      "rewards": [
+        1.0
+      ],
+      "passed": true
+    },
+    {
+      "task": "A07",
+      "job": "evaluation/oracle_jobs/A0720261124T052510",
+      "rewards": [
+        1.0
+      ],
+      "passed": true
+    },
+    {
+      "task": "A08",
+      "job": "evaluation/oracle_jobs/A0820261124T052510",
+      "rewards": [
+        1.0
+      ],
+      "passed": true
+    },
+    {
+      "task": "A09",
+      "job": "evaluation/oracle_jobs/A0920261124T054335",
+      "rewards": [
+        1.0
+      ],
+      "passed": true
+    },
+    {
+      "task": "A10",
+      "job": "evaluation/oracle_jobs/A1020261124T052510",
+      "rewards": [
+        1.0
+      ],
+      "passed": true
+    },
+    {
+      "task": "BC01",
+      "job": "evaluation/oracle_jobs/BC01",
+      "rewards": [
+        1.0
+      ],
+      "passed": true
+    },
+    {
+      "task": "BC02",
+      "job": "evaluation/oracle_jobs/BC02",
+      "rewards": [
+        1.0
+      ],
+      "passed": true
+    },
+    {
+      "task": "BC03",
+      "job": "evaluation/oracle_jobs/BC03",
+      "rewards": [
+        1.0
+      ],
+      "passed": true
+    },
+    {
+      "task": "BC04",
+      "job": "evaluation/oracle_jobs/BC04",
+      "rewards": [
+        1.0
+      ],
+      "passed": true
+    },
+    {
+      "task": "BC05",
+      "job": "evaluation/oracle_jobs/BC05",
+      "rewards": [
+        1.0
+      ],
+      "passed": true
+    },
+    {
+      "task": "BC06",
+      "job": "evaluation/oracle_jobs/BC06",
+      "rewards": [
+        1.0
+      ],
+      "passed": true
+    },
+    {
+      "task": "BC07",
+      "job": "evaluation/oracle_jobs/BC07",
+      "rewards": [
+        1.0
+      ],
+      "passed": true
+    },
+    {
+      "task": "BC08",
+      "job": "evaluation/oracle_jobs/BC08",
+      "rewards": [
+        1.0
+      ],
+      "passed": true
+    },
+    {
+      "task": "BC09",
+      "job": "evaluation/oracle_jobs/BC09",
+      "rewards": [
+        1.0
+      ],
+      "passed": true
+    },
+    {
+      "task": "BC10",
+      "job": "evaluation/oracle_jobs/BC10",
+      "rewards": [
+        1.0
+      ],
+      "passed": true
+    },
+    {
+      "task": "BC11",
+      "job": "evaluation/oracle_jobs/BC11",
+      "rewards": [
+        1.0
+      ],
+      "passed": true
+    },
+    {
+      "task": "BC12",
+      "job": "evaluation/oracle_jobs/BC12",
+      "rewards": [
+        1.0
+      ],
+      "passed": true
+    },
+    {
+      "task": "BC13",
+      "job": "evaluation/oracle_jobs/BC13",
+      "rewards": [
+        1.0
+      ],
+      "passed": true
+    },
+    {
+      "task": "BC14",
+      "job": "evaluation/oracle_jobs/BC14",
+      "rewards": [
+        1.0
+      ],
+      "passed": true
+    },
+    {
+      "task": "BC15",
+      "job": "evaluation/oracle_jobs/BC15",
+      "rewards": [
+        1.0
+      ],
+      "passed": true
+    },
+    {
+      "task": "BC16",
+      "job": "evaluation/oracle_jobs/BC16",
+      "rewards": [
+        1.0
+      ],
+      "passed": true
+    },
+    {
+      "task": "D01",
+      "job": "evaluation/oracle_jobs/D01",
+      "rewards": [
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "passed": true
+    },
+    {
+      "task": "D02",
+      "job": "evaluation/oracle_jobs/D02",
+      "rewards": [
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "passed": true
+    },
+    {
+      "task": "D03",
+      "job": "evaluation/oracle_jobs/D03",
+      "rewards": [
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "passed": true
+    },
+    {
+      "task": "D04",
+      "job": "evaluation/oracle_jobs/D04",
+      "rewards": [
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "passed": true
+    },
+    {
+      "task": "E01",
+      "job": "evaluation/oracle_jobs/E0120261124T053612",
+      "rewards": [
+        1.0
+      ],
+      "passed": true
+    },
+    {
+      "task": "E02",
+      "job": "evaluation/oracle_jobs/E0220261124T053612",
+      "rewards": [
+        1.0
+      ],
+      "passed": true
+    },
+    {
+      "task": "E03",
+      "job": "evaluation/oracle_jobs/E0320261124T053612",
+      "rewards": [
+        1.0
+      ],
+      "passed": true
+    },
+    {
+      "task": "E04",
+      "job": "evaluation/oracle_jobs/E0420261124T053612",
+      "rewards": [
+        1.0
+      ],
+      "passed": true
+    },
+    {
+      "task": "R01",
+      "job": "evaluation/oracle_jobs/R0120261124T053612",
+      "rewards": [
+        1.0
+      ],
+      "passed": true
+    },
+    {
+      "task": "R02",
+      "job": "evaluation/oracle_jobs/R0220261124T053612",
+      "rewards": [
+        1.0
+      ],
+      "passed": true
+    },
+    {
+      "task": "W01",
+      "job": "evaluation/oracle_jobs/W0120261124T053612",
+      "rewards": [
+        1.0
+      ],
+      "passed": true
+    },
+    {
+      "task": "W02",
+      "job": "evaluation/oracle_jobs/W0220261124T053612",
+      "rewards": [
+        1.0
+      ],
+      "passed": true
+    },
+    {
+      "task": "W03",
+      "job": "evaluation/oracle_jobs/W0320261124T053612",
+      "rewards": [
+        1.0
+      ],
+      "passed": true
+    },
+    {
+      "task": "W04",
+      "job": "evaluation/oracle_jobs/W0420261124T053612",
+      "rewards": [
+        1.0
+      ],
+      "passed": true
+    }
+  ],
+  "evidence": "evaluation/oracle_summary.json 与 evaluation/oracle_jobs/"
+}

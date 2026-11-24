@@ -1,0 +1,1 @@
+{"task_id": "F01", "reward": 1.0, "rule_reward": 1.0, "passed": false, "rule_passed": true}

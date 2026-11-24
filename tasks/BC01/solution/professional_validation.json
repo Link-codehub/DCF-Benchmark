@@ -1,0 +1,164 @@
+{
+  "rule_passed": true,
+  "baseline": {
+    "passed": true,
+    "mismatches": [],
+    "mismatches_all": [],
+    "nonformula_or_missing": [],
+    "nonformula_or_missing_all": [],
+    "duplicates": [],
+    "errors": [],
+    "errors_all": [],
+    "links": [],
+    "links_all": [],
+    "checked": 258
+  },
+  "perturbations": [
+    {
+      "id": 1,
+      "passed": true,
+      "mismatches": [],
+      "checked": 258
+    },
+    {
+      "id": 2,
+      "passed": true,
+      "mismatches": [],
+      "checked": 258
+    }
+  ],
+  "score_unexecuted_rules": [
+    "X-IN-007",
+    "X-IN-009",
+    "X-TA-002"
+  ],
+  "original_input_history_mismatches": [],
+  "original_input_history_comparison": "Inputs!A1:H79 and History!A1:I9 exact cell-value comparison against local public inputs.xlsx",
+  "results": {
+    "public_keys": 258,
+    "unique_A_column_keys": 258,
+    "ordered_exactly_as_public": true,
+    "B_column_live_formulas": 258,
+    "B_column_numeric_cached_values": 258
+  },
+  "formula_engineering": {
+    "all_formula_cells": 1059,
+    "formula_cells_missing_cached_value": [],
+    "formula_errors": [],
+    "dependency_cycles": [],
+    "external_workbook_links": 0,
+    "iterative_calculation_enabled": false
+  },
+  "internal_checks": {
+    "OK": 28,
+    "total": 28
+  },
+  "periods": [
+    {
+      "period": "P1",
+      "start": "2025-12-21",
+      "end": "2026-08-31",
+      "activity": 0.693150684931507,
+      "discount_time": 0.346575342465753
+    },
+    {
+      "period": "P2",
+      "start": "2026-08-31",
+      "end": "2027-08-31",
+      "activity": 1,
+      "discount_time": 1.19315068493151
+    },
+    {
+      "period": "P3",
+      "start": "2027-08-31",
+      "end": "2028-08-31",
+      "activity": 1,
+      "discount_time": 2.19452054794521
+    },
+    {
+      "period": "P4",
+      "start": "2028-08-31",
+      "end": "2029-08-31",
+      "activity": 1,
+      "discount_time": 3.1958904109589
+    },
+    {
+      "period": "P5",
+      "start": "2029-08-31",
+      "end": "2030-08-31",
+      "activity": 1,
+      "discount_time": 4.1958904109589
+    }
+  ],
+  "nonrecurring_adjustments": {
+    "H2_2025": 6.244924,
+    "H1_2025": 0,
+    "total": 6.244924,
+    "normalized_to_reported_bridge": 6.2449239999999975
+  },
+  "forbidden_company_or_external_link_tokens": {
+    "HUYA": false,
+    "茅台": false,
+    "externalLink": false
+  },
+  "headline": {
+    "enterprise_value": 2026.40970962661,
+    "equity_value": 1933.41970962661,
+    "diluted_shares": 145.4,
+    "value_per_share": 13.2972469712972
+  },
+  "supplemental_evidence": {
+    "X-IN-007": "Operating!D5:H10 shows P1 valuation-date residual period and four complete fiscal years through 2030-08-31; baseline numeric periods pass.",
+    "X-IN-009": "Exact original Inputs!A1:H79 and History!A1:I9 comparison has zero mismatches; historical values are not overwritten by forecasts.",
+    "X-TA-002": "History!C17:D19 separately records 2025H2 nonrecurring gain 6.244924, 2025H1 zero and their total, with normalized/report EBIT bridge."
+  },
+  "visual_verification": "preview/output.pdf; Summary and DCF pages visually inspected; cached values and Chinese text readable.",
+  "independent_review": {
+    "llm_09_MEMO": "pass",
+    "agent_status": "unscored",
+    "agent_error": "timeout",
+    "attempts": "Official judge.py was run twice; both Agent subprocesses timed out at 600 seconds. Requests/results were not modified.",
+    "aggregate_atomic_scored_items": 89,
+    "aggregate_atomic_scored_possible": 89,
+    "aggregate_unscored_or_unexecuted": [
+      "X-IN-007",
+      "X-IN-009",
+      "09-READABLE",
+      "X-TA-002",
+      "X-TA-004",
+      "X-TA-006",
+      "X-TA-007"
+    ],
+    "interpretation": "89/89 is only the score among executed and scored atoms, not a claim that all 102 weighted rubric points or all LLM/Agent items passed."
+  },
+  "final_files": {
+    "output.xlsx": {
+      "bytes": 71630,
+      "sha256": "21295d64fe87083c5f0abbcd010bd8e17aee7e0bae8ef8059d0f76366680d0e4"
+    },
+    "memo.md": {
+      "bytes": 8954,
+      "sha256": "1f127ea241f46dcd82edbac8148e0d8fb053ce5cc768a0a3ebe75260d2026946"
+    },
+    "inputs.xlsx": {
+      "bytes": 13099,
+      "sha256": "62b66a2f775e470cd34641765ba1635858b825c623d7c04d8c61cf04bbf44163"
+    },
+    "build_model.py": {
+      "bytes": 46849,
+      "sha256": "46d7e7348885f853044384c334e1e5118f8c81d98b52b8e9b7be13c1ef58da35"
+    },
+    "score.json": {
+      "bytes": 15973,
+      "sha256": "52eb016c7c3b4fd89811cfd1fc0bdcc3800a46b2b5123d666c59cf872ab6ae27"
+    },
+    "judge.json": {
+      "bytes": 1225,
+      "sha256": "670f9bda9afe2b339fbca18441de2a4c7b747482b7dfdd39edd12ec6e1957a84"
+    },
+    "aggregate.json": {
+      "bytes": 19965,
+      "sha256": "c57ec26b176a87f404f3a2789cb3721e84d0486da41b2c8da9a9f2cdb7764cf6"
+    }
+  }
+}

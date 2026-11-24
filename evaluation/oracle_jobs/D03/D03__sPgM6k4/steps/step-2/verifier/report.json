@@ -1,0 +1,35 @@
+{
+  "task_id": "tests",
+  "baseline": {
+    "passed": true,
+    "mismatches": [],
+    "nonformula_or_missing": [],
+    "duplicates": [],
+    "errors": [],
+    "links": [],
+    "checked": 202
+  },
+  "perturbations": [
+    {
+      "id": 1,
+      "passed": true,
+      "mismatches": [],
+      "checked": 202
+    },
+    {
+      "id": 2,
+      "passed": true,
+      "mismatches": [],
+      "checked": 202
+    }
+  ],
+  "passed": true,
+  "d_step": {
+    "history_preserved": true,
+    "history_mismatches": [],
+    "snapshot": "/app/snapshots/step-2.xlsx",
+    "snapshot_present": true,
+    "snapshot_formulas": true,
+    "passed": true
+  }
+}

@@ -1,0 +1,31 @@
+{
+  "checks": [
+    {
+      "check_id": "pretax_to_net_income",
+      "description": "税前利润−所得税费用−含非控股权益的合并净利润",
+      "input_fields": [
+        {
+          "field_id": "pretax_income",
+          "value": 123485,
+          "unit": "USD_millions"
+        },
+        {
+          "field_id": "income_tax",
+          "value": 29749,
+          "unit": "USD_millions"
+        },
+        {
+          "field_id": "net_income_consolidated",
+          "value": 93736,
+          "unit": "USD_millions"
+        }
+      ],
+      "formula": "pretax_income − income_tax − net_income_consolidated",
+      "difference": 0,
+      "tolerance": 1874.72,
+      "tolerance_rule": "max(0.01, abs(net_income_consolidated) * 0.02)",
+      "within_tolerance": true,
+      "memo": "交叉验证通过：123485 − 29749 − 93736 = 0，恰好为零。三个字段均取自 SEC EDGAR companyfacts，同一份 FY2024 10-K（accession 0000320193-24-000123，filed 2024-11-01）。NetIncomeLoss 标签对应含非控股权益的合并净利润；Apple 无非控股权益，因此与归母净利润一致。"
+    }
+  ]
+}

@@ -1,0 +1,37 @@
+{
+  "task": "BC04",
+  "judge_model": "claude-opus-5-5",
+  "generated": "2026-11-23T01:18:08.495309+00:00",
+  "llm": {
+    "09-MEMO": {
+      "status": "pass",
+      "rationale": "已提交 memo.md，内容满足本项要求。“主要价值驱动”一节列出五项驱动并给出具体数值：装机量×单价×服务频次构成收入，利润率由16.0%升至18.8%，资本开支、无形资产与营运资本，CAPM WACC 8.0907%与永续增长率2.3%，项目投产期与成功概率。“局限与口径提示”一节列出至少一个明确局限：终值现值约占已有业务企业价值76.2%、估值对折现率敏感；历史数据截至2025-10-31，未覆盖至估值日；项目未设终值，可能低估项目价值。本项只核查 memo 是否说明价值驱动与局限，不评判模型数值是否正确。",
+      "judge_model": "claude-opus-5-5",
+      "attempts": [
+        {
+          "attempt": 1,
+          "error": null,
+          "text_chars": 305
+        }
+      ]
+    }
+  },
+  "agent": {
+    "status": "scored",
+    "scores": {
+      "09-READABLE": 1,
+      "X-TA-004": 1,
+      "X-TA-006": 0,
+      "X-TA-007": 1
+    },
+    "evidence": {
+      "09-READABLE": "output.xlsx 包含 Inputs、History、History_Summary、Existing_Business、Projects、Valuation、Results 共 7 个页面。Existing_Business!C3:G3 的期间标签为“P1 残期”“P2 完整财年”至“P5 完整财年”，C5:C9 列出期初日、期末日、实际天数、折现时间和残期活动比例。Projects!A4 和 A23 分别标注 project_atlas、project_boreal，C5:G5 和 C24:G24 为 P1–P5 期间标签。H 列写明口径说明，如“实际天数 / 365”“期末余额 − 期初余额”。整套模型都是普通单元格公式。",
+      "X-TA-004": "Existing_Business 第 8 行“折现时间（年）”：C8='=(C6-Inputs!$C$4)/365'，值为 0.43836、1.43836、2.44110、3.44110、4.44110。Valuation!B19='=SUMPRODUCT(Existing_Business!C41:G41,1/(1+B12)^Existing_Business!C8:G8)'，B20 用 G8 折现终值。Projects 第 18 行和第 37 行逐期显示折现时间，并输出到 Results（如 A26 project_atlas_discount_time_p1 ='=Projects!C18'）。需要注意：项目折现因子 Projects!C19:G19 和 C38:G38 的公式为 '=1/(1+Valuation!$B$4)^C18'，而 Valuation!B4 是空白标题行，导致折现因子全部等于 1。也就是说，项目现值实际上没有折现，这是计算错误；但折现时间本身确实在可见行中逐期列出。",
+      "X-TA-006": "Existing_Business 中 EBIT 在第 17 行，税率在第 19 行（C19='=Inputs!$C$27'），NOPAT 在第 20 行（'=C17*(1-C19)'），折旧摊销在第 22 行，固定资产资本开支在第 24 行，新增无形资产在第 26 行，营运资本增加在第 38 行。FCFF 在第 41 行，公式为 '=C20+C22-C24-C26-C38'。缺少的是税额本身：模型只给了税率和 NOPAT，没有单独的税项金额行，因此税项不算独立可识别的行项。Projects 第 15 行同样是把税额嵌在 '=C10*(1-Existing_Business!C$19)+...' 里。",
+      "X-TA-007": "Valuation!B16 existing_tv_gordon 的公式为 '=Existing_Business!G41*(1+B13)/(B12-B13)'，引用可见的 P5 FCFF（G41）、增长率 B13（'=Inputs!$C$29'）和 WACC B12。Valuation!B17 existing_tv_exit 的公式为 '=(Existing_Business!G17+Existing_Business!G22)*B14'，引用 P5 的 EBIT 与折旧摊销，以及退出倍数 B14（'=Inputs!$C$31'）。B18 按 Inputs!$C$30 的 Gordon 权重加权，结果为 4166.88（Gordon）和 4747.33（退出倍数）。"
+    },
+    "rationale": "共检查 4 项，3 项得 1 分。工作簿期间和项目标签清楚，折现时间表可见，终值公式直接引用可见的终期指标和假设单元格。X-TA-006 得 0 分：FCFF 明细里没有单独的税额行，税只体现为税率加 NOPAT。另外发现一个不影响本次评分的计算错误：项目折现因子引用了空白的 Valuation!B4，项目现值实际上没有折现。",
+    "seconds": 67.1,
+    "judge_model": "claude-opus-5-5"
+  }
+}

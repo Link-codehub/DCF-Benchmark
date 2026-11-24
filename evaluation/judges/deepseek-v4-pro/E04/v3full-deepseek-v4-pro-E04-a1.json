@@ -1,0 +1,115 @@
+{
+  "task": "E04",
+  "judge_model": "claude-opus-5-5",
+  "generated": "2026-11-23T02:42:25.779620+00:00",
+  "llm": {
+    "E-llm_business_chain": {
+      "status": "pass",
+      "rationale": "memo 的“经营因果链与可复现假设推导”一节写出了 Netflix 特有的经营链条，能解释收入和 EBIT 的方向，不是泛化外推。收入端：收入 = 付费会员数 × ARPU，驱动因素包括付费共享打击密码共享（2023）、广告套餐（2022 Q4 上线，单用户 ARPU 较低但扩大可及市场）、区域阶梯定价和本地化内容。增长从 13% 衰减到 4.5%，理由是广告层级和亚太扩张动能向成熟市场收敛。利润端：内容摊销计入 COGS，属主要固定成本，收入增长带来经营杠杆，并以 2024 年收入 +15.65%、EBIT 利润率 +6.09pp 作为历史印证。利润率扩张到 31% 的上限受内容成本通胀和体育/直播版权风险约束。该链条与 27%→31% 的利润率路径及模拟中增长-利润率正相关 ρ=0.4 的设定一致。不足：未单独讨论留存；“27%→31% 低于管理层约 28%–30% 区间高位”表述自相矛盾，且该区间可能引用了输入以外的信息；会员数与 ARPU 未拆分量化，仅定性说明。这些不足不推翻因果链本身的存在与一致性。",
+      "judge_model": "claude-opus-5-5",
+      "attempts": [
+        {
+          "attempt": 1,
+          "error": null,
+          "text_chars": 534
+        }
+      ]
+    },
+    "E-llm_reinvestment_reasoning": {
+      "status": "fail",
+      "rationale": "memo 列出了 CapEx 1.15% 收入、D&A 约 0.9% 收入（注明内容摊销已计入 COGS）、NWC 目标 −14% 收入，也给出 FY2021–FY2024 再投资强度的历史波动，并把 FY1 约 −1.37% 的负再投资称为轻资产订阅模式特征。但这些主要是比例设定和历史描述，没有说明为何 13%→4.5% 的收入增长和 27%→31% 的利润率路径与这组再投资水平相匹配。具体不足有三点：其一，memo 自己把收入增长和利润率扩张归因于本地化内容投入、体育/直播版权和内容摊销杠杆，却未解释这些内容现金投入如何体现在建模的 D&A、CapEx 或 ΔNWC 中。其二，memo 在局限中承认“无内容库会计与现金支出时滞建模”，并称再投资与内容库投资节奏的关系强于稳态关系，这削弱了“增长只需 1.15% CapEx 且 NWC 扩张持续释放现金”的论证。其三，未解释 NWC 维持 −14% 收入在增长期为何可持续，也未说明它与会员、定价、广告套餐等增长驱动的关系。memo 只说 2021–2024 年再投资与内容投资节奏关系更强，未把高增长期 CFO 远低于经营利润的历史证据与预测再投资对照。因此，缺少由经营增长和利润率推出所建模再投资的明确因果论证。",
+      "judge_model": "claude-opus-5-5",
+      "attempts": [
+        {
+          "attempt": 1,
+          "error": null,
+          "text_chars": 606
+        }
+      ]
+    },
+    "07-ASSUME": {
+      "status": "fail",
+      "rationale": "部分假设可追溯到输入数据并带日期：税率13%来自2020–2024年 income_tax/pretax_income 均值；NWC −14% 来自 FY2024 NWC −5,454M；CapEx 1.15% 接近 FY2024 的1.13%；无风险利率4.24%注明 UST_DGS10、2025-02-28。但多项关键开放假设缺少可追溯证据或适用日期：(1) 股权溢价5%、β≈1.0、终值增长率3.0%、interest_rate 4.8% 均无来源或推导。(2) EBIT 利润率路径27%→31% 引用了'管理层约28%–30%隐含长期区间'，该信息不在 inputs.json 中，属于不可追溯的外部信息。(3) 增长衰减路径13%→4.5%只有定性叙述，没有可复现推导。(4) 付费共享、广告套餐上线时间等经营因果证据不在给定数据中。(5) 模拟边界的说明与历史数据不符：memo 称 ebit_margin 下界22%'涵盖FY2022低位'，但 FY2022 实际利润率约17.8%（5,633/31,616）；称增长下界2%是'FY2022最慢增速'，但 FY2022 实际增速为6.46%。整体证据不足以完全满足要求。",
+      "judge_model": "claude-opus-5-5",
+      "attempts": [
+        {
+          "attempt": 1,
+          "error": null,
+          "text_chars": 581
+        }
+      ]
+    },
+    "E-llm_driver_derivation": {
+      "status": "fail",
+      "rationale": "只有少数驱动能从引用的历史数据复现推导：NWC −14% 收入可由 FY2024 的 CA 13,100 − cash 7,805 − STI 1,779 − (CL 10,755 − CD 1,784) = −5,454，除以收入 39,001 得到；税率 13% 可由 2020–2024 年 income_tax/pretax_income 均值约 13.2% 得到。其余关键驱动只列了历史数据，没有给出可复现的推导：(1) 收入增长路径 13%→10.5%→8%→6%→4.5% 只有'广告层级/亚太扩张动能向稳态收敛'的叙述，没有说明如何从历史增速（18.8%、6.5%、6.7%、15.6%）算出各年数值；(2) EBIT 利润率 27%→31% 依据的是题面数据之外的'管理层约 28%–30% 隐含区间'，没有从历史利润率（18.3%–26.7%）推导的计算步骤；(3) CapEx 1.15% 与 D&A 0.9% 是直接设定，未说明取 2024 年值、均值还是趋势，且 D&A 0.9% 与 2024 年约 0.84% 并不一致；(4) WACC 8.5% 由 4.24% + 5%×1.0 = 9.24% 再'扣税后债务成本小幅下压'得到，没有给出资本结构权重和债务成本的计算，无法复现；(5) 终值增长率 3% 无任何推导。模拟边界方面，'2%–20% 涵盖 FY2022 最慢至 FY2021 最快'与历史值（6.46%、18.8%）不对应，扩展规则也未说明。最重要的增长和利润率驱动缺少可复现推导，因此不满足要求。",
+      "judge_model": "claude-opus-5-5",
+      "attempts": [
+        {
+          "attempt": 1,
+          "error": null,
+          "text_chars": 745
+        }
+      ]
+    },
+    "X-TA-003": {
+      "status": "fail",
+      "rationale": "部分会计事项的书面说明与模型一致：(1) 净债务 15,582.804 = 当期债务 1,784.453 + 非当期债务 13,798.351；(2) 现金及投资 9,583.739 = 7,804.733 + 1,779.006；(3) 股权价值 251,424.59 + 9,583.74 − 15,582.80 = 245,425.53；(4) memo 写 FY2024 NWC = −5,454M，按题面公式重算为 −5,454.3，nwc_to_revenue = −0.14 一致；(5) reinvestment_component_y1 = 396.64 − 506.82 − (−715.65) = 605.47，FCFF 由 EBIT×0.87 加该项得出，未加回 SBC。但'每项均一致'不成立：(a) memo 称 FY1 再投资强度约 −1.37% 是因为'D&A 超出有形再投资'，而模型 FY1 的 D&A 396.6 小于 CapEx 506.8，负再投资完全来自 ΔNWC −715.6，书面解释与实际处理相矛盾；(b) 题面指定股份支付为经营成本、不得加回 FCFF，memo 只列 SBC 历史数值，未给出处理说明，缺少书面证据；(c) 稀释股数 2022 年 451M 到 2023 年 4,495M 的约十倍跳变，memo 归因为回购'持续缩股'，未说明拆股口径，对股数处理的说明与数据不符。综上，书面处理说明未能逐项与模型一致，给 0。",
+      "judge_model": "claude-opus-5-5",
+      "attempts": [
+        {
+          "attempt": 1,
+          "error": null,
+          "text_chars": 700
+        }
+      ]
+    },
+    "X-TA-009": {
+      "status": "fail",
+      "rationale": "题面要求候选自行确定开放假设，因此本项适用。memo 只对部分假设给出了从历史观察值到假设值的书面推导，未做到逐项覆盖。已满足的项：tax_rate 13% 写明取 2020–2024 平均有效税率，并列出 13.69%、14.67%、12.58%；nwc_to_revenue −14% 写明 FY2024 NWC −5,454M 约占收入 −14%；capex 1.15% 可对照所列 FY2024 的 1.13%。不足的项如下：(1) initial_growth 13% 及 10.5%/8%/6%/4.5% 的衰减路径只有定性叙述（向成熟市场收敛），没有从 FY2024 的 15.65% 或其他历史增速到 13% 的计算或映射规则；(2) EBIT 利润率 27%→31% 引用了输入中不存在的“管理层约 28%–30% 隐含区间”，也没有说明如何从 FY2024 的 26.71% 映射到 27%，以及之后逐年取值的方式；(3) da_to_revenue 0.9% 未给出历史比率计算（FY2024 实际约 0.84%）及映射关系；(4) interest_rate 4.8% 完全没有推导；(5) WACC 8.5% 写为 4.24%+5%×β≈1.0，结果应为 9.24%，再以“扣税后债务成本小幅下压”降到 8.5%，没有给出债务/股权权重和计算过程；(6) terminal_growth 3% 与 terminal_revenue_growth 4.5% 没有历史依据或映射说明；(7) 模拟边界的说法与历史数据不符：称 revenue_growth 下限 2% 涵盖“FY2022 最慢增速”，但 FY2022 实际为 6.46%，且 2% 也低于该值，并非由其推得；称 ebit_margin 下限 22% 对应“FY2022 低位”，但 FY2022 实际利润率约 17.8%；reinvestment_intensity 与 discount_rate 的边界同样缺少从历史值出发的计算。因此不满足“每个开放性预测假设均有书面推导”。",
+      "judge_model": "claude-opus-5-5",
+      "attempts": [
+        {
+          "attempt": 1,
+          "error": null,
+          "text_chars": 943
+        }
+      ]
+    }
+  },
+  "agent": {
+    "status": "scored",
+    "scores": {
+      "X-IF-001a": 1,
+      "E-agent_distribution_rationale": 0,
+      "E-agent_interval_interpretation": 1,
+      "X-IN-001": 1,
+      "X-IN-002": 1,
+      "X-IN-003": 1,
+      "X-IN-004": 1,
+      "X-IN-005": 1,
+      "X-IN-006": 1,
+      "X-IN-007": 1,
+      "X-TA-004": 1,
+      "X-TA-005": 1,
+      "X-TA-006": 0
+    },
+    "evidence": {
+      "X-IF-001a": "All six required files are in the delivery folder under the exact required names: model.json, simulate.py, recompute.py, simulation.json, memo.md and recomputed.json. model.json has the five top-level objects historical/assumptions/forecast/valuation/simulation_summary. simulation.json has the 11 required top-level keys and len(trials)=5000.",
+      "E-agent_distribution_rationale": "Historical EBIT margins I recomputed from the inputs were 0.1834/0.2086/0.1782/0.2062/0.2671. memo.md says the ebit_margin bounds of 22%–36% 'cover the FY2022 low', but the FY2022 margin was 17.82%, so the stated basis is factually wrong. The memo also cites a 'management implied long-term range of about 28%–30%', which is not in the supplied inputs. The revenue_growth bounds of 2%–20% do cover the historical range of 6.46%–18.81%. The reinvestment and discount-rate bounds are only qualitative claims. Overall the bounds are not soundly justified from the supplied history.",
+      "E-agent_interval_interpretation": "The memo section '预测不确定性与模型局限' (forecast uncertainty and model limitations) says the simulated range is a model-conditional DCF distribution, not a stock-price forecast, and lists six limitations. The simulation.json limitations field also says 'NOT a stock-price prediction'.",
+      "X-IN-001": "model.json historical matches public_input.historical key by key. The only difference is that the text field operating_income_basis is missing. The risk-free rate of 4.24% matches treasury_10y 0.0424.",
+      "X-IN-002": "tax_rate is held at 0.13 in every forecast year. Checking ebit×(1−0.13)+reinvestment_component−fcff for y1–y5 leaves differences of 1e-7 or smaller. discount_years is fixed at [1,2,3,4,5].",
+      "X-IN-003": "Recomputed FY0 NWC: 13100.379−7804.733−1779.006−(10755.4−1784.453)=−5454.307, matching recomputed.json fy0_nwc. Net debt 1784.453+13798.351=15582.804 matches. Cash plus short-term investments 9583.739 matches. The 2020–2024 average effective tax rate is 0.1324, consistent with the assumed 0.13.",
+      "X-IN-004": "The historical data is from the 10-K for fiscal year ending 2024-12-31 (filed 2025-01-27). The Treasury yield is dated 2025-02-28. Both are on or before the 2025-03-01 cutoff.",
+      "X-IN-005": "Every historical series in model.json historical is keyed by fiscal-year end date (2020-12-31 to 2024-12-31). No quarterly, LTM or YTD figures are mixed in.",
+      "X-IN-006": "The equity bridge uses the 2024-12-31 balance-sheet debt and cash, the latest available before the valuation date. The Treasury observation is 2025-02-28, the last one before the cutoff.",
+      "X-IN-007": "forecast contains exactly five years of keys y1…y5. valuation.discount_years is [1,2,3,4,5], matching the required FY1–FY5 annual variant.",
+      "X-TA-004": "model.json valuation.discount_years is [1,2,3,4,5], and forecast includes discount_factor_y1..y5 (for example y1=0.9216589862=1/1.085).",
+      "X-TA-005": "model.json historical shows the FY2024 anchors: revenue 39000.966 and the balance-sheet items used for NWC. recomputed.json also shows fy0_revenue and fy0_nwc.",
+      "X-TA-006": "forecast has separate lines for ebit_y*, da_y*, capex_y* and delta_nwc_y*. It has no tax-amount line such as tax_y* or nopat_y*; tax appears only as the scalar tax_rate=0.13. So tax is not a separately identifiable line item."
+    },
+    "rationale": "The deliverables are complete, the inputs and equity bridge are consistent with the input package, and the FCFF arithmetic reconciles. The interval interpretation and limitations are adequate. Two items score 0. First, the ebit_margin bounds rest on a false claim that they cover the FY2022 low (actually 17.8%, below the 22% lower bound), and the memo cites a management margin range that is not in the supplied inputs. Second, the FCFF build has no separate tax line item.",
+    "seconds": 106.8,
+    "judge_model": "claude-opus-5-5"
+  }
+}

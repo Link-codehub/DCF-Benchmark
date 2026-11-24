@@ -1,0 +1,586 @@
+{
+  "schema_version": "dcf-v3-w-retrieval-v1",
+  "task_id": "W01",
+  "company": {
+    "ticker": "AAPL",
+    "cik": 320193,
+    "name": "Apple Inc."
+  },
+  "information_cutoff": "2024-11-27",
+  "fiscal_year": "FY2024",
+  "items": [
+    {
+      "field_id": "revenue",
+      "label": "合并收入",
+      "value": 391035,
+      "unit": "USD_millions",
+      "period_start": "2023-10-01",
+      "period_end": "2024-09-28",
+      "source_id": "SEC_COMPANYFACTS",
+      "source_url": "https://data.sec.gov/api/xbrl/companyfacts/CIK0000320193.json",
+      "source_file": "/app/data/source_cache/sec_companyfacts_2026-11-22.json",
+      "field": "RevenueFromContractWithCustomerExcludingAssessedTax",
+      "form": "10-K",
+      "filed": "2024-11-01",
+      "accession": "0000320193-24-000123",
+      "observed_at": "2026-11-22",
+      "status": "success",
+      "error": null,
+      "raw_value": 391035000000,
+      "raw_unit": "USD",
+      "fy": 2024,
+      "fp": "FY",
+      "frame": null,
+      "selection_note": "按允许标签顺序采用 RevenueFromContractWithCustomerExcludingAssessedTax；精确期间与单位，选择截止日前最早申报的同标签事实。",
+      "tag_inspection": [
+        {
+          "tag": "RevenueFromContractWithCustomerExcludingAssessedTax",
+          "compliant_fact_count": 1
+        }
+      ],
+      "same_tag_candidate_count": 1,
+      "same_tag_distinct_raw_values": [
+        391035000000
+      ],
+      "same_tag_value_conflict": false
+    },
+    {
+      "field_id": "operating_income",
+      "label": "经营利润（EBIT）",
+      "value": 123216,
+      "unit": "USD_millions",
+      "period_start": "2023-10-01",
+      "period_end": "2024-09-28",
+      "source_id": "SEC_COMPANYFACTS",
+      "source_url": "https://data.sec.gov/api/xbrl/companyfacts/CIK0000320193.json",
+      "source_file": "/app/data/source_cache/sec_companyfacts_2026-11-22.json",
+      "field": "OperatingIncomeLoss",
+      "form": "10-K",
+      "filed": "2024-11-01",
+      "accession": "0000320193-24-000123",
+      "observed_at": "2026-11-22",
+      "status": "success",
+      "error": null,
+      "raw_value": 123216000000,
+      "raw_unit": "USD",
+      "fy": 2024,
+      "fp": "FY",
+      "frame": null,
+      "selection_note": "按允许标签顺序采用 OperatingIncomeLoss；精确期间与单位，选择截止日前最早申报的同标签事实。",
+      "tag_inspection": [
+        {
+          "tag": "OperatingIncomeLoss",
+          "compliant_fact_count": 1
+        }
+      ],
+      "same_tag_candidate_count": 1,
+      "same_tag_distinct_raw_values": [
+        123216000000
+      ],
+      "same_tag_value_conflict": false
+    },
+    {
+      "field_id": "pretax_income",
+      "label": "税前利润",
+      "value": 123485,
+      "unit": "USD_millions",
+      "period_start": "2023-10-01",
+      "period_end": "2024-09-28",
+      "source_id": "SEC_COMPANYFACTS",
+      "source_url": "https://data.sec.gov/api/xbrl/companyfacts/CIK0000320193.json",
+      "source_file": "/app/data/source_cache/sec_companyfacts_2026-11-22.json",
+      "field": "IncomeLossFromContinuingOperationsBeforeIncomeTaxesExtraordinaryItemsNoncontrollingInterest",
+      "form": "10-K",
+      "filed": "2024-11-01",
+      "accession": "0000320193-24-000123",
+      "observed_at": "2026-11-22",
+      "status": "success",
+      "error": null,
+      "raw_value": 123485000000,
+      "raw_unit": "USD",
+      "fy": 2024,
+      "fp": "FY",
+      "frame": null,
+      "selection_note": "按允许标签顺序采用 IncomeLossFromContinuingOperationsBeforeIncomeTaxesExtraordinaryItemsNoncontrollingInterest；精确期间与单位，选择截止日前最早申报的同标签事实。",
+      "tag_inspection": [
+        {
+          "tag": "IncomeLossFromContinuingOperationsBeforeIncomeTaxesExtraordinaryItemsNoncontrollingInterest",
+          "compliant_fact_count": 1
+        }
+      ],
+      "same_tag_candidate_count": 1,
+      "same_tag_distinct_raw_values": [
+        123485000000
+      ],
+      "same_tag_value_conflict": false
+    },
+    {
+      "field_id": "income_tax",
+      "label": "所得税费用",
+      "value": 29749,
+      "unit": "USD_millions",
+      "period_start": "2023-10-01",
+      "period_end": "2024-09-28",
+      "source_id": "SEC_COMPANYFACTS",
+      "source_url": "https://data.sec.gov/api/xbrl/companyfacts/CIK0000320193.json",
+      "source_file": "/app/data/source_cache/sec_companyfacts_2026-11-22.json",
+      "field": "IncomeTaxExpenseBenefit",
+      "form": "10-K",
+      "filed": "2024-11-01",
+      "accession": "0000320193-24-000123",
+      "observed_at": "2026-11-22",
+      "status": "success",
+      "error": null,
+      "raw_value": 29749000000,
+      "raw_unit": "USD",
+      "fy": 2024,
+      "fp": "FY",
+      "frame": null,
+      "selection_note": "按允许标签顺序采用 IncomeTaxExpenseBenefit；精确期间与单位，选择截止日前最早申报的同标签事实。",
+      "tag_inspection": [
+        {
+          "tag": "IncomeTaxExpenseBenefit",
+          "compliant_fact_count": 1
+        }
+      ],
+      "same_tag_candidate_count": 1,
+      "same_tag_distinct_raw_values": [
+        29749000000
+      ],
+      "same_tag_value_conflict": false
+    },
+    {
+      "field_id": "net_income_consolidated",
+      "label": "含非控股权益的合并净利润",
+      "value": 93736,
+      "unit": "USD_millions",
+      "period_start": "2023-10-01",
+      "period_end": "2024-09-28",
+      "source_id": "SEC_COMPANYFACTS",
+      "source_url": "https://data.sec.gov/api/xbrl/companyfacts/CIK0000320193.json",
+      "source_file": "/app/data/source_cache/sec_companyfacts_2026-11-22.json",
+      "field": "NetIncomeLoss",
+      "form": "10-K",
+      "filed": "2024-11-01",
+      "accession": "0000320193-24-000123",
+      "observed_at": "2026-11-22",
+      "status": "success",
+      "error": null,
+      "raw_value": 93736000000,
+      "raw_unit": "USD",
+      "fy": 2024,
+      "fp": "FY",
+      "frame": null,
+      "selection_note": "按允许标签顺序采用 NetIncomeLoss；精确期间与单位，选择截止日前最早申报的同标签事实。 companyfacts 无 ProfitLoss 节点，依合同回退到 NetIncomeLoss，未把其他期间或其他标签混入。",
+      "tag_inspection": [
+        {
+          "tag": "ProfitLoss",
+          "result": "companyfacts 中无此标签节点"
+        },
+        {
+          "tag": "NetIncomeLoss",
+          "compliant_fact_count": 1
+        }
+      ],
+      "same_tag_candidate_count": 1,
+      "same_tag_distinct_raw_values": [
+        93736000000
+      ],
+      "same_tag_value_conflict": false
+    },
+    {
+      "field_id": "da",
+      "label": "折旧与摊销",
+      "value": 11445,
+      "unit": "USD_millions",
+      "period_start": "2023-10-01",
+      "period_end": "2024-09-28",
+      "source_id": "SEC_COMPANYFACTS",
+      "source_url": "https://data.sec.gov/api/xbrl/companyfacts/CIK0000320193.json",
+      "source_file": "/app/data/source_cache/sec_companyfacts_2026-11-22.json",
+      "field": "DepreciationDepletionAndAmortization",
+      "form": "10-K",
+      "filed": "2024-11-01",
+      "accession": "0000320193-24-000123",
+      "observed_at": "2026-11-22",
+      "status": "success",
+      "error": null,
+      "raw_value": 11445000000,
+      "raw_unit": "USD",
+      "fy": 2024,
+      "fp": "FY",
+      "frame": null,
+      "selection_note": "按允许标签顺序采用 DepreciationDepletionAndAmortization；精确期间与单位，选择截止日前最早申报的同标签事实。",
+      "tag_inspection": [
+        {
+          "tag": "DepreciationDepletionAndAmortization",
+          "compliant_fact_count": 1
+        }
+      ],
+      "same_tag_candidate_count": 1,
+      "same_tag_distinct_raw_values": [
+        11445000000
+      ],
+      "same_tag_value_conflict": false
+    },
+    {
+      "field_id": "capex",
+      "label": "购置固定资产现金支出（正数）",
+      "value": 9447,
+      "unit": "USD_millions",
+      "period_start": "2023-10-01",
+      "period_end": "2024-09-28",
+      "source_id": "SEC_COMPANYFACTS",
+      "source_url": "https://data.sec.gov/api/xbrl/companyfacts/CIK0000320193.json",
+      "source_file": "/app/data/source_cache/sec_companyfacts_2026-11-22.json",
+      "field": "PaymentsToAcquirePropertyPlantAndEquipment",
+      "form": "10-K",
+      "filed": "2024-11-01",
+      "accession": "0000320193-24-000123",
+      "observed_at": "2026-11-22",
+      "status": "success",
+      "error": null,
+      "raw_value": 9447000000,
+      "raw_unit": "USD",
+      "fy": 2024,
+      "fp": "FY",
+      "frame": null,
+      "selection_note": "按允许标签顺序采用 PaymentsToAcquirePropertyPlantAndEquipment；精确期间与单位，选择截止日前最早申报的同标签事实。 原始现金支出已为正数，未改变符号。",
+      "tag_inspection": [
+        {
+          "tag": "PaymentsToAcquirePropertyPlantAndEquipment",
+          "compliant_fact_count": 1
+        }
+      ],
+      "same_tag_candidate_count": 1,
+      "same_tag_distinct_raw_values": [
+        9447000000
+      ],
+      "same_tag_value_conflict": false
+    },
+    {
+      "field_id": "diluted_shares",
+      "label": "加权平均稀释股数",
+      "value": 15408.095,
+      "unit": "shares_millions",
+      "period_start": "2023-10-01",
+      "period_end": "2024-09-28",
+      "source_id": "SEC_COMPANYFACTS",
+      "source_url": "https://data.sec.gov/api/xbrl/companyfacts/CIK0000320193.json",
+      "source_file": "/app/data/source_cache/sec_companyfacts_2026-11-22.json",
+      "field": "WeightedAverageNumberOfDilutedSharesOutstanding",
+      "form": "10-K",
+      "filed": "2024-11-01",
+      "accession": "0000320193-24-000123",
+      "observed_at": "2026-11-22",
+      "status": "success",
+      "error": null,
+      "raw_value": 15408095000,
+      "raw_unit": "shares",
+      "fy": 2024,
+      "fp": "FY",
+      "frame": null,
+      "selection_note": "按允许标签顺序采用 WeightedAverageNumberOfDilutedSharesOutstanding；精确期间与单位，选择截止日前最早申报的同标签事实。",
+      "tag_inspection": [
+        {
+          "tag": "WeightedAverageNumberOfDilutedSharesOutstanding",
+          "compliant_fact_count": 1
+        }
+      ],
+      "same_tag_candidate_count": 1,
+      "same_tag_distinct_raw_values": [
+        15408095000
+      ],
+      "same_tag_value_conflict": false
+    },
+    {
+      "field_id": "cash",
+      "label": "现金及现金等价物",
+      "value": 29943,
+      "unit": "USD_millions",
+      "period_start": null,
+      "period_end": "2024-09-28",
+      "source_id": "SEC_COMPANYFACTS",
+      "source_url": "https://data.sec.gov/api/xbrl/companyfacts/CIK0000320193.json",
+      "source_file": "/app/data/source_cache/sec_companyfacts_2026-11-22.json",
+      "field": "CashAndCashEquivalentsAtCarryingValue",
+      "form": "10-K",
+      "filed": "2024-11-01",
+      "accession": "0000320193-24-000123",
+      "observed_at": "2026-11-22",
+      "status": "success",
+      "error": null,
+      "raw_value": 29943000000,
+      "raw_unit": "USD",
+      "fy": 2024,
+      "fp": "FY",
+      "frame": null,
+      "selection_note": "按允许标签顺序采用 CashAndCashEquivalentsAtCarryingValue；精确期间与单位，选择截止日前最早申报的同标签事实。",
+      "tag_inspection": [
+        {
+          "tag": "CashAndCashEquivalentsAtCarryingValue",
+          "compliant_fact_count": 1
+        }
+      ],
+      "same_tag_candidate_count": 1,
+      "same_tag_distinct_raw_values": [
+        29943000000
+      ],
+      "same_tag_value_conflict": false
+    },
+    {
+      "field_id": "short_term_investments",
+      "label": "短期投资",
+      "value": 35228,
+      "unit": "USD_millions",
+      "period_start": null,
+      "period_end": "2024-09-28",
+      "source_id": "SEC_COMPANYFACTS",
+      "source_url": "https://data.sec.gov/api/xbrl/companyfacts/CIK0000320193.json",
+      "source_file": "/app/data/source_cache/sec_companyfacts_2026-11-22.json",
+      "field": "MarketableSecuritiesCurrent",
+      "form": "10-K",
+      "filed": "2024-11-01",
+      "accession": "0000320193-24-000123",
+      "observed_at": "2026-11-22",
+      "status": "success",
+      "error": null,
+      "raw_value": 35228000000,
+      "raw_unit": "USD",
+      "fy": 2024,
+      "fp": "FY",
+      "frame": null,
+      "selection_note": "按允许标签顺序采用 MarketableSecuritiesCurrent；精确期间与单位，选择截止日前最早申报的同标签事实。",
+      "tag_inspection": [
+        {
+          "tag": "ShortTermInvestments",
+          "result": "companyfacts 中无此标签节点"
+        },
+        {
+          "tag": "MarketableSecuritiesCurrent",
+          "compliant_fact_count": 1
+        }
+      ],
+      "same_tag_candidate_count": 1,
+      "same_tag_distinct_raw_values": [
+        35228000000
+      ],
+      "same_tag_value_conflict": false
+    },
+    {
+      "field_id": "receivables",
+      "label": "应收账款净额",
+      "value": 33410,
+      "unit": "USD_millions",
+      "period_start": null,
+      "period_end": "2024-09-28",
+      "source_id": "SEC_COMPANYFACTS",
+      "source_url": "https://data.sec.gov/api/xbrl/companyfacts/CIK0000320193.json",
+      "source_file": "/app/data/source_cache/sec_companyfacts_2026-11-22.json",
+      "field": "AccountsReceivableNetCurrent",
+      "form": "10-K",
+      "filed": "2024-11-01",
+      "accession": "0000320193-24-000123",
+      "observed_at": "2026-11-22",
+      "status": "success",
+      "error": null,
+      "raw_value": 33410000000,
+      "raw_unit": "USD",
+      "fy": 2024,
+      "fp": "FY",
+      "frame": null,
+      "selection_note": "按允许标签顺序采用 AccountsReceivableNetCurrent；精确期间与单位，选择截止日前最早申报的同标签事实。",
+      "tag_inspection": [
+        {
+          "tag": "AccountsReceivableNetCurrent",
+          "compliant_fact_count": 1
+        }
+      ],
+      "same_tag_candidate_count": 1,
+      "same_tag_distinct_raw_values": [
+        33410000000
+      ],
+      "same_tag_value_conflict": false
+    },
+    {
+      "field_id": "current_assets",
+      "label": "流动资产合计",
+      "value": 152987,
+      "unit": "USD_millions",
+      "period_start": null,
+      "period_end": "2024-09-28",
+      "source_id": "SEC_COMPANYFACTS",
+      "source_url": "https://data.sec.gov/api/xbrl/companyfacts/CIK0000320193.json",
+      "source_file": "/app/data/source_cache/sec_companyfacts_2026-11-22.json",
+      "field": "AssetsCurrent",
+      "form": "10-K",
+      "filed": "2024-11-01",
+      "accession": "0000320193-24-000123",
+      "observed_at": "2026-11-22",
+      "status": "success",
+      "error": null,
+      "raw_value": 152987000000,
+      "raw_unit": "USD",
+      "fy": 2024,
+      "fp": "FY",
+      "frame": null,
+      "selection_note": "按允许标签顺序采用 AssetsCurrent；精确期间与单位，选择截止日前最早申报的同标签事实。",
+      "tag_inspection": [
+        {
+          "tag": "AssetsCurrent",
+          "compliant_fact_count": 1
+        }
+      ],
+      "same_tag_candidate_count": 1,
+      "same_tag_distinct_raw_values": [
+        152987000000
+      ],
+      "same_tag_value_conflict": false
+    },
+    {
+      "field_id": "current_liabilities",
+      "label": "流动负债合计",
+      "value": 176392,
+      "unit": "USD_millions",
+      "period_start": null,
+      "period_end": "2024-09-28",
+      "source_id": "SEC_COMPANYFACTS",
+      "source_url": "https://data.sec.gov/api/xbrl/companyfacts/CIK0000320193.json",
+      "source_file": "/app/data/source_cache/sec_companyfacts_2026-11-22.json",
+      "field": "LiabilitiesCurrent",
+      "form": "10-K",
+      "filed": "2024-11-01",
+      "accession": "0000320193-24-000123",
+      "observed_at": "2026-11-22",
+      "status": "success",
+      "error": null,
+      "raw_value": 176392000000,
+      "raw_unit": "USD",
+      "fy": 2024,
+      "fp": "FY",
+      "frame": null,
+      "selection_note": "按允许标签顺序采用 LiabilitiesCurrent；精确期间与单位，选择截止日前最早申报的同标签事实。",
+      "tag_inspection": [
+        {
+          "tag": "LiabilitiesCurrent",
+          "compliant_fact_count": 1
+        }
+      ],
+      "same_tag_candidate_count": 1,
+      "same_tag_distinct_raw_values": [
+        176392000000
+      ],
+      "same_tag_value_conflict": false
+    },
+    {
+      "field_id": "current_debt",
+      "label": "当期债务",
+      "value": 10912,
+      "unit": "USD_millions",
+      "period_start": null,
+      "period_end": "2024-09-28",
+      "source_id": "SEC_COMPANYFACTS",
+      "source_url": "https://data.sec.gov/api/xbrl/companyfacts/CIK0000320193.json",
+      "source_file": "/app/data/source_cache/sec_companyfacts_2026-11-22.json",
+      "field": "LongTermDebtCurrent",
+      "form": "10-K",
+      "filed": "2024-11-01",
+      "accession": "0000320193-24-000123",
+      "observed_at": "2026-11-22",
+      "status": "success",
+      "error": null,
+      "raw_value": 10912000000,
+      "raw_unit": "USD",
+      "fy": 2024,
+      "fp": "FY",
+      "frame": null,
+      "selection_note": "按允许标签顺序采用 LongTermDebtCurrent；精确期间与单位，选择截止日前最早申报的同标签事实。",
+      "tag_inspection": [
+        {
+          "tag": "LongTermDebtCurrent",
+          "compliant_fact_count": 1
+        }
+      ],
+      "same_tag_candidate_count": 1,
+      "same_tag_distinct_raw_values": [
+        10912000000
+      ],
+      "same_tag_value_conflict": false
+    },
+    {
+      "field_id": "noncurrent_debt",
+      "label": "非当期债务",
+      "value": 85750,
+      "unit": "USD_millions",
+      "period_start": null,
+      "period_end": "2024-09-28",
+      "source_id": "SEC_COMPANYFACTS",
+      "source_url": "https://data.sec.gov/api/xbrl/companyfacts/CIK0000320193.json",
+      "source_file": "/app/data/source_cache/sec_companyfacts_2026-11-22.json",
+      "field": "LongTermDebtNoncurrent",
+      "form": "10-K",
+      "filed": "2024-11-01",
+      "accession": "0000320193-24-000123",
+      "observed_at": "2026-11-22",
+      "status": "success",
+      "error": null,
+      "raw_value": 85750000000,
+      "raw_unit": "USD",
+      "fy": 2024,
+      "fp": "FY",
+      "frame": null,
+      "selection_note": "按允许标签顺序采用 LongTermDebtNoncurrent；精确期间与单位，选择截止日前最早申报的同标签事实。",
+      "tag_inspection": [
+        {
+          "tag": "LongTermDebtNoncurrent",
+          "compliant_fact_count": 1
+        }
+      ],
+      "same_tag_candidate_count": 1,
+      "same_tag_distinct_raw_values": [
+        85750000000
+      ],
+      "same_tag_value_conflict": false
+    },
+    {
+      "field_id": "treasury_10y",
+      "label": "10 年期美国国债固定期限收益率",
+      "value": 0.0425,
+      "unit": "decimal",
+      "period_start": "2024-11-27",
+      "period_end": "2024-11-27",
+      "source_id": "UST_DAILY",
+      "source_url": "https://home.treasury.gov/resource-center/data-chart-center/interest-rates/daily-treasury-rates.csv/2024/all?type=daily_treasury_yield_curve&field_tdr_date_value=2024&page=&_format=csv",
+      "source_file": "/app/data/source_cache/ust_daily_2024_2026-11-22.csv",
+      "field": "DGS10",
+      "form": null,
+      "filed": null,
+      "accession": null,
+      "observed_at": "2026-11-22",
+      "status": "success",
+      "error": null,
+      "raw_value": 4.25,
+      "raw_unit": "percent",
+      "source_column": "10 Yr",
+      "observation_date": "2024-11-27",
+      "selection_note": "2024-11-27 官方 10 Yr 非空，原始百分数除以 100；无需回溯日期。财政部日度观测没有 SEC form、filed 或 accession，对应字段保留为空。"
+    }
+  ],
+  "supplemental_fetch_events": [
+    {
+      "source_id": "SEC_COMPANYFACTS",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/320193/000032019324000123/aapl-20240928.htm",
+      "source_file": null,
+      "observed_at": "2026-11-22",
+      "status": "failed",
+      "error": "HTTP 403；补充原始 10-K HTML 请求被服务器拒绝",
+      "action": "未据此填数；16 个必需字段均由成功的 SEC companyfacts 与财政部 CSV 响应取得，未使用其他来源。"
+    }
+  ],
+  "notes": [
+    "items 顺序与 retrieval_contract.json required_fields 一致。",
+    "observed_at 是本机实际取得原始响应的 UTC 日期，不是申报日。",
+    "SEC companyfacts 当前响应可能含截止日后记录；本文件只采用 form、期间、单位及 filed 均合规的记录。",
+    "补充原始 10-K HTML 的 HTTP 403 不属于必需字段取数失败，且未触发任何替代来源。"
+  ]
+}

@@ -1,0 +1,1360 @@
+{
+  "task": "R02",
+  "candidate": "/Users/link/Desktop/Finance Bench/exp/dcf_factory_v3/eval/deliveries/kimi-k3.1-pro/R02/v3full-kimi-k3.1-pro-R02-a1/output.xlsx",
+  "native_reward": 0.1,
+  "native_rule_reward": 0.1,
+  "items": [
+    {
+      "id": "01-FILE",
+      "category": "交付与来源完整性",
+      "importance": "主需",
+      "weight": 3,
+      "rubric_method": "rule",
+      "status": "pass",
+      "native_evidence": {
+        "id": "01-FILE",
+        "category": "交付与来源完整性",
+        "method": "rule",
+        "score": 1,
+        "applicable": true,
+        "evidence": "/app/output.xlsx",
+        "detail": "/Users/link/Desktop/Finance Bench/exp/dcf_factory_v3/eval/deliveries/kimi-k3.1-pro/R02/v3full-kimi-k3.1-pro-R02-a1/output.xlsx"
+      }
+    },
+    {
+      "id": "01-KEYS",
+      "category": "交付与来源完整性",
+      "importance": "主需",
+      "weight": 3,
+      "rubric_method": "rule",
+      "status": "pass",
+      "native_evidence": {
+        "id": "01-KEYS",
+        "category": "交付与来源完整性",
+        "method": "rule",
+        "score": 1,
+        "applicable": true,
+        "evidence": "Outputs 或语义键映射",
+        "detail": {
+          "missing": [],
+          "duplicate_output_keys": []
+        }
+      }
+    },
+    {
+      "id": "X-IF-001a",
+      "category": "交付与来源完整性",
+      "importance": "主需",
+      "weight": 3,
+      "rubric_method": "agent",
+      "status": "not_executed"
+    },
+    {
+      "id": "X-IF-002",
+      "category": "交付与来源完整性",
+      "importance": "主需",
+      "weight": 3,
+      "rubric_method": "agent",
+      "status": "not_executed"
+    },
+    {
+      "id": "02-FY",
+      "category": "历史与会计口径",
+      "importance": "主需",
+      "weight": 3,
+      "rubric_method": "rule",
+      "status": "fail",
+      "native_evidence": {
+        "id": "02-FY",
+        "category": "历史与会计口径",
+        "method": "rule",
+        "score": 0,
+        "applicable": true,
+        "evidence": "历史聚合与原始期间",
+        "detail": {
+          "missing": [],
+          "mismatch": [
+            {
+              "key": "fy_normalized_ebit",
+              "actual": 134.00985,
+              "expected": 177.77662499999997,
+              "cell": "Outputs!B4"
+            },
+            {
+              "key": "fy_reported_ebit",
+              "actual": 136.9875,
+              "expected": 180.75427499999998,
+              "cell": "Outputs!B5"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "02-LTM",
+      "category": "历史与会计口径",
+      "importance": "主需",
+      "weight": 3,
+      "rubric_method": "rule",
+      "status": "fail",
+      "native_evidence": {
+        "id": "02-LTM",
+        "category": "历史与会计口径",
+        "method": "rule",
+        "score": 0,
+        "applicable": true,
+        "evidence": "历史聚合与估值日",
+        "detail": {
+          "missing": [],
+          "mismatch": [
+            {
+              "key": "ltm_normalized_ebit",
+              "actual": 134.00985,
+              "expected": 177.77662499999997,
+              "cell": "Outputs!B7"
+            },
+            {
+              "key": "ltm_reported_ebit",
+              "actual": 136.9875,
+              "expected": 180.75427499999998,
+              "cell": "Outputs!B8"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "02-REPORTED",
+      "category": "历史与会计口径",
+      "importance": "主需",
+      "weight": 3,
+      "rubric_method": "rule",
+      "status": "fail",
+      "native_evidence": {
+        "id": "02-REPORTED",
+        "category": "历史与会计口径",
+        "method": "rule",
+        "score": 0,
+        "applicable": true,
+        "evidence": "历史披露与调整",
+        "detail": {
+          "missing": [],
+          "mismatch": [
+            {
+              "key": "fy_reported_ebit",
+              "actual": 136.9875,
+              "expected": 180.75427499999998,
+              "cell": "Outputs!B5"
+            },
+            {
+              "key": "ltm_reported_ebit",
+              "actual": 136.9875,
+              "expected": 180.75427499999998,
+              "cell": "Outputs!B8"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "02-SBC",
+      "category": "历史与会计口径",
+      "importance": "主需",
+      "weight": 3,
+      "rubric_method": "rule",
+      "status": "pass",
+      "evidence_keys": [
+        "fy_normalized_ebit",
+        "ltm_normalized_ebit"
+      ],
+      "missing": []
+    },
+    {
+      "id": "02-COLLECT",
+      "category": "历史与会计口径",
+      "importance": "次需",
+      "weight": 1,
+      "rubric_method": "rule",
+      "status": "fail",
+      "native_evidence": {
+        "id": "02-COLLECT",
+        "category": "历史与会计口径",
+        "method": "rule",
+        "score": 0,
+        "applicable": true,
+        "evidence": "现金收款与递延收入",
+        "detail": {
+          "missing": [],
+          "mismatch": [
+            {
+              "key": "cash_collections_p1",
+              "actual": 934.52281054489,
+              "expected": 892.0864337790528,
+              "cell": "Outputs!B45"
+            },
+            {
+              "key": "cash_collections_p2",
+              "actual": 1326.88978990269,
+              "expected": 1181.8671818482117,
+              "cell": "Outputs!B89"
+            },
+            {
+              "key": "cash_collections_p3",
+              "actual": 1500.82834064344,
+              "expected": 1263.8315365873964,
+              "cell": "Outputs!B133"
+            },
+            {
+              "key": "cash_collections_p4",
+              "actual": 1678.85267640112,
+              "expected": 1349.978825299532,
+              "cell": "Outputs!B177"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "X-IN-007",
+      "category": "历史与会计口径",
+      "importance": "主需",
+      "weight": 3,
+      "rubric_method": "agent",
+      "status": "not_executed"
+    },
+    {
+      "id": "03-DRIVER",
+      "category": "经营预测",
+      "importance": "主需",
+      "weight": 3,
+      "rubric_method": "rule",
+      "status": "fail",
+      "native_evidence": {
+        "id": "03-DRIVER",
+        "category": "经营预测",
+        "method": "rule",
+        "score": 0,
+        "applicable": true,
+        "evidence": "经营预测期",
+        "detail": {
+          "missing": [],
+          "mismatch": [
+            {
+              "key": "driver_close_p1",
+              "actual": 81.0,
+              "expected": 74.52000000000001,
+              "cell": "Outputs!B30"
+            },
+            {
+              "key": "driver_close_p2",
+              "actual": 90.063,
+              "expected": 77.346,
+              "cell": "Outputs!B74"
+            },
+            {
+              "key": "driver_close_p3",
+              "actual": 98.938071,
+              "expected": 80.43597,
+              "cell": "Outputs!B118"
+            },
+            {
+              "key": "driver_close_p4",
+              "actual": 107.370885213,
+              "expected": 83.7458118,
+              "cell": "Outputs!B162"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "03-AVERAGE",
+      "category": "经营预测",
+      "importance": "主需",
+      "weight": 3,
+      "rubric_method": "rule",
+      "status": "fail",
+      "native_evidence": {
+        "id": "03-AVERAGE",
+        "category": "经营预测",
+        "method": "rule",
+        "score": 0,
+        "applicable": true,
+        "evidence": "收入预测",
+        "detail": {
+          "missing": [],
+          "mismatch": [
+            {
+              "key": "average_driver_p1",
+              "actual": 76.5,
+              "expected": 73.26,
+              "cell": "Outputs!B31"
+            },
+            {
+              "key": "average_driver_p2",
+              "actual": 85.5315,
+              "expected": 75.933,
+              "cell": "Outputs!B75"
+            },
+            {
+              "key": "average_driver_p3",
+              "actual": 94.5005355,
+              "expected": 78.890985,
+              "cell": "Outputs!B119"
+            },
+            {
+              "key": "average_driver_p4",
+              "actual": 103.1544781065,
+              "expected": 82.0908909,
+              "cell": "Outputs!B163"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "03-NWC",
+      "category": "经营预测",
+      "importance": "主需",
+      "weight": 3,
+      "rubric_method": "rule",
+      "status": "fail",
+      "native_evidence": {
+        "id": "03-NWC",
+        "category": "经营预测",
+        "method": "rule",
+        "score": 0,
+        "applicable": true,
+        "evidence": "营运资本表",
+        "detail": {
+          "missing": [],
+          "mismatch": [
+            {
+              "key": "delta_nwc_p1",
+              "actual": -136.51218702723,
+              "expected": -226.39256224847404,
+              "cell": "Outputs!B47"
+            },
+            {
+              "key": "delta_nwc_p2",
+              "actual": 36.0456994911029,
+              "expected": 13.226351134807175,
+              "cell": "Outputs!B91"
+            },
+            {
+              "key": "delta_nwc_p3",
+              "actual": 38.8140704338956,
+              "expected": 14.576804674001494,
+              "cell": "Outputs!B135"
+            },
+            {
+              "key": "delta_nwc_p4",
+              "actual": 12.7889468248536,
+              "expected": -6.321178945276515,
+              "cell": "Outputs!B179"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "B-NWC-OPEN",
+      "category": "经营预测",
+      "importance": "主需",
+      "weight": 3,
+      "rubric_method": "rule",
+      "status": "fail",
+      "evidence_keys": [
+        "nwc_p1",
+        "delta_nwc_p1",
+        "statement_delta_nwc_p1"
+      ],
+      "missing": [
+        "statement_delta_nwc_p1"
+      ]
+    },
+    {
+      "id": "05-FCFF",
+      "category": "DCF与估值桥",
+      "importance": "主需",
+      "weight": 3,
+      "rubric_method": "rule",
+      "status": "fail",
+      "native_evidence": {
+        "id": "05-FCFF",
+        "category": "DCF与估值桥",
+        "method": "rule",
+        "score": 0,
+        "applicable": true,
+        "evidence": "FCFF 表",
+        "detail": {
+          "missing": [],
+          "mismatch": [
+            {
+              "key": "fcff_p1",
+              "actual": 250.910127943806,
+              "expected": 336.86586474228255,
+              "cell": "Outputs!B50"
+            },
+            {
+              "key": "fcff_p2",
+              "actual": 95.4411757005799,
+              "expected": 103.84333511319124,
+              "cell": "Outputs!B94"
+            },
+            {
+              "key": "fcff_p3",
+              "actual": 109.061419698848,
+              "expected": 109.39126805427034,
+              "cell": "Outputs!B138"
+            },
+            {
+              "key": "fcff_p4",
+              "actual": 178.312357460269,
+              "expected": 158.99305311515576,
+              "cell": "Outputs!B182"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "05-DF",
+      "category": "DCF与估值桥",
+      "importance": "主需",
+      "weight": 3,
+      "rubric_method": "rule",
+      "status": "fail",
+      "native_evidence": {
+        "id": "05-DF",
+        "category": "DCF与估值桥",
+        "method": "rule",
+        "score": 0,
+        "applicable": true,
+        "evidence": "折现时间表",
+        "detail": {
+          "missing": [],
+          "mismatch": [
+            {
+              "key": "discount_factor_p4",
+              "actual": 0.723118039351009,
+              "expected": 0.7232151554143983,
+              "cell": "Outputs!B27"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "05-DUAL",
+      "category": "DCF与估值桥",
+      "importance": "主需",
+      "weight": 3,
+      "rubric_method": "rule",
+      "status": "fail",
+      "native_evidence": {
+        "id": "05-DUAL",
+        "category": "DCF与估值桥",
+        "method": "rule",
+        "score": 0,
+        "applicable": true,
+        "evidence": "终值计算",
+        "detail": {
+          "missing": [],
+          "mismatch": [
+            {
+              "key": "tv_gordon",
+              "actual": 2249.81764598019,
+              "expected": 2006.0604973294967,
+              "cell": "Outputs!B13"
+            },
+            {
+              "key": "tv_exit",
+              "actual": 2816.88400326678,
+              "expected": 2257.2606778143218,
+              "cell": "Outputs!B14"
+            },
+            {
+              "key": "terminal_value",
+              "actual": 2504.99750675916,
+              "expected": 2119.100578547668,
+              "cell": "Outputs!B15"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "05-TV",
+      "category": "DCF与估值桥",
+      "importance": "主需",
+      "weight": 3,
+      "rubric_method": "rule",
+      "status": "fail",
+      "native_evidence": {
+        "id": "05-TV",
+        "category": "DCF与估值桥",
+        "method": "rule",
+        "score": 0,
+        "applicable": true,
+        "evidence": "终值现值",
+        "detail": {
+          "missing": [],
+          "mismatch": [
+            {
+              "key": "terminal_value",
+              "actual": 2504.99750675916,
+              "expected": 2119.100578547668,
+              "cell": "Outputs!B15"
+            },
+            {
+              "key": "pv_terminal",
+              "actual": 1724.52865459095,
+              "expected": 1459.2554779582754,
+              "cell": "Outputs!B16"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "05-BRIDGE",
+      "category": "DCF与估值桥",
+      "importance": "主需",
+      "weight": 3,
+      "rubric_method": "rule",
+      "status": "fail",
+      "native_evidence": {
+        "id": "05-BRIDGE",
+        "category": "DCF与估值桥",
+        "method": "rule",
+        "score": 0,
+        "applicable": true,
+        "evidence": "股权桥",
+        "detail": {
+          "missing": [],
+          "mismatch": [
+            {
+              "key": "equity_value",
+              "actual": 2182.76604288156,
+              "expected": 1993.8222479309732,
+              "cell": "Outputs!B18"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "05-DILUTION",
+      "category": "DCF与估值桥",
+      "importance": "次需",
+      "weight": 1,
+      "rubric_method": "rule",
+      "status": "pass",
+      "native_evidence": {
+        "id": "05-DILUTION",
+        "category": "DCF与估值桥",
+        "method": "rule",
+        "score": 1,
+        "applicable": true,
+        "evidence": "股数桥",
+        "detail": {
+          "checked": 1
+        }
+      }
+    },
+    {
+      "id": "05-VPS",
+      "category": "DCF与估值桥",
+      "importance": "主需",
+      "weight": 3,
+      "rubric_method": "rule",
+      "status": "fail",
+      "native_evidence": {
+        "id": "05-VPS",
+        "category": "DCF与估值桥",
+        "method": "rule",
+        "score": 0,
+        "applicable": true,
+        "evidence": "估值结果",
+        "detail": {
+          "missing": [],
+          "mismatch": [
+            {
+              "key": "value_per_share",
+              "actual": 19.0498464548533,
+              "expected": 17.40086062142233,
+              "cell": "Outputs!B20"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "B-RESIDUAL",
+      "category": "DCF与估值桥",
+      "importance": "主需",
+      "weight": 3,
+      "rubric_method": "rule",
+      "status": "pass",
+      "evidence_keys": [
+        "activity_p1",
+        "revenue_p1",
+        "fcff_p1"
+      ],
+      "missing": []
+    },
+    {
+      "id": "06-FORMULA",
+      "category": "公式与模型工程",
+      "importance": "主需",
+      "weight": 3,
+      "rubric_method": "rule",
+      "status": "pass",
+      "native_evidence": {
+        "id": "06-FORMULA",
+        "category": "公式与模型工程",
+        "method": "rule",
+        "score": 1,
+        "applicable": true,
+        "evidence": "结果单元格 XML/openpyxl",
+        "detail": {
+          "nonformula_or_missing": []
+        }
+      }
+    },
+    {
+      "id": "06-RECALC",
+      "category": "公式与模型工程",
+      "importance": "主需",
+      "weight": 3,
+      "rubric_method": "rule",
+      "status": "fail",
+      "native_evidence": {
+        "id": "06-RECALC",
+        "category": "公式与模型工程",
+        "method": "rule",
+        "score": 0,
+        "applicable": true,
+        "evidence": "重算后的候选与 expected",
+        "detail": {
+          "missing": [],
+          "mismatch": [
+            {
+              "key": "fy_normalized_ebit",
+              "actual": 134.00985,
+              "expected": 177.77662499999997,
+              "cell": "Outputs!B4"
+            },
+            {
+              "key": "fy_reported_ebit",
+              "actual": 136.9875,
+              "expected": 180.75427499999998,
+              "cell": "Outputs!B5"
+            },
+            {
+              "key": "ltm_normalized_ebit",
+              "actual": 134.00985,
+              "expected": 177.77662499999997,
+              "cell": "Outputs!B7"
+            },
+            {
+              "key": "ltm_reported_ebit",
+              "actual": 136.9875,
+              "expected": 180.75427499999998,
+              "cell": "Outputs!B8"
+            },
+            {
+              "key": "levered_beta",
+              "actual": 0.916978,
+              "expected": 0.0,
+              "cell": "Outputs!B9"
+            },
+            {
+              "key": "cost_of_equity",
+              "actual": 0.084931922,
+              "expected": 0.0,
+              "cell": "Outputs!B10"
+            },
+            {
+              "key": "pv_explicit",
+              "actual": 541.11238829061,
+              "expected": 617.441769972698,
+              "cell": "Outputs!B12"
+            },
+            {
+              "key": "tv_gordon",
+              "actual": 2249.81764598019,
+              "expected": 2006.0604973294967,
+              "cell": "Outputs!B13"
+            },
+            {
+              "key": "tv_exit",
+              "actual": 2816.88400326678,
+              "expected": 2257.2606778143218,
+              "cell": "Outputs!B14"
+            },
+            {
+              "key": "terminal_value",
+              "actual": 2504.99750675916,
+              "expected": 2119.100578547668,
+              "cell": "Outputs!B15"
+            },
+            {
+              "key": "pv_terminal",
+              "actual": 1724.52865459095,
+              "expected": 1459.2554779582754,
+              "cell": "Outputs!B16"
+            },
+            {
+              "key": "enterprise_value",
+              "actual": 2265.64104288156,
+              "expected": 2076.6972479309734,
+              "cell": "Outputs!B17"
+            },
+            {
+              "key": "equity_value",
+              "actual": 2182.76604288156,
+              "expected": 1993.8222479309732,
+              "cell": "Outputs!B18"
+            },
+            {
+              "key": "value_per_share",
+              "actual": 19.0498464548533,
+              "expected": 17.40086062142233,
+              "cell": "Outputs!B20"
+            },
+            {
+              "key": "pv_fcff_p1",
+              "actual": 241.196688940632,
+              "expected": 323.8248366409438,
+              "cell": "Outputs!B22"
+            },
+            {
+              "key": "pv_fcff_p2",
+              "actual": 83.9758336595218,
+              "expected": 91.36864222495471,
+              "cell": "Outputs!B24"
+            },
+            {
+              "key": "pv_fcff_p3",
+              "actual": 86.9989833717303,
+              "expected": 87.2621054883125,
+              "cell": "Outputs!B26"
+            },
+            {
+              "key": "discount_factor_p4",
+              "actual": 0.723118039351009,
+              "expected": 0.7232151554143983,
+              "cell": "Outputs!B27"
+            },
+            {
+              "key": "pv_fcff_p4",
+              "actual": 128.940882318726,
+              "expected": 114.98618561848706,
+              "cell": "Outputs!B28"
+            },
+            {
+              "key": "activity_p1",
+              "actual": 0.805479452054795,
+              "expected": 0.8032786885245902,
+              "cell": "Outputs!B29"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "06-PERTURB1",
+      "category": "公式与模型工程",
+      "importance": "主需",
+      "weight": 3,
+      "rubric_method": "rule",
+      "status": "fail",
+      "native_evidence": {
+        "id": "06-PERTURB1",
+        "category": "公式与模型工程",
+        "method": "rule",
+        "score": 0,
+        "applicable": true,
+        "evidence": "隐藏扰动一",
+        "detail": {
+          "input_changes": {
+            "a.driver_add.0": 6.566399999999999,
+            "a.ebit_margin.1": 0.17702,
+            "a.wacc": 0.10763499999999998,
+            "b.valuation_cash_adjustment": 13.104000000000001
+          },
+          "mismatch": [
+            {
+              "key": "fy_normalized_ebit",
+              "actual": 134.00985,
+              "expected": 177.77662499999997
+            },
+            {
+              "key": "fy_reported_ebit",
+              "actual": 136.9875,
+              "expected": 180.75427499999998
+            },
+            {
+              "key": "ltm_normalized_ebit",
+              "actual": 134.00985,
+              "expected": 177.77662499999997
+            },
+            {
+              "key": "ltm_reported_ebit",
+              "actual": 136.9875,
+              "expected": 180.75427499999998
+            },
+            {
+              "key": "levered_beta",
+              "actual": 0.916978,
+              "expected": 0.0
+            },
+            {
+              "key": "cost_of_equity",
+              "actual": 0.084931922,
+              "expected": 0.0
+            },
+            {
+              "key": "pv_explicit",
+              "actual": 547.469732629754,
+              "expected": 623.6306879108924
+            },
+            {
+              "key": "tv_gordon",
+              "actual": 2147.14419949812,
+              "expected": 1914.5895550937773
+            },
+            {
+              "key": "tv_exit",
+              "actual": 2839.13341611981,
+              "expected": 2275.6610628128956
+            },
+            {
+              "key": "terminal_value",
+              "actual": 2458.53934697788,
+              "expected": 2077.0717335673808
+            },
+            {
+              "key": "pv_terminal",
+              "actual": 1665.73116474047,
+              "expected": 1407.6700749306744
+            },
+            {
+              "key": "enterprise_value",
+              "actual": 2213.20089737023,
+              "expected": 2031.300762841567
+            },
+            {
+              "key": "equity_value",
+              "actual": 2131.72989737023,
+              "expected": 1949.829762841567
+            },
+            {
+              "key": "value_per_share",
+              "actual": 18.6044342042784,
+              "expected": 17.016921129210754
+            },
+            {
+              "key": "pv_fcff_p1",
+              "actual": 240.259037549013,
+              "expected": 323.17831031567385
+            },
+            {
+              "key": "pv_fcff_p2",
+              "actual": 91.873364343184,
+              "expected": 98.72831286434462
+            },
+            {
+              "key": "pv_fcff_p3",
+              "actual": 87.0308719065194,
+              "expected": 87.29830370958237
+            },
+            {
+              "key": "discount_factor_p4",
+              "actual": 0.713159875628517,
+              "expected": 0.7132597514903475
+            },
+            {
+              "key": "pv_fcff_p4",
+              "actual": 128.306458831038,
+              "expected": 114.42576102129163
+            },
+            {
+              "key": "activity_p1",
+              "actual": 0.805479452054795,
+              "expected": 0.8032786885245902
+            }
+          ],
+          "checked": 202
+        }
+      }
+    },
+    {
+      "id": "06-PERTURB2",
+      "category": "公式与模型工程",
+      "importance": "主需",
+      "weight": 3,
+      "rubric_method": "rule",
+      "status": "fail",
+      "native_evidence": {
+        "id": "06-PERTURB2",
+        "category": "公式与模型工程",
+        "method": "rule",
+        "score": 0,
+        "applicable": true,
+        "evidence": "隐藏扰动二",
+        "detail": {
+          "input_changes": {
+            "a.price_growth.1": 0.02898,
+            "a.capex_pct.2": 0.07935,
+            "a.g": 0.02046,
+            "b.debt": 212.55
+          },
+          "mismatch": [
+            {
+              "key": "fy_normalized_ebit",
+              "actual": 134.00985,
+              "expected": 177.77662499999997
+            },
+            {
+              "key": "fy_reported_ebit",
+              "actual": 136.9875,
+              "expected": 180.75427499999998
+            },
+            {
+              "key": "ltm_normalized_ebit",
+              "actual": 134.00985,
+              "expected": 177.77662499999997
+            },
+            {
+              "key": "ltm_reported_ebit",
+              "actual": 136.9875,
+              "expected": 180.75427499999998
+            },
+            {
+              "key": "levered_beta",
+              "actual": 0.916978,
+              "expected": 0.0
+            },
+            {
+              "key": "cost_of_equity",
+              "actual": 0.084931922,
+              "expected": 0.0
+            },
+            {
+              "key": "pv_explicit",
+              "actual": 528.934910217519,
+              "expected": 607.231429646131
+            },
+            {
+              "key": "tv_gordon",
+              "actual": 2206.55776076243,
+              "expected": 1967.4814558409967
+            },
+            {
+              "key": "tv_exit",
+              "actual": 2819.46780098868,
+              "expected": 2259.3112599653505
+            },
+            {
+              "key": "terminal_value",
+              "actual": 2482.36727886425,
+              "expected": 2098.8048676969556
+            },
+            {
+              "key": "pv_terminal",
+              "actual": 1708.9492073622,
+              "expected": 1445.2794413615334
+            },
+            {
+              "key": "enterprise_value",
+              "actual": 2237.88411757972,
+              "expected": 2052.5108710076643
+            },
+            {
+              "key": "equity_value",
+              "actual": 2137.45911757972,
+              "expected": 1952.085871007664
+            },
+            {
+              "key": "value_per_share",
+              "actual": 18.6544353327332,
+              "expected": 17.036611060841242
+            },
+            {
+              "key": "pv_fcff_p1",
+              "actual": 241.196688940632,
+              "expected": 323.8248366409438
+            },
+            {
+              "key": "pv_fcff_p2",
+              "actual": 83.8922585998036,
+              "expected": 91.36750524220912
+            },
+            {
+              "key": "pv_fcff_p3",
+              "actual": 74.785572159824,
+              "expected": 76.94668819581588
+            },
+            {
+              "key": "discount_factor_p4",
+              "actual": 0.723118039351009,
+              "expected": 0.7232151554143983
+            },
+            {
+              "key": "pv_fcff_p4",
+              "actual": 129.06039051726,
+              "expected": 115.09239956716223
+            },
+            {
+              "key": "activity_p1",
+              "actual": 0.805479452054795,
+              "expected": 0.8032786885245902
+            }
+          ],
+          "checked": 202
+        }
+      }
+    },
+    {
+      "id": "06-LINKS",
+      "category": "公式与模型工程",
+      "importance": "主需",
+      "weight": 3,
+      "rubric_method": "rule",
+      "status": "pass",
+      "native_evidence": {
+        "id": "06-LINKS",
+        "category": "公式与模型工程",
+        "method": "rule",
+        "score": 1,
+        "applicable": true,
+        "evidence": "重算工作簿",
+        "detail": {
+          "errors": [],
+          "links": []
+        }
+      }
+    },
+    {
+      "id": "06-FREE",
+      "category": "公式与模型工程",
+      "importance": "次需",
+      "weight": 1,
+      "rubric_method": "rule",
+      "status": "pass",
+      "evidence_keys": [
+        "fy_revenue",
+        "fy_normalized_ebit",
+        "fy_reported_ebit",
+        "ltm_revenue",
+        "ltm_normalized_ebit",
+        "ltm_reported_ebit",
+        "levered_beta",
+        "cost_of_equity",
+        "wacc",
+        "pv_explicit",
+        "tv_gordon",
+        "tv_exit",
+        "terminal_value",
+        "pv_terminal",
+        "enterprise_value",
+        "equity_value",
+        "diluted_shares",
+        "value_per_share",
+        "discount_factor_p1",
+        "pv_fcff_p1",
+        "discount_factor_p2",
+        "pv_fcff_p2",
+        "discount_factor_p3",
+        "pv_fcff_p3",
+        "discount_factor_p4",
+        "pv_fcff_p4",
+        "activity_p1",
+        "driver_close_p1",
+        "average_driver_p1",
+        "unit_price_p1",
+        "full_revenue_p1",
+        "segment_revenue_p1",
+        "revenue_p1",
+        "ebit_p1",
+        "capex_p1",
+        "ppe_depreciation_p1",
+        "ppe_close_p1",
+        "rou_additions_p1",
+        "rou_amortization_p1",
+        "rou_close_p1",
+        "da_p1",
+        "deferred_close_p1",
+        "cash_collections_p1",
+        "nwc_p1",
+        "delta_nwc_p1",
+        "nol_close_p1",
+        "tax_p1",
+        "fcff_p1",
+        "interest_p1",
+        "debt_close_p1",
+        "net_income_p1",
+        "retained_earnings_p1",
+        "sbc_p1",
+        "sbc_reserve_p1",
+        "levered_tax_p1",
+        "cash_taxes_p1",
+        "interest_tax_shield_p1",
+        "deferred_tax_asset_p1",
+        "tax_accrual_p1",
+        "accrual_adjustments_p1",
+        "cfo_p1",
+        "cash_close_p1",
+        "cash_link_p1",
+        "operating_current_assets_p1",
+        "lease_liability_close_p1",
+        "assets_p1",
+        "liabilities_equity_p1",
+        "balance_difference_p1",
+        "end_time_p1",
+        "discount_time_p1",
+        "activity_p2",
+        "driver_close_p2",
+        "average_driver_p2",
+        "unit_price_p2",
+        "full_revenue_p2",
+        "segment_revenue_p2",
+        "revenue_p2",
+        "ebit_p2",
+        "capex_p2",
+        "ppe_depreciation_p2",
+        "ppe_close_p2",
+        "rou_additions_p2",
+        "rou_amortization_p2",
+        "rou_close_p2",
+        "da_p2",
+        "deferred_close_p2",
+        "cash_collections_p2",
+        "nwc_p2",
+        "delta_nwc_p2",
+        "nol_close_p2",
+        "tax_p2",
+        "fcff_p2",
+        "interest_p2",
+        "debt_close_p2",
+        "net_income_p2",
+        "retained_earnings_p2",
+        "sbc_p2",
+        "sbc_reserve_p2",
+        "levered_tax_p2",
+        "cash_taxes_p2",
+        "interest_tax_shield_p2",
+        "deferred_tax_asset_p2",
+        "tax_accrual_p2",
+        "accrual_adjustments_p2",
+        "cfo_p2",
+        "cash_close_p2",
+        "cash_link_p2",
+        "operating_current_assets_p2",
+        "lease_liability_close_p2",
+        "assets_p2",
+        "liabilities_equity_p2",
+        "balance_difference_p2",
+        "end_time_p2",
+        "discount_time_p2",
+        "activity_p3",
+        "driver_close_p3",
+        "average_driver_p3",
+        "unit_price_p3",
+        "full_revenue_p3",
+        "segment_revenue_p3",
+        "revenue_p3",
+        "ebit_p3",
+        "capex_p3",
+        "ppe_depreciation_p3",
+        "ppe_close_p3",
+        "rou_additions_p3",
+        "rou_amortization_p3",
+        "rou_close_p3",
+        "da_p3",
+        "deferred_close_p3",
+        "cash_collections_p3",
+        "nwc_p3",
+        "delta_nwc_p3",
+        "nol_close_p3",
+        "tax_p3",
+        "fcff_p3",
+        "interest_p3",
+        "debt_close_p3",
+        "net_income_p3",
+        "retained_earnings_p3",
+        "sbc_p3",
+        "sbc_reserve_p3",
+        "levered_tax_p3",
+        "cash_taxes_p3",
+        "interest_tax_shield_p3",
+        "deferred_tax_asset_p3",
+        "tax_accrual_p3",
+        "accrual_adjustments_p3",
+        "cfo_p3",
+        "cash_close_p3",
+        "cash_link_p3",
+        "operating_current_assets_p3",
+        "lease_liability_close_p3",
+        "assets_p3",
+        "liabilities_equity_p3",
+        "balance_difference_p3",
+        "end_time_p3",
+        "discount_time_p3",
+        "activity_p4",
+        "driver_close_p4",
+        "average_driver_p4",
+        "unit_price_p4",
+        "full_revenue_p4",
+        "segment_revenue_p4",
+        "revenue_p4",
+        "ebit_p4",
+        "capex_p4",
+        "ppe_depreciation_p4",
+        "ppe_close_p4",
+        "rou_additions_p4",
+        "rou_amortization_p4",
+        "rou_close_p4",
+        "da_p4",
+        "deferred_close_p4",
+        "cash_collections_p4",
+        "nwc_p4",
+        "delta_nwc_p4",
+        "nol_close_p4",
+        "tax_p4",
+        "fcff_p4",
+        "interest_p4",
+        "debt_close_p4",
+        "net_income_p4",
+        "retained_earnings_p4",
+        "sbc_p4",
+        "sbc_reserve_p4",
+        "levered_tax_p4",
+        "cash_taxes_p4",
+        "interest_tax_shield_p4",
+        "deferred_tax_asset_p4",
+        "tax_accrual_p4",
+        "accrual_adjustments_p4",
+        "cfo_p4",
+        "cash_close_p4",
+        "cash_link_p4",
+        "operating_current_assets_p4",
+        "lease_liability_close_p4",
+        "assets_p4",
+        "liabilities_equity_p4",
+        "balance_difference_p4",
+        "end_time_p4",
+        "discount_time_p4"
+      ],
+      "missing": []
+    },
+    {
+      "id": "09-MEMO",
+      "category": "表达与专业可用性",
+      "importance": "次需",
+      "weight": 1,
+      "rubric_method": "llm",
+      "status": "not_executed"
+    },
+    {
+      "id": "09-READABLE",
+      "category": "表达与专业可用性",
+      "importance": "次需",
+      "weight": 1,
+      "rubric_method": "agent",
+      "status": "not_executed"
+    },
+    {
+      "id": "X-TA-002",
+      "category": "表达与专业可用性",
+      "importance": "主需",
+      "weight": 3,
+      "rubric_method": "agent",
+      "status": "not_executed"
+    },
+    {
+      "id": "X-TA-004",
+      "category": "表达与专业可用性",
+      "importance": "次需",
+      "weight": 1,
+      "rubric_method": "agent",
+      "status": "not_executed"
+    },
+    {
+      "id": "X-TA-006",
+      "category": "表达与专业可用性",
+      "importance": "次需",
+      "weight": 1,
+      "rubric_method": "agent",
+      "status": "not_executed"
+    },
+    {
+      "id": "X-TA-007",
+      "category": "表达与专业可用性",
+      "importance": "次需",
+      "weight": 1,
+      "rubric_method": "agent",
+      "status": "not_executed"
+    },
+    {
+      "id": "03-MARGIN",
+      "category": "经营预测",
+      "importance": "主需",
+      "weight": 3,
+      "rubric_method": "rule",
+      "status": "fail",
+      "native_evidence": {
+        "id": "03-MARGIN",
+        "category": "经营预测",
+        "method": "rule",
+        "score": 0,
+        "applicable": true,
+        "evidence": "EBIT 预测",
+        "detail": {
+          "missing": [],
+          "mismatch": [
+            {
+              "key": "ebit_p1",
+              "actual": 141.911383900139,
+              "expected": 135.7154609790105,
+              "cell": "Outputs!B36"
+            },
+            {
+              "key": "ebit_p2",
+              "actual": 211.388355276703,
+              "expected": 188.40453060394003,
+              "cell": "Outputs!B80"
+            },
+            {
+              "key": "ebit_p3",
+              "actual": 249.698590751103,
+              "expected": 209.74190428123427,
+              "cell": "Outputs!B124"
+            },
+            {
+              "key": "ebit_p4",
+              "actual": 291.17729905639,
+              "expected": 232.9488404532553,
+              "cell": "Outputs!B168"
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "semantic_pending": [
+    "X-IF-001a",
+    "X-IF-002",
+    "X-IN-007",
+    "09-MEMO",
+    "09-READABLE",
+    "X-TA-002",
+    "X-TA-004",
+    "X-TA-006",
+    "X-TA-007"
+  ],
+  "unexecuted_rules": []
+}

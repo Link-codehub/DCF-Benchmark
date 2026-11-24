@@ -1,0 +1,609 @@
+{
+  "task_id": "B01",
+  "reward": 1.0,
+  "score": 100.0,
+  "raw_score_before_formula_gates": 100.0,
+  "passed": true,
+  "criteria": [
+    {
+      "id": "B01-S01",
+      "weight": 1,
+      "earned": 1,
+      "passed": true,
+      "category": "structure",
+      "missing_sheets": [],
+      "missing_labels": []
+    },
+    {
+      "id": "B01-R01",
+      "weight": 1,
+      "earned": 1,
+      "passed": true,
+      "category": "recalculation",
+      "formula_errors": [],
+      "error_count": 0
+    },
+    {
+      "id": "B01-H01",
+      "weight": 3.761194,
+      "earned": 3.761194,
+      "passed": true,
+      "category": "historical",
+      "observations": {
+        "Historical!B4": {
+          "actual": 2758.411,
+          "expected": 2758.411
+        },
+        "Historical!C4": {
+          "actual": 1129.618,
+          "expected": 1129.618
+        },
+        "Historical!D4": {
+          "actual": 482.722,
+          "expected": 482.722
+        },
+        "Historical!E4": {
+          "actual": 1146.071,
+          "expected": 1146.0710000000001
+        }
+      },
+      "failed_cells": []
+    },
+    {
+      "id": "B01-H02",
+      "weight": 3.761194,
+      "earned": 3.761194,
+      "passed": true,
+      "category": "historical",
+      "observations": {
+        "Historical!B5": {
+          "actual": 3016.557,
+          "expected": 3016.557
+        },
+        "Historical!C5": {
+          "actual": 1319.184,
+          "expected": 1319.184
+        },
+        "Historical!D5": {
+          "actual": 528.271,
+          "expected": 528.271
+        },
+        "Historical!E5": {
+          "actual": 1169.102,
+          "expected": 1169.1019999999999
+        }
+      },
+      "failed_cells": []
+    },
+    {
+      "id": "B01-H03",
+      "weight": 5.373134,
+      "earned": 5.373134,
+      "passed": true,
+      "category": "historical",
+      "observations": {
+        "Historical!B6": {
+          "actual": 3016.557,
+          "expected": 3016.557
+        },
+        "Historical!C6": {
+          "actual": 1319.184,
+          "expected": 1319.184
+        },
+        "Historical!D6": {
+          "actual": 528.271,
+          "expected": 528.271
+        },
+        "Historical!E6": {
+          "actual": 1169.102,
+          "expected": 1169.1019999999999
+        },
+        "Historical!G4": {
+          "actual": 864.35,
+          "expected": 864.35
+        }
+      },
+      "failed_cells": []
+    },
+    {
+      "id": "B01-T01",
+      "weight": 5.373134,
+      "earned": 5.373134,
+      "passed": true,
+      "category": "timeline",
+      "observations": {
+        "Forecast!B8": {
+          "actual": 1,
+          "expected": 1.0
+        },
+        "Forecast!B9": {
+          "actual": 0.627397260273973,
+          "expected": 0.6273972602739726
+        },
+        "Forecast!B36": {
+          "actual": 0.127397260273973,
+          "expected": 0.12739726027397258
+        },
+        "Forecast!E36": {
+          "actual": 3.13013698630137,
+          "expected": 3.1301369863013697
+        }
+      },
+      "failed_cells": []
+    },
+    {
+      "id": "B01-F01",
+      "weight": 4.298507,
+      "earned": 4.298507,
+      "passed": true,
+      "category": "forecast",
+      "observations": {
+        "Forecast!B12": {
+          "actual": 3298.7895798,
+          "expected": 3298.7895798
+        },
+        "Forecast!B13": {
+          "actual": 2069.65154458685,
+          "expected": 2069.651544586849
+        }
+      },
+      "failed_cells": []
+    },
+    {
+      "id": "B01-F02",
+      "weight": 3.223881,
+      "earned": 3.223881,
+      "passed": true,
+      "category": "forecast",
+      "observations": {
+        "Forecast!D12": {
+          "actual": 3387.73311474,
+          "expected": 3387.73311474
+        },
+        "Forecast!D13": {
+          "actual": 3387.73311474,
+          "expected": 3387.73311474
+        }
+      },
+      "failed_cells": []
+    },
+    {
+      "id": "B01-F03",
+      "weight": 3.223881,
+      "earned": 3.223881,
+      "passed": true,
+      "category": "forecast",
+      "observations": {
+        "Forecast!B14": {
+          "actual": 807.164102388871,
+          "expected": 807.1641023888712
+        },
+        "Forecast!B15": {
+          "actual": 393.233793471501,
+          "expected": 393.2337934715014
+        },
+        "Forecast!B16": {
+          "actual": 869.253648726477,
+          "expected": 869.2536487264764
+        },
+        "Forecast!B17": {
+          "actual": 199.92833920709,
+          "expected": 199.92833920708958
+        },
+        "Forecast!B18": {
+          "actual": 669.325309519387,
+          "expected": 669.3253095193868
+        }
+      },
+      "failed_cells": []
+    },
+    {
+      "id": "B01-F04",
+      "weight": 4.298507,
+      "earned": 4.298507,
+      "passed": true,
+      "category": "forecast",
+      "observations": {
+        "Forecast!B19": {
+          "actual": 1121,
+          "expected": 1121.0
+        },
+        "Forecast!B20": {
+          "actual": 122.154246575342,
+          "expected": 122.15424657534246
+        },
+        "Forecast!B21": {
+          "actual": 165.490797260274,
+          "expected": 165.490797260274
+        },
+        "Forecast!B22": {
+          "actual": 1077.66344931507,
+          "expected": 1077.6634493150686
+        }
+      },
+      "failed_cells": []
+    },
+    {
+      "id": "B01-F05",
+      "weight": 3.223881,
+      "earned": 3.223881,
+      "passed": true,
+      "category": "forecast",
+      "observations": {
+        "Forecast!D19": {
+          "actual": 1099.63106641096,
+          "expected": 1099.631066410959
+        },
+        "Forecast!D21": {
+          "actual": 166.794070802459,
+          "expected": 166.79407080245903
+        },
+        "Forecast!D22": {
+          "actual": 1109.8369956085,
+          "expected": 1109.8369956084998
+        }
+      },
+      "failed_cells": []
+    },
+    {
+      "id": "B01-F06",
+      "weight": 1.074627,
+      "earned": 1.074627,
+      "passed": true,
+      "category": "forecast",
+      "observations": {
+        "Forecast!D25": {
+          "actual": 0,
+          "expected": 0.0
+        },
+        "Forecast!D26": {
+          "actual": 0,
+          "expected": 0.0
+        },
+        "Forecast!D27": {
+          "actual": 166.794070802459,
+          "expected": 166.79407080245903
+        }
+      },
+      "failed_cells": []
+    },
+    {
+      "id": "B01-W01",
+      "weight": 4.298507,
+      "earned": 4.298507,
+      "passed": true,
+      "category": "working_capital",
+      "observations": {
+        "Forecast!B28": {
+          "actual": 497.077881887671,
+          "expected": 497.0778818876712
+        },
+        "Forecast!B29": {
+          "actual": 274.929257582236,
+          "expected": 274.9292575822356
+        },
+        "Forecast!B30": {
+          "actual": 169.187235435222,
+          "expected": 169.1872354352219
+        },
+        "Forecast!B31": {
+          "actual": 85.7685290748,
+          "expected": 85.7685290748
+        },
+        "Forecast!B32": {
+          "actual": 688.588433109485,
+          "expected": 688.5884331094849
+        },
+        "Forecast!B33": {
+          "actual": -175.761566890515,
+          "expected": -175.76156689051516
+        }
+      },
+      "failed_cells": []
+    },
+    {
+      "id": "B01-W02",
+      "weight": 3.223881,
+      "earned": 3.223881,
+      "passed": true,
+      "category": "working_capital",
+      "observations": {
+        "Forecast!D32": {
+          "actual": 718.459301221353,
+          "expected": 718.4593012213531
+        },
+        "Forecast!D33": {
+          "actual": 14.8604194263186,
+          "expected": 14.860419426318572
+        }
+      },
+      "failed_cells": []
+    },
+    {
+      "id": "B01-C01",
+      "weight": 3.223881,
+      "earned": 3.223881,
+      "passed": true,
+      "category": "fcff",
+      "observations": {
+        "Forecast!B34": {
+          "actual": 888.423427094834,
+          "expected": 888.4234270948335
+        }
+      },
+      "failed_cells": []
+    },
+    {
+      "id": "B01-C02",
+      "weight": 3.223881,
+      "earned": 3.223881,
+      "passed": true,
+      "category": "fcff",
+      "observations": {
+        "Forecast!D34": {
+          "actual": 1040.84999859793,
+          "expected": 1040.8499985979342
+        },
+        "Forecast!D37": {
+          "actual": 0.832684318554802,
+          "expected": 0.8326843185548017
+        },
+        "Forecast!D38": {
+          "actual": 866.699471800287,
+          "expected": 866.6994718002873
+        }
+      },
+      "failed_cells": []
+    },
+    {
+      "id": "B01-C03",
+      "weight": 3.223881,
+      "earned": 3.223881,
+      "passed": true,
+      "category": "fcff",
+      "observations": {
+        "Forecast!E34": {
+          "actual": 1056.45281765301,
+          "expected": 1056.4528176530052
+        },
+        "Forecast!E39": {
+          "actual": 1577.87493758597,
+          "expected": 1577.87493758597
+        }
+      },
+      "failed_cells": []
+    },
+    {
+      "id": "B01-V01",
+      "weight": 3.223881,
+      "earned": 3.223881,
+      "passed": true,
+      "category": "valuation",
+      "observations": {
+        "Valuation!B22": {
+          "actual": 0.08982,
+          "expected": 0.08982
+        }
+      },
+      "failed_cells": []
+    },
+    {
+      "id": "B01-V02",
+      "weight": 3.223881,
+      "earned": 3.223881,
+      "passed": true,
+      "category": "valuation",
+      "observations": {
+        "Valuation!B6": {
+          "actual": 3493.23257825256,
+          "expected": 3493.2325782525604
+        }
+      },
+      "failed_cells": []
+    },
+    {
+      "id": "B01-V03",
+      "weight": 3.223881,
+      "earned": 3.223881,
+      "passed": true,
+      "category": "valuation",
+      "observations": {
+        "Valuation!B7": {
+          "actual": 17271.2041345055,
+          "expected": 17271.20413450551
+        }
+      },
+      "failed_cells": []
+    },
+    {
+      "id": "B01-V04",
+      "weight": 1.074627,
+      "earned": 1.074627,
+      "passed": true,
+      "category": "valuation",
+      "observations": {
+        "Valuation!B8": {
+          "actual": 3.63013698630137,
+          "expected": 3.6301369863013697
+        },
+        "Valuation!B9": {
+          "actual": 12639.2024944474,
+          "expected": 12639.20249444742
+        }
+      },
+      "failed_cells": []
+    },
+    {
+      "id": "B01-V05",
+      "weight": 2.149254,
+      "earned": 2.149254,
+      "passed": true,
+      "category": "valuation",
+      "observations": {
+        "Valuation!B10": {
+          "actual": 16132.4350727,
+          "expected": 16132.43507269998
+        }
+      },
+      "failed_cells": []
+    },
+    {
+      "id": "B01-V06",
+      "weight": 3.223881,
+      "earned": 3.223881,
+      "passed": true,
+      "category": "equity_bridge",
+      "observations": {
+        "Valuation!B17": {
+          "actual": 15955.4350727,
+          "expected": 15955.435072699982
+        },
+        "Valuation!B20": {
+          "actual": 185.26,
+          "expected": 185.26
+        }
+      },
+      "failed_cells": []
+    },
+    {
+      "id": "B01-V07",
+      "weight": 1.074624,
+      "earned": 1.074624,
+      "passed": true,
+      "category": "equity_bridge",
+      "observations": {
+        "Valuation!B21": {
+          "actual": 86.1245550723307,
+          "expected": 86.12455507233068
+        }
+      },
+      "failed_cells": []
+    },
+    {
+      "id": "B01-L01",
+      "weight": 5,
+      "earned": 5,
+      "passed": true,
+      "category": "live_formulas",
+      "failed_cells": []
+    },
+    {
+      "id": "B01-P01",
+      "weight": 10.5,
+      "earned": 10.5,
+      "passed": true,
+      "category": "dynamic_perturbation",
+      "observations": {
+        "Forecast!B9": {
+          "actual": 0.542465753424658,
+          "expected": 0.5424657534246575
+        },
+        "Forecast!B13": {
+          "actual": 1896.84919728335,
+          "expected": 1896.8491972833538
+        },
+        "Forecast!B21": {
+          "actual": 165.220457643836,
+          "expected": 165.22045764383563
+        },
+        "Forecast!B33": {
+          "actual": -57.8058892965375,
+          "expected": -57.80588929653754
+        },
+        "Forecast!B34": {
+          "actual": 718.175125287015,
+          "expected": 718.175125287015
+        },
+        "Forecast!B36": {
+          "actual": 0.0424657534246575,
+          "expected": 0.042465753424657526
+        },
+        "Valuation!B6": {
+          "actual": 3456.01028962958,
+          "expected": 3456.0102896295803
+        },
+        "Valuation!B7": {
+          "actual": 16068.0782016545,
+          "expected": 16068.078201654453
+        },
+        "Valuation!B9": {
+          "actual": 11666.3765159796,
+          "expected": 11666.376515979611
+        },
+        "Valuation!B10": {
+          "actual": 15122.3868056092,
+          "expected": 15122.386805609192
+        },
+        "Valuation!B17": {
+          "actual": 14982.3868056092,
+          "expected": 14982.386805609192
+        },
+        "Valuation!B21": {
+          "actual": 80.8722163748742,
+          "expected": 80.8722163748742
+        }
+      },
+      "failed_cells": []
+    },
+    {
+      "id": "B01-P02",
+      "weight": 10.5,
+      "earned": 10.5,
+      "passed": true,
+      "category": "dynamic_perturbation",
+      "observations": {
+        "Forecast!B9": {
+          "actual": 0.693150684931507,
+          "expected": 0.6931506849315069
+        },
+        "Forecast!B13": {
+          "actual": 2286.55825668329,
+          "expected": 2286.5582566832877
+        },
+        "Forecast!B21": {
+          "actual": 166.386950684932,
+          "expected": 166.38695068493152
+        },
+        "Forecast!B33": {
+          "actual": -175.761566890515,
+          "expected": -175.76156689051516
+        },
+        "Forecast!B34": {
+          "actual": 946.665019430658,
+          "expected": 946.6650194306575
+        },
+        "Forecast!B36": {
+          "actual": 0.193150684931507,
+          "expected": 0.1931506849315069
+        },
+        "Valuation!B6": {
+          "actual": 3553.0153015418,
+          "expected": 3553.015301541802
+        },
+        "Valuation!B7": {
+          "actual": 16531.1359059737,
+          "expected": 16531.135905973744
+        },
+        "Valuation!B9": {
+          "actual": 12173.0473570283,
+          "expected": 12173.047357028305
+        },
+        "Valuation!B10": {
+          "actual": 15726.0626585701,
+          "expected": 15726.062658570107
+        },
+        "Valuation!B17": {
+          "actual": 15504.0626585701,
+          "expected": 15504.062658570107
+        },
+        "Valuation!B21": {
+          "actual": 81.9193842257746,
+          "expected": 81.91938422577464
+        }
+      },
+      "failed_cells": []
+    }
+  ],
+  "candidate": "/app/output.xlsx",
+  "recalculation_engine": "/usr/bin/soffice"
+}

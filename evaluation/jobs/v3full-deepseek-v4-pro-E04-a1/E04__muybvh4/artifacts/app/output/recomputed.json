@@ -1,0 +1,81 @@
+{
+  "recomputed": {
+    "fy0_revenue": 39000.966,
+    "fy0_nwc": -5454.307,
+    "growth_rates_used": [
+      0.13,
+      0.105,
+      0.08,
+      0.06,
+      0.045
+    ],
+    "ebit_margins_used": [
+      0.27,
+      0.285,
+      0.295,
+      0.305,
+      0.31
+    ],
+    "forecast": {
+      "revenue_y1": 44071.09158,
+      "ebit_y1": 11899.194727,
+      "da_y1": 396.639824,
+      "capex_y1": 506.817553,
+      "delta_nwc_y1": -715.645821,
+      "reinvestment_component_y1": 605.468092,
+      "fcff_y1": 10957.767504,
+      "discount_factor_y1": 0.9216589862,
+      "revenue_y2": 48698.556196,
+      "ebit_y2": 13879.088516,
+      "da_y2": 438.287006,
+      "capex_y2": 560.033396,
+      "delta_nwc_y2": -647.845046,
+      "reinvestment_component_y2": 526.098656,
+      "fcff_y2": 12600.905665,
+      "discount_factor_y2": 0.8494552868,
+      "revenue_y3": 52594.440692,
+      "ebit_y3": 15515.360004,
+      "da_y3": 473.349966,
+      "capex_y3": 604.836068,
+      "delta_nwc_y3": -545.423829,
+      "reinvestment_component_y3": 413.937728,
+      "fcff_y3": 13912.300931,
+      "discount_factor_y3": 0.7829080984,
+      "revenue_y4": 55750.107133,
+      "ebit_y4": 17003.782676,
+      "da_y4": 501.750964,
+      "capex_y4": 641.126232,
+      "delta_nwc_y4": -441.793302,
+      "reinvestment_component_y4": 302.418034,
+      "fcff_y4": 15095.708962,
+      "discount_factor_y4": 0.7215742843,
+      "revenue_y5": 58258.861954,
+      "ebit_y5": 18060.247206,
+      "da_y5": 524.329758,
+      "capex_y5": 669.976912,
+      "delta_nwc_y5": -351.225675,
+      "reinvestment_component_y5": 205.57852,
+      "fcff_y5": 15917.993589,
+      "discount_factor_y5": 0.6650454233
+    },
+    "valuation": {
+      "wacc": 0.085,
+      "terminal_growth": 0.03,
+      "tax_rate": 0.13,
+      "net_debt": 15582.804,
+      "cash_and_investments": 9583.739,
+      "diluted_shares": 4392.608,
+      "enterprise_value": 251424.592571,
+      "equity_value": 245425.527571,
+      "value_per_share": 55.872395,
+      "discount_years": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "terminal_year_fcff": 15917.993589
+    }
+  }
+}

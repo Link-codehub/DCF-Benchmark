@@ -1,0 +1,827 @@
+{
+  "task": "W03",
+  "artifact": "/Users/link/Desktop/Finance Bench/exp/dcf_factory_v3/eval/deliveries/deepseek-v4-pro/W03/v3full-deepseek-v4-pro-W03-a1",
+  "native_reward": 0,
+  "native_gate_failures": [
+    "W-USED"
+  ],
+  "items": [
+    {
+      "id": "01-FILE",
+      "category": "交付与来源完整性",
+      "importance": "主需",
+      "weight": 3,
+      "rubric_method": "rule",
+      "status": "pass",
+      "native_ids": [
+        "01-FILE"
+      ],
+      "native_evidence": [
+        {
+          "passed": true,
+          "evidence": null,
+          "weight": 3,
+          "method": "rule"
+        }
+      ]
+    },
+    {
+      "id": "01-KEYS",
+      "category": "交付与来源完整性",
+      "importance": "主需",
+      "weight": 3,
+      "rubric_method": "rule",
+      "status": "pass",
+      "native_ids": [
+        "W-VALUE"
+      ],
+      "native_evidence": [
+        {
+          "passed": true,
+          "evidence": {
+            "missing": [],
+            "incorrect": [],
+            "duplicates": []
+          },
+          "weight": 3,
+          "method": "rule"
+        }
+      ]
+    },
+    {
+      "id": "01-UNIT",
+      "category": "交付与来源完整性",
+      "importance": "次需",
+      "weight": 1,
+      "rubric_method": "agent",
+      "status": "not_executed"
+    },
+    {
+      "id": "X-IF-001a",
+      "category": "交付与来源完整性",
+      "importance": "主需",
+      "weight": 3,
+      "rubric_method": "agent",
+      "status": "not_executed"
+    },
+    {
+      "id": "X-IF-002",
+      "category": "交付与来源完整性",
+      "importance": "主需",
+      "weight": 3,
+      "rubric_method": "agent",
+      "status": "not_executed"
+    },
+    {
+      "id": "03-MARGIN",
+      "category": "经营预测",
+      "importance": "主需",
+      "weight": 3,
+      "rubric_method": "rule",
+      "status": "pass",
+      "native_ids": [
+        "W-OPERATING-RECALC"
+      ],
+      "native_evidence": [
+        {
+          "passed": true,
+          "evidence": null,
+          "weight": 3,
+          "method": "rule"
+        }
+      ]
+    },
+    {
+      "id": "03-NWC",
+      "category": "经营预测",
+      "importance": "主需",
+      "weight": 3,
+      "rubric_method": "rule",
+      "status": "pass",
+      "native_ids": [
+        "W-OPERATING-RECALC"
+      ],
+      "native_evidence": [
+        {
+          "passed": true,
+          "evidence": null,
+          "weight": 3,
+          "method": "rule"
+        }
+      ]
+    },
+    {
+      "id": "B-NWC-OPEN",
+      "category": "经营预测",
+      "importance": "主需",
+      "weight": 3,
+      "rubric_method": "rule",
+      "status": "pass",
+      "native_ids": [
+        "W-OPERATING-RECALC"
+      ],
+      "native_evidence": [
+        {
+          "passed": true,
+          "evidence": null,
+          "weight": 3,
+          "method": "rule"
+        }
+      ]
+    },
+    {
+      "id": "05-FCFF",
+      "category": "DCF与估值桥",
+      "importance": "主需",
+      "weight": 3,
+      "rubric_method": "rule",
+      "status": "fail",
+      "native_ids": [
+        "05-FCFF"
+      ],
+      "native_evidence": [
+        {
+          "passed": false,
+          "evidence": null,
+          "weight": 3,
+          "method": "rule"
+        }
+      ]
+    },
+    {
+      "id": "05-TV",
+      "category": "DCF与估值桥",
+      "importance": "主需",
+      "weight": 3,
+      "rubric_method": "rule",
+      "status": "pass",
+      "native_ids": [
+        "05-TV"
+      ],
+      "native_evidence": [
+        {
+          "passed": true,
+          "evidence": 52235.39901040326,
+          "weight": 3,
+          "method": "rule"
+        }
+      ]
+    },
+    {
+      "id": "05-VPS",
+      "category": "DCF与估值桥",
+      "importance": "主需",
+      "weight": 3,
+      "rubric_method": "rule",
+      "status": "pass",
+      "native_ids": [
+        "05-VPS"
+      ],
+      "native_evidence": [
+        {
+          "passed": true,
+          "evidence": null,
+          "weight": 3,
+          "method": "rule"
+        }
+      ]
+    },
+    {
+      "id": "06-FORMULA",
+      "category": "公式与模型工程",
+      "importance": "主需",
+      "weight": 3,
+      "rubric_method": "rule",
+      "status": "pass",
+      "native_ids": [
+        "06-FORMULA"
+      ],
+      "native_evidence": [
+        {
+          "passed": true,
+          "evidence": null,
+          "weight": 3,
+          "method": "rule"
+        }
+      ]
+    },
+    {
+      "id": "06-RECALC",
+      "category": "公式与模型工程",
+      "importance": "主需",
+      "weight": 3,
+      "rubric_method": "rule",
+      "status": "pass",
+      "native_ids": [
+        "06-RECALC"
+      ],
+      "native_evidence": [
+        {
+          "passed": true,
+          "evidence": null,
+          "weight": 3,
+          "method": "rule"
+        }
+      ]
+    },
+    {
+      "id": "X-FM-001",
+      "category": "公式与模型工程",
+      "importance": "主需",
+      "weight": 3,
+      "rubric_method": "rule",
+      "status": "fail",
+      "native_ids": [
+        "W-USED",
+        "W-SOURCE-PERTURB"
+      ],
+      "native_evidence": [
+        {
+          "passed": false,
+          "evidence": [
+            {
+              "field_id": "revenue",
+              "actual_references": [],
+              "declared": [
+                "Assumptions!B6",
+                "Assumptions!B7",
+                "Assumptions!B8",
+                "Assumptions!B9",
+                "Forecast!B2"
+              ]
+            },
+            {
+              "field_id": "operating_income",
+              "actual_references": [],
+              "declared": [
+                "Assumptions!B5",
+                "Assumptions!B6"
+              ]
+            },
+            {
+              "field_id": "pretax_income",
+              "actual_references": [],
+              "declared": [
+                "Assumptions!B5"
+              ]
+            },
+            {
+              "field_id": "income_tax",
+              "actual_references": [],
+              "declared": [
+                "Assumptions!B5"
+              ]
+            },
+            {
+              "field_id": "net_income_consolidated",
+              "actual_references": [],
+              "declared": [
+                "cross_validation.pretax_to_net_income"
+              ]
+            },
+            {
+              "field_id": "da",
+              "actual_references": [],
+              "declared": [
+                "Assumptions!B7"
+              ]
+            },
+            {
+              "field_id": "capex",
+              "actual_references": [],
+              "declared": [
+                "Assumptions!B8"
+              ]
+            },
+            {
+              "field_id": "diluted_shares",
+              "actual_references": [],
+              "declared": [
+                "DCF!B13"
+              ]
+            },
+            {
+              "field_id": "cash",
+              "actual_references": [],
+              "declared": [
+                "Sources!B18",
+                "DCF!B7"
+              ]
+            },
+            {
+              "field_id": "short_term_investments",
+              "actual_references": [],
+              "declared": [
+                "Sources!B18",
+                "DCF!B8"
+              ]
+            },
+            {
+              "field_id": "receivables",
+              "actual_references": [],
+              "declared": [
+                "Assumptions!B9"
+              ]
+            },
+            {
+              "field_id": "current_assets",
+              "actual_references": [],
+              "declared": [
+                "Sources!B18"
+              ]
+            },
+            {
+              "field_id": "current_liabilities",
+              "actual_references": [],
+              "declared": [
+                "Sources!B18"
+              ]
+            },
+            {
+              "field_id": "current_debt",
+              "actual_references": [],
+              "declared": [
+                "Sources!B18",
+                "DCF!B9"
+              ]
+            },
+            {
+              "field_id": "noncurrent_debt",
+              "actual_references": [],
+              "declared": [
+                "DCF!B10"
+              ]
+            },
+            {
+              "field_id": "treasury_10y",
+              "actual_references": [],
+              "declared": [
+                "Assumptions!B10"
+              ]
+            }
+          ],
+          "weight": 3,
+          "method": "rule"
+        },
+        {
+          "passed": true,
+          "evidence": {
+            "enterprise_value": 55773.5660592954,
+            "revenue_y1": 39124.5603
+          },
+          "weight": 3,
+          "method": "rule"
+        }
+      ]
+    },
+    {
+      "id": "X-FM-002",
+      "category": "公式与模型工程",
+      "importance": "主需",
+      "weight": 3,
+      "rubric_method": "agent",
+      "status": "not_executed"
+    },
+    {
+      "id": "X-FM-004",
+      "category": "公式与模型工程",
+      "importance": "主需",
+      "weight": 3,
+      "rubric_method": "agent",
+      "status": "not_executed"
+    },
+    {
+      "id": "X-FM-005",
+      "category": "公式与模型工程",
+      "importance": "主需",
+      "weight": 3,
+      "rubric_method": "agent",
+      "status": "not_executed"
+    },
+    {
+      "id": "09-MEMO",
+      "category": "表达与专业可用性",
+      "importance": "次需",
+      "weight": 1,
+      "rubric_method": "llm",
+      "status": "not_executed"
+    },
+    {
+      "id": "09-READABLE",
+      "category": "表达与专业可用性",
+      "importance": "次需",
+      "weight": 1,
+      "rubric_method": "agent",
+      "status": "not_executed"
+    },
+    {
+      "id": "W-VALUE",
+      "category": "交付与来源完整性",
+      "importance": "主需",
+      "weight": 3,
+      "rubric_method": "rule",
+      "status": "pass",
+      "native_ids": [
+        "W-VALUE"
+      ],
+      "native_evidence": [
+        {
+          "passed": true,
+          "evidence": {
+            "missing": [],
+            "incorrect": [],
+            "duplicates": []
+          },
+          "weight": 3,
+          "method": "rule"
+        }
+      ]
+    },
+    {
+      "id": "W-SOURCE",
+      "category": "交付与来源完整性",
+      "importance": "主需",
+      "weight": 3,
+      "rubric_method": "rule",
+      "status": "pass",
+      "native_ids": [
+        "W-SOURCE"
+      ],
+      "native_evidence": [
+        {
+          "passed": true,
+          "evidence": [],
+          "weight": 3,
+          "method": "rule"
+        }
+      ]
+    },
+    {
+      "id": "W-CROSS",
+      "category": "交付与来源完整性",
+      "importance": "主需",
+      "weight": 3,
+      "rubric_method": "rule",
+      "status": "fail",
+      "native_ids": [
+        "W-CROSS"
+      ],
+      "native_evidence": [
+        {
+          "passed": false,
+          "evidence": {
+            "expected_difference": 0.0,
+            "submitted": 0.0
+          },
+          "weight": 3,
+          "method": "rule"
+        }
+      ]
+    },
+    {
+      "id": "W-USED",
+      "category": "交付与来源完整性",
+      "importance": "主需",
+      "weight": 3,
+      "rubric_method": "rule",
+      "status": "fail",
+      "native_ids": [
+        "W-USED"
+      ],
+      "native_evidence": [
+        {
+          "passed": false,
+          "evidence": [
+            {
+              "field_id": "revenue",
+              "actual_references": [],
+              "declared": [
+                "Assumptions!B6",
+                "Assumptions!B7",
+                "Assumptions!B8",
+                "Assumptions!B9",
+                "Forecast!B2"
+              ]
+            },
+            {
+              "field_id": "operating_income",
+              "actual_references": [],
+              "declared": [
+                "Assumptions!B5",
+                "Assumptions!B6"
+              ]
+            },
+            {
+              "field_id": "pretax_income",
+              "actual_references": [],
+              "declared": [
+                "Assumptions!B5"
+              ]
+            },
+            {
+              "field_id": "income_tax",
+              "actual_references": [],
+              "declared": [
+                "Assumptions!B5"
+              ]
+            },
+            {
+              "field_id": "net_income_consolidated",
+              "actual_references": [],
+              "declared": [
+                "cross_validation.pretax_to_net_income"
+              ]
+            },
+            {
+              "field_id": "da",
+              "actual_references": [],
+              "declared": [
+                "Assumptions!B7"
+              ]
+            },
+            {
+              "field_id": "capex",
+              "actual_references": [],
+              "declared": [
+                "Assumptions!B8"
+              ]
+            },
+            {
+              "field_id": "diluted_shares",
+              "actual_references": [],
+              "declared": [
+                "DCF!B13"
+              ]
+            },
+            {
+              "field_id": "cash",
+              "actual_references": [],
+              "declared": [
+                "Sources!B18",
+                "DCF!B7"
+              ]
+            },
+            {
+              "field_id": "short_term_investments",
+              "actual_references": [],
+              "declared": [
+                "Sources!B18",
+                "DCF!B8"
+              ]
+            },
+            {
+              "field_id": "receivables",
+              "actual_references": [],
+              "declared": [
+                "Assumptions!B9"
+              ]
+            },
+            {
+              "field_id": "current_assets",
+              "actual_references": [],
+              "declared": [
+                "Sources!B18"
+              ]
+            },
+            {
+              "field_id": "current_liabilities",
+              "actual_references": [],
+              "declared": [
+                "Sources!B18"
+              ]
+            },
+            {
+              "field_id": "current_debt",
+              "actual_references": [],
+              "declared": [
+                "Sources!B18",
+                "DCF!B9"
+              ]
+            },
+            {
+              "field_id": "noncurrent_debt",
+              "actual_references": [],
+              "declared": [
+                "DCF!B10"
+              ]
+            },
+            {
+              "field_id": "treasury_10y",
+              "actual_references": [],
+              "declared": [
+                "Assumptions!B10"
+              ]
+            }
+          ],
+          "weight": 3,
+          "method": "rule"
+        }
+      ]
+    },
+    {
+      "id": "W-FAILURE",
+      "category": "交付与来源完整性",
+      "importance": "次需",
+      "weight": 1,
+      "rubric_method": "llm",
+      "status": "not_executed"
+    },
+    {
+      "id": "X-IN-001",
+      "category": "历史与会计口径",
+      "importance": "主需",
+      "weight": 3,
+      "rubric_method": "agent",
+      "status": "not_executed"
+    },
+    {
+      "id": "X-IN-002",
+      "category": "历史与会计口径",
+      "importance": "主需",
+      "weight": 3,
+      "rubric_method": "agent",
+      "status": "not_executed"
+    },
+    {
+      "id": "X-IN-003",
+      "category": "历史与会计口径",
+      "importance": "主需",
+      "weight": 3,
+      "rubric_method": "agent",
+      "status": "not_executed"
+    },
+    {
+      "id": "X-IN-004",
+      "category": "历史与会计口径",
+      "importance": "主需",
+      "weight": 3,
+      "rubric_method": "agent",
+      "status": "not_executed"
+    },
+    {
+      "id": "X-IN-005",
+      "category": "历史与会计口径",
+      "importance": "主需",
+      "weight": 3,
+      "rubric_method": "agent",
+      "status": "not_executed"
+    },
+    {
+      "id": "X-IN-006",
+      "category": "历史与会计口径",
+      "importance": "主需",
+      "weight": 3,
+      "rubric_method": "agent",
+      "status": "not_executed"
+    },
+    {
+      "id": "X-IN-007",
+      "category": "历史与会计口径",
+      "importance": "主需",
+      "weight": 3,
+      "rubric_method": "agent",
+      "status": "not_executed"
+    },
+    {
+      "id": "X-TA-001",
+      "category": "表达与专业可用性",
+      "importance": "主需",
+      "weight": 3,
+      "rubric_method": "agent",
+      "status": "not_executed"
+    },
+    {
+      "id": "X-TA-004",
+      "category": "表达与专业可用性",
+      "importance": "次需",
+      "weight": 1,
+      "rubric_method": "agent",
+      "status": "not_executed"
+    },
+    {
+      "id": "X-TA-005",
+      "category": "表达与专业可用性",
+      "importance": "次需",
+      "weight": 1,
+      "rubric_method": "agent",
+      "status": "not_executed"
+    },
+    {
+      "id": "X-TA-006",
+      "category": "表达与专业可用性",
+      "importance": "次需",
+      "weight": 1,
+      "rubric_method": "agent",
+      "status": "not_executed"
+    },
+    {
+      "id": "X-TA-007",
+      "category": "表达与专业可用性",
+      "importance": "次需",
+      "weight": 1,
+      "rubric_method": "agent",
+      "status": "not_executed"
+    },
+    {
+      "id": "X-TA-009",
+      "category": "表达与专业可用性",
+      "importance": "次需",
+      "weight": 1,
+      "rubric_method": "llm",
+      "status": "not_executed"
+    },
+    {
+      "id": "W-NOFORBID",
+      "category": "交付与来源完整性",
+      "importance": "主需",
+      "weight": 3,
+      "rubric_method": "agent",
+      "status": "not_executed"
+    },
+    {
+      "id": "05-DF",
+      "category": "DCF与估值桥",
+      "importance": "主需",
+      "weight": 3,
+      "rubric_method": "rule",
+      "status": "fail",
+      "native_ids": [
+        "05-FCFF"
+      ],
+      "native_evidence": [
+        {
+          "passed": false,
+          "evidence": null,
+          "weight": 3,
+          "method": "rule"
+        }
+      ]
+    },
+    {
+      "id": "05-BRIDGE",
+      "category": "DCF与估值桥",
+      "importance": "主需",
+      "weight": 3,
+      "rubric_method": "rule",
+      "status": "pass",
+      "native_ids": [
+        "05-BRIDGE"
+      ],
+      "native_evidence": [
+        {
+          "passed": true,
+          "evidence": 40210.19901040325,
+          "weight": 3,
+          "method": "rule"
+        }
+      ]
+    },
+    {
+      "id": "06-LINKS",
+      "category": "公式与模型工程",
+      "importance": "主需",
+      "weight": 3,
+      "rubric_method": "rule",
+      "status": "pass",
+      "native_ids": [
+        "06-RECALC"
+      ],
+      "native_evidence": [
+        {
+          "passed": true,
+          "evidence": null,
+          "weight": 3,
+          "method": "rule"
+        }
+      ]
+    }
+  ],
+  "semantic_pending": [
+    "01-UNIT",
+    "X-IF-001a",
+    "X-IF-002",
+    "X-FM-002",
+    "X-FM-004",
+    "X-FM-005",
+    "09-MEMO",
+    "09-READABLE",
+    "W-FAILURE",
+    "X-IN-001",
+    "X-IN-002",
+    "X-IN-003",
+    "X-IN-004",
+    "X-IN-005",
+    "X-IN-006",
+    "X-IN-007",
+    "X-TA-001",
+    "X-TA-004",
+    "X-TA-005",
+    "X-TA-006",
+    "X-TA-007",
+    "X-TA-009",
+    "W-NOFORBID"
+  ],
+  "unexecuted_rules": [],
+  "forecast_accuracy_diagnostic": null,
+  "market_calibration_diagnostic": null
+}

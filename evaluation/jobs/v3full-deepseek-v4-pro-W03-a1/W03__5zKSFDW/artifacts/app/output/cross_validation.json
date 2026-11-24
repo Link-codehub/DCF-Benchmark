@@ -1,0 +1,37 @@
+{
+  "schema_version": "dcf-v3-w-retrieval-v1",
+  "task_id": "W03",
+  "date": "2026-11-23",
+  "checks": [
+    {
+      "check_id": "pretax_to_net_income",
+      "description": "所得税勾稽：pretax_income − income_tax − net_income_consolidated",
+      "inputs": {
+        "pretax_income": {
+          "field_id": "pretax_income",
+          "value": 4969.6,
+          "unit": "USD_millions",
+          "source_item_index": 3
+        },
+        "income_tax": {
+          "field_id": "income_tax",
+          "value": 1207.3,
+          "unit": "USD_millions",
+          "source_item_index": 4
+        },
+        "net_income_consolidated": {
+          "field_id": "net_income_consolidated",
+          "value": 3762.3,
+          "unit": "USD_millions",
+          "source_item_index": 5
+        }
+      },
+      "calculation": "4969.6 − 1207.3 − 3762.3",
+      "difference": 0.00,
+      "tolerance_limit": 75.25,
+      "tolerance_formula": "max(0.01, abs(3762.30) * 0.02)",
+      "status": "pass",
+      "memo": "已勾稽：差异 0.00 完全在容忍上限 75.25 百万美元以内（0.0%）。三项均取自同一份 10-K (filed 2024-11-20, accn 0000829224-24-000057)，来源一致且可追溯。"
+    }
+  ]
+}

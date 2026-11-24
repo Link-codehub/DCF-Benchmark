@@ -1,0 +1,63 @@
+#!/bin/sh
+set -eu
+ALLOWLIST=/opt/egress-sidecar/allowlist.txt
+NFTABLES_RULESET_NAME=gost_egress
+READY_FILE=/tmp/dcf-egress-ready
+
+show() {
+  echo "allowlist: $ALLOWLIST"
+  if [ -f "$ALLOWLIST" ]; then
+    nl --body-numbering=a "$ALLOWLIST"
+  fi
+  nft list table ip "$NFTABLES_RULESET_NAME" 2>/dev/null || true
+}
+
+setup() {
+  rm -f "$READY_FILE"
+  nft --file - <<'EOF'
+add table ip gost_egress
+flush table ip gost_egress
+table ip gost_egress {
+  chain output {
+    type nat hook output priority dstnat; policy accept;
+    meta mark 114514 return
+    fib daddr type local return
+    ip daddr 192.168.65.254 tcp dport 4311 return
+    meta l4proto tcp redirect to :12345
+  }
+  chain egress {
+    type filter hook output priority filter; policy accept;
+    meta mark 114514 accept
+    fib daddr type local accept
+    ip daddr 192.168.65.254 tcp dport 4311 accept
+    ip protocol icmp accept
+    meta l4proto != tcp reject
+  }
+}
+EOF
+  touch "$READY_FILE"
+}
+
+case "${1:-show}" in
+  allow)
+    shift
+    : > "$ALLOWLIST"
+    for host in "$@"; do printf '%s\n' "$host" >> "$ALLOWLIST"; done
+    sleep 2
+    setup
+    show
+    ;;
+  allow-all)
+    nft delete table ip "$NFTABLES_RULESET_NAME" 2>/dev/null || true
+    : > "$ALLOWLIST"
+    touch "$READY_FILE"
+    ;;
+  deny-all)
+    : > "$ALLOWLIST"
+    sleep 2
+    setup
+    ;;
+  show) show ;;
+  rules) nft list table ip "$NFTABLES_RULESET_NAME" ;;
+  *) echo "Usage: network-policy show|allow [TARGET...]|deny-all|allow-all|rules" >&2; exit 2 ;;
+esac

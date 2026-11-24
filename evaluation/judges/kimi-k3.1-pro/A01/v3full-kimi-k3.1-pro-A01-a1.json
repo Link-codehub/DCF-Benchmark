@@ -1,0 +1,56 @@
+{
+  "task": "A01",
+  "judge_model": "claude-opus-5-5",
+  "generated": "2026-11-22T18:30:11.302851+00:00",
+  "llm": {
+    "A-REASON": {
+      "status": "pass",
+      "rationale": "memo.md 写明了从行业驱动到估值结果的完整因果链。(1) 驱动到 ARR：期末 ARR 由期初 ARR、净收入留存率扩张和新签 ARR 滚动得出，P1 按 276/365 计入；NRR 从 104% 升至 106%，新签从 98 增至 150，期末 ARR 从 730 增至 1,578。(2) ARR 到收入：收入按平均 ARR 确认，并说明不是单一增长率外推。(3) 收入到利润：EBIT 利润率从 16% 升至 17.6%，SBC 计入 EBIT 经营成本，不在 FCFF 加回。(4) 再投资到 FCFF：资本化研发 7.5% 与其他资本开支 6.5% 合计 14%，营运资本为年化收入的 13%；明确指出 ARR 扩张会带来当期研发和营运资本占用，并以此解释 P1 FCFF 为 −17.44。(5) FCFF 到估值：说明期末惯例折现和终值落在 P5 期末，终值现值占 EV 约 84.6%，因此长期 ARR 增长、利润率和资本效率对估值尤其重要，最终给出 EV 425.62、股权价值 367.62、每股 4.82。链条前后一致，满足该项要求。本项只评判论证链，不核验数值是否正确。",
+      "judge_model": "claude-opus-5-5",
+      "attempts": [
+        {
+          "attempt": 1,
+          "error": null,
+          "text_chars": 560
+        }
+      ]
+    },
+    "09-MEMO": {
+      "status": "pass",
+      "rationale": "候选交付了 memo.md 内容，满足本项要求。价值驱动方面，设有「主要价值驱动」专节，逐项说明：净留存率 104%→106% 与新签 ARR 98→150 共同推动 ARR 从 730 增至 1,578；EBIT 利润率 16%→17.6% 的经营杠杆；资本化研发、资本开支与营运资本的再投资占用；WACC 10% 与 g 2.5%。其中明确指出终值现值 360.28 占 EV 约 84.6%，长期 ARR 增长、利润率和资本效率最为关键。局限方面，设有「局限」专节，列出至少两项：缺少历史序列与客户队列数据，平均 ARR 确认属于简化，资本化研发未做资产滚动；终值占比高，对 WACC、g 敏感。memo 内数字自洽：EV 425.62 + 现金 139 + 投资 25 − 债务 203 − 租赁 13 − 少数股东 6 = 367.62；367.62 / 76.2 ≈ 4.82；360.28 / 425.62 ≈ 84.6%。",
+      "judge_model": "claude-opus-5-5",
+      "attempts": [
+        {
+          "attempt": 1,
+          "error": null,
+          "text_chars": 0
+        },
+        {
+          "attempt": 2,
+          "error": null,
+          "text_chars": 477
+        }
+      ]
+    }
+  },
+  "agent": {
+    "status": "scored",
+    "scores": {
+      "01-UNIT": 1,
+      "09-READABLE": 1,
+      "X-TA-004": 1,
+      "X-TA-006": 1,
+      "X-TA-007": 1
+    },
+    "evidence": {
+      "01-UNIT": "output.xlsx 的 Inputs!A2、Operating Model!A2、DCF Bridge!A2 和 Results!A2 都写明“金额百万元；股数百万股；比率小数”。Results 的 C 列逐键标注单位，例如 diluted_shares 为“百万股”、wacc 为“小数”、discount_time 为“年”。value_per_share 被标为“百万元/股”，用词欠妥，但数值上等于元/股，单位仍算已说明。",
+      "09-READABLE": "Operating Model 第 3 行用 C3:G3 标出 P1–P5，A 列写项目、B 列写口径，并分为“时间轴、ARR 与收入、利润再投资与自由现金流、营运资本”四个区块，第 40–42 行有说明。DCF Bridge 分为“DCF、股权桥、稀释股数与每股价值”三区，并有完整性检查 F5:F10。所有工作表都可见，没有隐藏的行或列。",
+      "X-TA-004": "Operating Model 第 10 行“折现时间（年）”的 C10:G10 公式为 =(期末日−Inputs!$C$4)/365，计算值为 0.756、1.756、2.759、3.759、4.759。DCF Bridge!C7 用 SUMPRODUCT(FCFF C38:G38, 1/(1+C5)^C10:G10) 逐期折现。",
+      "X-TA-006": "Operating Model 中各项单独成行：第 23 行 EBIT =C19*C22；第 24 行现金税 =C23*Inputs!$C$6；第 25 行 NOPAT；第 27 行折旧与摊销；第 32 行资本开支合计（第 29 行资本化研发 + 第 31 行其他资本开支）；第 37 行营运资本增加 =C35-C36。第 38 行 FCFF =C25+C27-C32-C37，没有加回 SBC。",
+      "X-TA-007": "DCF Bridge!C8 的终值公式为 ='Operating Model'!G38*(1+C6)/(C5-C6)，直接引用可见的 P5 FCFF（G38）、WACC 单元格 C5（来自 Inputs!C7）和永续增长率 g 单元格 C6（来自 Inputs!C8）。终值现值 C9 =C8/(1+C5)^'Operating Model'!G10。"
+    },
+    "rationale": "我用 openpyxl 检查了 output.xlsx 的公式、计算值和工作表结构。单位说明清楚；期间和项目标签齐全，没有隐藏结构。折现时间单独成行，并按实际天数/365 逐期计算。FCFF 的 EBIT、税项、折旧与摊销、资本开支和营运资本变动都是独立行，并由公式连接。终值采用 Gordon 永续增长法，直接引用可见的 P5 FCFF 和 WACC、g 假设单元格。五项均判定通过。",
+    "seconds": 47.1,
+    "judge_model": "claude-opus-5-5"
+  }
+}

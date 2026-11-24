@@ -1,0 +1,105 @@
+{
+  "task": "E01",
+  "judge_model": "claude-opus-5-5",
+  "generated": "2026-11-22T21:23:05.401806+00:00",
+  "llm": {
+    "E-llm_business_chain": {
+      "status": "unscored",
+      "judge_model": "claude-opus-5-5",
+      "attempts": [
+        {
+          "attempt": 1,
+          "error": null,
+          "text_chars": 0
+        },
+        {
+          "attempt": 2,
+          "error": null,
+          "text_chars": 0
+        },
+        {
+          "attempt": 3,
+          "error": null,
+          "text_chars": 0
+        }
+      ]
+    },
+    "E-llm_reinvestment_reasoning": {
+      "status": "unscored",
+      "judge_model": "claude-opus-5-5",
+      "attempts": [
+        {
+          "attempt": 1,
+          "error": null,
+          "text_chars": 0
+        },
+        {
+          "attempt": 2,
+          "error": null,
+          "text_chars": 0
+        },
+        {
+          "attempt": 3,
+          "error": null,
+          "text_chars": 0
+        }
+      ]
+    },
+    "E-llm_driver_derivation": {
+      "status": "fail",
+      "rationale": "部分驱动有可复现推导：EBIT 利润率 44.64% = 109,433/245,122；税率 18.23% = 19,651/107,787；D&A/收入 6.2% = 15,200/245,122；CapEx/收入 18.14% = 44,477/245,122。但多项重要驱动没有可复现推导，只是列出历史值或给出结论：(1) 收入增速 14% 只说“介于 FY2024 同比 15.7% 与 FY2023 同比 6.9% 之间”，并称排除 Activision 并购拉动，但未给出剔除金额或计算，无法重现 14%。(2) WACC 8.0% 由国债 3.87% 加“约 4.1% 股权风险溢价调整”得出，没有 beta、ERP、债务成本或权重的推导。(3) 永续增长 3% 没有任何历史观测支撑。(4) NWC/收入 -15.85% 未展示由流动资产、现金、短期投资、流动负债、当期债务计算的过程。(5) 再投资强度的算式自相矛盾：18.14% + 5.28% − 6.2% = 17.22%，而非所称的 11.9%；模拟众数又取 0.0999，三者无法对应。(6) 模拟边界称“基于 FY2020-FY2024 历史极值”，但收入增速区间 3%–28% 明显超出历史同比区间（约 6.9%–17.9%），利润率 35%–52% 及折现率区间也未展示推导；相关系数 0.5 被自认“权作假设”。综上，历史观测并未通过可复现推导逐一连接到每个重要预测驱动。",
+      "judge_model": "claude-opus-5-5",
+      "attempts": [
+        {
+          "attempt": 1,
+          "error": null,
+          "text_chars": 0
+        },
+        {
+          "attempt": 2,
+          "error": null,
+          "text_chars": 692
+        }
+      ]
+    },
+    "X-TA-003": {
+      "status": "fail",
+      "rationale": "题面指定了几项会计处理：股份支付作为经营成本、不得加回 FCFF；经营 NWC = 流动资产−现金−短期投资−(流动负债−当期债务)；净债务只含当期及非当期债务；股权价值 = 企业价值 + 现金及短期投资 − 净债务。候选交付在这些事项上无法证明书面说明与模型实际处理一致，理由如下：(1) memo 没有说明股份支付的处理，SBC 未出现在任何说明中；也没有给出经营 NWC 的计算口径和股权桥的计算式。(2) model_summary 为空，无法核对模型实际怎样处理 SBC、NWC、净债务（net_debt）和现金及投资（cash_and_investments）。(3) 已有的再投资说明自相矛盾。memo 写再投资强度为“FY2024 基准约 11.9%（18.14% + 5.28% − 6.2%）”，但该算式实际等于 17.22%。memo 又称 NWC/收入为 −15.85%，却把 ΔNWC 记为 +5.28% 的现金消耗，方向和口径都没有交代。memo 称模拟分布为 Tri(0.03,0.12,0.25)，而 simulation.json 中 reinvestment_intensity 的 mode 为 0.0999。综上，书面说明与模型实际处理的一致性缺乏证据，且存在明显不一致，给 0 分。",
+      "judge_model": "claude-opus-5-5",
+      "attempts": [
+        {
+          "attempt": 1,
+          "error": null,
+          "text_chars": 0
+        },
+        {
+          "attempt": 2,
+          "error": null,
+          "text_chars": 621
+        }
+      ]
+    },
+    "X-TA-009": {
+      "status": "unscored",
+      "judge_model": "claude-opus-5-5",
+      "attempts": [
+        {
+          "attempt": 1,
+          "error": null,
+          "text_chars": 0
+        },
+        {
+          "attempt": 2,
+          "error": null,
+          "text_chars": 0
+        },
+        {
+          "attempt": 3,
+          "error": null,
+          "text_chars": 0
+        }
+      ]
+    }
+  },
+  "agent": {}
+}

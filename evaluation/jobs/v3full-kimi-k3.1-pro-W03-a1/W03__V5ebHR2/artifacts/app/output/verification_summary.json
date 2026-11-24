@@ -1,0 +1,40 @@
+{
+  "status": "passed",
+  "baseline_outputs": {
+    "enterprise_value": 59721.90272189601,
+    "equity_value": 47696.70272189601,
+    "value_per_share": 41.938541037453625
+  },
+  "scenarios": {
+    "wacc_up_50bp": {
+      "enterprise_value": 54530.86153118084,
+      "equity_value": 42505.661531180835,
+      "value_per_share": 37.37418581832484
+    },
+    "wacc_down_50bp": {
+      "enterprise_value": 66005.71414349494,
+      "equity_value": 53980.51414349495,
+      "value_per_share": 47.46374232260173
+    },
+    "g_up_25bp": {
+      "enterprise_value": 62693.82772336545,
+      "equity_value": 50668.62772336545,
+      "value_per_share": 44.551681810749535
+    },
+    "g_down_25bp": {
+      "enterprise_value": 57019.95368550042,
+      "equity_value": 44994.753685500415,
+      "value_per_share": 39.56278350962843
+    },
+    "combined_up": {
+      "enterprise_value": 56996.08676328748,
+      "equity_value": 44970.886763287475,
+      "value_per_share": 39.54179791021496
+    }
+  },
+  "raw_fact_checks": 15,
+  "retrieval_map_items": 16,
+  "baseline_formula_checks": 66,
+  "libreoffice_version": "LibreOffice 7.4.7.2 40(Build:2)",
+  "workbook_sha256": "81ca81c3ff79f8388da7a03e4568a278c312f03de66427446e00e03cc44f6426"
+}
